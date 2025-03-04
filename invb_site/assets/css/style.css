@@ -1,0 +1,207 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    padding-top: 70px; /* Adiciona um espaçamento para o conteúdo não ficar escondido atrás do header */
+}
+
+header {
+    background-color: #001f3d;
+    color: whitesmoke;
+    padding: 15px 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px;
+}
+
+.logo img {
+    max-height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 5vw;
+    margin-left: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Primeira Seção - Bem-vindo */
+.section-hero {
+    display: flex;
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    height: calc(100vh - 70px); /* Compensa a altura do header fixo */
+    color: whitesmoke;
+    background: rgba(0, 0, 0, 0.6);
+    transition: opacity 1s ease-out;
+    text-align: center; /* Centraliza o texto */
+}
+
+.section-hero .text h1, .section-hero .text h4, .section-hero .text p {
+    margin: 0; /* Remove qualquer margem do h1, h4, e p */
+}
+
+.section-hero .text h1 {
+    font-size: 3rem;
+}
+
+.section-hero .text h4 {
+    font-size: 1.8rem;
+}
+
+.section-hero .text p {
+    font-size: 1.5rem;
+}
+
+.section-hero .text h1, .section-hero .text h4, .section-hero .text p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Quando a seção "Bem-vindo" estiver em fade-out */
+.section-hero.fade-out{
+    opacity: 0;
+    pointer-events: none; /* Evita interação enquanto está em fade-out */
+}
+
+/* Seção Cultos */
+.section-cultos {
+    padding: 50px;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-cultos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.section-cultos p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    flex: 1;
+    max-width: 45%;
+    margin-left: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+
+
+/* Seção Contato */
+.section-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    color: whitesmoke;
+    /* background: url('../img/image2.png') no-repeat center center fixed; */
+    background-size: cover;
+    transition: opacity 1s ease-out;
+    text-align: center; /* Centraliza o texto */
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-form button{
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e6b800
+}
+
+
+
+footer {
+    background-color: #001f3d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+}
+
+footer nav ul {
+    justify-content: center;
+}
+
+footer nav ul li a {
+    color: white;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
