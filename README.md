@@ -21,9 +21,9 @@ No Linux
 Baixe o arquivo .xz e extraia no diretório desejado e configure no path do sistema.
 ```
 
-Após instalar o nvm basta executar o comando: 
+Após instalar o nvm basta executar o comando abaixo: 
 ```
-nvm install node
+nvm install npm
 ```
 
 Também podemos utilizar a instalação do nvm via script de instalação https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
