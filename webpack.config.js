@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',  // Arquivo JS empacotado
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Home-Page/'
+    publicPath: '/invbotafogo/'
   },
   module: {
     rules: [
