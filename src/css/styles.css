@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/image.png') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -144,7 +144,7 @@ nav ul li a:hover {
     height: 100vh;
     padding: 50px;
     color: whitesmoke;
-    /* background: url('../img/image2.png') no-repeat center center fixed; */
+    /* background: url('~/images/image2.png') no-repeat center center fixed; */
     background-size: cover;
     transition: opacity 1s ease-out;
     text-align: center; /* Centraliza o texto */

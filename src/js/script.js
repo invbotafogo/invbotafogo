@@ -1,3 +1,6 @@
+import "../css/styles.css";
+import "../css/oracao.css";
+
 // Efeito de fade-out para a seção "Bem-vindo"
 window.addEventListener('scroll', function() {
     const heroSection = document.querySelector('.section-hero');
