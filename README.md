@@ -33,12 +33,20 @@ Após instalar o npm precisamos instalar as dependências:
 npm install
 ```
 
+Para empacotar os arquivos do site basta executar o comando:
+```
+npm run build
+```
+
 Para executar o site em localhost:8080 basta executar o comando:
 ```
 npm run dev
 ```
 
-Para empacotar os arquivos do site basta executar o comando:
+# Como realizar uma nova implantação do site?
+
+Para gerar uma nova implantação precisamos subir as mudanças com o comando: 
 ```
-npm run build
+npm run deploy
 ```
+Este comando irá executar o build e realizar um push para a branch *origin/gh-pages*
