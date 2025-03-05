@@ -1,4 +1,4 @@
-# Home-Page
+# Site Igreja de Nova Vida Botafogo
 Site estático da Igreja Nova Vida de Botafogo.
 
 # Como executar o site em dev?
