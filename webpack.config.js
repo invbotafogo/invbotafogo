@@ -39,7 +39,6 @@ module.exports = {
       });
     }),
   ],
-  cache: false,
   devServer: {
     static: path.resolve(__dirname, 'dist'), // Diretório dos arquivos estáticos
     port: 8080,
