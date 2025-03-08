@@ -1,1 +1,0 @@
-import"../css/styles.css";import"../css/oracao.css";window.addEventListener("scroll",(function(){const s=document.querySelector(".section-hero"),t=document.querySelector(".section-cultos");window.scrollY>100?(s.classList.add("fade-out"),t.style.opacity=1,t.style.transition="opacity 1s ease-in-out"):(s.classList.remove("fade-out"),t.style.opacity=0)}));
