@@ -1,11 +1,11 @@
 {
-  "name": "home-page",
+  "name": "invbotafogo",
   "version": "1.0.0",
   "description": "Site estático da Igreja Nova Vida de Botafogo.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve --mode development --open",
+    "dev": "npx webpack serve --mode development",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
