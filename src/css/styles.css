@@ -69,7 +69,7 @@ nav ul li a:hover {
     align-items: center; /* Alinha o conteúdo verticalmente */
     height: calc(100vh - 70px); /* Compensa a altura do header fixo */
     color: whitesmoke;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     transition: opacity 1s ease-out;
     text-align: center; /* Centraliza o texto */
 }
