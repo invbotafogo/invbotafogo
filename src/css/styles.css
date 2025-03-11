@@ -10,43 +10,70 @@ body {
     padding-top: 70px; /* Adiciona um espaçamento para o conteúdo não ficar escondido atrás do header */
 }
 
+/* Estilos do cabeçalho */
 header {
     background-color: #001f3d;
     color: whitesmoke;
-    padding: 15px 20px;
+    padding: 15px 0;
+    margin: 0;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantém o logo à esquerda e o menu à direita */
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     height: 70px;
 }
 
+
+
+.logo {
+    flex-shrink: 0; /* Impede que o logo encolha */
+}
+
 .logo img {
     max-height: 50px;
     filter: brightness(0) invert(1);
+    margin-left: 15px;
+
 }
 
-nav {
-    flex-grow: 1;
+header nav {
     display: flex;
-    justify-content: center;
-    padding-right: 5vw;
+    justify-content: flex-end; /* Alinha os itens do menu à direita */
+    flex-grow: 1; /* Ocupa o espaço restante */
     margin-left: 40px;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
-    margin: 0;
+    margin: 0 10px;
     padding: 0;
     display: flex;
     gap: 30px;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: flex-end; /* Garante que os links sejam alinhados à direita */
+}
+
+footer nav {
+    display: flex;
+    flex-grow: 1; /* Ocupa o espaço restante */
+    gap: 0;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end; /* Garante que os links sejam alinhados à direita */
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
@@ -61,6 +88,44 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffcc00;
 }
+
+/* Estilos do dropdown */
+.menu-item {
+    position: relative;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    min-width: 180px;
+    background-color: #001f3d;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+
 
 /* Primeira Seção - Bem-vindo */
 .section-hero {
@@ -178,6 +243,7 @@ nav ul li a:hover {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    display: block;
 }
 
 .contact-form button:hover {
@@ -186,24 +252,101 @@ nav ul li a:hover {
 
 
 
+/* FOOTER */
 footer {
-    background-color: #001f3d;
-    color: white;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-    width: 100%;
-    position: relative;
 }
 
-footer nav ul {
-    justify-content: center;
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0;
 }
 
-footer nav ul li a {
-    color: white;
+.footer-logo {
+    max-width: 200px;
 }
 
-footer a:hover {
+.social-icons {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.social-icons li a:hover {
     color: #ffcc00;
+    transform: scale(1.1);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    text-align: left;
+    max-width: 300px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    display: block;
+    color: #ffcc00;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
 }
