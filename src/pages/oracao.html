@@ -1,154 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD:src/pages/oracao.html
-    <title>Enviar Mensagem - Igreja</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/oracao.css">
-=======
     <title>Pedido de Oração - Igreja</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/oração.css">
->>>>>>> 82ddc2d (header e footer modificados):invb_site/oração.html
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../assets/images/logo.png" alt="Logo da Igreja">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-<<<<<<< HEAD:src/pages/oracao.html
-                    <li><a href="cultos.html">Cultos</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="estudo.html">Escola Bíblica</a></li>
-                    <li><a href="oracao.html">Oração</a></li>
-                    <li><a href="doe.html">Doe</a></li>
-                    <li><a href="ministerios.html">Ministérios</a></li>
-=======
-                    <li><a href="sobre.html">Sobre</a></li>
-                        <!-- Ministérios Dropdown -->
-                        <li class="menu-item">
-                            <a href="ministerios.html">Ministérios</a>
-                            <ul class="submenu">
-                                <li><a href="ministerios.html#louvor">Louvor</a></li>
-                                <li><a href="ministerios.html#infantil">Infantil</a></li>
-                                <li><a href="ministerios.html#intercessao">Intercessão</a></li>
-                                <li><a href="ministerios.html#comunicacoes">Comunicações</a></li>
-                                <li><a href="ministerios.html#juventude">Juventude</a></li>
-                                <li><a href="ministerios.html#mulheres">Mulheres</a></li>
-                                <li><a href="ministerios.html#homens">Homens</a></li>
-                            </ul>
-                        </li>
-                    <li><a href="estudo.html">Escola Bíblica</a></li>
-                    <li><a href="doe.html">Doe</a></li>
->>>>>>> 82ddc2d (header e footer modificados):invb_site/oração.html
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
+    <div id="header"></div> <!-- Header será injetado aqui -->
 
-    </header>
+    <div id="main">
+        <div class="container">
+            <h1>Pedido de Oração</h1>
+            <p>Escreva seu pedido de oração e enviaremos para nossa equipe.</p>
 
-    
+            <form id="oracao-form">
+                <label for="topico">Tópico:</label>
+                <input type="text" id="topico" name="topico" required>
 
-    <div class="container">
-        <h1>Pedido de Oração</h1>
-        <p>Escreva seu pedido de oração e enviaremos para nossa equipe.</p>
-        
-        <form id="oracao-form">
-            <label for="topico">Tópico:</label>
-            <input type="text" id="topico" name="topico" required>
-            
-            <label for="descricao">Descrição:</label>
-            <textarea id="descricao" name="descricao" rows="5" required></textarea>
-            
-            <button type="submit">Enviar Pedido</button>
-        </form>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="5" required></textarea>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </div>
     </div>
 
-    <footer>
-        <div class="logo footer-top">
+    <div id="footer"></div> <!-- Footer será injetado aqui -->
 
-            <img src="assets/img/logo.png" alt="INVB Logo">
-            <nav>
-                <ul>
-                    <li><a href="https://www.youtube.com/@igrejadenovavidabotafogo3785" target="_blank"><i class="fa-brands fa-youtube"></i> </a></li>
-                    <li><a href="https://www.facebook.com/IgrejaNovaVidadeBotafogo" target="_blank"><i class="fa-brands fa-facebook"></i> </a></li>
-                    <li><a href="https://www.instagram.com/igrejanvb" target="_blank"><i class="fa-brands fa-instagram"></i> </a></li>
-                    <li><a href="https://wa.me/5521982982802" target="_blank"><i class="fa-brands fa-whatsapp"></i> </a></li>
-                </ul>
-            </nav>
-        </div>
-    
-        <hr>
-    
-        <div class="footer-content">
-            <div class="footer-links">
-                <div>
-                    <h4>Topico 1</h4>
-                    <ul>
-                        <li><a href="#">icone 1</a></li>
-                        <li><a href="#">icone 2</a></li>
-                        <li><a href="#">icone 3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Topico 2</h4>
-                    <ul>
-                        <li><a href="#">icone 1</a></li>
-                        <li><a href="#">icone 2</a></li>
-                        <li><a href="#">icone 3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Topico 3</h4>
-                    <ul>
-                        <li><a href="#">icone 1</a></li>
-                        <li><a href="#">icone 2</a></li>
-                        <li><a href="#">icone 3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Topico 4</h4>
-                    <ul>
-                        <li><a href="#">icone 1</a></li>
-                        <li><a href="#">icone 2</a></li>
-                        <li><a href="#">icone 3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Topico 5</h4>
-                    <ul>
-                        <li><a href="#">icone 1</a></li>
-                        <li><a href="#">icone 2</a></li>
-                        <li><a href="#">icone 3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Topico 6</h4>
-                    <ul>
-                        <li><a href="#">icone 1</a></li>
-                        <li><a href="#">icone 2</a></li>
-                        <li><a href="#">icone 3</a></li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="footer-contact">
-                <h4>INV Botafogo</h4>
-                <p>95 Rua da Matriz, Rio de Janeiro - RJ</p>
-                <p><i class="fa-solid fa-envelope"></i> E-mail: <a href="mailto:invbotafogo.contato@gmail.com">invbotafogo.contato@gmail.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> Telefone: <a href="tel:+5521982982802">(21) 98298-2802</a></p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../js/script.js"></script>
 </body>
+
 </html>
