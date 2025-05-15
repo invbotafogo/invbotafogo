@@ -5,14 +5,15 @@ body {
     box-sizing: border-box;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
     color: #fff;
-    padding-top: 70px; /* Adiciona um espaçamento para o conteúdo não ficar escondido atrás do header */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #001f3d;
+    background-color: transparent;
     color: whitesmoke;
     padding: 15px 0;
     margin: 0;
@@ -35,9 +36,9 @@ header {
 }
 
 .logo img {
-    max-height: 50px;
+    max-height: 65px;
     filter: brightness(0) invert(1);
-    margin-left: 15px;
+    margin-left: 25px;
 
 }
 
@@ -57,20 +58,7 @@ header nav ul {
     justify-content: flex-end; /* Garante que os links sejam alinhados à direita */
 }
 
-footer nav {
-    display: flex;
-    flex-grow: 1; /* Ocupa o espaço restante */
-    gap: 0;
-}
 
-footer nav ul {
-    list-style: none;
-    margin: 0 10px;
-    padding: 0;
-    display: flex;
-    gap: 5px;
-    justify-content: flex-end; /* Garante que os links sejam alinhados à direita */
-}
 
 nav ul li {
     position: relative;
@@ -105,7 +93,8 @@ nav ul li a:hover {
     left: 0;
     width: auto;
     min-width: 180px;
-    background-color: #001f3d;
+    background-color: transparent;
+    /* background-color: #001f3d; */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -128,39 +117,40 @@ nav ul li a:hover {
 
 
 /* Primeira Seção - Bem-vindo */
-.section-hero {
+.section-home {
     display: flex;
     justify-content: center; /* Alinha o conteúdo horizontalmente */
     align-items: center; /* Alinha o conteúdo verticalmente */
-    height: calc(100vh - 70px); /* Compensa a altura do header fixo */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    /*height: calc(100vh - 70px); /* Compensa a altura do header fixo */
     color: whitesmoke;
     background: rgba(0, 0, 0, 0.5);
     transition: opacity 1s ease-out;
     text-align: center; /* Centraliza o texto */
 }
 
-.section-hero .text h1, .section-hero .text h4, .section-hero .text p {
+.section-home .text h1, .section-home .text h4, .section-home .text p {
     margin: 0; /* Remove qualquer margem do h1, h4, e p */
 }
 
-.section-hero .text h1 {
+.section-home .text h1 {
     font-size: 3rem;
 }
 
-.section-hero .text h4 {
+.section-home .text h4 {
     font-size: 1.8rem;
 }
 
-.section-hero .text p {
+.section-home .text p {
     font-size: 1.5rem;
 }
 
-.section-hero .text h1, .section-hero .text h4, .section-hero .text p {
+.section-home .text h1, .section-home .text h4, .section-home .text p {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* Quando a seção "Bem-vindo" estiver em fade-out */
-.section-hero.fade-out{
+.section-home.fade-out{
     opacity: 0;
     pointer-events: none; /* Evita interação enquanto está em fade-out */
 }
@@ -250,14 +240,27 @@ nav ul li a:hover {
     background-color: #e6b800
 }
 
-
-
 /* FOOTER */
 footer {
     background-color: #000;
     color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+
+    /* text-align: center; */
+}
+
+footer nav {
+    display: flex;
+    flex-grow: 1; /* Ocupa o espaço restante */
+    gap: 0;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end; /* Garante que os links sejam alinhados à direita */
 }
 
 .footer-top {
@@ -274,14 +277,14 @@ footer {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 5px;
     list-style: none;
     padding: 0;
 }
 
 .social-icons li a {
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     transition: color 0.3s ease-in-out, transform 0.3s;
 }
 
@@ -293,24 +296,30 @@ footer {
 hr {
     border: none;
     border-top: 1px solid #fff;
-    margin: 20px 0;
+    margin: 5px 10px;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 5px;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
 }
 
 .footer-links h4 {
     margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .footer-links ul {
@@ -320,33 +329,97 @@ hr {
 
 .footer-links ul li {
     margin-bottom: 5px;
+    margin-left:20px;
 }
 
 .footer-links ul li a {
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
     text-decoration: none;
+    font-size: 15px;
+    transition: color 0.5s;
+    font-weight:400;
+    
 }
 
 .footer-links ul li a:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 
 .footer-contact {
+    width: auto; 
     text-align: left;
-    max-width: 300px;
+}
+
+.footer-contact h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight:bolder;
+    color: #fff;
 }
 
 .footer-contact p {
     margin: 5px 0;
+    font-size: 14px;
 }
 
 .footer-contact a {
-    display: block;
     color: #ffcc00;
     text-decoration: none;
-    margin-top: 5px;
 }
 
 .footer-contact a:hover {
     text-decoration: underline;
+}
+
+/* Próximo Culto */
+.proximo-culto {
+    background-color: #000;
+    color: #fff;
+    top: 0;
+    margin-top: 140px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-top: 3px solid #ffcc00;
+    border-bottom: 3px solid #ffcc00;
+}
+
+.proximo-culto a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Últimos Cultos */
+.ultimos-cultos {
+    background-color: transparent;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.ultimos-cultos h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #ffcc00;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.videos-container iframe {
+    width: 100%;
+    max-width: 360px;
+    height: 215px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
