@@ -10,12 +10,49 @@
 </head>
 
 <body>
+    
     <div id="header"></div> <!-- Header será injetado aqui -->
 
 
     <div id="main">
         <!-- Seção Principal -->
-         Doação
+
+        <section class="section-ofertas">
+            <div class="ofertas-container">
+                <h2>Seja um abençoador</h2>
+                <p class="versiculo">
+                    "Cada um contribua segundo propôs no coração, não com tristeza ou por necessidade; porque Deus ama a quem dá com alegria." <br>
+                    <span>— 2 Coríntios 9:7</span>
+                </p>
+        
+                <p class="descricao">
+                    Suas ofertas e dízimos nos ajudam a continuar avançando na obra de Deus em nossa comunidade. Contribua com alegria e fé!
+                </p>
+        
+                <div class="dados-bancarios">
+                    <h3>Dados para Depósito/Transferência:</h3>
+                    <p><strong>Banco:</strong> 104 - Caixa Econômica Federal</p>
+                    <p><strong>Agência:</strong> 1234</p>
+                    <p><strong>Conta:</strong> 56789-0</p>
+                    <p><strong>Tipo:</strong> Poupança</p>
+                    <p><strong>Favorecido:</strong> Igreja de Nova Vida Botafogo</p>
+                    <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+                </div>
+        
+                <div class="pix-box">
+                    <h3>Chave PIX</h3>
+                    <p><i class="fa-solid fa-qrcode"></i> <strong id="chave-pix">invbotafogo.pix@gmail.com</strong></p>
+                
+                    <!-- QR Code gerado dinamicamente -->
+                    <img class="qr-pix" 
+                         src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=invbotafogo.pix@gmail.com" 
+                         alt="QR Code PIX">
+
+                         <button id="copiar-btn">Copiar chave PIX</button>
+                    <p id="confirmacao-pix" class="confirmacao"></p>
+                </div>
+        </section>
+        
     </div>
 
     <div id="footer"></div> <!-- Footer será injetado aqui -->

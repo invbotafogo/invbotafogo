@@ -196,52 +196,98 @@ nav ul li a:hover {
 
 
 /* Seção Contato */
-.section-contato{
+.section-contato {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
-    color: whitesmoke;
-    background-size: cover;
+    height: auto;
+    min-height: 75vh;
+    padding: 90px 20px;
     transition: opacity 1s ease-out;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
+.section-contato .text {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.section-contato h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-contato p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.section-contato a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.section-contato a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário de Contato */
 .contact-form {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px 15px;
+    border-radius: 10px;
     border: none;
     font-size: 1rem;
+    background-color: #ffffffcc;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form button{
-    background-color: #ffcc00;
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    background-color: #ffd700;
     color: #333;
+    font-weight: 600;
     font-size: 1rem;
-    padding: 10px;
+    padding: 12px;
     border: none;
     cursor: pointer;
-    transition: 0.3s;
-    display: block;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form button:hover {
-    background-color: #e6b800
+    background-color: #e6c200;
+    transform: translateY(-2px);
 }
-
 /* FOOTER */
 footer {
     background-color: #000;
@@ -516,3 +562,118 @@ hr {
     opacity: 1;
     max-height: 200px;
   }
+
+
+
+  /* DOE - Estilo atualizado */
+.section-ofertas {
+    /* background: linear-gradient(to right, #1e3c72, #2a5298); */
+    color: #ffffff;
+    padding: 90px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.ofertas-container {
+    max-width: 700px;
+    margin: 0 auto;
+    /* background: rgba(255, 255, 255, 0.07); */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.ofertas-container:hover {
+    transform: translateY(-5px);
+}
+
+.section-ofertas h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #ffdd57;
+    font-weight: 600;
+}
+
+.versiculo {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #e6e6e6;
+}
+
+.versiculo span {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #d0d0d0;
+}
+
+.descricao {
+    margin-bottom: 35px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #f0f0f0;
+}
+
+/* Blocos com dados */
+.dados-bancarios, .pix-box {
+    margin-bottom: 30px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.30);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #ffd700;
+}
+
+/* Títulos das seções */
+.dados-bancarios h3,
+.pix-box h3 {
+    color: #ffdd57;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.pix-box p,
+.dados-bancarios p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #f5f5f5;
+    word-break: break-word;
+}
+
+/* Botão PIX */
+.botao-pix {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffdd57;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-pix:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
+}
+
+/* Confirmação de cópia */
+.confirmacao {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #9effa8;
+}
+
+/* QR Code responsivo */
+.qrcode img {
+    width: 180px;
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
