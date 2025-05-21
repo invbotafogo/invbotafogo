@@ -21,8 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    const botao = document.getElementById("copiar-btn");
+    if (botao) {
+        botao.addEventListener("click", copiarPix);
+    }
+
+
     carregarVideos();
     mostrarProximoCulto();
+    
 });
 
 async function loadComponent(selector, file) {
@@ -35,6 +42,16 @@ async function loadComponent(selector, file) {
     } catch (error) {
         console.error(error);
     }
+}
+
+function copiarPix() {
+    const chave = document.getElementById("chave-pix").innerText;
+    navigator.clipboard.writeText(chave).then(function() {
+        document.getElementById("confirmacao-pix").textContent = "Chave PIX copiada!";
+        setTimeout(() => {
+            document.getElementById("confirmacao-pix").textContent = "";
+        }, 3000);
+    });
 }
 
 // Carrega os últimos 3 vídeos do canal
@@ -68,7 +85,9 @@ async function carregarVideos() {
     }
 }
 
-// Mostra o próximo culto (ou se está ao vivo)
+
+
+/// Mostra o próximo culto (ou se está ao vivo)
 function mostrarProximoCulto() {
     const container = document.getElementById("proximo-culto");
     if (!container) return;
@@ -76,9 +95,9 @@ function mostrarProximoCulto() {
     const agora = new Date();
 
     const cultos = [
-        { dia: 3, hora: 19 }, // quarta 19h
-        { dia: 0, hora: 10 }, // domingo 10h
-        { dia: 0, hora: 19 }  // domingo 19h
+        { dia: 3, hora: 19, minutos: 30 }, // quarta 19h30
+        { dia: 0, hora: 10, minutos: 0 },  // domingo 10h00
+        { dia: 0, hora: 19, minutos: 0 }   // domingo 19h00
     ];
 
     const proximoCulto = cultos
@@ -86,20 +105,21 @@ function mostrarProximoCulto() {
             const dataCulto = new Date(agora);
             const diffDias = (culto.dia - dataCulto.getDay() + 7) % 7;
             dataCulto.setDate(dataCulto.getDate() + diffDias);
-            dataCulto.setHours(culto.hora, 0, 0, 0);
+            dataCulto.setHours(culto.hora, culto.minutos, 0, 0);
             return dataCulto;
         })
-        .filter(data => data > agora || (agora - data <= 2 * 60 * 60 * 1000)) // em até 2h depois
+        .filter(data => data > agora || (agora - data <= 2 * 60 * 60 * 1000)) // mostrar até 2h após
         .sort((a, b) => a - b)[0];
 
     if (!proximoCulto) return;
 
     const horaFormatada = proximoCulto.toLocaleString('pt-BR', {
-        weekday: 'long', hour: '2-digit', minute: '2-digit'
+        weekday: 'long',
+        hour: '2-digit',
+        minute: '2-digit'
     });
 
     const link = "https://www.youtube.com/@igrejadenovavidabotafogo3785/live";
-
 
     const estaAoVivo = proximoCulto <= agora;
 
