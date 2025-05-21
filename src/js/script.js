@@ -39,7 +39,7 @@ async function loadComponent(selector, file) {
 
 // Carrega os últimos 3 vídeos do canal
 async function carregarVideos() {
-    const apiKey = 'AIzaSyDZ3SmZsMnIMuFzKIU-DtY6Ga7DQhYoFMM';
+    const apiKey = 'AIzaSyBgXtC_kaKRq3E-WusWXXdqi0Bd1fNhnyI';
     const channelId = 'UCLuWhw8fYakYDzM9SlNXVKg';
 
     try {
