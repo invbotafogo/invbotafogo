@@ -1,5 +1,7 @@
 import "../css/styles.css";
 
+let lastExpandedId = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     loadComponent("#header", "header.html");
     loadComponent("#footer", "footer.html");
@@ -12,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (homeSection && cultosSection) {
             if (window.scrollY > 100) {
                 homeSection.classList.add('fade-out');
+                cultosSection.style.transition = 'opacity 1s ease-in-out'; // Colocado antes da alteração de opacity
                 cultosSection.style.opacity = 1;
-                cultosSection.style.transition = 'opacity 1s ease-in-out';
             } else {
                 homeSection.classList.remove('fade-out');
                 cultosSection.style.opacity = 0;
@@ -21,16 +23,57 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Botão copiar pix
     const botao = document.getElementById("copiar-btn");
     if (botao) {
         botao.addEventListener("click", copiarPix);
     }
 
+    // Seleciona os cards antes de usar
+    const cards = document.querySelectorAll('.card'); // <-- Ajuste aqui o seletor para seus cards
+    const expandedContent = document.getElementById('expanded-content');
+    let lastExpandedId = null;
 
+    if (cards && expandedContent) {
+        cards.forEach((card) => {
+            card.addEventListener("click", () => {
+                const id = card.id;
+                const allExpandedItems = document.querySelectorAll("#expanded-items .expanded-item");
+
+                expandedContent.innerHTML = "";
+
+                if (!id) {
+                    // Se for "Ver todos"
+                    allExpandedItems.forEach((item) => {
+                        expandedContent.appendChild(item.cloneNode(true));
+                    });
+                } else {
+                    const item = document.querySelector(`#expanded-items .expanded-item[data-id="${id}"]`);
+                    if (item) {
+                        expandedContent.appendChild(item.cloneNode(true));
+                    }
+                }
+
+                expandedContent.classList.remove("hidden");
+                expandedContent.scrollIntoView({ behavior: "smooth" });
+
+                lastExpandedId = id;
+            });
+        });
+
+        // Clique direto no bloco expandido = fecha
+        expandedContent.addEventListener('click', () => {
+            expandedContent.classList.add('hidden');
+            expandedContent.innerHTML = '';
+            lastExpandedId = null;
+        });
+    }
+
+    // Funções que você chamou (certifique-se que elas existem)
     carregarVideos();
     mostrarProximoCulto();
-    
 });
+
 
 async function loadComponent(selector, file) {
     try {

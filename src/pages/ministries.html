@@ -1,116 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministérios - INVB</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministérios - INVB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div id="header"></div> <!-- Header será injetado aqui -->
+  <div id="header"></div>
 
-    <div id="main">
+  <div id="main">
+    <div id="expanded-content" class="expanded-content hidden"></div>
 
-      <div id="expanded-content" class="expanded-content hidden"></div>
-        <div class="cards-container">
-          
-  
-            <div class="card" id="louvor">
-              <img src="../assets/images/image2.png" alt="Louvor">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério De Louvor</div>
-                <div class="card-description">
-                  Responsável por conduzir a igreja em adoração. Ensaios semanais, seleções musicais e coordenação com pregadores.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card" id="infantil">
-              <img src="../assets/images/infantil.png" alt="Infantil">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério Infantil</div>
-                <div class="card-description">
-                  Cuida das crianças durante os cultos. Promove atividades, ensino bíblico e recreação.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card" id="intercessao">
-              <img src="../assets/images/image.png" alt="Intercessão">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério De Intercessão</div>
-                <div class="card-description">
-                  Grupo dedicado à oração e intercessão pela igreja e seus membros. Vigílias e reuniões de oração.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card" id="comunicacoes">
-              <img src="../assets/images/image.png" alt="Comunicações">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério De Comunicações</div>
-                <div class="card-description">
-                  Responsável pela mídia, transmissões ao vivo, redes sociais e anúncios da igreja.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card" id="juventude">
-              <img src="../assets/images/juventude.jpg" alt="Juventude">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério Da Juventude</div>
-                <div class="card-description">
-                  Acompanha os jovens da igreja com eventos, estudos e discipulados específicos para a faixa etária.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card" id="mulheres">
-              <img src="../assets/images/image.png" alt="Mulheres">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério De Mulheres</div>
-                <div class="card-description">
-                  Atividades, encontros e apoio para mulheres da igreja. Ensinos e discipulados direcionados.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card" id="homens">
-              <img src="../assets/images/image.png" alt="Homens">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ministério De Homens</div>
-                <div class="card-description">
-                  Reuniões e discipulados voltados para os homens da igreja, fortalecendo laços e fé.
-                </div>
-              </div>
-            </div>
-          
-            <div class="card">
-              <img src="../assets/images/image.png" alt="Ver todos">
-              <div class="card-content">
-                <div class="card-label">MINISTÉRIO</div>
-                <div class="card-title">Ver todos</div>
-                <div class="card-description">
-                  Clique para visualizar todos os ministérios e conhecer mais sobre cada área de atuação.
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="cards-container">
+
+      <div class="card" id="louvor">
+        <img src="../assets/images/image2.png" alt="Louvor">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério De Louvor</div>
+          <div class="card-description">Responsável por conduzir a igreja em adoração. Ensaios semanais, seleções musicais e coordenação com pregadores.</div>
+        </div>
+      </div>
+
+      <div class="card" id="infantil">
+        <img src="../assets/images/infantil.png" alt="Infantil">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério Infantil</div>
+          <div class="card-description">Cuida das crianças durante os cultos. Promove atividades, ensino bíblico e recreação.</div>
+        </div>
+      </div>
+
+      <div class="card" id="intercessao">
+        <img src="../assets/images/image.png" alt="Intercessão">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério De Intercessão</div>
+          <div class="card-description">Grupo dedicado à oração e intercessão pela igreja e seus membros. Vigílias e reuniões de oração.</div>
+        </div>
+      </div>
+
+      <div class="card" id="comunicacoes">
+        <img src="../assets/images/image.png" alt="Comunicações">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério De Comunicações</div>
+          <div class="card-description">Responsável pela mídia, transmissões ao vivo, redes sociais e anúncios da igreja.</div>
+        </div>
+      </div>
+
+      <div class="card" id="juventude">
+        <img src="../assets/images/juventude.jpg" alt="Juventude">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério Da Juventude</div>
+          <div class="card-description">Acompanha os jovens da igreja com eventos, estudos e discipulados específicos para a faixa etária.</div>
+        </div>
+      </div>
+
+      <div class="card" id="mulheres">
+        <img src="../assets/images/image.png" alt="Mulheres">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério De Mulheres</div>
+          <div class="card-description">Atividades, encontros e apoio para mulheres da igreja. Ensinos e discipulados direcionados.</div>
+        </div>
+      </div>
+
+      <div class="card" id="homens">
+        <img src="../assets/images/image.png" alt="Homens">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ministério De Homens</div>
+          <div class="card-description">Reuniões e discipulados voltados para os homens da igreja, fortalecendo laços e fé.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../assets/images/image.png" alt="Ver todos">
+        <div class="card-content">
+          <div class="card-label">MINISTÉRIO</div>
+          <div class="card-title">Ver todos</div>
+          <div class="card-description">Clique para visualizar todos os ministérios e conhecer mais sobre cada área de atuação.</div>
+        </div>
+      </div>
+
     </div>
-    
 
-    <div id="footer"></div> <!-- Footer será injetado aqui -->
+    <div id="expanded-items" style="display: none;">
 
+      <div class="expanded-item" data-id="louvor">
+        <img class="expanded-image" src="../assets/images/image2.png" alt="Louvor">
+        <div class="expanded-text">
+          <h2>Ministério de Louvor</h2>
+          <p>O Ministério de Louvor lidera momentos de adoração por meio da música. Os integrantes participam de ensaios regulares, cultivam uma vida devocional ativa e colaboram com pregadores para alinhar as canções à mensagem do culto.</p>
+        </div>
+      </div>
+
+      <div class="expanded-item" data-id="infantil">
+        <img class="expanded-image" src="../assets/images/infantil.png" alt="Infantil">
+        <div class="expanded-text">
+          <h2>Ministério Infantil</h2>
+          <p>Responsável por criar um ambiente seguro, acolhedor e bíblico para as crianças. O ministério prepara lições, brincadeiras e dinâmicas que ensinam os princípios cristãos de forma divertida e pedagógica.</p>
+        </div>
+      </div>
+
+      <div class="expanded-item" data-id="intercessao">
+        <img class="expanded-image" src="../assets/images/image.png" alt="Intercessão">
+        <div class="expanded-text">
+          <h2>Ministério de Intercessão</h2>
+          <p>Formado por membros comprometidos com a oração contínua pela igreja, seus líderes, famílias e causas diversas. Organiza vigílias, campanhas e acompanha pedidos de oração enviados pela comunidade.</p>
+        </div>
+      </div>
+
+      <div class="expanded-item" data-id="comunicacoes">
+        <img class="expanded-image" src="../assets/images/image.png" alt="Comunicações">
+        <div class="expanded-text">
+          <h2>Ministério de Comunicações</h2>
+          <p>Trabalha com a gestão das redes sociais, transmissões ao vivo, gravações, fotografia e design. Garante que a mensagem da igreja alcance mais pessoas por meios digitais e presenciais.</p>
+        </div>
+      </div>
+
+      <div class="expanded-item" data-id="juventude">
+        <img class="expanded-image" src="../assets/images/juventude.jpg" alt="Juventude">
+        <div class="expanded-text">
+          <h2>Ministério da Juventude</h2>
+          <p>Envolve os jovens com programações que abordam temas relevantes, estudos bíblicos, atividades recreativas e discipulados que promovem comunhão, identidade cristã e propósito.</p>
+        </div>
+      </div>
+
+      <div class="expanded-item" data-id="mulheres">
+        <img class="expanded-image" src="../assets/images/image.png" alt="Mulheres">
+        <div class="expanded-text">
+          <h2>Ministério de Mulheres</h2>
+          <p>Oferece apoio espiritual, emocional e relacional para mulheres. Promove encontros, devocionais, palestras e discipulados voltados ao crescimento individual e à edificação da família.</p>
+        </div>
+      </div>
+
+      <div class="expanded-item" data-id="homens">
+        <img class="expanded-image" src="../assets/images/image.png" alt="Homens">
+        <div class="expanded-text">
+          <h2>Ministério de Homens</h2>
+          <p>Fomenta o desenvolvimento espiritual e a liderança cristã entre os homens. Reúne-se regularmente para orações, estudos, mentorias e ações que promovem responsabilidade e unidade.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
 </body>
-
 </html>
