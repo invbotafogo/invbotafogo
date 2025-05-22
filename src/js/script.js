@@ -69,6 +69,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const ministerioId = urlParams.get('ministerio');
+
+    if (ministerioId) {
+        const expandedContent = document.getElementById('expanded-content');
+        const item = document.querySelector(`#expanded-items .expanded-item[data-id="${ministerioId}"]`);
+
+        if (expandedContent && item) {
+            expandedContent.innerHTML = "";
+            expandedContent.appendChild(item.cloneNode(true));
+            expandedContent.classList.remove("hidden");
+            expandedContent.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     // Funções que você chamou (certifique-se que elas existem)
     carregarVideos();
     mostrarProximoCulto();

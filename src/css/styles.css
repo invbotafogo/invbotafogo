@@ -620,6 +620,10 @@ hr {
     flex-direction: column;
     justify-content: center;
   }
+
+  .expanded-text h2 {
+    text-align: center;
+  }
   
   .hidden {
     display: none;
