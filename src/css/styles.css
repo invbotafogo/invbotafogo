@@ -8,12 +8,17 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed; */
     background-size: cover;
     color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.section-index{
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
+background-size: cover;
 }
 
 /* Estilos do cabeçalho */
@@ -197,6 +202,8 @@ nav ul li a:hover {
 
 /* Seção Contato */
 .section-contato {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,6 +484,11 @@ hr {
 
 /* MINISTÉRIOS */
 
+.section-ministerios{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -515,7 +527,7 @@ hr {
   }
   
   .card:hover img {
-    transform: scale(1.2) translate(10%, 10%);
+    transform: scale(1.2);
     filter: blur(6px);
   }
   
@@ -550,9 +562,10 @@ hr {
   
   .card-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.80rem;
+    font-size: 15px;
     opacity: 0;
     max-height: 0;
+    font-weight: bold;
     overflow: hidden;
     transition: opacity 0.5s ease, max-height 0.5s ease;
   }
