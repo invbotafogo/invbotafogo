@@ -42,17 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 expandedContent.innerHTML = "";
 
-                if (!id) {
-                    // Se for "Ver todos"
-                    allExpandedItems.forEach((item) => {
-                        expandedContent.appendChild(item.cloneNode(true));
-                    });
-                } else {
+                
                     const item = document.querySelector(`#expanded-items .expanded-item[data-id="${id}"]`);
                     if (item) {
                         expandedContent.appendChild(item.cloneNode(true));
                     }
-                }
+                
 
                 expandedContent.classList.remove("hidden");
                 expandedContent.scrollIntoView({ behavior: "smooth" });

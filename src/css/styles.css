@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-.section-index{
+.section-index, .section-cultos, .section-doe{
 background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.png') no-repeat center center fixed;
 background-size: cover;
 }
@@ -165,7 +165,7 @@ nav ul li a:hover {
 }
 
 /* Seção Cultos */
-.section-cultos {
+.div-cultos {
     padding: 50px;
     background-color: #f8f9fa;
     color: #333;
