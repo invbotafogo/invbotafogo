@@ -18,6 +18,11 @@ jobs:
         with:
           fetch-depth: 0  # necessário para histórico completo
 
+      - name: Clonar a branch `data`
+        run: |
+          git checkout data
+          git merge -X main
+
       - name: Instalar Python e dependências
         run: pip install requests
 
@@ -26,10 +31,6 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
         run: python ./scripts/save_last_three_youtube_videos.py
-
-      - name: Clonar a branch `data`
-        run: |
-          git checkout data
 
       - name: Copiar videos.json para branch `data`
         run: |
