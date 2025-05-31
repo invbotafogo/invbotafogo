@@ -30,6 +30,7 @@ def main():
     }
 
     response = requests.get('https://www.googleapis.com/youtube/v3/search', params=params)
+    response.raise_for_status()
 
     with open('videos.json', 'w') as f:
         json.dump(response.json(), f, indent=2)
