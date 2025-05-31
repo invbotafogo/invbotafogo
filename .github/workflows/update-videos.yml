@@ -28,7 +28,6 @@ jobs:
 
       - name: Copiar videos.json para branch `data`
         run: |
-          mv videos.json ./videos.json
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add videos.json
