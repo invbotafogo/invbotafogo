@@ -11,6 +11,7 @@ permissions:
 jobs:
   gerar-json:
     runs-on: ubuntu-latest
+    environment: data
     steps:
       - name: Clonar o repositório
         uses: actions/checkout@v3

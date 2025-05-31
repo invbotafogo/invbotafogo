@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-API_KEY = os.getenv('YOUTUBE_API_KEY')
+API_KEY = os.getenv('API_KEY')
 CHANNEL_ID = os.getenv('CHANNEL_ID')
 MAX_RESULTS = 3
 
