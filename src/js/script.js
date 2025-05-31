@@ -109,11 +109,8 @@ function copiarPix() {
 
 // Carrega os últimos 3 vídeos do canal
 async function carregarVideos() {
-    const apiKey = 'AIzaSyBgXtC_kaKRq3E-WusWXXdqi0Bd1fNhnyI';
-    const channelId = 'UCLuWhw8fYakYDzM9SlNXVKg';
-
     try {
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=3`);
+        const response = await fetch(`https://raw.githubusercontent.com/invbotafogo/invbotafogo/refs/heads/data/videos.json`);
         const data = await response.json();
 
         const container = document.getElementById("videos");
