@@ -2,7 +2,7 @@ name: Atualizar vídeos do YouTube
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Roda a cada hora
+    - cron: '0 12,22 * * *'  # Roda 12:00 e 22:00 horas todo dia
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
         env:
           API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-        run: python fetch_videos.py
+        run: python ./scripts/save_last_three_youtube_videos.py
 
       - name: Clonar a branch `data`
         run: |
