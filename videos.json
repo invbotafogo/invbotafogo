@@ -1,14 +1,114 @@
 {
-  "error": {
-    "code": 403,
-    "message": "Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.",
-    "errors": [
-      {
-        "message": "Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.",
-        "domain": "global",
-        "reason": "forbidden"
+  "kind": "youtube#searchListResponse",
+  "etag": "wMhbY7Hl8jrry3TCAq01riKUb6w",
+  "nextPageToken": "CAMQAA",
+  "regionCode": "BR",
+  "pageInfo": {
+    "totalResults": 154,
+    "resultsPerPage": 3
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Kgx1qlZl52W-7JynMT5-gTrXT1U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tOPX3hlykCQ"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-30T19:46:25Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Chega de Se Esconder: Deus Est\u00e1 Chamando Voc\u00ea - Pra. Daniela",
+        "description": "Culto de quarta-feira \u00e0 noite 28 de maio de 2025 #igreja #jesus #deus #f\u00e9 #biblia #pentecostal #espiritosanto #gospel.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tOPX3hlykCQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tOPX3hlykCQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tOPX3hlykCQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA DE NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-30T19:46:25Z"
       }
-    ],
-    "status": "PERMISSION_DENIED"
-  }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CPGFqaz2N7adglNvvxexxyQc26g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SMZdBQ8_jP8"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-30T19:20:07Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Ainda Que: A F\u00e9 Que Enfrenta o Imposs\u00edvel - Pr. Luiz Carlos",
+        "description": "Culto domingo \u00e0 noite dia 25 de maio de 2025.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SMZdBQ8_jP8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SMZdBQ8_jP8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SMZdBQ8_jP8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA DE NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-30T19:20:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EvjW9_a74Lnm2kjwAAYjqGsTJRM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zdh-S4B5Ht8"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-30T17:50:02Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Deus prover\u00e1! - Pr. M\u00e1rcio Soares",
+        "description": "Culto de quarta-feira \u00e0 noite 14 de maio de 2025.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zdh-S4B5Ht8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zdh-S4B5Ht8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zdh-S4B5Ht8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA DE NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-30T17:50:02Z"
+      }
+    }
+  ]
 }
