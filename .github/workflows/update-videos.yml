@@ -28,7 +28,6 @@ jobs:
 
       - name: Clonar a branch `data`
         run: |
-          git fetch origin data:data || git checkout --orphan data
           git checkout data
 
       - name: Copiar videos.json para branch `data`
