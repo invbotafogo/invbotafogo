@@ -1,5 +1,7 @@
-# Site Igreja de Nova Vida Botafogo
-Site estático da Igreja Nova Vida de Botafogo.
+# Site Igreja de Nova Vida Botafogo 
+Site estático da Igreja Nova Vida de Botafogo. 
+
+[Acesse o site](https://invbotafogo.github.io/invbotafogo/)
 
 # Como executar o site em dev?
 Para servir o site em dev precisamos do programa [npm](https://nodejs.org).
