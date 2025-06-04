@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Efeito de fade-out na seção de boas-vindas
     window.addEventListener('scroll', function () {
         const homeSection = document.querySelector('.section-home');
-        const cultosSection = document.querySelector('.section-cultos');
+        const cultosSection = document.querySelector('.div-cultos');
 
         if (homeSection && cultosSection) {
             if (window.scrollY > 100) {
