@@ -447,6 +447,10 @@ nav ul li a:hover {
     background-color: #e6c200;
     transform: translateY(-2px);
 }
+
+
+
+
 /* FOOTER */
 footer {
     background-color: #000;
@@ -507,8 +511,6 @@ hr {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 5px;
     flex-wrap: wrap;
     gap: 40px;
 }
@@ -553,6 +555,7 @@ hr {
 
 .footer-contact {
     width: auto; 
+    margin-right: 10px;
     text-align: left;
 }
 
@@ -576,6 +579,18 @@ hr {
 .footer-contact a:hover {
     text-decoration: underline;
 }
+
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #ccc;
+    background-color: #111;
+  }
+  
+
+
+
 
 /* Próximo Culto */
 .proximo-culto {
