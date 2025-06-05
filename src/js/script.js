@@ -9,19 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Efeito de fade-out na seção de boas-vindas
     window.addEventListener('scroll', function () {
         const homeSection = document.querySelector('.section-home');
-        const cultosSection = document.querySelector('.div-cultos');
-
-        if (homeSection && cultosSection) {
+        const eventosCultosSection = document.querySelector('.section-cultos-unificada');
+        const historiaSection = document.querySelector('.section-historia');
+    
+        if (homeSection && eventosCultosSection && historiaSection) {
             if (window.scrollY > 100) {
                 homeSection.classList.add('fade-out');
-                cultosSection.style.transition = 'opacity 1s ease-in-out'; // Colocado antes da alteração de opacity
-                cultosSection.style.opacity = 1;
+                eventosCultosSection.style.opacity = 1;
+                historiaSection.style.opacity = 1;
             } else {
                 homeSection.classList.remove('fade-out');
-                cultosSection.style.opacity = 0;
+                eventosCultosSection.style.opacity = 0;
+                historiaSection.style.opacity = 0;
             }
         }
-    });
+    });    
+    
 
     // Botão copiar pix
     const botao = document.getElementById("copiar-btn");
@@ -79,6 +82,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+  
+    let index = 0;
+  
+    function updateCarousel() {
+      const width = items[0].offsetWidth;
+      track.style.transform = `translateX(-${index * width}px)`;
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % items.length;
+      updateCarousel();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + items.length) % items.length;
+      updateCarousel();
+    });
+  
+    window.addEventListener('resize', updateCarousel);
+
+
+
     // Funções que você chamou (certifique-se que elas existem)
     carregarVideos();
     mostrarProximoCulto();
@@ -106,6 +136,7 @@ function copiarPix() {
         }, 3000);
     });
 }
+
 
 // Carrega os últimos 3 vídeos do canal
 async function carregarVideos() {
