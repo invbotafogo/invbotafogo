@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const homeSection = document.querySelector('.section-home');
         const eventosCultosSection = document.querySelector('.section-cultos-unificada');
         const historiaSection = document.querySelector('.section-historia');
-    
+
         if (homeSection && eventosCultosSection && historiaSection) {
             if (window.scrollY > 100) {
                 homeSection.classList.add('fade-out');
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 historiaSection.style.opacity = 0;
             }
         }
-    });    
-    
+    });
+
 
     // Botão copiar pix
     const botao = document.getElementById("copiar-btn");
@@ -45,12 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 expandedContent.innerHTML = "";
 
-                
-                    const item = document.querySelector(`#expanded-items .expanded-item[data-id="${id}"]`);
-                    if (item) {
-                        expandedContent.appendChild(item.cloneNode(true));
-                    }
-                
+                const item = document.querySelector(`#expanded-items .expanded-item[data-id="${id}"]`);
+                if (item) {
+                    expandedContent.appendChild(item.cloneNode(true));
+                }
+
 
                 expandedContent.classList.remove("hidden");
                 expandedContent.scrollIntoView({ behavior: "smooth" });
@@ -87,24 +86,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll('.carousel-item');
     const prevBtn = document.querySelector('.carousel-btn.prev');
     const nextBtn = document.querySelector('.carousel-btn.next');
-  
+
     let index = 0;
-  
+
     function updateCarousel() {
-      const width = items[0].offsetWidth;
-      track.style.transform = `translateX(-${index * width}px)`;
+        const width = items[0].offsetWidth;
+        track.style.transform = `translateX(-${index * width}px)`;
     }
-  
-    nextBtn.addEventListener('click', () => {
-      index = (index + 1) % items.length;
-      updateCarousel();
-    });
-  
-    prevBtn.addEventListener('click', () => {
-      index = (index - 1 + items.length) % items.length;
-      updateCarousel();
-    });
-  
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % items.length;
+            updateCarousel();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+    }
+
     window.addEventListener('resize', updateCarousel);
 
 
@@ -129,7 +132,7 @@ async function loadComponent(selector, file) {
 
 function copiarPix() {
     const chave = document.getElementById("chave-pix").innerText;
-    navigator.clipboard.writeText(chave).then(function() {
+    navigator.clipboard.writeText(chave).then(function () {
         document.getElementById("confirmacao-pix").textContent = "Chave PIX copiada!";
         setTimeout(() => {
             document.getElementById("confirmacao-pix").textContent = "";
