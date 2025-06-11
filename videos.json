@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "61HL-g6nBuSGqmNu80BmE9ewKmA",
+  "etag": "Lz0Zr3WLYsX2tYVrLLaNqLFOVOM",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 156,
+    "totalResults": 159,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "oEXsL1KWpGa4dD3ge0Bl3cVjw3Q",
+      "etag": "gRdUsBJ10QDyGHd0EhiV-NpnVAo",
       "id": {
         "kind": "youtube#video",
-        "videoId": "QnMwctZRJKw"
+        "videoId": "BVG7fgYcSHk"
       },
       "snippet": {
-        "publishedAt": "2025-06-01T18:17:36Z",
+        "publishedAt": "2025-06-11T17:33:52Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "ARREPENDIMENTO: AT\u00c9 QUE PONTO H\u00c1 SINCERIDADE?- Pr. Marcio Soares",
-        "description": "Culto domingo de manh\u00e3 dia 25 de maio de 2025.",
+        "title": "Eu e minha casa seguiremos a Deus - Pr. M\u00e1rcio Soares",
+        "description": "Culto domingo de manh\u00e3 dia 6 de junho de 2025.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/QnMwctZRJKw/default.jpg",
+            "url": "https://i.ytimg.com/vi/BVG7fgYcSHk/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/QnMwctZRJKw/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/BVG7fgYcSHk/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/QnMwctZRJKw/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/BVG7fgYcSHk/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "IGREJA DE NOVA VIDA DE BOTAFOGO",
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-06-01T18:17:36Z"
+        "publishTime": "2025-06-11T17:33:52Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "wja8TIMRa1IBLysxT8bNcGAOsg0",
+      "etag": "2UcNZqvEMeOHuInpWg2_4FysbLA",
       "id": {
         "kind": "youtube#video",
-        "videoId": "Q1J2GK_81L0"
+        "videoId": "6ny3_q0NCSk"
       },
       "snippet": {
-        "publishedAt": "2025-06-01T18:13:48Z",
+        "publishedAt": "2025-06-11T17:10:42Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse: Escatologia - Parte 5",
+        "title": "O Deus a quem servimos pode livrar  - Pr. Luiz Carlos",
+        "description": "Culto domingo de noite dia 1 de junho de 2025.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6ny3_q0NCSk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6ny3_q0NCSk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6ny3_q0NCSk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-11T17:10:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QfK8FZulmiHJNx8hh_PRHyS4PFU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "foY5i2GJQHI"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-11T16:55:42Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse: Escatologia - Parte 6",
         "description": "Escola b\u00edblica dominical dia 01 de Junho de 2025 #ebd #biblia #apocalipse.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/Q1J2GK_81L0/default.jpg",
+            "url": "https://i.ytimg.com/vi/foY5i2GJQHI/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/Q1J2GK_81L0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/foY5i2GJQHI/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/Q1J2GK_81L0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/foY5i2GJQHI/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "IGREJA DE NOVA VIDA DE BOTAFOGO",
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-06-01T18:13:48Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "60t0G5Q2aX9I9IVlvEF-hOaih38",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "tOPX3hlykCQ"
-      },
-      "snippet": {
-        "publishedAt": "2025-05-30T19:46:25Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Chega de Se Esconder: Deus Est\u00e1 Chamando Voc\u00ea - Pra. Daniela",
-        "description": "Culto de quarta-feira \u00e0 noite 28 de maio de 2025 #igreja #jesus #deus #f\u00e9 #biblia #pentecostal #espiritosanto #gospel.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/tOPX3hlykCQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/tOPX3hlykCQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/tOPX3hlykCQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA DE NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-05-30T19:46:25Z"
+        "publishTime": "2025-06-11T16:55:42Z"
       }
     }
   ]
