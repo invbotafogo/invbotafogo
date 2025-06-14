@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Lz0Zr3WLYsX2tYVrLLaNqLFOVOM",
+  "etag": "Heo-5Ufw41NS9Wn9GVLwOsp3Qio",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 159,
+    "totalResults": 160,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EyCzt6DKiwmvh9q5ZFFFLccK0wE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "s56MDpkz2Os"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-14T14:25:40Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Sujeitai-vos a Deus - Pr. Humberto Menezes",
+        "description": "Culto quarta-feira a noite dia 11 de junho de 2025 Pedro I 5:5-10.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/s56MDpkz2Os/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/s56MDpkz2Os/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/s56MDpkz2Os/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-14T14:25:40Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "gRdUsBJ10QDyGHd0EhiV-NpnVAo",
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "2UcNZqvEMeOHuInpWg2_4FysbLA",
+      "etag": "GZoKgPbGE84nu_b3-ly0Q2uQwYI",
       "id": {
         "kind": "youtube#video",
         "videoId": "6ny3_q0NCSk"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-11T17:10:42Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "QfK8FZulmiHJNx8hh_PRHyS4PFU",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "foY5i2GJQHI"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-11T16:55:42Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse: Escatologia - Parte 6",
-        "description": "Escola b\u00edblica dominical dia 01 de Junho de 2025 #ebd #biblia #apocalipse.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/foY5i2GJQHI/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/foY5i2GJQHI/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/foY5i2GJQHI/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-11T16:55:42Z"
       }
     }
   ]
