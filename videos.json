@@ -1,13 +1,81 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Heo-5Ufw41NS9Wn9GVLwOsp3Qio",
+  "etag": "cN4McXwtDyNenD8B2QROHC7RxUE",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 160,
+    "totalResults": 162,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3KO0O7O-4vu7XgJEunjz4bmCmTU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yJppQXHC4hk"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-16T02:27:45Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Devemos servir com excel\u00eancia - Pr. M\u00e1rcio Soares",
+        "description": "Culto domingo de manh\u00e3 dia 15 de junho de 2025.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yJppQXHC4hk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yJppQXHC4hk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yJppQXHC4hk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-16T02:27:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ldA0_QhIA3ntpCJ96Ct01q9w0yE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ns_fhLRZfBc"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-16T02:07:33Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse: Escatologia - Parte 7",
+        "description": "Escola b\u00edblica dominical dia 15 de Junho de 2025 #ebd #biblia #apocalipse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ns_fhLRZfBc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ns_fhLRZfBc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ns_fhLRZfBc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-16T02:07:33Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "EyCzt6DKiwmvh9q5ZFFFLccK0wE",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-14T14:25:40Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "gRdUsBJ10QDyGHd0EhiV-NpnVAo",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "BVG7fgYcSHk"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-11T17:33:52Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Eu e minha casa seguiremos a Deus - Pr. M\u00e1rcio Soares",
-        "description": "Culto domingo de manh\u00e3 dia 6 de junho de 2025.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/BVG7fgYcSHk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/BVG7fgYcSHk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/BVG7fgYcSHk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-11T17:33:52Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "GZoKgPbGE84nu_b3-ly0Q2uQwYI",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "6ny3_q0NCSk"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-11T17:10:42Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Deus a quem servimos pode livrar  - Pr. Luiz Carlos",
-        "description": "Culto domingo de noite dia 1 de junho de 2025.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/6ny3_q0NCSk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/6ny3_q0NCSk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/6ny3_q0NCSk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-11T17:10:42Z"
       }
     }
   ]
