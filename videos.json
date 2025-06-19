@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "cN4McXwtDyNenD8B2QROHC7RxUE",
+  "etag": "x8F-gfopODt0XxF-txmHrgPBDqI",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 162,
+    "totalResults": 163,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pdm8i4ewfN6qW10ZVGZ1QKtfDGg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "caC0-f5Y4Yg"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-18T23:30:51Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Abra\u00e3o recebe uma visita- Pr Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/caC0-f5Y4Yg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/caC0-f5Y4Yg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/caC0-f5Y4Yg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-18T23:30:51Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "3KO0O7O-4vu7XgJEunjz4bmCmTU",
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ldA0_QhIA3ntpCJ96Ct01q9w0yE",
+      "etag": "MdbpIwa2aLfVxjKU6wFvKU5K4ts",
       "id": {
         "kind": "youtube#video",
         "videoId": "Ns_fhLRZfBc"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-16T02:07:33Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "EyCzt6DKiwmvh9q5ZFFFLccK0wE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "s56MDpkz2Os"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-14T14:25:40Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Sujeitai-vos a Deus - Pr. Humberto Menezes",
-        "description": "Culto quarta-feira a noite dia 11 de junho de 2025 Pedro I 5:5-10.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/s56MDpkz2Os/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/s56MDpkz2Os/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/s56MDpkz2Os/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-14T14:25:40Z"
       }
     }
   ]
