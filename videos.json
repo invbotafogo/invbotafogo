@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "AxJD9XUH4JU0O3uBmYKXDKAGqxs",
+  "etag": "PORFUkgRJv7r5lk-qlGF5-wZ3sI",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 166,
+    "totalResults": 167,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rHKzpB_ouwpYKb7uKaZBYqXFw4s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qmx7fax4u-U"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-23T02:10:11Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto da fam\u00edlia- Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qmx7fax4u-U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qmx7fax4u-U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qmx7fax4u-U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-23T02:10:11Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "tanprjVL9xUjMcakSMWWrW9rCJg",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-19T16:54:30Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "iaJTL4hi4sHcZiZyNr2QQZWblG8",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "caC0-f5Y4Yg"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-18T23:30:51Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Abra\u00e3o recebe uma visita - Pr. Luiz Carlos",
-        "description": "Culto domingo \u00e0 noite 15 de Junho de 2025.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/caC0-f5Y4Yg/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/caC0-f5Y4Yg/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/caC0-f5Y4Yg/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-18T23:30:51Z"
       }
     }
   ]
