@@ -1,16 +1,16 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "8FrNn7gkdgmzEFrYG2Dc31dxLZ8",
+  "etag": "xi4T5afOY_gXojLBnY3ftasIDa4",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 165,
+    "totalResults": 167,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "rHKzpB_ouwpYKb7uKaZBYqXFw4s",
+      "etag": "IMWydcDpnjQleyygiA5ENDv42VA",
       "id": {
         "kind": "youtube#video",
         "videoId": "qmx7fax4u-U"
@@ -18,8 +18,8 @@
       "snippet": {
         "publishedAt": "2025-06-23T02:10:11Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto da fam\u00edlia- Pr. Luiz Carlos",
-        "description": "",
+        "title": "Culto da fam\u00edlia - Pr. Luiz Carlos",
+        "description": "Culto domingo \u00e0 noite dia 22 de junho de 2025 2\u00aa Tim\u00f3teo 3:1-4.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/qmx7fax4u-U/default.jpg",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "tanprjVL9xUjMcakSMWWrW9rCJg",
+      "etag": "Zog6F6koWSKGB9JqY33z9fzItFc",
       "id": {
         "kind": "youtube#video",
         "videoId": "kmqWvObeyiQ"
@@ -52,8 +52,8 @@
       "snippet": {
         "publishedAt": "2025-06-22T16:39:55Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Mais que vencedores- Pr. Marcio Soares",
-        "description": "",
+        "title": "Mais que vencedores - Pr. Marcio Soares",
+        "description": "Culto domingo de manh\u00e3 dia 22 de junho de 2025 Romanos 8:37.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/kmqWvObeyiQ/default.jpg",
