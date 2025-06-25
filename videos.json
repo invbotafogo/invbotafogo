@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "xi4T5afOY_gXojLBnY3ftasIDa4",
+  "etag": "6bNcFNX8p3PsxF3h4_nTnoH1pGw",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 167,
+    "totalResults": 168,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ni7ifNNtQuPI4Kfd4bFjaEo4b80",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "S2v4D7edAZY"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-25T03:10:41Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse: Escatologia - Parte 8",
+        "description": "Escola b\u00edblica dominical dia 22 de Junho de 2025 #ebd #biblia #apocalipse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/S2v4D7edAZY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/S2v4D7edAZY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/S2v4D7edAZY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-25T03:10:41Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "IMWydcDpnjQleyygiA5ENDv42VA",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-22T16:39:55Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "GvJpZ9TMpmWyoxpOLyegUc_bxcg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Y3gngnkweCM"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-19T16:54:30Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Senhor \u00e9 contigo, homem e mulher valentes! Pr. Marcio Soares",
-        "description": "Culto quarta-feira \u00e0 noite dia 18 de junho de 2025 Ju\u00edzes 6:11-12.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Y3gngnkweCM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Y3gngnkweCM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Y3gngnkweCM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-19T16:54:30Z"
       }
     }
   ]
