@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "-NQsPJGnnl4xgy6szkUOKauHzbo",
+  "etag": "QBco5ywPVfMNWjwLynKAzNG6v-E",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 168,
+    "totalResults": 169,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mieUzT9HMLtI8GXwndrBc6J1oAA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1Y1QpGWuO40"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-28T15:08:49Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Tirai a pedra e Desatai- Pra. Daniela Neves",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-28T15:08:49Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "7L68BbMcFgqduLeQepWSCKNxA2Q",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-23T02:10:11Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Zog6F6koWSKGB9JqY33z9fzItFc",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "kmqWvObeyiQ"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-22T16:39:55Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Mais que vencedores - Pr. Marcio Soares",
-        "description": "Culto domingo de manh\u00e3 dia 22 de junho de 2025 Romanos 8:37.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/kmqWvObeyiQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/kmqWvObeyiQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/kmqWvObeyiQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-22T16:39:55Z"
       }
     }
   ]
