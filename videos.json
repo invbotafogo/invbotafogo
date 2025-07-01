@@ -1,16 +1,84 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "QBco5ywPVfMNWjwLynKAzNG6v-E",
+  "etag": "KuEeUeO93wkuBrslS_nC_vMdVV8",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 169,
+    "totalResults": 171,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "mieUzT9HMLtI8GXwndrBc6J1oAA",
+      "etag": "WKhmg4JYBFXZ0kPAWqSSiR4_kLA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "x6PoWCZyahk"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-01T02:19:11Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Aquele, pois, que pensa estar em p\u00e9 veja que n\u00e3o caia - Pr. Marcio Soares",
+        "description": "Culto domingo de manh\u00e3 dia 29 de junho de 2025 1 Cor\u00edntios 10:12.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/x6PoWCZyahk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/x6PoWCZyahk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/x6PoWCZyahk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-01T02:19:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IWi1QzIWzJe630Kn5t_7Sn9cqQs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4BEZ3cBxAxs"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-01T02:03:55Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse: Escatologia - Parte 9",
+        "description": "Escola b\u00edblica dominical dia 29 de Junho de 2025 #ebd #biblia #apocalipse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4BEZ3cBxAxs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4BEZ3cBxAxs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4BEZ3cBxAxs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-01T02:03:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x4UKKGR589wPToUpO3_h33jPoqM",
       "id": {
         "kind": "youtube#video",
         "videoId": "1Y1QpGWuO40"
@@ -18,8 +86,8 @@
       "snippet": {
         "publishedAt": "2025-06-28T15:08:49Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Tirai a pedra e Desatai- Pra. Daniela Neves",
-        "description": "",
+        "title": "Tirai a pedra e Desatai - Pra. Daniela Neves",
+        "description": "Culto quarta-feira \u00e0 noite dia 25 de junho de 2025.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/default.jpg",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-06-28T15:08:49Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "7L68BbMcFgqduLeQepWSCKNxA2Q",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "S2v4D7edAZY"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-25T03:10:41Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse: Escatologia - Parte 8",
-        "description": "Escola b\u00edblica dominical dia 22 de Junho de 2025 #ebd #biblia #apocalipse.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/S2v4D7edAZY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/S2v4D7edAZY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/S2v4D7edAZY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-25T03:10:41Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "rhT9UxYy17JqId7J3NEzu8eZjjE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "qmx7fax4u-U"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-23T02:10:11Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto da fam\u00edlia - Pr. Luiz Carlos",
-        "description": "Culto domingo \u00e0 noite dia 22 de junho de 2025 2\u00aa Tim\u00f3teo 3:1-4.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/qmx7fax4u-U/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/qmx7fax4u-U/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/qmx7fax4u-U/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-23T02:10:11Z"
       }
     }
   ]
