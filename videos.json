@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "KuEeUeO93wkuBrslS_nC_vMdVV8",
+  "etag": "84ZYb6_f3IjxN1JCRfVATEmpsJg",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 171,
+    "totalResults": 172,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TdkrotFR5WGKg_lyLs9n1LlMFmA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cPcJtfvQTkY"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-02T22:16:56Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "29 de junho de 2025",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cPcJtfvQTkY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cPcJtfvQTkY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cPcJtfvQTkY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-02T22:16:56Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "WKhmg4JYBFXZ0kPAWqSSiR4_kLA",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-07-01T02:03:55Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "x4UKKGR589wPToUpO3_h33jPoqM",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "1Y1QpGWuO40"
-      },
-      "snippet": {
-        "publishedAt": "2025-06-28T15:08:49Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Tirai a pedra e Desatai - Pra. Daniela Neves",
-        "description": "Culto quarta-feira \u00e0 noite dia 25 de junho de 2025.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/1Y1QpGWuO40/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-06-28T15:08:49Z"
       }
     }
   ]
