@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "qd6nATQMK_lJtqnl2WHkOIF7b2s",
+  "etag": "GGiRrpKwBx6Yati-GjyBgyuiThY",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 172,
+    "totalResults": 173,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j5hI_PnmbBbYO3IXOGTtuMs8SaE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "v1cCIGIKCVk"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-06T18:15:12Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Como conhecer e fazer a vontade de Deus- Pr. M\u00e1rcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-06T18:15:12Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "dSBKOkszRKgXJxv7ygqK0Nps4nY",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-07-01T02:19:11Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "NDXvZ7nz14PMl6fcWFeUuIuPsO4",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "4BEZ3cBxAxs"
-      },
-      "snippet": {
-        "publishedAt": "2025-07-01T02:03:55Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse: Escatologia - Parte 9",
-        "description": "Escola b\u00edblica dominical dia 29 de Junho de 2025 #ebd #biblia #apocalipse.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/4BEZ3cBxAxs/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/4BEZ3cBxAxs/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/4BEZ3cBxAxs/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-07-01T02:03:55Z"
       }
     }
   ]
