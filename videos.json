@@ -1,16 +1,50 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "l7TbJlET3_oX31J7raxaztU9fuw",
+  "etag": "M_gOeuaGQ9ousLgb9q5G99jTEF0",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 174,
+    "totalResults": 175,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "A3_pcBh8op4d5CrHFsFnVmb-LrY",
+      "etag": "FtkHIpmExAi74j71F99Nr6Fz5Z8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9LX7PduQtVQ"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-10T02:33:16Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Conhecereis a verdade e a verdade vos libertar\u00e1 - Pr. Marcio Soares",
+        "description": "Culto quarta-feira \u00e0 noite dia 09 de julho de 2025 Jo\u00e3o 8:32.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9LX7PduQtVQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9LX7PduQtVQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9LX7PduQtVQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-10T02:33:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x8WGLb-rEh66tGc1oxoYbKY4JwI",
       "id": {
         "kind": "youtube#video",
         "videoId": "yyNB9latoJA"
@@ -19,7 +53,7 @@
         "publishedAt": "2025-07-07T02:09:35Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Apocalipse 7 e 8",
-        "description": "Escola b\u00edblica dominical dia 29 de Junho de 2025 #ebd #biblia #apocalipse.",
+        "description": "Escola b\u00edblica dominical dia 06 de Julho de 2025 #ebd #biblia #apocalipse.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/yyNB9latoJA/default.jpg",
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "tkYxU0ycIrBYoRd0uoO7MYOmtUs",
+      "etag": "p0wmMFtXqMitGDP5oqWZwQWwV4I",
       "id": {
         "kind": "youtube#video",
         "videoId": "v1cCIGIKCVk"
@@ -53,7 +87,7 @@
         "publishedAt": "2025-07-06T18:15:12Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Como conhecer e fazer a vontade de Deus- Pr. M\u00e1rcio Soares",
-        "description": "",
+        "description": "Culto domingo de manh\u00e3 dia 06 de julho de 2025 Mateus 6:9-13.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/default.jpg",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-07-06T18:15:12Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "dSBKOkszRKgXJxv7ygqK0Nps4nY",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "cPcJtfvQTkY"
-      },
-      "snippet": {
-        "publishedAt": "2025-07-02T22:16:56Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "29 de junho de 2025",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/cPcJtfvQTkY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/cPcJtfvQTkY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/cPcJtfvQTkY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-07-02T22:16:56Z"
       }
     }
   ]
