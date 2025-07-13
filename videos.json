@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "WI02PoDuR-gs_LgAL8airbhFKRA",
+  "etag": "pIQxzGChfEKDucwViMUmGXbWsNE",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 174,
+    "totalResults": 176,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1Uyh4qrYt26zmiZxijCoXSW5R3g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B8nssUilmUw"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-13T20:54:26Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse 9",
+        "description": "Escola b\u00edblica dominical dia 13 de Julho de 2025 #ebd #biblia #apocalipse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B8nssUilmUw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B8nssUilmUw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B8nssUilmUw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-13T20:54:26Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "FtkHIpmExAi74j71F99Nr6Fz5Z8",
@@ -40,40 +74,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-07-10T02:33:16Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "x8WGLb-rEh66tGc1oxoYbKY4JwI",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "yyNB9latoJA"
-      },
-      "snippet": {
-        "publishedAt": "2025-07-07T02:09:35Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse 7 e 8",
-        "description": "Escola b\u00edblica dominical dia 06 de Julho de 2025 #ebd #biblia #apocalipse.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/yyNB9latoJA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/yyNB9latoJA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/yyNB9latoJA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-07-07T02:09:35Z"
       }
     },
     {
