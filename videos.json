@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "pIQxzGChfEKDucwViMUmGXbWsNE",
+  "etag": "qA4zz-RnPoiqT_JfzXVb1T3DpWw",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "FtkHIpmExAi74j71F99Nr6Fz5Z8",
+      "etag": "-BYqXLQjdzRLzLYJOhWoH3yBOpA",
       "id": {
         "kind": "youtube#video",
         "videoId": "9LX7PduQtVQ"
@@ -78,36 +78,36 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "p0wmMFtXqMitGDP5oqWZwQWwV4I",
+      "etag": "x8WGLb-rEh66tGc1oxoYbKY4JwI",
       "id": {
         "kind": "youtube#video",
-        "videoId": "v1cCIGIKCVk"
+        "videoId": "yyNB9latoJA"
       },
       "snippet": {
-        "publishedAt": "2025-07-06T18:15:12Z",
+        "publishedAt": "2025-07-07T02:09:35Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Como conhecer e fazer a vontade de Deus- Pr. M\u00e1rcio Soares",
-        "description": "Culto domingo de manh\u00e3 dia 06 de julho de 2025 Mateus 6:9-13.",
+        "title": "Apocalipse 7 e 8",
+        "description": "Escola b\u00edblica dominical dia 06 de Julho de 2025 #ebd #biblia #apocalipse.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/default.jpg",
+            "url": "https://i.ytimg.com/vi/yyNB9latoJA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/yyNB9latoJA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/v1cCIGIKCVk/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/yyNB9latoJA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-06T18:15:12Z"
+        "publishTime": "2025-07-07T02:09:35Z"
       }
     }
   ]
