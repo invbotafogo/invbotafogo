@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "1Re0sDREOgcwIVQ6q12px1_8wpg",
+  "etag": "j4oTuPT-117wQcyUJVszr-VKo4o",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "OOXMsX3l1-PMeiI3g4z_SM2Y91U",
+      "etag": "N0lVED3UDdzTWpCfKog7C5_A3yI",
       "id": {
         "kind": "youtube#video",
         "videoId": "n-vIpGd5t4w"
@@ -18,7 +18,7 @@
       "snippet": {
         "publishedAt": "2025-07-17T00:18:11Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto da Fam\u00edlia: come\u00e7a por voc\u00ea- Pra. Daniela Neves( Dom. Manh\u00e3)",
+        "title": "Culto da Fam\u00edlia: Come\u00e7a por voc\u00ea! - Pra. Daniela Neves (Dom/Manh\u00e3)",
         "description": "",
         "thumbnails": {
           "default": {
