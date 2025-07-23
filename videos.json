@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "pFhb4KVuygNWp68HRV8-BfAjS4g",
+  "etag": "LzJs-m40ol9kJMZ-RPWnWVseIsw",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 177,
+    "totalResults": 181,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "mxWKPLQWcazAWw1QlqeEA3SzNO8",
+      "etag": "22nQFQ2m5YQmk35fxECABc7AmB0",
       "id": {
         "kind": "youtube#video",
-        "videoId": "n-vIpGd5t4w"
+        "videoId": "P72GBneChR8"
       },
       "snippet": {
-        "publishedAt": "2025-07-17T00:18:11Z",
+        "publishedAt": "2025-07-22T23:41:53Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto da Fam\u00edlia: Come\u00e7a por voc\u00ea! - Pra. Daniela Neves (Dom/Manh\u00e3)",
-        "description": "Culto domingo de manh\u00e3 dia 13 de julho de 2025.",
+        "title": "Todo lugar em que pisar a planta do teu p\u00e9 ser\u00e1 teu - Pr. Luiz Carlos",
+        "description": "Culto domingo \u00e0 noite dia 20 de Julho de 2025 Josu\u00e9 1:1-7.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/n-vIpGd5t4w/default.jpg",
+            "url": "https://i.ytimg.com/vi/P72GBneChR8/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/n-vIpGd5t4w/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/P72GBneChR8/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/n-vIpGd5t4w/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/P72GBneChR8/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-17T00:18:11Z"
+        "publishTime": "2025-07-22T23:41:53Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "WwIypRARc_UZ8xdltl2jxmpOtzA",
+      "etag": "CIG--Xhr8g5TzF_fjRmPxvvKkgc",
       "id": {
         "kind": "youtube#video",
-        "videoId": "B8nssUilmUw"
+        "videoId": "CLCXcRapZys"
       },
       "snippet": {
-        "publishedAt": "2025-07-13T20:54:26Z",
+        "publishedAt": "2025-07-22T23:33:28Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse 9",
-        "description": "Escola b\u00edblica dominical dia 13 de Julho de 2025 #ebd #biblia #apocalipse.",
+        "title": "Intimidade com o Senhor - Pr. Marcio Soares",
+        "description": "Culto domingo pela manh\u00e3 dia 20 de julho de 2025 Salmo 25:14.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/B8nssUilmUw/default.jpg",
+            "url": "https://i.ytimg.com/vi/CLCXcRapZys/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/B8nssUilmUw/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/CLCXcRapZys/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/B8nssUilmUw/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/CLCXcRapZys/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-13T20:54:26Z"
+        "publishTime": "2025-07-22T23:33:28Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "-BYqXLQjdzRLzLYJOhWoH3yBOpA",
+      "etag": "n7tMOaXB8qpD8bYBO1AImrSN3aY",
       "id": {
         "kind": "youtube#video",
-        "videoId": "9LX7PduQtVQ"
+        "videoId": "h42JJ5C81iE"
       },
       "snippet": {
-        "publishedAt": "2025-07-10T02:33:16Z",
+        "publishedAt": "2025-07-22T22:45:13Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Conhecereis a verdade e a verdade vos libertar\u00e1 - Pr. Marcio Soares",
-        "description": "Culto quarta-feira \u00e0 noite dia 09 de julho de 2025 Jo\u00e3o 8:32.",
+        "title": "Clame ao Senhor e Ele te responder\u00e1 - Pr. Humberto Menezes",
+        "description": "Culto quarta-feira \u00e0 noite dia 16 de julho de 2025 2 Cr\u00f4nicas 15:1-15.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/9LX7PduQtVQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/h42JJ5C81iE/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/9LX7PduQtVQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/h42JJ5C81iE/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/9LX7PduQtVQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/h42JJ5C81iE/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-10T02:33:16Z"
+        "publishTime": "2025-07-22T22:45:13Z"
       }
     }
   ]
