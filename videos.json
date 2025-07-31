@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "z2wSsUYV008H9FDOjpii_3xIc9Q",
+  "etag": "3ovjaA4KFR57DZq_JF72Wo7Quck",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 184,
+    "totalResults": 185,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4uLq1-6v2BEuYa_12OJEsn1v_uw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9wRghuJo6rE"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-31T02:09:39Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Olha para mim e tem piedade de mim, porque estou solit\u00e1rio e aflito - Pra. Daniela Neves",
+        "description": "Culto quarta-feira \u00e0 noite dia 30 de julho de 2025 Salmo 25:16.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9wRghuJo6rE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9wRghuJo6rE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9wRghuJo6rE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-31T02:09:39Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "RAQf6_QRbztisSrgrdgArdZKyJY",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-07-29T03:36:33Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "n9RNTWBS8loGBcBAOu84SQCHa8Y",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "7VMMOGuKtKM"
-      },
-      "snippet": {
-        "publishedAt": "2025-07-29T03:21:48Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Descanse no Senhor, basta crer - Convidado Pr. Marcelo",
-        "description": "Culto quarta-feira \u00e0 noite dia 23 de julho de 2025 Jo\u00e3o 6:1-14.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/7VMMOGuKtKM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/7VMMOGuKtKM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/7VMMOGuKtKM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-07-29T03:21:48Z"
       }
     }
   ]
