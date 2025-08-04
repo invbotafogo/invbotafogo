@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Z3F-K3DKfrTUL1A6Da2UynlGJyM",
+  "etag": "4bkYW9tG5PmZrqYoDcmUGLuH27M",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 185,
+    "totalResults": 188,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "dCNN-Mtv1iMLFpgylgnCnFCKtf8",
+      "etag": "iPQQW7hGTuLywUmCWUzv4089OzY",
       "id": {
         "kind": "youtube#video",
-        "videoId": "9wRghuJo6rE"
+        "videoId": "JFO9dCe1Llo"
       },
       "snippet": {
-        "publishedAt": "2025-07-31T02:09:39Z",
+        "publishedAt": "2025-08-04T02:11:59Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Olha para mim e tem piedade de mim, porque estou solit\u00e1rio e aflito - Pra. Daniela Neves",
-        "description": "Culto quarta-feira \u00e0 noite dia 30 de julho de 2025 Salmo 25:16.",
+        "title": "Onde est\u00e1, \u00f3 morte, o teu aguilh\u00e3o?  - Pr. Luiz Carlos",
+        "description": "Culto domingo \u00e0 noite dia 03 de Agosto de 20251 1 Cor\u00edntios 15:45:57.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/9wRghuJo6rE/default.jpg",
+            "url": "https://i.ytimg.com/vi/JFO9dCe1Llo/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/9wRghuJo6rE/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/JFO9dCe1Llo/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/9wRghuJo6rE/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/JFO9dCe1Llo/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-31T02:09:39Z"
+        "publishTime": "2025-08-04T02:11:59Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "RAQf6_QRbztisSrgrdgArdZKyJY",
+      "etag": "Gdp2KGD54c1lc-WKN35KFVOszNg",
       "id": {
         "kind": "youtube#video",
-        "videoId": "j0szbvPLAtA"
+        "videoId": "cvfyv3n-NHQ"
       },
       "snippet": {
-        "publishedAt": "2025-07-29T03:42:29Z",
+        "publishedAt": "2025-08-04T01:43:28Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "A Fam\u00edlia \u00e9 um projeto divino - Pr. Luiz Carlos",
-        "description": "Culto domingo \u00e0 noite dia 27 de Julho de 2025 Josu\u00e9 24:15.",
+        "title": "Revela\u00e7\u00e3o de Deus - Pr. Marcio Soares",
+        "description": "Culto domingo pela manh\u00e3 dia 03 de agosto de 2025 1 Cor\u00edntios 2:9.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/j0szbvPLAtA/default.jpg",
+            "url": "https://i.ytimg.com/vi/cvfyv3n-NHQ/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/j0szbvPLAtA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/cvfyv3n-NHQ/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/j0szbvPLAtA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/cvfyv3n-NHQ/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-29T03:42:29Z"
+        "publishTime": "2025-08-04T01:43:28Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "dsb58hhaX7tyhh1Z33L_FgUjJkc",
+      "etag": "QkTKoD67NzwkztAav5pMmAaYlfI",
       "id": {
         "kind": "youtube#video",
-        "videoId": "cxsiy9D56i0"
+        "videoId": "1vcK5Iq01Xg"
       },
       "snippet": {
-        "publishedAt": "2025-07-29T03:36:33Z",
+        "publishedAt": "2025-08-04T01:29:16Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Alegrar o cora\u00e7\u00e3o de Deus - Pr. Marcio Soares",
-        "description": "Culto domingo pela manh\u00e3 dia 27 de julho de 2025 N\u00fameros 13:25.",
+        "title": "Apocalipse 10",
+        "description": "Escola b\u00edblica dominical dia 03 de Agosto de 2025 #ebd #biblia #apocalipse.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/cxsiy9D56i0/default.jpg",
+            "url": "https://i.ytimg.com/vi/1vcK5Iq01Xg/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/cxsiy9D56i0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/1vcK5Iq01Xg/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/cxsiy9D56i0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/1vcK5Iq01Xg/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-07-29T03:36:33Z"
+        "publishTime": "2025-08-04T01:29:16Z"
       }
     }
   ]
