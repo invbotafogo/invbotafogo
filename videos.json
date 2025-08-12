@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "tx8-YuksmW89fGDcBo_CKGWmEV0",
+  "etag": "2QsmnQQ_2cYIuVZPVErWIuTLkqc",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "8fHMzDQFQEJyoiMp_bnCKAGcO5A",
+      "etag": "fTplU6Br994zb0Ecr5DSWfjZhkY",
       "id": {
         "kind": "youtube#video",
         "videoId": "ITfr_pl9mfI"
@@ -86,7 +86,7 @@
       "snippet": {
         "publishedAt": "2025-08-12T03:17:47Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Tenham bom \u00e2nimo Eu venci o Mundo - Pr. Marcio Soares",
+        "title": "Vencendo as afli\u00e7\u00f5es da vida - Pr. Marcio Soares",
         "description": "Culto quarta-feira \u00e0 noite dia 06 de agosto de 2025 Jo\u00e3o 16:33.",
         "thumbnails": {
           "default": {
