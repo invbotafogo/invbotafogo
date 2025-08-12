@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "0W6jNRaBJpbgTwiAIE2xbiiB5SM",
+  "etag": "tx8-YuksmW89fGDcBo_CKGWmEV0",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 188,
+    "totalResults": 191,
     "resultsPerPage": 3
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "LqnILlDM5GLtPxRpeO9YNAhI8hY",
+      "etag": "yooRglh76sVUtRRPwmYVyrLVpLE",
       "id": {
         "kind": "youtube#video",
-        "videoId": "JFO9dCe1Llo"
+        "videoId": "6ytzOZ6hxPo"
       },
       "snippet": {
-        "publishedAt": "2025-08-04T02:11:59Z",
+        "publishedAt": "2025-08-12T03:28:21Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Onde est\u00e1, \u00f3 morte, o teu aguilh\u00e3o?  - Pr. Luiz Carlos",
-        "description": "Culto domingo \u00e0 noite dia 03 de Agosto de 20251 1 Cor\u00edntios 15:45:57.",
+        "title": "Apocalipse 11",
+        "description": "Escola b\u00edblica dominical dia 10 de Agosto de 2025 #ebd #biblia #apocalipse.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/JFO9dCe1Llo/default.jpg",
+            "url": "https://i.ytimg.com/vi/6ytzOZ6hxPo/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/JFO9dCe1Llo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/6ytzOZ6hxPo/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/JFO9dCe1Llo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/6ytzOZ6hxPo/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-08-04T02:11:59Z"
+        "publishTime": "2025-08-12T03:28:21Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "PggBuXVMpo8v1hWDBPLumpGLw3U",
+      "etag": "8Z10JZgICtbnmfUjnhfcxEOEn5g",
       "id": {
         "kind": "youtube#video",
-        "videoId": "cvfyv3n-NHQ"
+        "videoId": "ec-kZLftRyA"
       },
       "snippet": {
-        "publishedAt": "2025-08-04T01:43:28Z",
+        "publishedAt": "2025-08-12T03:20:20Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Revela\u00e7\u00e3o de Deus - Pr. Marcio Soares",
-        "description": "Culto domingo pela manh\u00e3 dia 03 de agosto de 2025 1 Cor\u00edntios 2:9.",
+        "title": "O chamado do Senhor - Pr. Luiz Carlos",
+        "description": "Culto domingo \u00e0 noite dia 10 de Agosto de 2025 G\u00eanesis 12:1-3.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/cvfyv3n-NHQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/ec-kZLftRyA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/cvfyv3n-NHQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ec-kZLftRyA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/cvfyv3n-NHQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ec-kZLftRyA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-08-04T01:43:28Z"
+        "publishTime": "2025-08-12T03:20:20Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "g0PfqPikAvGKEJ8P_DoE78ycw9E",
+      "etag": "8fHMzDQFQEJyoiMp_bnCKAGcO5A",
       "id": {
         "kind": "youtube#video",
-        "videoId": "1vcK5Iq01Xg"
+        "videoId": "ITfr_pl9mfI"
       },
       "snippet": {
-        "publishedAt": "2025-08-04T01:29:16Z",
+        "publishedAt": "2025-08-12T03:17:47Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse 10",
-        "description": "Escola b\u00edblica dominical dia 03 de Agosto de 2025 #ebd #biblia #apocalipse.",
+        "title": "Tenham bom \u00e2nimo Eu venci o Mundo - Pr. Marcio Soares",
+        "description": "Culto quarta-feira \u00e0 noite dia 06 de agosto de 2025 Jo\u00e3o 16:33.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/1vcK5Iq01Xg/default.jpg",
+            "url": "https://i.ytimg.com/vi/ITfr_pl9mfI/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/1vcK5Iq01Xg/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ITfr_pl9mfI/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/1vcK5Iq01Xg/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ITfr_pl9mfI/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-08-04T01:29:16Z"
+        "publishTime": "2025-08-12T03:17:47Z"
       }
     }
   ]
