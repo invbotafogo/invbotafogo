@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "sTYrt8-yxTFm0dSFnbDvdd46MiA",
+  "etag": "xreT4sCpazu6LoC0g0vgySVH6Qw",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 97,
+    "totalResults": 191,
     "resultsPerPage": 3
   },
   "items": [
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "8Z10JZgICtbnmfUjnhfcxEOEn5g",
+      "etag": "E-r3NkscNJXaKTbNpAGRsOPRdOw",
       "id": {
         "kind": "youtube#video",
         "videoId": "ec-kZLftRyA"
