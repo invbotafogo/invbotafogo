@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "I5lGu3B4COYmQunAXMXfq3l33v0",
+  "etag": "rRWOE96lcIVZATlNmWdLM-VSNMg",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,75 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "EEgD_qEUfSZ5zVMs-TMcf75-BpA",
+      "etag": "8LNPFy3GlV6jppa3IHnZJpjQt4o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8e9DgTceZaY"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-17T16:44:53Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Vendo Deus no sofrimento - Pra. Daniela Neves - Parte 1",
+        "description": "Culto quarta-feira \u00e0 noite dia 13 de agosto de 2025 Prov\u00e9rbios 4:23.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8e9DgTceZaY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8e9DgTceZaY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8e9DgTceZaY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-17T16:44:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mFaw0S4ctC_eMU_N4bOrqVwz4PM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8xSw2fvRmos"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-17T16:19:23Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse 12",
+        "description": "Escola b\u00edblica dominical dia 17 de Agosto de 2025 #ebd #biblia #apocalipse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8xSw2fvRmos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8xSw2fvRmos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8xSw2fvRmos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-17T16:19:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nMFFIPQci4ZjkLb4JJoAELF9xfA",
       "id": {
         "kind": "youtube#video",
         "videoId": "qQ8GjT7yk9w"
@@ -18,8 +86,8 @@
       "snippet": {
         "publishedAt": "2025-08-12T22:56:55Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O poder das nossas atitudes- Pr. M\u00e1rcio Soares ",
-        "description": "",
+        "title": "O poder das nossas atitudes - Pr. M\u00e1rcio Soares",
+        "description": "Culto domingo pela manh\u00e3 dia 10 de agosto de 2025 Ezequiel 3:17-21.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/qQ8GjT7yk9w/default.jpg",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-08-12T22:56:55Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "yooRglh76sVUtRRPwmYVyrLVpLE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "6ytzOZ6hxPo"
-      },
-      "snippet": {
-        "publishedAt": "2025-08-12T03:28:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse 11",
-        "description": "Escola b\u00edblica dominical dia 10 de Agosto de 2025 #ebd #biblia #apocalipse.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/6ytzOZ6hxPo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/6ytzOZ6hxPo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/6ytzOZ6hxPo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-08-12T03:28:21Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "E-r3NkscNJXaKTbNpAGRsOPRdOw",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ec-kZLftRyA"
-      },
-      "snippet": {
-        "publishedAt": "2025-08-12T03:20:20Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O chamado do Senhor - Pr. Luiz Carlos",
-        "description": "Culto domingo \u00e0 noite dia 10 de Agosto de 2025 G\u00eanesis 12:1-3.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ec-kZLftRyA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ec-kZLftRyA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ec-kZLftRyA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-08-12T03:20:20Z"
       }
     }
   ]
