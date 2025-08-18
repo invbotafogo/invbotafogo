@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "WfBKphJe0K073McWv2KXZW6mjTg",
+  "etag": "5P-20okjlmae2nJMLAXj85X-SrQ",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 194,
+    "totalResults": 195,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5hXgIYKdN0cSR6wVf9-L7cPS-Q0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IX2nwzf1chc"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-18T16:47:51Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "17 de agosto de 2025",
+        "description": "SEM M\u00c1SCARAS DIANTE DE DEUS- Pr M\u00e1rcio Soares.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IX2nwzf1chc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IX2nwzf1chc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IX2nwzf1chc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-18T16:47:51Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "8LNPFy3GlV6jppa3IHnZJpjQt4o",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-08-17T16:19:23Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "nMFFIPQci4ZjkLb4JJoAELF9xfA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "qQ8GjT7yk9w"
-      },
-      "snippet": {
-        "publishedAt": "2025-08-12T22:56:55Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O poder das nossas atitudes - Pr. M\u00e1rcio Soares",
-        "description": "Culto domingo pela manh\u00e3 dia 10 de agosto de 2025 Ezequiel 3:17-21.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/qQ8GjT7yk9w/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/qQ8GjT7yk9w/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/qQ8GjT7yk9w/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-08-12T22:56:55Z"
       }
     }
   ]
