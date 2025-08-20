@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "5P-20okjlmae2nJMLAXj85X-SrQ",
+  "etag": "-O_re5_F8Da3ytLzuUfSlUFB-aw",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "5hXgIYKdN0cSR6wVf9-L7cPS-Q0",
+      "etag": "VaaALP01chC8Kik37vMY3rSmvXw",
       "id": {
         "kind": "youtube#video",
         "videoId": "IX2nwzf1chc"
@@ -18,8 +18,8 @@
       "snippet": {
         "publishedAt": "2025-08-18T16:47:51Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "17 de agosto de 2025",
-        "description": "SEM M\u00c1SCARAS DIANTE DE DEUS- Pr M\u00e1rcio Soares.",
+        "title": "Sem m\u00e1scaras diante de Deus - Pr. M\u00e1rcio Soares",
+        "description": "",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/IX2nwzf1chc/default.jpg",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "8LNPFy3GlV6jppa3IHnZJpjQt4o",
+      "etag": "L0Sv9Ub-_MgSMby4SlsXtWwDr2k",
       "id": {
         "kind": "youtube#video",
         "videoId": "8e9DgTceZaY"
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "mFaw0S4ctC_eMU_N4bOrqVwz4PM",
+      "etag": "ar4tFsS66jCkwGiieVRQFNLeypw",
       "id": {
         "kind": "youtube#video",
         "videoId": "8xSw2fvRmos"
