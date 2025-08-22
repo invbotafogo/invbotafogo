@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "xzhOKr2ufnjGXpQzq34OALLOghs",
+  "etag": "vMNRUSjdECWf3vSfuWeHt6fOQOU",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "XE_sNxMwsS-VnY1zdOBo5L0cMKM",
+      "etag": "od1ClgiKrq1SWE-WkwRtjujJQ24",
       "id": {
         "kind": "youtube#video",
         "videoId": "kR9Sijonqe4"
@@ -18,7 +18,7 @@
       "snippet": {
         "publishedAt": "2025-08-21T18:48:48Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Vendo Deus no sofrimento 2- Pra. Daniela Neves",
+        "title": "Vendo Deus no sofrimento (Parte 2) - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "L0Sv9Ub-_MgSMby4SlsXtWwDr2k",
+      "etag": "JSpHbWXcATSyzgIRquPTIz0ys98",
       "id": {
         "kind": "youtube#video",
         "videoId": "8e9DgTceZaY"
@@ -86,7 +86,7 @@
       "snippet": {
         "publishedAt": "2025-08-17T16:44:53Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Vendo Deus no sofrimento - Pra. Daniela Neves - Parte 1",
+        "title": "Vendo Deus no sofrimento (Parte 1) - Pra. Daniela Neves",
         "description": "Culto quarta-feira \u00e0 noite dia 13 de agosto de 2025 Prov\u00e9rbios 4:23.",
         "thumbnails": {
           "default": {
