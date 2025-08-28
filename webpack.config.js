@@ -19,13 +19,13 @@ function generateHtmlPlugins(isProduction) {
       scriptLoading: 'defer',
       minify: isProduction
         ? {
-            removeComments: true,
-            collapseWhitespace: true,
-            keepClosingSlash: true,
-            removeRedundantAttributes: true,
-            removeEmptyAttributes: true,
-            useShortDoctype: true,
-          }
+          removeComments: true,
+          collapseWhitespace: true,
+          keepClosingSlash: true,
+          removeRedundantAttributes: true,
+          removeEmptyAttributes: true,
+          useShortDoctype: true,
+        }
         : false,
     });
   });
@@ -80,12 +80,10 @@ module.exports = (env, argv) => {
             filename: 'assets/fonts/[name].[contenthash][ext][query]',
           },
         },
-
-        // (Opcional) Para importar HTMLs com require, se necessário:
-        // {
-        //   test: /\.html$/i,
-        //   loader: 'html-loader',
-        // },
+        {
+          test: /\.html$/i,
+          loader: 'html-loader',
+        },
       ],
     },
 
