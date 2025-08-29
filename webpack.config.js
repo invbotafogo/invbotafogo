@@ -44,7 +44,7 @@ module.exports = (env, argv) => {
       chunkFilename: isProduction ? '[name].[contenthash].js' : '[name].js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
-      publicPath: isProduction ? '/invbotafogo/' : '/',
+      publicPath: '/',
       assetModuleFilename: 'assets/[name].[contenthash][ext][query]',
     },
 
