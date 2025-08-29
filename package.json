@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open",
-    "deploy": "npm run build && gh-pages -d dist -b gh-pages -c invbotafogo.com.br",
+    "deploy": "npm run build && gh-pages -d dist -b gh-pages --cname invbotafogo.com.br",
     "analyze:stats": "webpack --profile --json=dist/stats.json --mode production",
     "analyze": "npm run analyze:stats && npx webpack-bundle-analyzer dist/stats.json dist --port 8888",
     "serve:dist": "npx serve dist -l 5000"
