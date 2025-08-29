@@ -17,7 +17,7 @@ body {
 .section-index,
 .section-cultos,
 .section-doe {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/invbotafogo/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -364,7 +364,7 @@ nav ul li a:hover {
 
 /* Seção Contato */
 .section-contato {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/invbotafogo/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -662,7 +662,7 @@ hr {
 /* MINISTÉRIOS */
 
 .section-ministerios {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/invbotafogo/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -945,7 +945,7 @@ hr {
     height: 150px;
     margin: 20px auto 0;
     border-radius: 8px;
-    background-image: url(/invbotafogo/assets/images/qrcode_pix.c8c9f231534cfd1b605d.png);
+    background-image: url(/assets/images/qrcode_pix.c8c9f231534cfd1b605d.png);
     /* caminho relativo da imagem */
     background-size: cover;
     background-position: center;
@@ -1176,4 +1176,4 @@ svg {
     }
 }
 
-/*# sourceMappingURL=styles.cf2fedc37b3efce86925.css.map*/
+/*# sourceMappingURL=styles.17b92790b230959e581a.css.map*/
