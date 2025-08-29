@@ -7,13 +7,13 @@
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open",
     "deploy": "npm run build && gh-pages -d dist",
-
     "analyze:stats": "webpack --profile --json=dist/stats.json --mode production",
     "analyze": "npm run analyze:stats && npx webpack-bundle-analyzer dist/stats.json dist --port 8888",
     "serve:dist": "npx serve dist -l 5000"
   },
   "keywords": [],
   "devDependencies": {
+    "mini-css-extract-plugin": "^2.9.4",
     "css-loader": "^6.7.3",
     "gh-pages": "^6.3.0",
     "glob": "^11.0.1",
