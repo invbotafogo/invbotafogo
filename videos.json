@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Sh3zGXHzI-ch0pLIK-6O0mvg3qQ",
+  "etag": "RtLgBhhTqVUgIZ1d-XqEyZtfY8Y",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 198,
+    "totalResults": 200,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hxht42V-0KZ5korC7Gd476VgwT4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9nF4GHUhqc8"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-31T17:19:28Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Apocalipse 14",
+        "description": "Escola b\u00edblica dominical dia 31 de Agosto de 2025 #ebd #biblia #apocalipse.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9nF4GHUhqc8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9nF4GHUhqc8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9nF4GHUhqc8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-31T17:19:28Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "D8-Zbzx7l-XhIF7k_DgrWHPu-P0",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-08-24T18:13:33Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "FFB40S_KvFgt_aP2eUazgJuehpA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "kR9Sijonqe4"
-      },
-      "snippet": {
-        "publishedAt": "2025-08-21T18:48:48Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Vendo Deus no sofrimento (Parte 2) - Pra. Daniela Neves",
-        "description": "Culto quarta-feira \u00e0 noite dia 20 de agosto de 2025 2 Cor\u00edntios 12:7.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/kR9Sijonqe4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/kR9Sijonqe4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/kR9Sijonqe4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-08-21T18:48:48Z"
       }
     }
   ]
