@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "87LWx3Qu7Umna7LC-FLybU6Xw78",
+  "etag": "Sh3zGXHzI-ch0pLIK-6O0mvg3qQ",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 197,
+    "totalResults": 198,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "D8-Zbzx7l-XhIF7k_DgrWHPu-P0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sSeR3CyoLKE"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-31T08:34:22Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Quando Deus muda a tua hist\u00f3ria-Ch\u00e1 das Virtuosas. Ir.Raphaela Neves",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sSeR3CyoLKE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sSeR3CyoLKE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sSeR3CyoLKE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-31T08:34:22Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "zbgsxxY7eakkbJS5DSSgdXqzQ9g",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-08-21T18:48:48Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "BTGbRwUVQ9PqT3YyfNWaAdh2lJs",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "IX2nwzf1chc"
-      },
-      "snippet": {
-        "publishedAt": "2025-08-18T16:47:51Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Sem m\u00e1scaras diante de Deus - Pr. M\u00e1rcio Soares",
-        "description": "Culto domingo pela manh\u00e3 dia 17 de agosto de 2025 2 Cor\u00edntios 3:13,14.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/IX2nwzf1chc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/IX2nwzf1chc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/IX2nwzf1chc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-08-18T16:47:51Z"
       }
     }
   ]
