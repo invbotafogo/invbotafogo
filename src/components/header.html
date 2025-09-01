@@ -1,17 +1,15 @@
-<header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="../assets/images/logo.png" alt="INVB Logo">
+<header class="navbar">
+    <div class="logo navbar__brand">
+        <a href="./index.html">
+            <img src="/src/assets/images/logo.png" alt="INVB Logo">
         </a>
     </div>
+
     <nav>
-        <ul>
+        <ul id="menu" class="navbar__menu">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./cultos.html">Cultos</a></li>
-            
-            <!-- <li><a href="./estudo.html">Escola Bíblica</a></li> -->
-            <!-- <li><a href="./oracao.html">Pedido de Oração</a></li> -->
-            <!-- Ministérios Dropdown -->
+
             <li class="menu-item">
                 <a href="./ministries.html">Ministérios</a>
                 <ul class="submenu">
@@ -22,11 +20,15 @@
                     <li><a href="./ministries.html?ministerio=juventude">Juventude</a></li>
                     <li><a href="./ministries.html?ministerio=mulheres">Mulheres</a></li>
                     <li><a href="./ministries.html?ministerio=guerreiros">Guerreiros</a></li>
-                    <li><a href="./ministries.html?ministerio=introducao">Introdução & Recepção</a></li>
+                    <li><a href="./ministries.html?ministerio=introducao">Introdução &amp; Recepção</a></li>
                 </ul>
             </li>
+
             <li><a href="./doe.html">Doe</a></li>
             <li><a href="./contato.html">Contato</a></li>
         </ul>
     </nav>
+
+    <!-- Botão hamburguer (aparece no mobile via CSS) -->
+    <button class="navbar__toggle">☰</button>
 </header>

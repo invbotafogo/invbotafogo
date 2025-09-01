@@ -1,53 +1,142 @@
+/* eslint-disable no-undef */
 const path = require('path');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const glob = require('glob'); // Para encontrar arquivos HTML automaticamente
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+/**
+ * Gera instâncias do HtmlWebpackPlugin para cada HTML encontrado em src/
+ * Manter o nome base do arquivo (ex.: src/pages/about.html -> dist/about.html)
+ */
+function generateHtmlPlugins(isProduction) {
+  const files = glob.sync('./src/**/*.html');
+  return files.map((file) => {
+    const filename = path.basename(file);
+    return new HtmlWebpackPlugin({
+      template: file,
+      filename,
+      inject: 'body',
+      scriptLoading: 'defer',
+      minify: isProduction
+        ? {
+          removeComments: true,
+          collapseWhitespace: true,
+          keepClosingSlash: true,
+          removeRedundantAttributes: true,
+          removeEmptyAttributes: true,
+          useShortDoctype: true,
+        }
+        : false,
+    });
+  });
+}
 
 module.exports = (env, argv) => {
-  const isProduction = argv.mode === "production";
+  const isProduction = argv.mode === 'production';
 
   return {
-    entry: './src/js/script.js',  // Arquivo de entrada principal
+    // Entrada principal do app
+    entry: './src/js/script.js',
+
+    // Saída com cache busting por conteúdo
     output: {
-      filename: 'bundle.js',  // Arquivo JS empacotado
+      filename: isProduction ? 'bundle.[contenthash].js' : '[name].js',
+      chunkFilename: isProduction ? '[name].[contenthash].js' : '[name].js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
-      publicPath: isProduction ? '/invbotafogo/' : '/',
+      publicPath: '/',
+      assetModuleFilename: 'assets/[name].[contenthash][ext][query]',
     },
+
+    // Mapeamento de fontes para facilitar debug
+    devtool: isProduction ? 'source-map' : 'eval-cheap-module-source-map',
+
+    // Regras de carregamento
     module: {
       rules: [
+        // CSS -> extrai para arquivo em prod; injeta em dev
         {
-          test: /\.css$/,  // Regra para arquivos CSS
-          use: ['style-loader', 'css-loader'],
+          test: /\.css$/i,
+          use: [
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            'css-loader',
+          ],
         },
+
+        // Imagens (usa Asset Modules)
         {
-          test: /\.(png|jpe?g|gif|svg)$/i,  // Regra para imagens
+          test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'assets/images/[name][ext][query]',
+            filename: 'assets/images/[name].[contenthash][ext][query]',
+          },
+        },
+
+        // Fontes
+        {
+          test: /\.(woff2?|eot|ttf|otf)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'assets/fonts/[name].[contenthash][ext][query]',
           },
         },
         {
-          test: /\.html$/,  // Regra para HTML
-          use: 'html-loader',
+          test: /\.html$/i,
+          loader: 'html-loader',
         },
       ],
     },
+
+    // Otimizações para melhor cache
+    optimization: {
+      splitChunks: { chunks: 'all' },
+      runtimeChunk: { name: 'runtime' }, // evita conflito e dá nome previsível ao runtime
+      moduleIds: 'deterministic',
+    },
+
+    // Plugins
     plugins: [
-      // Usando glob para encontrar todos os arquivos HTML
-      ...glob.sync('./src/**/*.html').map(file => {
-        return new HtmlWebpackPlugin({
-          template: file,
-          filename: path.basename(file), // Usa o nome do arquivo para o destino
-        });
+      // Gera um CSS com hash em produção
+      new MiniCssExtractPlugin({
+        filename: isProduction ? 'styles.[contenthash].css' : 'styles.css',
       }),
+
+      // Uma instância por HTML encontrado em src/
+      ...generateHtmlPlugins(isProduction),
     ],
+
+    // Dev Server
     devServer: {
-      static: path.resolve(__dirname, 'dist'), // Diretório dos arquivos estáticos
+      static: {
+        directory: path.resolve(__dirname, 'src'), // serve estáticos direto da pasta fonte
+        watch: true,
+      },
+      watchFiles: ['src/**/*.html', 'src/**/*.css', 'src/**/*.js'],
+      open: true,
+      compress: true,
       port: 8080,
-      open: true, // Abre o navegador automaticamente
-      hot: true, // Ativa o HMR (Hot Module Replacement)
-      liveReload: true, // Atualiza a página quando há mudanças
-      watchFiles: ['src/**/*', 'dist/**/*'], // Observa mudanças em arquivos HTML, CSS e JS em src/* e dist/*
-    }
+      client: {
+        overlay: true,
+        logging: 'info',
+      },
+      // Se for SPA, ativar abaixo:
+      // historyApiFallback: true,
+    },
+
+    // Resolve básico
+    resolve: {
+      extensions: ['.js', '.json'],
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
+    },
+
+    // Cache do webpack (ajuda no dev)
+    cache: {
+      type: 'filesystem',
+    },
+
+    // Modo é passado via CLI (dev/prod)
+    mode: isProduction ? 'production' : 'development',
   };
 };
