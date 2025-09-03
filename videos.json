@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "jtKUOqspG9a8TzIMTwlyOEAH18g",
+  "etag": "MN_rRbszQRC1VYMZPtrZ-6e7P20",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 199,
+    "totalResults": 201,
     "resultsPerPage": 3
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hel2m9_G8J1oSH1YMtwRRurdlTg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Pngf8JJJl0w"
+      },
+      "snippet": {
+        "publishedAt": "2025-09-03T00:58:31Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Escolhi o caminho da fidelidade- Pr M\u00e1rcio",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Pngf8JJJl0w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Pngf8JJJl0w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Pngf8JJJl0w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-09-03T00:58:31Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "hxht42V-0KZ5korC7Gd476VgwT4",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-08-31T08:34:22Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "zbgsxxY7eakkbJS5DSSgdXqzQ9g",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "e2Hx7JHyCws"
-      },
-      "snippet": {
-        "publishedAt": "2025-08-24T18:13:33Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Apocalipse 13",
-        "description": "Escola b\u00edblica dominical dia 24 de Agosto de 2025 #ebd #biblia #apocalipse.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/e2Hx7JHyCws/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/e2Hx7JHyCws/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/e2Hx7JHyCws/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-08-24T18:13:33Z"
       }
     }
   ]
