@@ -86,6 +86,7 @@ module.exports = (env, argv) => {
           options: {
             sources: {
               urlFilter: (attr, value, resourcePath) => {
+                if (isProduction) return true;
                 if (value.startsWith('/src/')) return false;
                 return true;
               },

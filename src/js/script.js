@@ -164,11 +164,13 @@ function setupMobileMenu() {
     if (!btn || !menu) return;
     const OPEN_CLASS = 'is-open';
     function openMenu() {
+        btn.classList.toggle('active');
         menu.classList.add(OPEN_CLASS);
         document.addEventListener('click', handleOutsideClick);
         document.addEventListener('keydown', handleEsc, { once: true });
     }
     function closeMenu() {
+        btn.classList.toggle('active');
         menu.classList.remove(OPEN_CLASS);
         document.removeEventListener('click', handleOutsideClick);
     }

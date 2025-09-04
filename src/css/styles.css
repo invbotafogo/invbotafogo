@@ -50,7 +50,6 @@ header {
     max-height: 65px;
     filter: brightness(0) invert(1);
     margin-left: 25px;
-
 }
 
 header nav {
@@ -311,7 +310,6 @@ nav ul li a:hover {
 .eventos-box h3 i {
     color: #ffcc00;
 }
-
 
 .section-historia {
     background: transparent;
@@ -1015,21 +1013,51 @@ svg {
 /* ===== MENU MOBILE – TAP-FRIENDLY ===== */
 @media (max-width: 768px) {
 
+    .navbar {
+        padding: 0 5%;
+    }
+
     /* Botão hamburguer maior e com área de toque amigável */
     .navbar__toggle {
-        display: inline-flex;
-        /* centraliza o ícone */
-        align-items: center;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 7px;
         font-size: 1.75rem;
-        /* maior que 1.5rem */
-        padding: 10px;
-        /* aumenta a área clicável */
-        min-width: 48px;
-        /* tap target recomendado */
-        min-height: 48px;
-        /* tap target recomendado */
+        min-width: 50px;
+        /* largura do botão */
+        min-height: 50px;
+        /* altura do botão */
+        background: none;
         border-radius: 10px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .navbar__toggle.active span:nth-child(1) {
+        bottom: 50%;
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    .navbar__toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: rotate(45deg);
+    }
+
+    .navbar__toggle.active span:nth-child(3) {
+        bottom: 0;
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+    .navbar__toggle span {
+        display: block;
+        height: 5px;
+        /* espessura da barra */
+        width: 100%;
+        /* ocupa toda a largura do botão */
+        background: whitesmoke;
+        border-radius: 2px;
+        transition: all 0.3s ease;
     }
 
     /* Container do dropdown com melhor legibilidade */
@@ -1070,10 +1098,9 @@ svg {
         padding: 16px 18px;
         /* mais espaço lateral/vertical */
         font-size: 1.125rem;
-        /* ~18px */
         line-height: 1.35;
         letter-spacing: 0.2px;
-        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        border-bottom: 0px solid rgba(255, 255, 255, .08);
     }
 
     .navbar__menu a:active {
@@ -1116,7 +1143,7 @@ svg {
     .submenu a {
         padding: 14px 18px;
         font-size: 1.05rem;
-        border-bottom: 1px dashed rgba(255, 255, 255, .08);
+        border-bottom: 0px dashed rgba(255, 255, 255, .08);
     }
 
     .submenu a:last-child {
@@ -1174,6 +1201,43 @@ svg {
         flex-direction: column;
         gap: 10px;
     }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0% 5%;
+    }
+
+    .logo img {
+        max-height: 65px;
+        filter: brightness(0) invert(1);
+        margin-left: 0;
+    }
+
+    footer {
+        padding-bottom: max(20px, env(safe-area-inset-bottom))
+    }
+
+    footer nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+
+    .footer_infos {
+        display: none;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0% 5%;
+    }
+
 }
 
 /* Ajuste extra: evita overflow horizontal por larguras fixas */
