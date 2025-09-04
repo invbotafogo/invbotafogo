@@ -315,7 +315,7 @@ nav ul li a:hover {
 
 .section-historia {
     background: transparent;
-    padding: 150px 40px;
+    padding: 4% 3%;
     display: flex;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
@@ -324,7 +324,7 @@ nav ul li a:hover {
 .historia-container {
     max-width: 1000px;
     width: 100%;
-    padding: 40px;
+    padding: 1%;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     /* centro transparente */
@@ -361,6 +361,22 @@ nav ul li a:hover {
     transition: opacity 1s ease-in-out;
 }
 
+.membros {
+    margin: 0;
+}
+
+.membros dt,
+.membros dd {
+    display: inline;
+    /* coloca lado a lado */
+    margin: 0;
+}
+
+.membros div {
+    margin-bottom: 0.5rem;
+    /* espaço só entre cargos diferentes */
+}
+
 
 /* Seção Contato */
 .section-contato {
@@ -380,7 +396,6 @@ nav ul li a:hover {
 .section-contato .text {
     width: 100%;
     max-width: 500px;
-
     padding: 30px;
     border-radius: 20px;
     backdrop-filter: blur(8px);
@@ -1148,6 +1163,17 @@ svg {
         margin: 70px auto 0;
         padding: 0 16px;
     }
+
+    .historia-container h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #ffcc00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Ajuste extra: evita overflow horizontal por larguras fixas */
@@ -1176,4 +1202,4 @@ svg {
     }
 }
 
-/*# sourceMappingURL=styles.17b92790b230959e581a.css.map*/
+/*# sourceMappingURL=styles.c3c4b7716e51094db5ed.css.map*/
