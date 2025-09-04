@@ -83,6 +83,14 @@ module.exports = (env, argv) => {
         {
           test: /\.html$/i,
           loader: 'html-loader',
+          options: {
+            sources: {
+              urlFilter: (attr, value, resourcePath) => {
+                if (value.startsWith('/src/')) return false;
+                return true;
+              },
+            },
+          },
         },
       ],
     },
@@ -109,9 +117,10 @@ module.exports = (env, argv) => {
     devServer: {
       static: {
         directory: path.resolve(__dirname, 'src'), // serve estáticos direto da pasta fonte
+        publicPath: '/src',
         watch: true,
       },
-      watchFiles: ['src/**/*.html', 'src/**/*.css', 'src/**/*.js'],
+      watchFiles: ['src/**/*.html', 'src/**/*.css', 'src/**/*.js', 'src/assets/**/*.jpg', 'src/assets/**/*.png'],
       open: true,
       compress: true,
       port: 8080,
