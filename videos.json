@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "HebI4oQ-aLZVv65D_I0jZYCN9VI",
+  "etag": "syIsbfK5NeC-n7DVDeBL5-66Bpg",
   "nextPageToken": "CAMQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "hel2m9_G8J1oSH1YMtwRRurdlTg",
+      "etag": "WrozQFb2LM1tno6u1Ji3eN2MSxg",
       "id": {
         "kind": "youtube#video",
         "videoId": "Pngf8JJJl0w"
@@ -18,8 +18,8 @@
       "snippet": {
         "publishedAt": "2025-09-03T00:58:31Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Escolhi o caminho da fidelidade- Pr M\u00e1rcio",
-        "description": "",
+        "title": "Escolhi o caminho da fidelidade - Pr M\u00e1rcio",
+        "description": "Culto Domingo de manh\u00e3 31 de Agosto de 2025.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/Pngf8JJJl0w/default.jpg",
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "D8-Zbzx7l-XhIF7k_DgrWHPu-P0",
+      "etag": "T7aQN5OOwPAxAOCAKzYr0PkcV_c",
       "id": {
         "kind": "youtube#video",
         "videoId": "sSeR3CyoLKE"
@@ -87,7 +87,7 @@
         "publishedAt": "2025-08-31T08:34:22Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Quando Deus muda a tua hist\u00f3ria-Ch\u00e1 das Virtuosas. Ir.Raphaela Neves",
-        "description": "",
+        "description": "Ch\u00e1 das Virtuosas 30 de agosto de 2025.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/sSeR3CyoLKE/default.jpg",
