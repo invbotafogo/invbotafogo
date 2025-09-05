@@ -155,7 +155,7 @@ nav ul li a:hover {
 }
 
 .section-home .text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .section-home .text h4 {
@@ -197,7 +197,8 @@ nav ul li a:hover {
 
 /* BLOCO: Cultos + Mapa */
 .cultos-box {
-    flex: 2.2;
+    flex: 1;
+    min-width: 260px;
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -250,11 +251,12 @@ nav ul li a:hover {
 
 .cultos-mapa iframe {
     width: 100%;
-    height: 320px;
+    height: 350px;
     border: none;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin: 10px 0;
 }
 
 .cultos-mapa iframe:hover {
@@ -313,7 +315,7 @@ nav ul li a:hover {
 
 .section-historia {
     background: transparent;
-    padding: 4% 3%;
+    padding: 60px 5vw;
     display: flex;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
@@ -322,11 +324,11 @@ nav ul li a:hover {
 .historia-container {
     max-width: 1000px;
     width: 100%;
-    padding: 1%;
+    padding: 0 5vw;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     /* centro transparente */
-    border: 8px solid #ffffff;
+    border: 3px solid #ffffff;
     /* bordas brancas sólidas */
     backdrop-filter: blur(12px);
     /* efeito vidro fosco */
@@ -487,6 +489,18 @@ footer nav {
     gap: 0;
 }
 
+.footer_infos,
+.footer-contact{
+    margin: 0 0 5px 20px;
+    width: auto;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.footer_infos h4{
+    text-align: left;
+}
+
 footer nav ul {
     list-style: none;
     margin: 0 10px;
@@ -540,19 +554,16 @@ hr {
     gap: 40px;
 }
 
+
+
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    flex-wrap: wrap;       /* permite quebra de linha */
+    justify-content: space-between; /* espalha os itens igualmente */
+    width: 100%;
 }
 
-.footer-links h4 {
-    margin-bottom: 10px;
-    margin-left: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-}
+
 
 .footer-links ul {
     list-style: none;
@@ -560,8 +571,7 @@ hr {
 }
 
 .footer-links ul li {
-    margin-bottom: 5px;
-    margin-left: 20px;
+    margin: 0 0 5px 20px;
 }
 
 .footer-links ul li a {
@@ -578,11 +588,11 @@ hr {
     color: #fff;
 }
 
-.footer-contact {
+/* .footer-contact {
     width: auto;
     margin-right: 10px;
     text-align: left;
-}
+} */
 
 .footer-contact h4 {
     margin-bottom: 5px;
@@ -662,7 +672,7 @@ hr {
 
 .videos-container iframe {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     height: 215px;
     border: none;
     border-radius: 8px;
@@ -829,6 +839,10 @@ hr {
     display: none;
 }
 
+#esconder{
+    display: none;
+}
+
 
 /* DOE - Estilo atualizado */
 .section-ofertas {
@@ -842,7 +856,7 @@ hr {
 .ofertas-container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 10px 30px;
+    padding: 10px 40px;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
@@ -893,7 +907,8 @@ hr {
 .dados-bancarios,
 .pix-box {
     flex: 1;
-    min-width: 300px;
+    width: 400px;
+    height: 400px;
     background-color: rgba(255, 255, 255, 0.05);
     padding: 25px 20px;
     border-radius: 16px;
@@ -954,8 +969,8 @@ hr {
 
 
 .qrcode {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 20px auto 0;
     border-radius: 8px;
     background-image: url(/assets/images/qrcode_pix.c8c9f231534cfd1b605d.png);
@@ -964,6 +979,24 @@ hr {
     background-position: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+#copiar-btn{
+    color: black;
+    font-weight: bold;
+    /* margin-top: 10px; */
+    background-color: #ffcc00;
+    border: none;
+
+    border-radius: 5px;
+}
+
+#confirmacao-pix{
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
 
 /* ======================
    AJUSTES GERAIS + MENU MOBILE (TAP-FRIENDLY)
@@ -1010,8 +1043,209 @@ svg {
     display: flex !important;
 }
 
+@media (max-width: 425px) {
+    .section-home .text h1{
+        font-size: 2.5rem;
+    }
+    .section-home .text h4{
+        font-size: 1.5rem;
+    }
+    .section-home .text p{
+        font-size: 1.2rem;
+    }
+
+    .footer-contact{
+        display: none;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center; /* centraliza o bloco de links */
+        flex-wrap: wrap; /* permite quebra de linha */
+        gap: 40px; /* espaço entre os grupos de links, ajuste como quiser */
+    }
+
+    .footer-links ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* duas colunas para os links */
+        gap: 8px; /* espaço entre os links */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: left; /* mantém texto alinhado à esquerda */
+    }
+
+    .footer-copyright{
+        font-size: 0.75rem;
+        margin-top: 10px;
+    }
+    .section-historia h2{
+        font-size: 1.5rem;
+    }
+    .section-historia p{
+        font-size: 0.9rem;
+    }
+    
+    .cultos-mapa{
+        height: auto;
+        min-width: 200px;
+    }
+    .card{
+        height: 300px;
+        width: 300px;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ultimos-cultos h2{
+        font-size: 1.5rem;
+    }
+    .videos-container iframe {
+        width: auto;
+        height: 100%;
+    }
+ 
+}
+
+@media (max-width: 375px) {
+    .cultos-info h2, 
+    .eventos-box h3 {
+        font-size: 1.3rem;
+    }
+    .cultos-info p, 
+    .eventos-box p,
+    .eventos-box strong, 
+    .historia-container p{
+        font-size: 0.8rem;
+    }
+    .section-home .text h1, 
+    .historia-container h2, 
+    .ofertas-container h2{
+        font-size: 2rem !important;
+    }
+    .section-home .text h4, 
+    .versiculo{
+        font-size: 1.0rem;
+    }
+    
+    .cultos-mapa{
+        height: auto;
+        min-width: auto;
+    }
+    
+    .footer-copyright{
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+    .card{
+        height: 250px;
+        width: 250px;
+    }
+    .social-icons li a {
+        font-size: 17px;
+    }
+
+    .dados-bancarios, .pix-box{
+        width: 100%;
+        height: 100%;
+        /* margin: 20px; */
+    }
+    .dados-bancarios h3{
+        font-size: 1.1rem;
+    }
+    .proximo-culto {
+        font-size: 17px;
+    }
+
+    .ultimos-cultos h2{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (max-width: 320px){
+    .cultos-conteudo {
+        gap: 5px
+    }
+    .cultos-info h2, 
+    .eventos-box h3 {
+        font-size: 1.3rem;
+    }
+    .cultos-info p, 
+    .eventos-box p,
+    .eventos-box strong, 
+    .historia-container p{
+        font-size: 0.8rem;
+    }
+    .section-home .text h1, 
+    .historia-container h2, 
+    .ofertas-container h2{
+        font-size: 1.8rem !important;
+    }
+    .section-home .text h4, 
+    .versiculo{
+        font-size: 1.0rem;
+    }
+    .section-home .text p{
+        font-size: 0.7rem;
+    }
+    .footer-copyright{
+        font-size: 0.6rem;
+        margin-top: 10px;
+    }
+    .ofertas-container {
+        
+        backdrop-filter: none;
+
+    }
+
+    .social-icons li a {
+        font-size: 15px;
+    }
+
+    .qrcode {
+        width: 150px;
+        height: 150px;
+    }
+    .dados-bancarios p{
+        font-size: 0.9rem;
+    }
+    .pix-box p{
+        font-size: 0.87rem;
+    }
+    #email{
+        
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 2%;
+       
+    }
+    
+
+
+
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+        height: 300px;
+        width: 300px;
+    }
+
+}
+
 /* ===== MENU MOBILE – TAP-FRIENDLY ===== */
 @media (max-width: 768px) {
+    #esconder{
+        display: block;
+    }
 
     .navbar {
         padding: 0 5%;
@@ -1033,6 +1267,8 @@ svg {
         cursor: pointer;
         margin: 0;
     }
+
+
 
     .navbar__toggle.active span:nth-child(1) {
         bottom: 50%;
@@ -1216,9 +1452,9 @@ svg {
         margin-left: 0;
     }
 
-    footer {
+    /* footer {
         padding-bottom: max(20px, env(safe-area-inset-bottom))
-    }
+    } */
 
     footer nav {
         display: flex;
@@ -1230,13 +1466,42 @@ svg {
         display: none;
     }
 
-    .footer-links {
+    .footer-content {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-        padding: 0% 5%;
+        justify-content: space-between; /* espalha igualmente */
+        align-items: flex-start; /* alinha pelo topo */
+        flex-wrap: wrap; /* caso a tela fique menor, quebra para linha de baixo */
+        gap: 20px; /* espaçamento entre os blocos */
+        padding: 0 5%;
     }
+
+    .cultos-eventos-container {
+        display: flex;
+        flex-direction: column; /* empilha os blocos verticalmente */
+        gap: 20px; /* espaço entre os blocos */
+    }
+
+    /* opcional: para os conteúdos internos se adaptarem */
+    .cultos-box,
+    .eventos-box {
+        width: 100%; /* ocupam toda a largura */
+    }
+
+    /* opcional: para o mapa se adaptar ao tamanho da tela */
+    .cultos-mapa iframe {
+        width: 100%;
+        height: 300px; /* ajuste como quiser */
+    }
+
+    .section-home .text h1 {
+        font-size: 2.3rem;
+    }
+  
+    
+    
+
+
+
 
 }
 
@@ -1266,4 +1531,6 @@ svg {
     }
 }
 
-/*# sourceMappingURL=styles.a241d0aaf8f19e33fcb2.css.map*/
+
+
+/*# sourceMappingURL=styles.08b4bba1535b874b00bd.css.map*/
