@@ -14,17 +14,12 @@ body {
     min-height: 100vh;
 }
 
-.section-index{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
-    background-size: cover;
-}
-
+.section-index,
 .section-cultos,
-.section-doe,
-.section-contato,
-.section-ministerios {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
+.section-doe {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Estilos do cabeçalho */
@@ -386,8 +381,9 @@ nav ul li a:hover {
 
 /* Seção Contato */
 .section-contato {
-
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -690,7 +686,11 @@ hr {
 
 /* MINISTÉRIOS */
 
-
+.section-ministerios {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .cards-container {
     display: grid;
@@ -868,7 +868,7 @@ hr {
 
 
 .section-ofertas h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-bottom: 20px;
     color: #ffdd57;
     font-weight: 600;
@@ -1247,6 +1247,9 @@ svg {
 
 /* ===== MENU MOBILE – TAP-FRIENDLY ===== */
 @media (max-width: 768px) {
+    
+    
+    
     #esconder{
         display: block;
     }
@@ -1537,4 +1540,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.8b6a5b27c3a86d9e5f3f.css.map*/
+/*# sourceMappingURL=styles.f38a09007c7206ee2098.css.map*/
