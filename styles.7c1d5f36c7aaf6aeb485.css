@@ -17,7 +17,7 @@ body {
 .section-index,
 .section-cultos,
 .section-doe {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -380,7 +380,7 @@ nav ul li a:hover {
 
 /* Seção Contato */
 .section-contato {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -685,7 +685,7 @@ hr {
 /* MINISTÉRIOS */
 
 .section-ministerios {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/assets/images/image.5feb04780e2002b22072.png) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -1533,4 +1533,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.08b4bba1535b874b00bd.css.map*/
+/*# sourceMappingURL=styles.7c1d5f36c7aaf6aeb485.css.map*/
