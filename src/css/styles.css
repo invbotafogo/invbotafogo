@@ -1051,14 +1051,25 @@ svg {
     display: flex !important;
 }
 
-@media only screen and (max-width: 768px) {
-    .section-index,
-    .section-ministerios{
-        background-attachment: scroll;
-    }
+@media only screen and (max-width: 1024px) {
+    .section-index {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .section-index::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                    url('../assets/images/image.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+      }
+      
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .section-home .text h1{
         font-size: 2.5rem;
     }
