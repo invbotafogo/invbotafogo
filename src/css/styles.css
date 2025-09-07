@@ -1070,6 +1070,8 @@ svg {
       }
 }
 
+
+
 @media (max-width: 450px) {
     .section-home .text h1{
         font-size: 2.5rem;
@@ -1265,6 +1267,176 @@ svg {
         height: 300px;
         width: 300px;
     }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cultos-mapa{
+        height: auto;
+        min-width: 250px;
+    }
+    #esconder{
+        display: block;
+    }
+    .navbar {
+        padding: 0 5%;
+    }
+    
+
+    /* Botão hamburguer maior e com área de toque amigável */
+    .navbar__toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 7px;
+        font-size: 1.75rem;
+        min-width: 50px;
+        /* largura do botão */
+        min-height: 50px;
+        /* altura do botão */
+        background: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+
+
+    .navbar__toggle.active span:nth-child(1) {
+        bottom: 50%;
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    .navbar__toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: rotate(45deg);
+    }
+
+    .navbar__toggle.active span:nth-child(3) {
+        bottom: 0;
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+    .navbar__toggle span {
+        display: block;
+        height: 5px;
+        /* espessura da barra */
+        width: 100%;
+        /* ocupa toda a largura do botão */
+        background: whitesmoke;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Container do dropdown com melhor legibilidade */
+    .navbar__menu {
+        position: absolute;
+        top: calc(70px + env(safe-area-inset-top, 0px));
+        /* altura do header + notch */
+        right: 12px;
+        left: 12px;
+        display: none;
+        /* escondido por padrão */
+        flex-direction: column;
+        gap: 0;
+        background: rgba(0, 0, 0, 0.92);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+        overflow: hidden;
+        z-index: 1000;
+        padding: 6px 0;
+        backdrop-filter: blur(6px);
+        max-height: min(70vh, 520px);
+        /* evita estourar a tela */
+        overflow-y: auto;
+        /* rolagem interna se passar */
+        scrollbar-width: thin;
+    }
+
+    /* Itens maiores, com área de toque confortável */
+    .navbar__menu li {
+        min-height: 52px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .navbar__menu a {
+        display: block;
+        width: 100%;
+        padding: 16px 18px;
+        /* mais espaço lateral/vertical */
+        font-size: 1.125rem;
+        line-height: 1.35;
+        letter-spacing: 0.2px;
+        border-bottom: 0px solid rgba(255, 255, 255, .08);
+    }
+
+    .navbar__menu a:active {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar__menu a:last-child {
+        border-bottom: 0;
+    }
+
+    /* Submenu no mobile (em coluna) */
+    .submenu {
+        position: static;
+        display: none;
+        margin: 0;
+        padding: 6px 0;
+        background: rgba(255, 255, 255, 0.05);
+        border-top: 1px solid rgba(255, 255, 255, .08);
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* Use .submenu--open via JS se desejar abrir por clique */
+    .submenu.submenu--open {
+        display: block;
+    }
+
+    .menu-item:hover>.submenu {
+        display: none;
+    }
+
+    /* desativa hover no mobile */
+
+    .submenu li {
+        min-height: 48px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .submenu a {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        border-bottom: 0px dashed rgba(255, 255, 255, .08);
+    }
+
+    .submenu a:last-child {
+        border-bottom: 0;
+    }
+
+    footer nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+
+    .footer_infos {
+        display: none;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between; /* espalha igualmente */
+        align-items: flex-start; /* alinha pelo topo */
+        flex-wrap: wrap; /* caso a tela fique menor, quebra para linha de baixo */
+        gap: 20px; /* espaçamento entre os blocos */
+        padding: 0 5%;
+    }
+
 
 }
 
