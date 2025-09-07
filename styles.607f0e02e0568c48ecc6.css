@@ -1054,30 +1054,21 @@ svg {
 @media only screen and (max-width: 1440px) {
     .section-index,
     .section-ministerios {
-      position: relative;
-      z-index: 1;
-      height: 100vh; /* garante que só ocupe a tela inicial */
-    }
-  
-    .section-index::before,
-    .section-ministerios::before {
-      content: "";
-      position: fixed;
-      inset: 0; /* shorthand p/ top, right, bottom, left */
-      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
-                  url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center;
-      background-size: cover;
-      z-index: -1;
-      pointer-events: none;
-    }
-  
-    .section-home {
-      position: relative;
-      z-index: 2; /* garante que fique sobre o fundo */
-      background: #000; /* ou rgba(0,0,0,0.95) */
-    }
-  }
-  
+        position: relative;
+        z-index: 1;
+      }
+      
+      .section-index::before,
+      .section-ministerios::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                    url(/assets/images/image.7282c21ac6fe23917fc0.jpg) no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+      }
+}
 
 @media (max-width: 450px) {
     .section-home .text h1{
@@ -1572,4 +1563,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.15aeb7c74690b4eea864.css.map*/
+/*# sourceMappingURL=styles.607f0e02e0568c48ecc6.css.map*/
