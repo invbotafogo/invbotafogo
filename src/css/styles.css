@@ -14,10 +14,14 @@ body {
     min-height: 100vh;
 }
 
-.section-index,
+.section-index{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../assets/images/image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
 .section-cultos,
 .section-doe {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../assets/images/image.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -1045,6 +1049,13 @@ svg {
 /* Menu aberto (classe adicionada via JS) */
 .navbar__menu.is-open {
     display: flex !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .section-index,
+    .section-ministerios{
+        background-attachment: scroll;
+    }
 }
 
 @media (max-width: 425px) {
