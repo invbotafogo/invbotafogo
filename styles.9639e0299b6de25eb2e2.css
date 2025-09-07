@@ -1051,7 +1051,7 @@ svg {
     display: flex !important;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
     .section-index,
     .section-ministerios {
         position: relative;
@@ -1563,4 +1563,4 @@ lign: left; /* mantém texto alinhado à esquerda */
 
 
 
-/*# sourceMappingURL=styles.18c2e9fb6caa95fee655.css.map*/
+/*# sourceMappingURL=styles.9639e0299b6de25eb2e2.css.map*/
