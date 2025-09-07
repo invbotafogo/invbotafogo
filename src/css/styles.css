@@ -1052,12 +1052,14 @@ svg {
 }
 
 @media only screen and (max-width: 1024px) {
-    .section-index {
+    .section-index,
+    .section-ministerios {
         position: relative;
         z-index: 1;
       }
       
-      .section-index::before {
+      .section-index::before,
+      .section-ministerios::before {
         content: "";
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
@@ -1066,7 +1068,6 @@ svg {
         background-size: cover;
         z-index: -1;
       }
-      
 }
 
 @media (max-width: 450px) {
