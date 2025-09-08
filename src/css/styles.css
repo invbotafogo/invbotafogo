@@ -1281,6 +1281,18 @@ svg {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        /* imagem responsiva (sem height fixa) */
+        .expanded-image {
+            display: block;      /* necessário para margin auto funcionar em imagens */
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 5 / 5;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 0 auto;      /* centraliza horizontalmente */
+        }
+    
     .cultos-mapa{
         height: auto;
         min-width: 250px;
@@ -1451,8 +1463,9 @@ svg {
 }
 
 /* ===== MENU MOBILE – TAP-FRIENDLY ===== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     
+
     
     
     #esconder{
@@ -1608,14 +1621,14 @@ svg {
 
     /* imagem responsiva (sem height fixa) */
     .expanded-image {
-        max-width: 100%;
+        display: block;      /* necessário para margin auto funcionar em imagens */
+        max-width: 600px;
         width: 100%;
         height: auto;
-        /* remove a altura fixa */
         aspect-ratio: 5 / 5;
-        /* opcional: mantém proporção agradável */
         object-fit: cover;
         border-radius: 12px;
+        margin: 0 auto;      /* centraliza horizontalmente */
     }
 
     /* texto abaixo da imagem com boa leitura */
