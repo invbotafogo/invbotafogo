@@ -4,7 +4,7 @@ let lastExpandedId = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadComponent("#header", "header.html");
-    setupMobileMenu();
+    await setupMobileMenu();
 
     await loadComponent("#footer", "footer.html");
 
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (prevBtn) prevBtn.addEventListener('click', () => { index = (index - 1 + items.length) % items.length; updateCarousel(); });
     window.addEventListener('resize', updateCarousel);
 
-    carregarVideos();
-    mostrarProximoCulto();
+    await carregarVideos();
+    await mostrarProximoCulto();
 });
 
 // ==== Funções utilitárias ====
@@ -129,7 +129,7 @@ async function carregarVideos() {
     } catch (error) { console.error("Erro ao carregar vídeos:", error); }
 }
 
-function mostrarProximoCulto() {
+async function mostrarProximoCulto() {
     const container = document.getElementById("proximo-culto");
     if (!container) return;
     const agora = new Date();
@@ -158,7 +158,7 @@ function mostrarProximoCulto() {
 }
 
 // ==== Novo: toggle menu (sem aria) ====
-function setupMobileMenu() {
+async function setupMobileMenu() {
     const btn = document.querySelector('.navbar__toggle');
     const menu = document.querySelector('#menu');
     if (!btn || !menu) return;
