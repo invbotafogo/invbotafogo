@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "sMKmOdsinAvVvOReGCGip9aVpDs",
+  "etag": "Mjpftalwn-WuZlzOLwame8CNaRg",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "H6a9GbTGrM6StGcg9GsbQrwVMN4",
+      "etag": "NS73hVsm1I9Oh9YA0-_T6lrBxsk",
       "id": {
         "kind": "youtube#video",
         "videoId": "5HX2_Npj48w"
@@ -18,7 +18,7 @@
       "snippet": {
         "publishedAt": "2025-09-21T15:03:01Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Contentamento na vida - Pr. M\u00e1rcio Santos",
+        "title": "Contentamento na vida - Pr. M\u00e1rcio Soares",
         "description": "Culto de Domingo (Manh\u00e3), 21 de setembro. Aprender a viver contente em toda e qualquer situa\u00e7\u00e3o \u00e9 um segredo poderoso.",
         "thumbnails": {
           "default": {
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "rni_ysgSKnSLsxXpeKrHiTEMTXk",
+      "etag": "Wm7z6UhiCDvxld_DZbzmRlIDhrY",
       "id": {
         "kind": "youtube#video",
         "videoId": "FcD6WhoHP4g"
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "RMqpnzVKzqLsOEmG4aacYJUqt2o",
+      "etag": "dxY2B7tkazGQuN8GWEcG91KkeAk",
       "id": {
         "kind": "youtube#video",
         "videoId": "nlWFP5migSk"
