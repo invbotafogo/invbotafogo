@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "NFG4T0a_KXqbqfSyTnGnKvAMztM",
+  "etag": "q5qRFsmiKtlHvdhMo6ZknJb3AYo",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 213,
+    "totalResults": 214,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nEqNp6CCFxb8ifqEEYE1_myk9FI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cteDiaT5tys"
+      },
+      "snippet": {
+        "publishedAt": "2025-09-28T16:27:25Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Servo Aprovado - Pr. M\u00e1rcio Soares",
+        "description": "Culto de Domingo (Manh\u00e3), 28 de setembro. Deus nos chama a viver de forma \u00edntegra e dedicada ao Seu servi\u00e7o. Em 2 Tim\u00f3teo ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cteDiaT5tys/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cteDiaT5tys/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cteDiaT5tys/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-09-28T16:27:25Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "bELg2Y_KRdk_AGV1Jhy7VVtPno4",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-09-25T03:03:43Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "DkLXUsVIQZpCEn3YhL-QLJ6ggYY",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ZmftlQjwxBY"
-      },
-      "snippet": {
-        "publishedAt": "2025-09-23T00:54:16Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de A\u00e7\u00e3o de Gra\u00e7as em celebra\u00e7\u00e3o pelos 80 anos de vida do Pr. Luiz Carlos dos Santos.",
-        "description": "Culto em A\u00e7\u00e3o de Gra\u00e7as pelos 80 anos do Pr. Luiz Carlos dos Santos. Uma noite de louvor, gratid\u00e3o e reconhecimento a Deus ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ZmftlQjwxBY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ZmftlQjwxBY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ZmftlQjwxBY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-09-23T00:54:16Z"
       }
     }
   ]
