@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "_kMQZTaM5UTdAtCsmQ84rhUOvzo",
+  "etag": "HSa0pGFeCydQgUX9oVO7UDzdgWo",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 217,
+    "totalResults": 219,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1Z9tPakb1vrImgkmfZRwshFrM8M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dvIvtd6xQ-8"
+      },
+      "snippet": {
+        "publishedAt": "2025-10-06T00:14:06Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Volte \u00e0 Fortaleza, H\u00e1 esperan\u00e7a - Pr. Luiz Carlos dos Santos",
+        "description": "Culto (Santa Ceia), Domingo (Noite), 5 de outubro de 2025. Zacarias 9:1-12 revela a fidelidade de Deus em meio ao ju\u00edzo.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dvIvtd6xQ-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dvIvtd6xQ-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dvIvtd6xQ-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-10-06T00:14:06Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "Ki7_DpMoUvI8YnFKUo8wkWWrcjA",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-09-29T00:02:42Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "nEqNp6CCFxb8ifqEEYE1_myk9FI",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "cteDiaT5tys"
-      },
-      "snippet": {
-        "publishedAt": "2025-09-28T16:27:25Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Servo Aprovado - Pr. M\u00e1rcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3), 28 de setembro. Deus nos chama a viver de forma \u00edntegra e dedicada ao Seu servi\u00e7o. Em 2 Tim\u00f3teo ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/cteDiaT5tys/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/cteDiaT5tys/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/cteDiaT5tys/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-09-28T16:27:25Z"
       }
     }
   ]
