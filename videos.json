@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "qSFzIXmmHuFD5l8o_6a5CLDg7jY",
+  "etag": "HI_H8iz0TM-gKY4t5hQ-bLpYu3Q",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 220,
+    "totalResults": 221,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BH9IjDQkAWgExnhfpt-ScEEBKBU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KckNrQEAkyk"
+      },
+      "snippet": {
+        "publishedAt": "2025-10-12T15:25:44Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Dois caminhos e Apenas uma escolha - Pr. M\u00e1rcio Soares",
+        "description": "Culto de Domingo (manh\u00e3), 12 de outubro de 2025. A vida crist\u00e3 \u00e9 feita de escolhas, e Jesus nos alerta sobre dois caminhos: um ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KckNrQEAkyk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KckNrQEAkyk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KckNrQEAkyk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-10-12T15:25:44Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "atn6xcTQKSLKclkEUiIwd9paf-Y",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-10-06T00:14:06Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Ki7_DpMoUvI8YnFKUo8wkWWrcjA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "38oCL2LKECU"
-      },
-      "snippet": {
-        "publishedAt": "2025-10-05T15:19:27Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "A adora\u00e7\u00e3o que agrada a Deus - Pr. M\u00e1rcio Soares",
-        "description": "Culto (Santa Ceia), Domingo (Manh\u00e3), 5 de outubro. Com base em 1 Samuel 15, refletiremos sobre o que realmente agrada a ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/38oCL2LKECU/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/38oCL2LKECU/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/38oCL2LKECU/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-10-05T15:19:27Z"
       }
     }
   ]
