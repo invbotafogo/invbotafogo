@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "HI_H8iz0TM-gKY4t5hQ-bLpYu3Q",
+  "etag": "HnPprKw4lXx-y3JJJtzGnN1Mrvg",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 221,
+    "totalResults": 223,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LJH93lKDd5e4vAyyd99Ani55nk4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "6BJdEvikVuU"
+      },
+      "snippet": {
+        "publishedAt": "2025-10-13T03:32:46Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Do Clamor \u00e0 Vit\u00f3ria - Pr. Luiz Carlos dos Santos ",
+        "description": "Culto de Domingo (noite), 12 de outubro de 2025. Esses tr\u00eas salmos revelam uma jornada espiritual profunda. Em Salmos 22 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6BJdEvikVuU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6BJdEvikVuU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6BJdEvikVuU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-10-13T03:32:46Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "BH9IjDQkAWgExnhfpt-ScEEBKBU",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-10-09T01:40:13Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "MziTUHfDCQlRtOdTv9WZiJgQFC8",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "dvIvtd6xQ-8"
-      },
-      "snippet": {
-        "publishedAt": "2025-10-06T00:14:06Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Volte \u00e0 Fortaleza, H\u00e1 esperan\u00e7a - Pr. Luiz Carlos dos Santos",
-        "description": "Culto (Santa Ceia), Domingo (Noite), 5 de outubro de 2025. Zacarias 9:1-12 revela a fidelidade de Deus em meio ao ju\u00edzo.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/dvIvtd6xQ-8/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/dvIvtd6xQ-8/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/dvIvtd6xQ-8/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-10-06T00:14:06Z"
       }
     }
   ]
