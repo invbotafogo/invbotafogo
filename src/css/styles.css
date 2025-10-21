@@ -1,7 +1,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -11,7 +10,17 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* garante que o body ocupe a altura inteira da tela */
+}
+
+/* Conteúdo principal que ocupa espaço restante */
+main, .section-cultos, .section-estudo, .section-home, .section-historia {
+    flex: 1 0 auto; /* cresce para ocupar espaço restante */
+}
+
+/* Footer não encolhe e fica sempre no final */
+footer {
+    flex-shrink: 0;
 }
 
 .section-index{
@@ -20,7 +29,8 @@ body {
     background-attachment: fixed;
 }
 .section-cultos,
-.section-doe {
+.section-doe,
+.section-estudo {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/image.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
@@ -486,6 +496,10 @@ nav ul li a:hover {
 footer {
     background-color: #000;
     color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
 }
 
 footer nav {
@@ -851,10 +865,124 @@ hr {
 }
 
 
+/* ESTUDO */
+.section-contato {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 75vh;
+    padding: 90px 20px;
+    transition: opacity 1s ease-out;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.estudos-biblicos h2 {
+    padding-top: 5%;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.estudos-biblicos p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+
+
+
+.tema-btn {
+    width: 95%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 auto 10px auto; /* centraliza horizontalmente */
+    display: block;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.tema-btn:hover {
+    background-color: #333;
+}
+
+.aulas-container {
+    width: 95%;
+    margin: 0 auto 20px auto; /* mesma margem do botão */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+.aulas-container.hidden {
+    display: none;
+}
+
+
+.aulas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.aula-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px rgba(255,255,255,0.1); */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aula-card iframe {
+    width: 100%;
+    height: 215px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.aula-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.aula-card .btn:hover {
+    background-color: #005bb5;
+}
+
+
+
 /* DOE - Estilo atualizado */
 .section-ofertas {
     color: #ffffff;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     padding: 75px 20px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -1083,6 +1211,25 @@ svg {
 
 
 @media (max-width: 450px) {
+
+    .estudos-biblicos h2 {
+        padding-top: 10%;
+        font-size: 30px;
+        
+    }
+    
+    .estudos-biblicos p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .tema-btn {
+        width: 90%;
+    }
+
+    .aulas-container {
+        width: 90%;
+    }
+
     .section-home .text h1{
         font-size: 2.5rem;
     }
@@ -1147,6 +1294,29 @@ svg {
         height: 100%;
     }
  
+}
+
+@media (max-width: 768px) {
+
+    .footer-contact{
+        display: none;
+    }
+    .footer-links {
+        display: flex;
+        justify-content: center; /* centraliza o bloco de links */
+        flex-wrap: wrap; /* permite quebra de linha */
+        gap: 40px; /* espaço entre os grupos de links, ajuste como quiser */
+    }
+
+    .footer-links ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
 }
 
 @media (max-width: 375px) {

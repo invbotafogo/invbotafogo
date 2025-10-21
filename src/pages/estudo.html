@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INVB - Estudo Bíblico</title>
+    <title>INVB - Estudo Biblíco</title>
+    <!-- Favicon padrão -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo2.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/logo2.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/logo2.png">
+
+    <!-- Para Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/logo2.png">
+
+    <!-- Para iOS (atalhos na tela inicial) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -12,14 +22,36 @@
 <body>
     <div id="header"></div> <!-- Header será injetado aqui -->
 
-
-    <div id="main">
-        <!-- Seção Principal -->
-        Estudos Bíblicos
-    </div>
+    <div class="section-estudo">
+        <section id="estudos-biblicos" class="estudos-biblicos">
+          <h2>Estudos Bíblicos</h2>
+          <p>Escolha um tema para acessar as aulas e PDFs correspondentes.</p>
+      
+          <div class="temas-container">
+      
+            <!-- Tema 1 -->
+            <div class="tema-card">
+              <button class="tema-btn" onclick="carregarEstudosBiblicos('apocalipse')">
+                Apocalipse
+              </button>
+              <div id="apocalipse-container" class="aulas-container hidden"></div>
+            </div>
+      
+            <!-- Tema 2 -->
+            <div class="tema-card">
+              <button class="tema-btn" onclick="carregarEstudosBiblicos('evangelismo')">
+                Evangelismo (em breve)
+              </button>
+              <div id="evangelismo-container" class="aulas-container hidden"></div>
+            </div>
+      
+          </div>
+        </section>
+      </div>
 
     <div id="footer"></div> <!-- Footer será injetado aqui -->
 
+    <script type="module" src="../js/script.js"></script>
 </body>
 
 </html>
