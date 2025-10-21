@@ -147,9 +147,9 @@ async function carregarEstudosBiblicos(tema) {
       });
     }
   
-    if (tema === "evangelismo") {
-      container.innerHTML = `<p style="padding:10px;">As aulas de Evangelismo estarão disponíveis em breve 🙏</p>`;
-    }
+    // if (tema === "evangelismo") {
+    //   container.innerHTML = `<p style="padding:10px;">As aulas de Evangelismo estarão disponíveis em breve 🙏</p>`;
+    // }
 }
 window.carregarEstudosBiblicos = carregarEstudosBiblicos;
 
