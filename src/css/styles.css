@@ -948,7 +948,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #222;
+    background-color: #111;
     padding: 15px;
     border-radius: 12px;
     /* box-shadow: 0 4px 8px rgba(255,255,255,0.1); */
@@ -964,19 +964,20 @@ hr {
 }
 
 .aula-card .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0070f3;
-    color: white;
+    background-color: #000;
+    color: #ffcc00;
     text-decoration: none;
     border-radius: 6px;
     margin-top: 5px;
 }
 
 .aula-card .btn:hover {
-    background-color: #005bb5;
+    background-color: #222;
 }
-
 
 
 /* DOE - Estilo atualizado */

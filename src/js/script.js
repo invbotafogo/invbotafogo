@@ -147,10 +147,28 @@ async function carregarEstudosBiblicos(tema) {
       });
     }
   
-    // if (tema === "evangelismo") {
-    //   container.innerHTML = `<p style="padding:10px;">As aulas de Evangelismo estarão disponíveis em breve 🙏</p>`;
-    // }
+    // --- Espírito Santo ---
+  if (tema === "espirito_santo") {
+    const aulas = [
+      { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: "/src/assets/pdfs/ESPIRITO_Aula1.pdf" },
+      { titulo: "Aula 2 - Os símbolos do Espírito Santo", pdf: "/src/assets/pdfs/ESPIRITO_Aula2.pdf" },
+      // Adicione mais aulas conforme necessário
+    ];
+
+    aulas.forEach(aula => {
+      const card = document.createElement("div");
+      card.classList.add("aula-card");
+
+      card.innerHTML = `
+        <h3>${aula.titulo}</h3>
+        <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+      `;
+
+      container.appendChild(card);
+    });
+  }
 }
+
 window.carregarEstudosBiblicos = carregarEstudosBiblicos;
 
 async function loadComponent(selector, file) {
