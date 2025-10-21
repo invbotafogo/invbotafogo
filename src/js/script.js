@@ -193,13 +193,9 @@ async function carregarVideos() {
     } catch (error) { console.error("Erro ao carregar vídeos:", error); }
 }
 
-<<<<<<< HEAD
-async function mostrarProximoCulto() {
-=======
 
 
 function mostrarProximoCulto() {
->>>>>>> b86672b (pagina estudo adicionada)
     const container = document.getElementById("proximo-culto");
     if (!container) return;
     const agora = new Date();
