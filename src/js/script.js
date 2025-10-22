@@ -108,65 +108,67 @@ async function carregarEstudosBiblicos(tema) {
   
     // Se já tiver conteúdo carregado, não recarrega
     if (container.children.length > 0) return;
+
+    const basePath = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/pdfs";
   
     if (tema === "apocalipse") {
-    const aulas = [
-        { titulo: "Aula 1", videoID: "W-9M-PvIs3I", pdf: "/src/assets/pdfs/APOCALIPSE_Aula1.pdf" },
-        { titulo: "Aula 2", videoID: "UjytdzVytzI", pdf: "/src/assets/pdfs/APOCALIPSE_Aula2.pdf" },
-        { titulo: "Aula 3", videoID: "NZ1r3sO4dfU", pdf: "/src/assets/pdfs/APOCALIPSE_Aula3.pdf" },
-        { titulo: "Aula 4", videoID: "V_scgNPGmUM", pdf: "/src/assets/pdfs/APOCALIPSE_Aula4.pdf" },
-        { titulo: "Aula 5", videoID: "Q1J2GK_81L0", pdf: "/src/assets/pdfs/APOCALIPSE_Aula5.pdf" },
-        { titulo: "Aula 6", videoID: "foY5i2GJQHI", pdf: "/src/assets/pdfs/APOCALIPSE_Aula6.pdf" },
-        { titulo: "Aula 7", videoID: "Ns_fhLRZfBc", pdf: "/src/assets/pdfs/APOCALIPSE_Aula7.pdf" },
-        { titulo: "Aula 8", videoID: "S2v4D7edAZY", pdf: "/src/assets/pdfs/APOCALIPSE_Aula8.pdf" },
-        { titulo: "Aula 9", videoID: "4BEZ3cBxAxs", pdf: "/src/assets/pdfs/APOCALIPSE_Aula9.pdf" },
-        { titulo: "Aula 10", videoID: "yyNB9latoJA", pdf: "/src/assets/pdfs/APOCALIPSE_Aula10.pdf" },
-        { titulo: "Aula 11", videoID: "B8nssUilmUw", pdf: "/src/assets/pdfs/APOCALIPSE_Aula11.pdf" },
-        { titulo: "Aula 12", videoID: "1vcK5Iq01Xg", pdf: "/src/assets/pdfs/APOCALIPSE_Aula12.pdf" },
-        { titulo: "Aula 13", videoID: "6ytzOZ6hxPo", pdf: "/src/assets/pdfs/APOCALIPSE_Aula13.pdf" },
-        { titulo: "Aula 14", videoID: "8xSw2fvRmos", pdf: "/src/assets/pdfs/APOCALIPSE_Aula14.pdf" },
-        { titulo: "Aula 15", videoID: "e2Hx7JHyCws", pdf: "/src/assets/pdfs/APOCALIPSE_Aula15.pdf" },
-        { titulo: "Aula 16", videoID: "9nF4GHUhqc8", pdf: "/src/assets/pdfs/APOCALIPSE_Aula16.pdf" },
-        { titulo: "Aula 17", videoID: "KKLdA2VGj6k", pdf: "/src/assets/pdfs/APOCALIPSE_Aula17.pdf" },
-        { titulo: "Aula 18", videoID: "Ix74fta9zYE", pdf: "/src/assets/pdfs/APOCALIPSE_Aula18.pdf" },
-        { titulo: "Aula 19", videoID: "nTVSwWWeDws", pdf: "/src/assets/pdfs/APOCALIPSE_Aula19.pdf" },
-        { titulo: "Aula 21", videoID: "Ezp3lBmE7gM", pdf: "/src/assets/pdfs/APOCALIPSE_Aula21.pdf" },
+        const aulas = [
+            { titulo: "Aula 1", videoID: "W-9M-PvIs3I", pdf: `${basePath}/APOCALIPSE_Aula1.pdf` },
+            { titulo: "Aula 2", videoID: "UjytdzVytzI", pdf: `${basePath}/APOCALIPSE_Aula2.pdf` },
+            { titulo: "Aula 3", videoID: "NZ1r3sO4dfU", pdf: `${basePath}/APOCALIPSE_Aula3.pdf` },
+            { titulo: "Aula 4", videoID: "V_scgNPGmUM", pdf: `${basePath}/APOCALIPSE_Aula4.pdf` },
+            { titulo: "Aula 5", videoID: "Q1J2GK_81L0", pdf: `${basePath}/APOCALIPSE_Aula5.pdf` },
+            { titulo: "Aula 6", videoID: "foY5i2GJQHI", pdf: `${basePath}/APOCALIPSE_Aula6.pdf` },
+            { titulo: "Aula 7", videoID: "Ns_fhLRZfBc", pdf: `${basePath}/APOCALIPSE_Aula7.pdf` },
+            { titulo: "Aula 8", videoID: "S2v4D7edAZY", pdf: `${basePath}/APOCALIPSE_Aula8.pdf` },
+            { titulo: "Aula 9", videoID: "4BEZ3cBxAxs", pdf: `${basePath}/APOCALIPSE_Aula9.pdf` },
+            { titulo: "Aula 10", videoID: "yyNB9latoJA", pdf: `${basePath}/APOCALIPSE_Aula10.pdf` },
+            { titulo: "Aula 11", videoID: "B8nssUilmUw", pdf: `${basePath}/APOCALIPSE_Aula11.pdf` },
+            { titulo: "Aula 12", videoID: "1vcK5Iq01Xg", pdf: `${basePath}/APOCALIPSE_Aula12.pdf` },
+            { titulo: "Aula 13", videoID: "6ytzOZ6hxPo", pdf: `${basePath}/APOCALIPSE_Aula13.pdf` },
+            { titulo: "Aula 14", videoID: "8xSw2fvRmos", pdf: `${basePath}/APOCALIPSE_Aula14.pdf` },
+            { titulo: "Aula 15", videoID: "e2Hx7JHyCws", pdf: `${basePath}/APOCALIPSE_Aula15.pdf` },
+            { titulo: "Aula 16", videoID: "9nF4GHUhqc8", pdf: `${basePath}/APOCALIPSE_Aula16.pdf` },
+            { titulo: "Aula 17", videoID: "KKLdA2VGj6k", pdf: `${basePath}/APOCALIPSE_Aula17.pdf` },
+            { titulo: "Aula 18", videoID: "Ix74fta9zYE", pdf: `${basePath}/APOCALIPSE_Aula18.pdf` },
+            { titulo: "Aula 19", videoID: "nTVSwWWeDws", pdf: `${basePath}/APOCALIPSE_Aula19.pdf` },
+            { titulo: "Aula 21", videoID: "Ezp3lBmE7gM", pdf: `${basePath}/APOCALIPSE_Aula21.pdf` },
         ];
   
-      aulas.forEach(aula => {
-        const card = document.createElement("div");
-        card.classList.add("aula-card");
-  
-        card.innerHTML = `
-          <iframe src="https://www.youtube.com/embed/${aula.videoID}" title="${aula.titulo}" allowfullscreen></iframe>
-          <h3>${aula.titulo}</h3>
-          <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
-        `;
-  
-        container.appendChild(card);
-      });
+        aulas.forEach(aula => {
+            const card = document.createElement("div");
+            card.classList.add("aula-card");
+    
+            card.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${aula.videoID}" title="${aula.titulo}" allowfullscreen></iframe>
+            <h3>${aula.titulo}</h3>
+            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+            `;
+    
+            container.appendChild(card);
+        });
     }
   
     // --- Espírito Santo ---
-  if (tema === "espirito_santo") {
-    const aulas = [
-      { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: "/src/assets/pdfs/ESPIRITO_Aula1.pdf" },
-      { titulo: "Aula 2 - Os símbolos do Espírito Santo", pdf: "/src/assets/pdfs/ESPIRITO_Aula2.pdf" },
-      // Adicione mais aulas conforme necessário
-    ];
+    if (tema === "espirito_santo") {
+        const aulas = [
+            { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
+            { titulo: "Aula 2 - Os símbolos do Espírito Santo", pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
+            // Adicione mais aulas conforme necessário
+        ];
 
-    aulas.forEach(aula => {
-      const card = document.createElement("div");
-      card.classList.add("aula-card");
+        aulas.forEach(aula => {
+        const card = document.createElement("div");
+        card.classList.add("aula-card");
 
-      card.innerHTML = `
-        <h3>${aula.titulo}</h3>
-        <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
-      `;
+        card.innerHTML = `
+            <h3>${aula.titulo}</h3>
+            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+        `;
 
-      container.appendChild(card);
-    });
-  }
+        container.appendChild(card);
+        });
+    }
 }
 
 window.carregarEstudosBiblicos = carregarEstudosBiblicos;
