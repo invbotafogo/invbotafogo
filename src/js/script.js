@@ -132,15 +132,20 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "Aula 17", videoID: "KKLdA2VGj6k", pdf: `${basePath}/APOCALIPSE_Aula17.pdf` },
             { titulo: "Aula 18", videoID: "Ix74fta9zYE", pdf: `${basePath}/APOCALIPSE_Aula18.pdf` },
             { titulo: "Aula 19", videoID: "nTVSwWWeDws", pdf: `${basePath}/APOCALIPSE_Aula19.pdf` },
+            { titulo: "Aula 20", videoID: "", pdf: `${basePath}/APOCALIPSE_Aula20.pdf` },
             { titulo: "Aula 21", videoID: "Ezp3lBmE7gM", pdf: `${basePath}/APOCALIPSE_Aula21.pdf` },
         ];
   
         aulas.forEach(aula => {
             const card = document.createElement("div");
             card.classList.add("aula-card");
+
+            const midia = aula.videoID
+            ? `<iframe src="https://www.youtube.com/embed/${aula.videoID}" title="${aula.titulo}" allowfullscreen loading="lazy"></iframe>`
+            : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
     
             card.innerHTML = `
-            <iframe src="https://www.youtube.com/embed/${aula.videoID}" title="${aula.titulo}" allowfullscreen></iframe>
+            ${midia}
             <h3>${aula.titulo}</h3>
             <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
             `;
