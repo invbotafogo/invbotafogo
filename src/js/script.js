@@ -159,6 +159,22 @@ async function carregarEstudosBiblicos(tema) {
         const aulas = [
             { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
             { titulo: "Aula 2 - Os símbolos do Espírito Santo", pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
+            // { titulo: "Aula 3 - O Espírito Santo e as Escrituras", pdf: "" },
+            // { titulo: "Aula 4 - Da criação até o nascimento de Jesus", pdf: "" },
+            // { titulo: "Aula 5 - Do nascimento de Jesus até Pentecostes", pdf: "" },
+            // { titulo: "Aula 6 - Depois de Pentecostes", pdf: "" },
+            // { titulo: "Aula 7 - O Espírito Santo na vida do crente", pdf: "" },
+            // { titulo: "Aula 8 - O batismo com o Espírito Santo", pdf: "" },
+            // { titulo: "Aula 9 - A luta interior do crente", pdf: "" },
+            // { titulo: "Aula 10 - Pecados contra o Espírito Santo", pdf: "" },
+            // { titulo: "Aula 11 - O fruto do Espírito", pdf: "" },
+            // { titulo: "Aula 12 - Princípios e objetivos dos dons", pdf: "" },
+            // { titulo: "Aula 13 - Os dons de ministério", pdf: "" },
+            // { titulo: "Aula 14 - Os dons de serviço", pdf: "" },
+            // { titulo: "Aula 15 - Os dons de sinais", pdf: "" },
+            // { titulo: "Aula 16 - Como reconhecer o seu dom", pdf: "" },
+            // { titulo: "Aula 17 - Como ficar cheio do Espírito Santo", pdf: "" },
+                
             // Adicione mais aulas conforme necessário
         ];
 
