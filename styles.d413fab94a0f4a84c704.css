@@ -234,7 +234,8 @@ nav ul li a:hover {
     min-width: 280px;
 }
 
-.cultos-info h2 {
+.cultos-info h2,
+.eventos-box h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #2c3e50;
@@ -324,7 +325,7 @@ nav ul li a:hover {
 }
 
 .cultos-info h2 i,
-.eventos-box h3 i {
+.eventos-box h2 i {
     color: #ffcc00;
 }
 
@@ -1955,4 +1956,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.cb6b506063bf134df610.css.map*/
+/*# sourceMappingURL=styles.d413fab94a0f4a84c704.css.map*/
