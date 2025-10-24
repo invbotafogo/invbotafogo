@@ -63,20 +63,43 @@
 
                 <!-- Bloco separado: Eventos -->
                 <div class="eventos-box">
-                    <h3><i class="fa-solid fa-calendar-days"></i> Eventos</h3>
-                    <div class="evento-mini">
-                        <strong>Encontro de Guerreiros</strong>
-                        <p>27/10/2025 às 19h</p>
-                    </div>
-                    <div class="evento-mini">
-                        <strong>Encontro de Amigas</strong>
-                        <p>27/10/2025 às 19h</p>
-                    </div>
-                    <div class="evento-mini">
-                        <strong>Culto das Mulheres</strong>
-                        <p>17/10/2025 às 19:30h</p>
+                    <h2><i class="fa-solid fa-calendar-days"></i> Calendário de Eventos</h2>
+                    <!-- src="https://calendar.google.com/calendar/embed?src=en.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FSao_Paulo&mode=AGENDA" -->
+                    <div id="calendar-container">
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?src=en.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FSao_Paulo&hl=pt_BR"
+                            width="100%"
+                            style="border:none; border-radius: 12px;"
+                            frameborder="0"
+                            scrolling="no">
+                        </iframe>
                     </div>
                 </div>
+                <script>
+                    (function() {
+                        function updateCalendar() {
+                            const iframe = document.querySelector('#calendar-container iframe');
+                            if (!iframe) return; // garante que o iframe exista
+                    
+                            if (window.innerWidth < 450) {
+                                // Modo programação (Agenda) para telas pequenas
+                                iframe.src = "https://calendar.google.com/calendar/embed?src=en.brazilian%23holiday@group.v.calendar.google.com&ctz=America%2FSao_Paulo&mode=AGENDA&showTitle=0&showPrint=0&showCalendars=0&hl=pt_BR";
+                                iframe.height = "600";
+                                iframe.scrolling = "yes";
+                            } else {
+                                // Modo mensal padrão
+                                iframe.src = "https://calendar.google.com/calendar/embed?src=en.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FSao_Paulo&hl=pt_BR";
+                                iframe.height = "550";
+                                iframe.scrolling = "no";
+                            }
+                        }
+                    
+                        // Executa ao carregar a página
+                        window.addEventListener('DOMContentLoaded', updateCalendar);
+                        // Executa ao redimensionar a tela
+                        window.addEventListener('resize', updateCalendar);
+                    })();
+                    </script>
 
             </div>
         </section>
