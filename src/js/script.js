@@ -235,6 +235,64 @@ async function carregarVideos() {
 }
 
 
+// Função para inicializar o calendário
+function initializeCalendar() {
+    const calendarContainer = document.getElementById('calendar-container');
+    let lastMode = null;
+    let lastUpdate = 0;
+
+    function updateCalendar(force = false) {
+        const now = Date.now();
+        const hoursSinceLastUpdate = (now - lastUpdate) / (1000 * 60 * 60);
+
+        // Atualiza a cada 6 horas ou se for forçado
+        if (!force && hoursSinceLastUpdate < 6) return;
+
+        lastUpdate = now;
+        const width = window.innerWidth;
+        let newMode = width < 450 ? "AGENDA" : "MONTH";
+
+        // Evita recriar se o modo for o mesmo
+        if (newMode === lastMode && !force) return;
+        lastMode = newMode;
+
+        const src = `https://calendar.google.com/calendar/embed?src=mdc.invb%40gmail.com&ctz=America%2FSao_Paulo&mode=${newMode}&showTitle=1&showPrint=0&showCalendars=0&showTz=0`;
+
+        // Verifica se já existe um iframe dentro do container
+        let iframe = calendarContainer.querySelector('iframe');
+        if (iframe) {
+            // Só atualiza o src e propriedades
+            iframe.src = src;
+            iframe.height = newMode === 'AGENDA' ? '600' : '550';
+            iframe.scrolling = newMode === 'AGENDA' ? 'yes' : 'no';
+        } else {
+            // Cria o iframe apenas uma vez
+            iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.width = '100%';
+            iframe.height = newMode === 'AGENDA' ? '600' : '550';
+            iframe.style.border = 'none';
+            iframe.style.borderRadius = '12px';
+            iframe.frameBorder = '0';
+            iframe.scrolling = newMode === 'AGENDA' ? 'yes' : 'no';
+            calendarContainer.appendChild(iframe);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => updateCalendar(true));
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => updateCalendar(true), 1000);
+    });
+
+    // Atualiza automaticamente a cada 6 horas
+    setInterval(() => updateCalendar(true), 6 * 60 * 60 * 1000);
+}
+initializeCalendar();
+
+
 
 function mostrarProximoCulto() {
     const container = document.getElementById("proximo-culto");
@@ -255,13 +313,13 @@ function mostrarProximoCulto() {
         })
         .filter(data => data > agora || (agora - data <= 2 * 60 * 60 * 1000))
         .sort((a, b) => a - b)[0];
-    if (!proximoCulto) return;
-    const horaFormatada = proximoCulto.toLocaleString('pt-BR', { weekday: 'long', hour: '2-digit', minute: '2-digit' });
-    const link = "https://www.youtube.com/@igrejadenovavidabotafogo3785/live";
-    const estaAoVivo = proximoCulto <= agora;
-    container.innerHTML = estaAoVivo
-        ? `🎥 Culto ao vivo agora! <a href="${link}" target="_blank">Clique para assistir</a>`
-        : `🗓️ Próximo culto: ${horaFormatada}. <a href="${link}" target="_blank">Clique para assistir</a>`;
+        if (!proximoCulto) return;
+            const horaFormatada = proximoCulto.toLocaleString('pt-BR', { weekday: 'long', hour: '2-digit', minute: '2-digit' });
+            const link = "https://www.youtube.com/@igrejadenovavidabotafogo3785/live";
+            const estaAoVivo = proximoCulto <= agora;
+            container.innerHTML = estaAoVivo
+            ? `🎥 Culto ao vivo agora! <a href="${link}" target="_blank">Clique para assistir</a>`
+            : `🗓️ Próximo culto: ${horaFormatada}. <a href="${link}" target="_blank">Clique para assistir</a>`;
 }
 
 // ==== Novo: toggle menu (sem aria) ====
