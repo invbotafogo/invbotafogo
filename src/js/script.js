@@ -157,10 +157,10 @@ async function carregarEstudosBiblicos(tema) {
     // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
-            { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
+            // { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
             { titulo: "Aula 2 - Os símbolos do Espírito Santo", pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
             { titulo: "Aula 3 - O Espírito Santo e as Escrituras", pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
-            // { titulo: "Aula 4 - Da criação até o nascimento de Jesus", pdf: "" },
+            { titulo: "Aula 4 - Da criação até o nascimento de Jesus", pdf: `${basePath}/ESPIRITO_Aula4.pdf`  },
             // { titulo: "Aula 5 - Do nascimento de Jesus até Pentecostes", pdf: "" },
             // { titulo: "Aula 6 - Depois de Pentecostes", pdf: "" },
             // { titulo: "Aula 7 - O Espírito Santo na vida do crente", pdf: "" },
