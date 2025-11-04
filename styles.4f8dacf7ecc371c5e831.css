@@ -977,10 +977,10 @@ hr {
 .aula-card iframe,
 .aula-card .sem-video {
   width: 100%;
-  height: 100%;
+  height: auto;
   border: none;
   box-sizing: border-box;
-    aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -1963,4 +1963,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.3a00a42a47a736b93c97.css.map*/
+/*# sourceMappingURL=styles.4f8dacf7ecc371c5e831.css.map*/
