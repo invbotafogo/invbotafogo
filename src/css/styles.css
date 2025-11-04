@@ -957,7 +957,8 @@ hr {
 }
 
 .aula-card iframe,
-.aula-card .sem-video {
+.aula-card .sem-video,
+.aula-card img.video-thumb {
     padding: 15px;
     font-family: 'Poppins', sans-serif;
     color: #111;

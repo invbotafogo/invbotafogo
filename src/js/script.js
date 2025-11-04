@@ -184,8 +184,8 @@ async function carregarEstudosBiblicos(tema) {
         card.classList.add("aula-card");
 
         const midia = aula.imagem
-            ? `<img src="${aula.imagem}" alt="${aula.titulo}">`
-            : `<div class="sem-imagem" role="img" aria-label="Sem imagem disponível">Sem imagem</div>`;
+        ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
+        : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
 
         card.innerHTML = `
             ${midia}
