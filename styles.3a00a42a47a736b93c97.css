@@ -956,9 +956,8 @@ hr {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.aula-card iframe,
-.aula-card .sem-video,
-.aula-card img.video-thumb {
+/* .aula-card iframe,
+.aula-card .sem-video{
     padding: 15px;
     font-family: 'Poppins', sans-serif;
     color: #111;
@@ -966,13 +965,26 @@ hr {
     aspect-ratio: 16 / 9;
     flex-direction: column;
     align-items: center;
+    object-fit: contain;
     background-color: #111;
     width: 100%;
     height: 215px;
-    border: none;
     border-radius: 8px;
     margin-bottom: 10px;
+} */
+
+.aula-card img.video-thumb,
+.aula-card iframe,
+.aula-card .sem-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+    aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  object-fit: cover;
 }
+  
 
 .aula-card .sem-video {
   background: #111;
@@ -983,13 +995,7 @@ hr {
   border-radius: 8px;
 }
 
-.aula-card iframe {
-    width: 100%;
-    height: 215px;
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
+
 
 .aula-card .btn {
     font-family: 'Montserrat', sans-serif;
@@ -1957,4 +1963,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.a71f9452d53ff4b17206.css.map*/
+/*# sourceMappingURL=styles.3a00a42a47a736b93c97.css.map*/
