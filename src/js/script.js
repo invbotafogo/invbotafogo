@@ -1,3 +1,4 @@
+import { image } from "framer-motion/client";
 import "../css/styles.css";
 
 let lastExpandedId = null;
@@ -154,13 +155,14 @@ async function carregarEstudosBiblicos(tema) {
         });
     }
   
+    const basePathImg = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/images";
     // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
-            { titulo: "Aula 1 - Quem é o Espírito Santo?", pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
-            { titulo: "Aula 2 - Os símbolos do Espírito Santo", pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
-            { titulo: "Aula 3 - O Espírito Santo e as Escrituras", pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
-            { titulo: "Aula 4 - Da criação até o nascimento de Jesus", pdf: `${basePath}/ESPIRITO_Aula4.pdf`  },
+            { titulo: "Aula 1 - Quem é o Espírito Santo?", imagem: `${basePathImg}/aula1.jpg` ,pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
+            { titulo: "Aula 2 - Os símbolos do Espírito Santo", imagem: `${basePathImg}/intro.jpg`, pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
+            { titulo: "Aula 3 - O Espírito Santo e as Escrituras", imagem: `${basePathImg}/intro.jpg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
+            { titulo: "Aula 4 - Da criação até o nascimento de Jesus", imagem: `${basePathImg}/intro.jpg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf`  },
             // { titulo: "Aula 5 - Do nascimento de Jesus até Pentecostes", pdf: "" },
             // { titulo: "Aula 6 - Depois de Pentecostes", pdf: "" },
             // { titulo: "Aula 7 - O Espírito Santo na vida do crente", pdf: "" },
@@ -181,7 +183,12 @@ async function carregarEstudosBiblicos(tema) {
         const card = document.createElement("div");
         card.classList.add("aula-card");
 
+        const midia = aula.imagem
+            ? `<img src="${aula.imagem}" alt="${aula.titulo}">`
+            : `<div class="sem-imagem" role="img" aria-label="Sem imagem disponível">Sem imagem</div>`;
+
         card.innerHTML = `
+            ${midia}
             <h3>${aula.titulo}</h3>
             <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
         `;
