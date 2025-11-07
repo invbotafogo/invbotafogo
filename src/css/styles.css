@@ -995,7 +995,9 @@ hr {
   border-radius: 8px;
 }
 
-
+.aula-card h3{
+    text-align: center;
+}
 
 .aula-card .btn {
     font-family: 'Montserrat', sans-serif;

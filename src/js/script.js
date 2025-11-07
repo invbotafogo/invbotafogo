@@ -196,6 +196,32 @@ async function carregarEstudosBiblicos(tema) {
         container.appendChild(card);
         });
     }
+
+    if (tema === "evangelismo") {
+        const aulas = [
+            { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY"},
+            
+        ];
+
+        aulas.forEach(aula => {
+            const card = document.createElement("div");
+            card.classList.add("aula-card");
+
+            const midia = aula.videoID
+            ? `<iframe src="https://www.youtube.com/embed/${aula.videoID}" title="${aula.titulo}" allowfullscreen loading="lazy"></iframe>`
+            : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
+    
+            card.innerHTML = `
+            ${midia}
+            <h3>${aula.titulo}</h3>
+            `;
+    
+            container.appendChild(card);
+        });
+    }
+
+
+
 }
 
 window.carregarEstudosBiblicos = carregarEstudosBiblicos;
