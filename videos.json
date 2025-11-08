@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "0c3tm0cxZIyikvdHZ4l5FkA-wuY",
+  "etag": "o6gvylzTGNMBApXt6W2M1mwrJew",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 93,
+    "totalResults": 233,
     "resultsPerPage": 10
   },
   "items": [
@@ -44,70 +44,70 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "C7QBB2G2bRYKXRgxn1BSfoqyxWs",
+      "etag": "a-FFuY9-J_Y5_J3fmI-o7HUJ_1E",
       "id": {
         "kind": "youtube#video",
-        "videoId": "KckNrQEAkyk"
+        "videoId": "IAuxVP9gxJE"
       },
       "snippet": {
-        "publishedAt": "2025-10-12T15:25:44Z",
+        "publishedAt": "2025-10-20T02:29:12Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Dois caminhos e Apenas uma escolha - Pr. M\u00e1rcio Soares",
-        "description": "Culto de Domingo (manh\u00e3), 12 de outubro de 2025. A vida crist\u00e3 \u00e9 feita de escolhas, e Jesus nos alerta sobre dois caminhos: um ...",
+        "title": "O exemplo que transforma - Pr. Luiz Carlos dos Santos",
+        "description": "Culto de Domingo (noite), 19 de outubro de 2025. Cristo n\u00e3o apenas falou sobre humildade, Ele viveu. N\u00e3o apenas ensinou ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/KckNrQEAkyk/default.jpg",
+            "url": "https://i.ytimg.com/vi/IAuxVP9gxJE/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/KckNrQEAkyk/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/IAuxVP9gxJE/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/KckNrQEAkyk/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/IAuxVP9gxJE/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-10-12T15:25:44Z"
+        "publishTime": "2025-10-20T02:29:12Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "atn6xcTQKSLKclkEUiIwd9paf-Y",
+      "etag": "JzHyxLoCVYlnvlgOrTVObfv8orE",
       "id": {
         "kind": "youtube#video",
-        "videoId": "_uFzGExVqm0"
+        "videoId": "P1ocUT6KZIs"
       },
       "snippet": {
-        "publishedAt": "2025-10-09T01:40:13Z",
+        "publishedAt": "2025-10-20T02:00:31Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Sentindo a presen\u00e7a de Deus - Pr. M\u00e1rcio Soares ",
-        "description": "Culto de Quarta, 08 de setembro de 2025. Pr. M\u00e1rcio Soares Sentindo a presen\u00e7a de Deus.",
+        "title": "Vivendo sem contradi\u00e7\u00e3o - Pr. M\u00e1rcio Soares",
+        "description": "Culto de Domingo (manh\u00e3), 19 de outubro de 2025. Viver sem contradi\u00e7\u00e3o \u00e9 alinhar o que falamos com o que vivemos.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/_uFzGExVqm0/default.jpg",
+            "url": "https://i.ytimg.com/vi/P1ocUT6KZIs/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/_uFzGExVqm0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/P1ocUT6KZIs/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/_uFzGExVqm0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/P1ocUT6KZIs/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-10-09T01:40:13Z"
+        "publishTime": "2025-10-20T02:00:31Z"
       }
     }
   ]
