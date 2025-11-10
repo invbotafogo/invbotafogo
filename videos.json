@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "qoiqPbraKrzSJuIo7BvH2w5mc6M",
+  "etag": "Y_dv9Il-suDE71QYegFLDT1tnUo",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 234,
+    "totalResults": 235,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sA7HHcj2D27NRUCmPREEDMSC_LI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qf89f-ozVf0"
+      },
+      "snippet": {
+        "publishedAt": "2025-11-10T00:11:02Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "N\u00e3o quero ser mais quem eu sou! - Pr. Daniela Neves",
+        "description": "Culto de Domingo (noite), 9 de novembro de 2025. \u201cN\u00e3o apagueis o Esp\u00edrito.\u201d 1 Tessalonicenses 5:19 (ARA) Uma mensagem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qf89f-ozVf0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qf89f-ozVf0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qf89f-ozVf0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-11-10T00:11:02Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "qk3yOrUJiPCc4jYRKBKwym-4DEQ",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-11-07T13:00:38Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "2wO6krX7wzNgqbkfKSrHI_dlw6A",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "gt9hojhCGtA"
-      },
-      "snippet": {
-        "publishedAt": "2025-11-06T00:32:49Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Agir de Deus - Pr. Carlos Augusto ",
-        "description": "Tema: Agir de Deus Convidado: Pr. Carlos Augusto Quando Deus age, nada pode impedir. \u00c0s vezes, n\u00e3o entendemos o ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/gt9hojhCGtA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/gt9hojhCGtA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/gt9hojhCGtA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-11-06T00:32:49Z"
       }
     }
   ]
