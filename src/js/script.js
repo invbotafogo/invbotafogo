@@ -155,7 +155,7 @@ async function carregarEstudosBiblicos(tema) {
         });
     }
   
-    const basePathImg = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/images";
+    const basePathImg = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesES";
     // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
@@ -163,7 +163,7 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "Aula 2 - Os símbolos do Espírito Santo", imagem: `${basePathImg}/aula2.jpg`, pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
             { titulo: "Aula 3 - O Espírito Santo e as Escrituras", imagem: `${basePathImg}/aula3.jpg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
             { titulo: "Aula 4 - Da criação até o nascimento de Jesus", imagem: `${basePathImg}/aula4.jpg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf`  },
-            // { titulo: "Aula 5 - Do nascimento de Jesus até Pentecostes", pdf: "" },
+            { titulo: "Aula 5 - Do nascimento de Jesus até Pentecostes", imagem: `${basePathImg}/aula5.jpg`, pdf: `${basePath}/ESPIRITO_Aula5.pdf`},
             // { titulo: "Aula 6 - Depois de Pentecostes", pdf: "" },
             // { titulo: "Aula 7 - O Espírito Santo na vida do crente", pdf: "" },
             // { titulo: "Aula 8 - O batismo com o Espírito Santo", pdf: "" },
