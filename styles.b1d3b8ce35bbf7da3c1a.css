@@ -954,6 +954,9 @@ hr {
     border-radius: 12px;
     /* box-shadow: 0 4px 8px rgba(255,255,255,0.1); */
     transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 640px;
+    margin: 0 auto;
+    max-height: 480px;
 }
 
 /* .aula-card iframe,
@@ -978,6 +981,8 @@ hr {
 .aula-card .sem-video {
   width: 100%;
   height: auto;
+  max-width: 640px;
+  max-height: 480px;
   border: none;
   box-sizing: border-box;
   aspect-ratio: 16 / 9;
@@ -1965,4 +1970,4 @@ svg {
 
 
 
-/*# sourceMappingURL=styles.6b61da89e81ff9533994.css.map*/
+/*# sourceMappingURL=styles.b1d3b8ce35bbf7da3c1a.css.map*/
