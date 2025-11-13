@@ -1,16 +1,50 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "uxQooPee8he71PJRk_2QBax3B6g",
+  "etag": "5-9AbmDM1KrjIj5Bns2OKqxQZkk",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 235,
+    "totalResults": 236,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "sA7HHcj2D27NRUCmPREEDMSC_LI",
+      "etag": "As959A4lF1If9d38O2iNFujA0Ng",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zDCBk4Cy-vQ"
+      },
+      "snippet": {
+        "publishedAt": "2025-11-13T01:21:21Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Agir de Deus - Pra. Zuleima Maia",
+        "description": "Tema: Agir de Deus Convidado: Pra. Zuleima Maia Deus age quando ningu\u00e9m mais pode agir. Nada pode impedir o Seu mover, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-11-13T01:21:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LR9y_AxWpzEdkyGRu-nMASJzt_w",
       "id": {
         "kind": "youtube#video",
         "videoId": "qf89f-ozVf0"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-11-09T15:28:54Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "fR4ag4BhvwwNvhAlnFICuMKhzco",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Hodgcydb7aY"
-      },
-      "snippet": {
-        "publishedAt": "2025-11-07T13:00:38Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Capacita\u00e7\u00e3o para o Evangelismo - Parte I",
-        "description": "Cap\u00edtulos: 0:00 Introdu\u00e7\u00e3o 6:00 Ora\u00e7\u00e3o 7:35 Sum\u00e1rio 13:09 Evangelizar \u00e9 uma ordem 53:32 Qualifica\u00e7\u00f5es do ganhador de almas ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Hodgcydb7aY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Hodgcydb7aY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Hodgcydb7aY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-11-07T13:00:38Z"
       }
     }
   ]
