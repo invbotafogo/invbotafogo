@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "5-9AbmDM1KrjIj5Bns2OKqxQZkk",
+  "etag": "McGU-nv8oHwXJg-xsH4na7jYmEA",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 236,
+    "totalResults": 237,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gpoCVd0ziCgL8oj8dEOCFsFzp9A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "l2SjPiQY2do"
+      },
+      "snippet": {
+        "publishedAt": "2025-11-13T23:01:07Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Capacita\u00e7\u00e3o para o Evangelismo - Parte II",
+        "description": "Cap\u00edtulos: 0:00 Ora\u00e7\u00e3o 1:30 Sum\u00e1rio/Revis\u00e3o 3:03 Observa\u00e7\u00f5es e Precau\u00e7\u00f5es ao evangelizar 5:43 Qual \u00e9 a Mensagem 29:27 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/l2SjPiQY2do/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/l2SjPiQY2do/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/l2SjPiQY2do/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-11-13T23:01:07Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "As959A4lF1If9d38O2iNFujA0Ng",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-11-10T00:11:02Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "qk3yOrUJiPCc4jYRKBKwym-4DEQ",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "kuIfbDbZW4w"
-      },
-      "snippet": {
-        "publishedAt": "2025-11-09T15:28:54Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O que eu posso dar a um Deus que j\u00e1 me deu tudo? - Pr. Marcio Soares",
-        "description": "Culto de Domingo (manh\u00e3). 9 de novembro de 2025. Como retribuir a um Deus que j\u00e1 nos deu tudo? Nesta mensagem baseada ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/kuIfbDbZW4w/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/kuIfbDbZW4w/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/kuIfbDbZW4w/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-11-09T15:28:54Z"
       }
     }
   ]
