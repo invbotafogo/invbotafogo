@@ -200,6 +200,7 @@ async function carregarEstudosBiblicos(tema) {
     if (tema === "evangelismo") {
         const aulas = [
             { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY"},
+            { titulo: "Capacitação para o Evangelismo - Parte II", videoID: "l2SjPiQY2do" },
             
         ];
 
