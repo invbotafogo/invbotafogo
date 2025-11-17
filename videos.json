@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "3StxdKxymejYW8Fhk_EKHfZ3Y-I",
+  "etag": "PwbtEeIzn7bhBM-3au_DqDVlMSk",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 238,
+    "totalResults": 239,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JumQnOBflQ0Pzp7vgsjY5QmV874",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Sd-red5Ah1Y"
+      },
+      "snippet": {
+        "publishedAt": "2025-11-17T00:20:54Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Quem teme ao Senhor nunca fica desamparado - Pr. Luiz Carlos",
+        "description": "Culto de Domingo (noite), 16 de novembro de 2025. Nesta mensagem, somos lembrados de que o cuidado de Deus \u00e9 real na ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Sd-red5Ah1Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Sd-red5Ah1Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Sd-red5Ah1Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-11-17T00:20:54Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "rsLwkKssmQOy4k0s6HRi5Huz1mU",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-11-13T23:01:07Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "KlBLfkjbsHe0Pnddyb8tsCI9cw4",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "zDCBk4Cy-vQ"
-      },
-      "snippet": {
-        "publishedAt": "2025-11-13T01:21:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Agir de Deus - Pra. Zuleima Maia",
-        "description": "Tema: Agir de Deus Convidado: Pra. Zuleima Maia Deus age quando ningu\u00e9m mais pode agir. Nada pode impedir o Seu mover, ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-11-13T01:21:21Z"
       }
     }
   ]
