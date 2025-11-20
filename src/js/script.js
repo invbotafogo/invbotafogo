@@ -159,24 +159,26 @@ async function carregarEstudosBiblicos(tema) {
     // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
-            { titulo: "Aula 1 - Quem é o Espírito Santo?", imagem: `${basePathImg}/aula1.jpg` ,pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
-            { titulo: "Aula 2 - Os símbolos do Espírito Santo", imagem: `${basePathImg}/aula2.jpg`, pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
-            { titulo: "Aula 3 - O Espírito Santo e as Escrituras", imagem: `${basePathImg}/aula3.jpg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
-            { titulo: "Aula 4 - Da criação até o nascimento de Jesus", imagem: `${basePathImg}/aula4.jpg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf`  },
-            { titulo: "Aula 5 - Do nascimento de Jesus até Pentecostes", imagem: `${basePathImg}/aula5.jpg`, pdf: `${basePath}/ESPIRITO_Aula5.pdf`},
-            // { titulo: "Aula 6 - Depois de Pentecostes", pdf: "" },
-            // { titulo: "Aula 7 - O Espírito Santo na vida do crente", pdf: "" },
-            // { titulo: "Aula 8 - O batismo com o Espírito Santo", pdf: "" },
-            // { titulo: "Aula 9 - A luta interior do crente", pdf: "" },
-            // { titulo: "Aula 10 - Pecados contra o Espírito Santo", pdf: "" },
-            // { titulo: "Aula 11 - O fruto do Espírito", pdf: "" },
-            // { titulo: "Aula 12 - Princípios e objetivos dos dons", pdf: "" },
-            // { titulo: "Aula 13 - Os dons de ministério", pdf: "" },
-            // { titulo: "Aula 14 - Os dons de serviço", pdf: "" },
-            // { titulo: "Aula 15 - Os dons de sinais", pdf: "" },
-            // { titulo: "Aula 16 - Como reconhecer o seu dom", pdf: "" },
-            // { titulo: "Aula 17 - Como ficar cheio do Espírito Santo", pdf: "" },
-                
+            { titulo: "Quem é o Espírito Santo?", imagem: `${basePathImg}/1.jpeg`, pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
+            { titulo: "Os símbolos do Espírito Santo", imagem: `${basePathImg}/2.jpeg`, pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
+            { titulo: "O Espírito Santo e as Escrituras", imagem: `${basePathImg}/3.jpeg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
+            { titulo: "Da criação até o nascimento de Jesus", imagem: `${basePathImg}/4.jpeg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf` },
+            { titulo: "Do nascimento de Jesus até Pentecostes", imagem: `${basePathImg}/5.jpeg`, pdf: `${basePath}/ESPIRITO_Aula5.pdf` },
+        
+            { titulo: "Depois de Pentecostes", imagem: `${basePathImg}/6.jpeg`, pdf: `${basePath}/ESPIRITO_Aula6.pdf` },
+            // { titulo: "O Espírito Santo na vida do crente", imagem: `${basePathImg}/7.jpeg`, pdf: `${basePath}/ESPIRITO_Aula7.pdf` },
+            // { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImg}/8.jpeg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
+            // { titulo: "A luta interior do crente", imagem: `${basePathImg}/9.jpeg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
+            // { titulo: "Pecados contra o Espírito Santo", imagem: `${basePathImg}/10.jpeg`, pdf: `${basePath}/ESPIRITO_Aula10.pdf` },
+        
+            // { titulo: "O fruto do Espírito", imagem: `${basePathImg}/11.jpeg`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
+            // { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImg}/12.jpeg`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
+            // { titulo: "Os dons de ministério", imagem: `${basePathImg}/13.jpeg`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
+            // { titulo: "Os dons de serviço", imagem: `${basePathImg}/14.jpeg`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
+            // { titulo: "Os dons de sinais", imagem: `${basePathImg}/15.jpeg`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
+        
+            // { titulo: "Como reconhecer o seu dom", imagem: `${basePathImg}/16.jpeg`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
+            // { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImg}/17.jpeg`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
         ];
 
         aulas.forEach(aula => {
