@@ -155,7 +155,7 @@ async function carregarEstudosBiblicos(tema) {
         });
     }
   
-    const basePathImg = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesES";
+    const basePathImgES = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesES";
     // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
@@ -220,6 +220,31 @@ async function carregarEstudosBiblicos(tema) {
             `;
     
             container.appendChild(card);
+        });
+    }
+
+    const basePathImgCC = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCC";
+    // --- Capelania Cristã ---
+    if (tema === "capelania") {
+        const aulas = [
+            { titulo: "Apostila", imagem: `${basePathImg}/capelania.jpg`, pdf: `${basePath}/CAPELANIA.pdf` },
+        ];
+
+        aulas.forEach(aula => {
+        const card = document.createElement("div");
+        card.classList.add("aula-card");
+
+        const midia = aula.imagem
+        ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
+        : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
+
+        card.innerHTML = `
+            ${midia}
+            <h3>${aula.titulo}</h3>
+            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+        `;
+
+        container.appendChild(card);
         });
     }
 
