@@ -227,7 +227,7 @@ async function carregarEstudosBiblicos(tema) {
     // --- Capelania Cristã ---
     if (tema === "capelania") {
         const aulas = [
-            { titulo: "Apostila", imagem: `${basePathImg}/capelania.jpg`, pdf: `${basePath}/CAPELANIA.pdf` },
+            { titulo: "Apostila", imagem: `${basePathImgCC}/capelania.jpg`, pdf: `${basePath}/CAPELANIA.pdf` },
         ];
 
         aulas.forEach(aula => {
