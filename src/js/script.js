@@ -159,26 +159,26 @@ async function carregarEstudosBiblicos(tema) {
     // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
-            { titulo: "Quem é o Espírito Santo?", imagem: `${basePathImg}/1.jpg`, pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
-            { titulo: "Os símbolos do Espírito Santo", imagem: `${basePathImg}/2.jpg`, pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
-            { titulo: "O Espírito Santo e as Escrituras", imagem: `${basePathImg}/3.jpg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
-            { titulo: "Da criação até o nascimento de Jesus", imagem: `${basePathImg}/4.jpg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf` },
-            { titulo: "Do nascimento de Jesus até Pentecostes", imagem: `${basePathImg}/5.jpg`, pdf: `${basePath}/ESPIRITO_Aula5.pdf` },
+            { titulo: "Quem é o Espírito Santo?", imagem: `${basePathImgES}/1.jpg`, pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
+            { titulo: "Os símbolos do Espírito Santo", imagem: `${basePathImgES}/2.jpg`, pdf: `${basePath}/ESPIRITO_Aula2.pdf` },
+            { titulo: "O Espírito Santo e as Escrituras", imagem: `${basePathImgES}/3.jpg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
+            { titulo: "Da criação até o nascimento de Jesus", imagem: `${basePathImgES}/4.jpg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf` },
+            { titulo: "Do nascimento de Jesus até Pentecostes", imagem: `${basePathImgES}/5.jpg`, pdf: `${basePath}/ESPIRITO_Aula5.pdf` },
         
-            { titulo: "Depois de Pentecostes", imagem: `${basePathImg}/6.jpg`, pdf: `${basePath}/ESPIRITO_Aula6.pdf` },
-            // { titulo: "O Espírito Santo na vida do crente", imagem: `${basePathImg}/7.jpg`, pdf: `${basePath}/ESPIRITO_Aula7.pdf` },
-            // { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImg}/8.jpg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
-            // { titulo: "A luta interior do crente", imagem: `${basePathImg}/9.jpg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
-            // { titulo: "Pecados contra o Espírito Santo", imagem: `${basePathImg}/10.jpg`, pdf: `${basePath}/ESPIRITO_Aula10.pdf` },
+            { titulo: "Depois de Pentecostes", imagem: `${basePathImgES}/6.jpg`, pdf: `${basePath}/ESPIRITO_Aula6.pdf` },
+            // { titulo: "O Espírito Santo na vida do crente", imagem: `${basePathImgES}/7.jpg`, pdf: `${basePath}/ESPIRITO_Aula7.pdf` },
+            // { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImgES}/8.jpg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
+            // { titulo: "A luta interior do crente", imagem: `${basePathImgES}/9.jpg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
+            // { titulo: "Pecados contra o Espírito Santo", imagem: `${basePathImgES}/10.jpg`, pdf: `${basePath}/ESPIRITO_Aula10.pdf` },
         
-            // { titulo: "O fruto do Espírito", imagem: `${basePathImg}/11.jpg`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
-            // { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImg}/12.jpg`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
-            // { titulo: "Os dons de ministério", imagem: `${basePathImg}/13.jpg`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
-            // { titulo: "Os dons de serviço", imagem: `${basePathImg}/14.jpg`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
-            // { titulo: "Os dons de sinais", imagem: `${basePathImg}/15.jpg`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
+            // { titulo: "O fruto do Espírito", imagem: `${basePathImgES}/11.jpg`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
+            // { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImgES}/12.jpg`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
+            // { titulo: "Os dons de ministério", imagem: `${basePathImgES}/13.jpg`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
+            // { titulo: "Os dons de serviço", imagem: `${basePathImgES}/14.jpg`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
+            // { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.jpg`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
         
-            // { titulo: "Como reconhecer o seu dom", imagem: `${basePathImg}/16.jpg`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
-            // { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImg}/17.jpg`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
+            // { titulo: "Como reconhecer o seu dom", imagem: `${basePathImgES}/16.jpg`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
+            // { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImgES}/17.jpg`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
         ];
 
         aulas.forEach(aula => {
