@@ -203,6 +203,7 @@ async function carregarEstudosBiblicos(tema) {
         const aulas = [
             { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY"},
             { titulo: "Capacitação para o Evangelismo - Parte II", videoID: "l2SjPiQY2do" },
+            { titulo: "Capacitação para o Evangelismo - Parte III", videoID: "OI8QZWsqeyo" },
             
         ];
 
