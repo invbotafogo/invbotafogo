@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "dWdMcT1okQc4f8PiDY1lwbYaulY",
+  "etag": "YbZlsbpdqjnBm2c_CMWXBIIEb00",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 233,
+    "totalResults": 241,
     "resultsPerPage": 10
   },
   "items": [
@@ -78,36 +78,36 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "LR9y_AxWpzEdkyGRu-nMASJzt_w",
+      "etag": "KlBLfkjbsHe0Pnddyb8tsCI9cw4",
       "id": {
         "kind": "youtube#video",
-        "videoId": "qf89f-ozVf0"
+        "videoId": "zDCBk4Cy-vQ"
       },
       "snippet": {
-        "publishedAt": "2025-11-10T00:11:02Z",
+        "publishedAt": "2025-11-13T01:21:21Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "N\u00e3o quero ser mais quem eu sou! - Pr. Daniela Neves",
-        "description": "Culto de Domingo (noite), 9 de novembro de 2025. \u201cN\u00e3o apagueis o Esp\u00edrito.\u201d 1 Tessalonicenses 5:19 (ARA) Uma mensagem ...",
+        "title": "Agir de Deus - Pra. Zuleima Maia",
+        "description": "Tema: Agir de Deus Convidado: Pra. Zuleima Maia Deus age quando ningu\u00e9m mais pode agir. Nada pode impedir o Seu mover, ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/qf89f-ozVf0/default.jpg",
+            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/qf89f-ozVf0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/qf89f-ozVf0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-11-10T00:11:02Z"
+        "publishTime": "2025-11-13T01:21:21Z"
       }
     }
   ]
