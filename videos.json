@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "YbZlsbpdqjnBm2c_CMWXBIIEb00",
+  "etag": "vxGqVriz5oYLpIH-tJaPTGDhz8g",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 241,
+    "totalResults": 242,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "rsLwkKssmQOy4k0s6HRi5Huz1mU",
+      "etag": "GvcWbfD37fbLq6qC_OVL1Xj4Uss",
       "id": {
         "kind": "youtube#video",
-        "videoId": "S1n6EDAnfQE"
+        "videoId": "L43WnSXc3jc"
       },
       "snippet": {
-        "publishedAt": "2025-11-16T15:30:33Z",
+        "publishedAt": "2025-11-25T05:29:49Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Marcas de um Grande Vencedor - Pr. Marcio Soares",
-        "description": "Culto de Domingo (manh\u00e3), 16 de novembro de 2025. O Pr. Marcio Soares ministra sobre as marcas de um grande vencedor, ...",
+        "title": "Clamei ao Senhor e Ele me ouviu - Pr. Luiz Carlos",
+        "description": "Culto de Domingo (noite), 23 de novembro de 2025. Salmo 142 mostra a ora\u00e7\u00e3o de algu\u00e9m que est\u00e1 cercado por afli\u00e7\u00f5es, mas ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/S1n6EDAnfQE/default.jpg",
+            "url": "https://i.ytimg.com/vi/L43WnSXc3jc/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/S1n6EDAnfQE/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/L43WnSXc3jc/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/S1n6EDAnfQE/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/L43WnSXc3jc/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-11-16T15:30:33Z"
+        "publishTime": "2025-11-25T05:29:49Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "gpoCVd0ziCgL8oj8dEOCFsFzp9A",
+      "etag": "iUZKKMzex51zpho4yxfynnSgU5Q",
       "id": {
         "kind": "youtube#video",
-        "videoId": "l2SjPiQY2do"
+        "videoId": "yrufInNeko0"
       },
       "snippet": {
-        "publishedAt": "2025-11-13T23:01:07Z",
+        "publishedAt": "2025-11-23T17:18:24Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Capacita\u00e7\u00e3o para o Evangelismo - Parte II",
-        "description": "Cap\u00edtulos: 0:00 Ora\u00e7\u00e3o 1:30 Sum\u00e1rio/Revis\u00e3o 3:03 Observa\u00e7\u00f5es e Precau\u00e7\u00f5es ao evangelizar 5:43 Qual \u00e9 a Mensagem 29:27 ...",
+        "title": "Avivamento: De dentro para fora! - Pr. Marcio Soares",
+        "description": "Culto de Domingo (manh\u00e3), 23 de novembro de 2025. Avivamento verdadeiro come\u00e7a no secreto, nasce no cora\u00e7\u00e3o e se revela ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/l2SjPiQY2do/default.jpg",
+            "url": "https://i.ytimg.com/vi/yrufInNeko0/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/l2SjPiQY2do/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/yrufInNeko0/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/l2SjPiQY2do/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/yrufInNeko0/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-11-13T23:01:07Z"
+        "publishTime": "2025-11-23T17:18:24Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "KlBLfkjbsHe0Pnddyb8tsCI9cw4",
+      "etag": "ZPOcy3BvU6CnFiyCii9fx6TgJDk",
       "id": {
         "kind": "youtube#video",
-        "videoId": "zDCBk4Cy-vQ"
+        "videoId": "OI8QZWsqeyo"
       },
       "snippet": {
-        "publishedAt": "2025-11-13T01:21:21Z",
+        "publishedAt": "2025-11-22T11:00:43Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Agir de Deus - Pra. Zuleima Maia",
-        "description": "Tema: Agir de Deus Convidado: Pra. Zuleima Maia Deus age quando ningu\u00e9m mais pode agir. Nada pode impedir o Seu mover, ...",
+        "title": "Capacita\u00e7\u00e3o para o Evangelismo - Parte III",
+        "description": "Capitulos: 0:00 Ora\u00e7\u00e3o 1:23 Sum\u00e1rio/Revis\u00e3o 3:31 Tratando com o Perdido (continua\u00e7\u00e3o) 1:01:16 Tratando com os Desviados ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/OI8QZWsqeyo/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/OI8QZWsqeyo/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/zDCBk4Cy-vQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/OI8QZWsqeyo/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-11-13T01:21:21Z"
+        "publishTime": "2025-11-22T11:00:43Z"
       }
     }
   ]
