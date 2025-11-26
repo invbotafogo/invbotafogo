@@ -199,12 +199,21 @@ async function carregarEstudosBiblicos(tema) {
         });
     }
 
+
+    const basePathImgCC = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCC";
+
     if (tema === "evangelismo") {
+
         const aulas = [
-            { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY"},
+            { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY" },
             { titulo: "Capacitação para o Evangelismo - Parte II", videoID: "l2SjPiQY2do" },
             { titulo: "Capacitação para o Evangelismo - Parte III", videoID: "OI8QZWsqeyo" },
-            
+            // { titulo: "Capacitação para o Evangelismo - Parte IV", videoID: "X1b0Y7Y6b0o" },
+            { 
+                titulo: "Apostila", 
+                imagem: `${basePathImgCC}/evangelismo.jpg`,
+                pdf: `${basePath}/EVANGELISMO.pdf`
+            },
         ];
 
         aulas.forEach(aula => {
@@ -212,19 +221,26 @@ async function carregarEstudosBiblicos(tema) {
             card.classList.add("aula-card");
 
             const midia = aula.videoID
-            ? `<iframe src="https://www.youtube.com/embed/${aula.videoID}" title="${aula.titulo}" allowfullscreen loading="lazy"></iframe>`
-            : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
-    
+                ? `<iframe src="https://www.youtube.com/embed/${aula.videoID}"
+                            title="${aula.titulo}"
+                            allowfullscreen
+                            loading="lazy"></iframe>`
+                : `<img src="${aula.imagem}" alt="${aula.titulo}" class="aula-imagem">`;
+
+            const botaoPDF = aula.pdf
+                ? `<a href="${aula.pdf}" download class="btn">Baixar PDF</a>`
+                : "";
+
             card.innerHTML = `
-            ${midia}
-            <h3>${aula.titulo}</h3>
+                ${midia}
+                <h3>${aula.titulo}</h3>
+                ${botaoPDF}
             `;
-    
+
             container.appendChild(card);
         });
     }
 
-    const basePathImgCC = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCC";
     // --- Capelania Cristã ---
     if (tema === "capelania") {
         const aulas = [
