@@ -208,7 +208,7 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY" },
             { titulo: "Capacitação para o Evangelismo - Parte II", videoID: "l2SjPiQY2do" },
             { titulo: "Capacitação para o Evangelismo - Parte III", videoID: "OI8QZWsqeyo" },
-            // { titulo: "Capacitação para o Evangelismo - Parte IV", videoID: "X1b0Y7Y6b0o" },
+            { titulo: "Capacitação para o Evangelismo - Parte IV", videoID: "VlIgm2LxGe8" },
             { 
                 titulo: "Apostila", 
                 imagem: `${basePathImgCC}/evangelismo.jpg`,
