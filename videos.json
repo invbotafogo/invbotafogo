@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "cyc-MdPzoazFniV-YqOU1NABqOU",
+  "etag": "ajN28XcchwMG2keHuBdOF-QaLok",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 245,
+    "totalResults": 246,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mSomQQOFCUjOlTXlhLKBoEBzyfI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "J5M2pTjvgvQ"
+      },
+      "snippet": {
+        "publishedAt": "2025-11-30T17:08:33Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Pare de se enganar! - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/J5M2pTjvgvQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/J5M2pTjvgvQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/J5M2pTjvgvQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-11-30T17:08:33Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "KvEvt1yKemSkGt-I5fRncgg-m2k",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-11-23T17:18:24Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "ZPOcy3BvU6CnFiyCii9fx6TgJDk",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "OI8QZWsqeyo"
-      },
-      "snippet": {
-        "publishedAt": "2025-11-22T11:00:43Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Capacita\u00e7\u00e3o para o Evangelismo - Parte III",
-        "description": "Capitulos: 0:00 Ora\u00e7\u00e3o 1:23 Sum\u00e1rio/Revis\u00e3o 3:31 Tratando com o Perdido (continua\u00e7\u00e3o) 1:01:16 Tratando com os Desviados ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/OI8QZWsqeyo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/OI8QZWsqeyo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/OI8QZWsqeyo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-11-22T11:00:43Z"
       }
     }
   ]
