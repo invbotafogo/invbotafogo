@@ -713,15 +713,15 @@ hr {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, minmax(270px, 1fr));
+    gap: 1rem;
     margin-top: 25px;
     padding: 75px 20px;
 }
 
 .card {
     position: relative;
-    height: 350px;
+    height: 270px;
     border-radius: 1rem;
     overflow: hidden;
     cursor: pointer;
@@ -1486,17 +1486,39 @@ svg {
 
 @media (min-width: 1024px) and (max-width: 1440px) {
     .cards-container {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        
+    }
+    
+    .card {
+        height: 350px;
     }
 
-    .card {
-        width: 100%;
-        min-height: 380px; /* opcional */
-        height: auto;
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
     }
+
+    .footer_infos {
+        display: static;
+    }
+        
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 2rem;
+        
+    }
+    
+    .card {
+        height: 350px;
+    }
         /* imagem responsiva (sem height fixa) */
         .expanded-image {
             display: block;      /* necessário para margin auto funcionar em imagens */
