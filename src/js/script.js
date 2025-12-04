@@ -167,8 +167,8 @@ async function carregarEstudosBiblicos(tema) {
         
             { titulo: "Depois de Pentecostes", imagem: `${basePathImgES}/6.jpg`, pdf: `${basePath}/ESPIRITO_Aula6.pdf` },
             { titulo: "O Espírito Santo na vida do crente", imagem: `${basePathImgES}/7.jpg`, pdf: `${basePath}/ESPIRITO_Aula7.pdf` },
-            // { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImgES}/8.jpg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
-            // { titulo: "A luta interior do crente", imagem: `${basePathImgES}/9.jpg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
+            { titulo: "A luta interior do crente", imagem: `${basePathImgES}/8.jpg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
+            // { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImgES}/9.jpg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
             // { titulo: "Pecados contra o Espírito Santo", imagem: `${basePathImgES}/10.jpg`, pdf: `${basePath}/ESPIRITO_Aula10.pdf` },
         
             // { titulo: "O fruto do Espírito", imagem: `${basePathImgES}/11.jpg`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
