@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "dYhZdjCsU055uX7PXqzN7bHL6MY",
+  "etag": "Fm43_e1nFQUy6u5rgys1ApWeHmw",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 248,
+    "totalResults": 249,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JDoOprvAg26FrfAZ4Juk2oA-OZ0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EgdyENEcRDM"
+      },
+      "snippet": {
+        "publishedAt": "2025-12-07T15:13:57Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O caminho para a plenitude de Deus - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EgdyENEcRDM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EgdyENEcRDM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EgdyENEcRDM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-12-07T15:13:57Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "YnSl_Yb6t9u98y1TFyo3M6EfgjY",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-11-30T17:08:33Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "KvEvt1yKemSkGt-I5fRncgg-m2k",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "L43WnSXc3jc"
-      },
-      "snippet": {
-        "publishedAt": "2025-11-25T05:29:49Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Clamei ao Senhor e Ele me ouviu - Pr. Luiz Carlos",
-        "description": "Culto de Domingo (noite), 23 de novembro de 2025. Salmo 142 mostra a ora\u00e7\u00e3o de algu\u00e9m que est\u00e1 cercado por afli\u00e7\u00f5es, mas ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/L43WnSXc3jc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/L43WnSXc3jc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/L43WnSXc3jc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-11-25T05:29:49Z"
       }
     }
   ]
