@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "qn-f7OvTWqgfEbgmfsUMZjVUrLQ",
+  "etag": "XyV-CZgV8E3orIhdlFcLoCkXmMA",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 251,
+    "totalResults": 252,
     "resultsPerPage": 25
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "Ot-5Ly6hiPWzjvJG6BT6XZ_2z60",
+      "etag": "BCrA7C12cf_W0-Ww35kQmrMJH1U",
       "id": {
         "kind": "youtube#video",
-        "videoId": "EgdyENEcRDM"
+        "videoId": "0ibO_A63TE8"
       },
       "snippet": {
-        "publishedAt": "2025-12-07T15:13:57Z",
+        "publishedAt": "2025-12-22T01:50:40Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O caminho para a plenitude de Deus - Pr. Marcio Soares",
+        "title": "Marcados pelo Amor - Pr. Marcio Soares",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/EgdyENEcRDM/default.jpg",
+            "url": "https://i.ytimg.com/vi/0ibO_A63TE8/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/EgdyENEcRDM/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/0ibO_A63TE8/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/EgdyENEcRDM/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/0ibO_A63TE8/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-12-07T15:13:57Z"
+        "publishTime": "2025-12-22T01:50:40Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "YnSl_Yb6t9u98y1TFyo3M6EfgjY",
+      "etag": "5_LJimYIZtdLH40g7Z6KdLEoMa0",
       "id": {
         "kind": "youtube#video",
-        "videoId": "QpxXoQHkTwk"
+        "videoId": "TV5Gp5hGa_I"
       },
       "snippet": {
-        "publishedAt": "2025-12-01T05:33:30Z",
+        "publishedAt": "2025-12-15T23:57:55Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Com Deus n\u00e3o temeremos - Pr. Luiz Carlos",
+        "title": "Ainda h\u00e1 uma voz que n\u00e3o se cala - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/QpxXoQHkTwk/default.jpg",
+            "url": "https://i.ytimg.com/vi/TV5Gp5hGa_I/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/QpxXoQHkTwk/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/TV5Gp5hGa_I/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/QpxXoQHkTwk/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/TV5Gp5hGa_I/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-12-01T05:33:30Z"
+        "publishTime": "2025-12-15T23:57:55Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "mSomQQOFCUjOlTXlhLKBoEBzyfI",
+      "etag": "V8235urn9zkVter0-HA9f53GAAE",
       "id": {
         "kind": "youtube#video",
-        "videoId": "J5M2pTjvgvQ"
+        "videoId": "4F-rCzIFgv4"
       },
       "snippet": {
-        "publishedAt": "2025-11-30T17:08:33Z",
+        "publishedAt": "2025-12-08T00:13:18Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Pare de se enganar! - Pr. Marcio Soares",
+        "title": "7 de dezembro de 2025",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/J5M2pTjvgvQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/4F-rCzIFgv4/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/J5M2pTjvgvQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/4F-rCzIFgv4/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/J5M2pTjvgvQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/4F-rCzIFgv4/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2025-11-30T17:08:33Z"
+        "publishTime": "2025-12-08T00:13:18Z"
       }
     }
   ]
