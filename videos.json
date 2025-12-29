@@ -1,13 +1,81 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "XNaI-Nwzfhyc_uln-7Kq6wiQVPk",
+  "etag": "Yti3156f7_TwQaGfNWbdiBLaBXI",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 253,
-    "resultsPerPage": 10
+    "totalResults": 255,
+    "resultsPerPage": 25
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-MQc5LSnJBMwgGQ_pP46_a3Oliw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AwG4wCFT42A"
+      },
+      "snippet": {
+        "publishedAt": "2025-12-29T12:22:50Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Evangelho, Poder de Deus para Salva\u00e7\u00e3o - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AwG4wCFT42A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AwG4wCFT42A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AwG4wCFT42A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-12-29T12:22:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RpD3uD0-pWvNeDPGI8t9W4eD8HQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "r_9LkLndPV0"
+      },
+      "snippet": {
+        "publishedAt": "2025-12-29T11:42:30Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Estamos crescendo na dire\u00e7\u00e3o certa? - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r_9LkLndPV0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r_9LkLndPV0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r_9LkLndPV0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-12-29T11:42:30Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "kOKgoiGuPkuG2jgJBBVKcCAo2Vc",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2025-12-22T01:50:40Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "djgyAbwAQioZagiMZNloHUf8CvE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "TV5Gp5hGa_I"
-      },
-      "snippet": {
-        "publishedAt": "2025-12-15T23:57:55Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Ainda h\u00e1 uma voz que n\u00e3o se cala - Pra. Daniela Neves",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/TV5Gp5hGa_I/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/TV5Gp5hGa_I/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/TV5Gp5hGa_I/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-12-15T23:57:55Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "4YPNJW7N1FGhm4xJARwneeRHnh0",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "4F-rCzIFgv4"
-      },
-      "snippet": {
-        "publishedAt": "2025-12-08T00:13:18Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "7 de dezembro de 2025",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/4F-rCzIFgv4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/4F-rCzIFgv4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/4F-rCzIFgv4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2025-12-08T00:13:18Z"
       }
     }
   ]
