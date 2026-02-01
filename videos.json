@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "reHD_kjj1ARfWw3yrfEFKUY0KE8",
+  "etag": "mFWRf0sGxgf-TH7j8Ib9EcUP5Q0",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 259,
-    "resultsPerPage": 25
+    "totalResults": 262,
+    "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "u4i5kVY9xVhGdAHoF_NeuaU-7Qo",
+      "etag": "RZCA9jHs86qze2f4mFqG63ylZIA",
       "id": {
         "kind": "youtube#video",
-        "videoId": "yA3gNDoxYao"
+        "videoId": "OJnmeEHLPjA"
       },
       "snippet": {
-        "publishedAt": "2026-01-11T19:18:51Z",
+        "publishedAt": "2026-02-01T17:13:21Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "title": "P\u00d5E GUARDA NA TUA BOCA! - Pr. Marcio Santos ",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/yA3gNDoxYao/default.jpg",
+            "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/yA3gNDoxYao/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/yA3gNDoxYao/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-01-11T19:18:51Z"
+        "publishTime": "2026-02-01T17:13:21Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "K_hMbxokGta8ZvZ0wuCX94wY368",
+      "etag": "t9OViZ_fwSaWg2Zhulfy5_47ZOw",
       "id": {
         "kind": "youtube#video",
-        "videoId": "1U4YWN04GK8"
+        "videoId": "jHq1cctxTKI"
       },
       "snippet": {
-        "publishedAt": "2026-01-07T17:29:26Z",
+        "publishedAt": "2026-01-25T17:11:06Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Seja forte, Deus vai \u00e0 sua frente! - Pr. Luiz Carlos",
+        "title": "O &quot;N\u00c3O&quot; AINDA FAZ PARTE DO VOCABUL\u00c1RIO! - Pr. Marcio Soares",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/1U4YWN04GK8/default.jpg",
+            "url": "https://i.ytimg.com/vi/jHq1cctxTKI/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/1U4YWN04GK8/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/jHq1cctxTKI/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/1U4YWN04GK8/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/jHq1cctxTKI/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-01-07T17:29:26Z"
+        "publishTime": "2026-01-25T17:11:06Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "MOiowBOSRqnsIWjssN0zh9wXbFk",
+      "etag": "A-9AihtSm0HsQTmqijak-521U8k",
       "id": {
         "kind": "youtube#video",
-        "videoId": "OIt6EZgcFZk"
+        "videoId": "CbHe55Bev5k"
       },
       "snippet": {
-        "publishedAt": "2026-01-05T21:55:29Z",
+        "publishedAt": "2026-01-18T15:22:33Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Cora\u00e7\u00e3o Quebrantado - Pr. Marcio Soares",
+        "title": "RESPONSABILIDADE N\u00c3O \u00c9 OPCIONAL - Pr. Marcio Soares",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/OIt6EZgcFZk/default.jpg",
+            "url": "https://i.ytimg.com/vi/CbHe55Bev5k/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/OIt6EZgcFZk/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/CbHe55Bev5k/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/OIt6EZgcFZk/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/CbHe55Bev5k/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-01-05T21:55:29Z"
+        "publishTime": "2026-01-18T15:22:33Z"
       }
     }
   ]
