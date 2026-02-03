@@ -1,16 +1,50 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "bO3RoBvDpxCHxAl-vnJc4wg5HWA",
+  "etag": "sCeyzFxE7rJGiSvL2sWJAwGCTJ4",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
     "totalResults": 262,
-    "resultsPerPage": 25
+    "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "RZCA9jHs86qze2f4mFqG63ylZIA",
+      "etag": "ZPMKzHbIplLeRpWoB9GRpCc5fcs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Zp54_4ZFaj8"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-03T03:00:53Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Quando a tempestade n\u00e3o impede a presen\u00e7a - Pr. Luiz Carlos",
+        "description": "Culto de Domingo (Noite) 01 de fevereiro Pr. Luiz Carlos.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Zp54_4ZFaj8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Zp54_4ZFaj8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Zp54_4ZFaj8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-03T03:00:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gCDn_fmsvW4jTEzGp-1K7Fona3w",
       "id": {
         "kind": "youtube#video",
         "videoId": "OJnmeEHLPjA"
@@ -19,7 +53,7 @@
         "publishedAt": "2026-02-01T17:13:21Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "P\u00d5E GUARDA NA TUA BOCA! - Pr. Marcio Santos ",
-        "description": "",
+        "description": "Culto de Domingo (Manh\u00e3) 01 de fevereiro Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/default.jpg",
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "t9OViZ_fwSaWg2Zhulfy5_47ZOw",
+      "etag": "3twFTWK0_6GEfWS_HzFIBsYNeow",
       "id": {
         "kind": "youtube#video",
         "videoId": "jHq1cctxTKI"
@@ -53,7 +87,7 @@
         "publishedAt": "2026-01-25T17:11:06Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "O &quot;N\u00c3O&quot; AINDA FAZ PARTE DO VOCABUL\u00c1RIO! - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Domingo (Manh\u00e3) 25 de janeiro Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/jHq1cctxTKI/default.jpg",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-01-25T17:11:06Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "iVFAKys2aI7VdjN7ixOwFs6Q-uk",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "CbHe55Bev5k"
-      },
-      "snippet": {
-        "publishedAt": "2026-01-18T15:22:33Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "RESPONSABILIDADE N\u00c3O \u00c9 OPCIONAL - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/CbHe55Bev5k/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/CbHe55Bev5k/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/CbHe55Bev5k/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-01-18T15:22:33Z"
       }
     }
   ]
