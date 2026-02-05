@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "rTIw6kFJzAsl5WUw0TI-ZbdgXJ8",
+  "etag": "ORBtnOMSEp224NOM8blmbpRe_i8",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 261,
+    "totalResults": 264,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eJcPlfgVI3nDUfL8bgxzgNWFOA0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Hs8Sn6uPqZk"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-05T09:23:06Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O elo entre disciplina e vit\u00f3ria! - Pr. Marcio Soares",
+        "description": "Culto de Quarta 04 de fevereiro Pr. Marcio Soares.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Hs8Sn6uPqZk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Hs8Sn6uPqZk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Hs8Sn6uPqZk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-05T09:23:06Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "ZPMKzHbIplLeRpWoB9GRpCc5fcs",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-02-01T17:13:21Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "3twFTWK0_6GEfWS_HzFIBsYNeow",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "jHq1cctxTKI"
-      },
-      "snippet": {
-        "publishedAt": "2026-01-25T17:11:06Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O &quot;N\u00c3O&quot; AINDA FAZ PARTE DO VOCABUL\u00c1RIO! - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) 25 de janeiro Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/jHq1cctxTKI/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/jHq1cctxTKI/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/jHq1cctxTKI/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-01-25T17:11:06Z"
       }
     }
   ]
