@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "R9hU5jZgs_KcTZHZhH0QctuQXqE",
+  "etag": "SJtDsnqY094lHhfGBf-wYkgDaWM",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 266,
+    "totalResults": 267,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bLsfUKyzQUCi8Vc153psE9931xI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aUYmtI0DNBo"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-09T02:13:31Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Al\u00e9m do Altar: Consagrando o seu dia a dia a Deus - Pr. Marcio Soares",
+        "description": "Culto de Domingo (Manh\u00e3) 09 de fevereiro Pr. Marcio Soares.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aUYmtI0DNBo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aUYmtI0DNBo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aUYmtI0DNBo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-09T02:13:31Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "2lljGkrJ3wHajYFVJeFBTNHtdIA",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-02-03T03:00:53Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "gCDn_fmsvW4jTEzGp-1K7Fona3w",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "OJnmeEHLPjA"
-      },
-      "snippet": {
-        "publishedAt": "2026-02-01T17:13:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "P\u00d5E GUARDA NA TUA BOCA! - Pr. Marcio Santos ",
-        "description": "Culto de Domingo (Manh\u00e3) 01 de fevereiro Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/OJnmeEHLPjA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-02-01T17:13:21Z"
       }
     }
   ]
