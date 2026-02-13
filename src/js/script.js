@@ -170,9 +170,10 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "A luta interior do crente", imagem: `${basePathImgES}/8.jpg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
             { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImgES}/9.jpg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
             { titulo: "Pecados contra o Espírito Santo", imagem: `${basePathImgES}/10.jpg`, pdf: `${basePath}/ESPIRITO_Aula10.pdf` },
+            
         
-            // { titulo: "O fruto do Espírito", imagem: `${basePathImgES}/11.jpg`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
-            // { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImgES}/12.jpg`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
+            { titulo: "O fruto do Espírito", imagem: `${basePathImgES}/11.png`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
+            { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImgES}/12.png`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
             // { titulo: "Os dons de ministério", imagem: `${basePathImgES}/13.jpg`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
             // { titulo: "Os dons de serviço", imagem: `${basePathImgES}/14.jpg`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
             // { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.jpg`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
