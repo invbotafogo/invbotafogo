@@ -1,13 +1,81 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "CDyzqEsdRRECmKlP791M1d-VxHQ",
+  "etag": "xsVoiXQ6sfGxR2Z5MeVWHVAZB10",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 271,
+    "totalResults": 273,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JBPWtiqTmXidRefAIM5GYdVE-sg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wE4iaGEV-Y4"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-24T02:30:44Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "A sa\u00edda que vem de Deus - Pr. Luiz Carlos",
+        "description": "Culto de Domingo (Noite) 22 de fevereiro Pr. Luiz Carlos.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wE4iaGEV-Y4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wE4iaGEV-Y4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wE4iaGEV-Y4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-24T02:30:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GK72YIO7RUFwjyDPzjylyxpX2nk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UMQZPT4MKgw"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-24T01:51:29Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Chega de Apar\u00eancia Espiritual - Pra. Daniela Neves",
+        "description": "Culto de Domingo (Manh\u00e3) 22 de fevereiro Pr. Daniela Neves.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UMQZPT4MKgw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UMQZPT4MKgw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UMQZPT4MKgw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-24T01:51:29Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "mHnwmSnIE2s6RymRFOA0XORamjQ",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-02-15T17:30:34Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "l7zTcA4-157TkR_Dg4e_rKM2UcU",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ZjLTlF-MzWs"
-      },
-      "snippet": {
-        "publishedAt": "2026-02-15T17:21:42Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Quarta - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ZjLTlF-MzWs/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ZjLTlF-MzWs/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ZjLTlF-MzWs/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-02-15T17:21:42Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "cU6gojgoaOnU1sECDCHu1KTDqpk",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "aUYmtI0DNBo"
-      },
-      "snippet": {
-        "publishedAt": "2026-02-09T02:13:31Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Al\u00e9m do Altar: Consagrando o seu dia a dia a Deus - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) 09 de fevereiro Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/aUYmtI0DNBo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/aUYmtI0DNBo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/aUYmtI0DNBo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-02-09T02:13:31Z"
       }
     }
   ]
