@@ -174,8 +174,8 @@ async function carregarEstudosBiblicos(tema) {
         
             { titulo: "O fruto do Espírito", imagem: `${basePathImgES}/11.png`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
             { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImgES}/12.png`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
-            // { titulo: "Os dons de ministério", imagem: `${basePathImgES}/13.jpg`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
-            // { titulo: "Os dons de serviço", imagem: `${basePathImgES}/14.jpg`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
+            { titulo: "Os dons de ministério", imagem: `${basePathImgES}/13.png`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
+            { titulo: "Os dons de serviço", imagem: `${basePathImgES}/14.png`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
             // { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.jpg`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
         
             // { titulo: "Como reconhecer o seu dom", imagem: `${basePathImgES}/16.jpg`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
