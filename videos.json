@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "HByyODh8ShtxSKZfE-zC9eGm3DA",
+  "etag": "Y9TMSdUrqUAP6dJEmUDDpb3ENiU",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "4t_t--vvIWk1ixckuffjq5NPPro",
+      "etag": "-UzgkRCHcmXH1OdQCFrtRBdOOt4",
       "id": {
         "kind": "youtube#video",
         "videoId": "2WHVZB0BYLY"
@@ -19,7 +19,7 @@
         "publishedAt": "2026-03-05T21:51:30Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Em tempos de guerra, nunca pare de lutar! - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Quarta | 04/03 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/2WHVZB0BYLY/default.jpg",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "QL7tB0WQihugD-cC7z0GwYP9hdY",
+      "etag": "wdsqVAKWRUhhmxXFd3bLyvsipfo",
       "id": {
         "kind": "youtube#video",
         "videoId": "EdqXrXT5KCU"
@@ -53,7 +53,7 @@
         "publishedAt": "2026-03-01T17:24:40Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "O dif\u00edcil caminho da unidade na igreja - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) 01 de mar\u00e7o Pr. Marcio Soares.",
+        "description": "Culto de Domingo (Manh\u00e3) | 01/03 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/EdqXrXT5KCU/default.jpg",
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "NfQvP4cosSuI1XWz1q6BnTzHTi8",
+      "etag": "VYGZyddHxvnK2adXG8LGM8ORdDY",
       "id": {
         "kind": "youtube#video",
         "videoId": "-Mf24xJ6hzU"
@@ -87,7 +87,7 @@
         "publishedAt": "2026-02-27T00:34:54Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "O Risco de Adoecer no Prop\u00f3sito - Pra. Daniela Neves",
-        "description": "Culto de Quarta 25 de fevereiro Pra. Daniela Neves.",
+        "description": "Culto de Quarta | 25/02 | Pra. Daniela Neves.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/-Mf24xJ6hzU/default.jpg",
