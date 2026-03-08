@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "_MZBSNuudZ_SxUiNcx9w5FPyZog",
+  "etag": "zxvfft77nn4gKaju2vMU8OWhp-s",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 277,
+    "totalResults": 280,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bX9pPlPyv4CgnC0ZJi883Ho6Of8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "E_yXUTUuG9E"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-08T20:15:32Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "A disciplina da perseveran\u00e7a: construindo pontes no caos - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-03-08T20:15:32Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "-UzgkRCHcmXH1OdQCFrtRBdOOt4",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-03-01T17:24:40Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "VYGZyddHxvnK2adXG8LGM8ORdDY",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "-Mf24xJ6hzU"
-      },
-      "snippet": {
-        "publishedAt": "2026-02-27T00:34:54Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Risco de Adoecer no Prop\u00f3sito - Pra. Daniela Neves",
-        "description": "Culto de Quarta | 25/02 | Pra. Daniela Neves.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/-Mf24xJ6hzU/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/-Mf24xJ6hzU/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/-Mf24xJ6hzU/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-02-27T00:34:54Z"
       }
     }
   ]
