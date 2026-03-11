@@ -1,16 +1,50 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "VS5deYvrVofl0FagiG9NGaxld34",
+  "etag": "S0X5C8LHASgWORbM36quF-mtyWo",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 281,
-    "resultsPerPage": 25
+    "totalResults": 282,
+    "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "bX9pPlPyv4CgnC0ZJi883Ho6Of8",
+      "etag": "qNxbeqfEVzxdLtC5IoDiIgSSsUA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-VH7lLlspyM"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-10T22:24:16Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "Culto de Domingo (Noite) | 08/03 | Pr. Luiz Carlos.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-VH7lLlspyM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-VH7lLlspyM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-VH7lLlspyM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-03-10T22:24:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XvpRoqa9oeUPsC0NDg_E9OYfFHE",
       "id": {
         "kind": "youtube#video",
         "videoId": "E_yXUTUuG9E"
@@ -19,7 +53,7 @@
         "publishedAt": "2026-03-08T20:15:32Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "A disciplina da perseveran\u00e7a: construindo pontes no caos - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Domingo (Manh\u00e3) | 08/03 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/default.jpg",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-03-05T21:51:30Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "wdsqVAKWRUhhmxXFd3bLyvsipfo",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "EdqXrXT5KCU"
-      },
-      "snippet": {
-        "publishedAt": "2026-03-01T17:24:40Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O dif\u00edcil caminho da unidade na igreja - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) | 01/03 | Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/EdqXrXT5KCU/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/EdqXrXT5KCU/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/EdqXrXT5KCU/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-03-01T17:24:40Z"
       }
     }
   ]
