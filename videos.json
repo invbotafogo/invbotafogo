@@ -1,13 +1,81 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "lgYZ_ZGiqobcSdKKjK_EMRCO8bo",
+  "etag": "boS4wZ7FuiLsVWTNozMt0qZPpsw",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 284,
+    "totalResults": 288,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UlcssfRS2EJGg9pARIjtqVF28vk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "erNg8crHObA"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-15T18:50:05Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "15 de mar\u00e7o de 2026",
+        "description": "Culto de Domingo (Manh\u00e3) | 15/03 | Pr. Marcio Soares.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/erNg8crHObA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/erNg8crHObA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/erNg8crHObA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-03-15T18:50:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BZhTU8nSRLOCvctzE65qYZrAhlc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "neKwED5W6m8"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-15T18:23:32Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Quarta - Pr. Luiz Carlos",
+        "description": "Culto de Quarta | 11/03 | Pr. Luiz Carlos.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/neKwED5W6m8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/neKwED5W6m8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/neKwED5W6m8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-03-15T18:23:32Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "Tl9xbFafSNfDbFl09YinWjcGpYs",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-03-10T22:24:16Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "XvpRoqa9oeUPsC0NDg_E9OYfFHE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "E_yXUTUuG9E"
-      },
-      "snippet": {
-        "publishedAt": "2026-03-08T20:15:32Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "A disciplina da perseveran\u00e7a: construindo pontes no caos - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) | 08/03 | Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/E_yXUTUuG9E/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-03-08T20:15:32Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Jyhye1mbt6CW28OjUTHG9McMC0w",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "2WHVZB0BYLY"
-      },
-      "snippet": {
-        "publishedAt": "2026-03-05T21:51:30Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Em tempos de guerra, nunca pare de lutar! - Pr. Marcio Soares",
-        "description": "Culto de Quarta | 04/03 | Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/2WHVZB0BYLY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/2WHVZB0BYLY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/2WHVZB0BYLY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-03-05T21:51:30Z"
       }
     }
   ]
