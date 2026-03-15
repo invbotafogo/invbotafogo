@@ -176,10 +176,10 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImgES}/12.png`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
             { titulo: "Os dons de ministério", imagem: `${basePathImgES}/13.png`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
             { titulo: "Os dons de serviço", imagem: `${basePathImgES}/14.png`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
-            // { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.jpg`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
+            { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.png`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
         
-            // { titulo: "Como reconhecer o seu dom", imagem: `${basePathImgES}/16.jpg`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
-            // { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImgES}/17.jpg`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
+            { titulo: "Como reconhecer o seu dom", imagem: `${basePathImgES}/16.png`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
+            // { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImgES}/17.png`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
         ];
 
         aulas.forEach(aula => {
