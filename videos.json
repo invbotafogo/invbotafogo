@@ -1,16 +1,16 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "boS4wZ7FuiLsVWTNozMt0qZPpsw",
+  "etag": "risEL6H3nD4_v4G9bbk5Md5dmQo",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 288,
+    "totalResults": 281,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "UlcssfRS2EJGg9pARIjtqVF28vk",
+      "etag": "YJm8a1Qy5zbGzF2CooEJNCb-8Qg",
       "id": {
         "kind": "youtube#video",
         "videoId": "erNg8crHObA"
@@ -18,7 +18,7 @@
       "snippet": {
         "publishedAt": "2026-03-15T18:50:05Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "15 de mar\u00e7o de 2026",
+        "title": "Conv\u00e9m que Cristo cres\u00e7a e eu diminua - Pr. Marcio Soares",
         "description": "Culto de Domingo (Manh\u00e3) | 15/03 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "Tl9xbFafSNfDbFl09YinWjcGpYs",
+      "etag": "I7xngO9q1pXCpvK2dc-Pd7QjVeQ",
       "id": {
         "kind": "youtube#video",
         "videoId": "-VH7lLlspyM"
