@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "zjCHMAz0jO56NlnxuYWYVV9F2JQ",
+  "etag": "1eQNRc2MKszl8WFZSat715pNa5w",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 280,
+    "totalResults": 282,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uyjCwhzAsyyT5zBvlyIEhIWDyOs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "n3maRUAaib0"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-22T19:32:09Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "As 7 marcas de uma vida frut\u00edfera - Pr. Marcio Soares",
+        "description": "Culto de Domingo (Manh\u00e3) | 22/03 | Pr. Marcio Soares.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n3maRUAaib0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n3maRUAaib0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n3maRUAaib0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-03-22T19:32:09Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "YJm8a1Qy5zbGzF2CooEJNCb-8Qg",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-03-15T18:23:32Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "ia5BOw7PbNaAgtCwXgoH-MXDwDs",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "-VH7lLlspyM"
-      },
-      "snippet": {
-        "publishedAt": "2026-03-10T22:24:16Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "Culto de Domingo (Noite) | 08/03 | Pr. Luiz Carlos.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/-VH7lLlspyM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/-VH7lLlspyM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/-VH7lLlspyM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-03-10T22:24:16Z"
       }
     }
   ]
