@@ -179,7 +179,7 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.png`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
         
             { titulo: "Como reconhecer o seu dom", imagem: `${basePathImgES}/16.png`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
-            // { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImgES}/17.png`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
+            { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImgES}/17.png`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
         ];
 
         aulas.forEach(aula => {
