@@ -201,6 +201,33 @@ async function carregarEstudosBiblicos(tema) {
     }
 
 
+    const basePathImgCR = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCR";
+
+    // --- Cristologia ---
+    if (tema == "cristologia") {
+        const aulas = [
+            { titulo: "Cristologia - Parte I", imagem: `${basePathImgCR}/1.png`, pdf: `${basePath}/CRISTOLOGIA_Aula1.pdf` },
+        ];
+
+        aulas.forEach(aula => {
+        const card = document.createElement("div");
+        card.classList.add("aula-card");
+
+        const midia = aula.imagem
+        ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
+        : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
+
+        card.innerHTML = `
+            ${midia}
+            <h3>${aula.titulo}</h3>
+            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+        `;
+
+        container.appendChild(card);
+        });
+    }
+
+
     const basePathImgCC = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCC";
 
     if (tema === "evangelismo") {
