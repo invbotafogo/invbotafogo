@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "GHhGugQatrcd9GayqqLlNUUubyc",
+  "etag": "5P2fb8_jcD2AH7neAES3eiBI_PQ",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 287,
+    "totalResults": 285,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VMVDIPunHSem6JlOEftQRcXCml8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b9-go9hlmI4"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-30T21:49:42Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b9-go9hlmI4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b9-go9hlmI4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b9-go9hlmI4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-03-30T21:49:42Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "kr-uJVg4SLVDD0BXWzv-ZB4GVPI",
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "PHz8avs0wh1Dz0kObPiodJnaFMI",
+      "etag": "7rQotZU64FCOHqzxSDbrSpKknfM",
       "id": {
         "kind": "youtube#video",
         "videoId": "M5tt_7s2gzk"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-03-27T12:16:26Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "uyjCwhzAsyyT5zBvlyIEhIWDyOs",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "n3maRUAaib0"
-      },
-      "snippet": {
-        "publishedAt": "2026-03-22T19:32:09Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "As 7 marcas de uma vida frut\u00edfera - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) | 22/03 | Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/n3maRUAaib0/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/n3maRUAaib0/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/n3maRUAaib0/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-03-22T19:32:09Z"
       }
     }
   ]
