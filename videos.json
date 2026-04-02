@@ -1,16 +1,16 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "LCwDelBfnHMB9XzFsz12P3F4_gw",
+  "etag": "xzzrJa7KbqtPnJFWgojsGlE8g-k",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 288,
+    "totalResults": 287,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "qJxHNJPyBmTe6IaXXB9PXBCFTnY",
+      "etag": "M0VgQVSHy3rGzS7J51XXj15MJco",
       "id": {
         "kind": "youtube#video",
         "videoId": "lRyA7YV99Sg"
@@ -19,7 +19,7 @@
         "publishedAt": "2026-04-02T02:06:01Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Vigil\u00e2ncia, inclusive, nas pequenas coisas! - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Quarta | 01/04 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/lRyA7YV99Sg/default.jpg",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "VMVDIPunHSem6JlOEftQRcXCml8",
+      "etag": "i29Bb13jtki4jXns205eTNP2hKE",
       "id": {
         "kind": "youtube#video",
         "videoId": "b9-go9hlmI4"
@@ -53,7 +53,7 @@
         "publishedAt": "2026-03-30T21:49:42Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
+        "description": "Culto de Domingo (Noite) | 29/03 | Pr. Luiz Carlos.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/b9-go9hlmI4/default.jpg",
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "kr-uJVg4SLVDD0BXWzv-ZB4GVPI",
+      "etag": "UVboSxO_lZ48-EstFmlpqNkJNmQ",
       "id": {
         "kind": "youtube#video",
         "videoId": "Tzes3b2GFE0"
@@ -87,7 +87,7 @@
         "publishedAt": "2026-03-29T17:41:12Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "N\u00e3o brinque com a sua salva\u00e7\u00e3o! - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Domingo (Manh\u00e3) | 29/03 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/Tzes3b2GFE0/default.jpg",
