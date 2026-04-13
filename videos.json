@@ -1,16 +1,16 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "NIkSdD0JHDerapoeoTorUqcnI2o",
+  "etag": "on0G8ByF9rXk7ZTugFsHM6aopXs",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 292,
+    "totalResults": 290,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "nWb65PaKYRcLr9ZICFNaLxZDf1w",
+      "etag": "zuZ4HfqLrgaR8Vhk4kcHoMs8EKk",
       "id": {
         "kind": "youtube#video",
         "videoId": "WygiEsz2aas"
@@ -19,7 +19,7 @@
         "publishedAt": "2026-04-12T17:33:44Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "O que fazer quando a decep\u00e7\u00e3o bate \u00e0 porta - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Domingo (Manh\u00e3) | 12/04 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/WygiEsz2aas/default.jpg",
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "-Acb3jXglcKIwwguOTv0Bs62lyA",
+      "etag": "75zC9q_jzcS845NKL8QLy9qs1bA",
       "id": {
         "kind": "youtube#video",
         "videoId": "nYk5owPIgEg"
@@ -53,7 +53,7 @@
         "publishedAt": "2026-04-09T01:27:59Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Quem mandou largar a rede? - Pr. Luiz Carlos",
-        "description": "",
+        "description": "Culto de Quarta | 08/04 | Pr. Luiz Carlos.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/nYk5owPIgEg/default.jpg",
@@ -78,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "5azEJedPF9lCXowEZjlPq9euED0",
+      "etag": "80KYmgfbyg_giiEyVlc8UfE8EUM",
       "id": {
         "kind": "youtube#video",
         "videoId": "mwDZmyT5qOo"
@@ -87,7 +87,7 @@
         "publishedAt": "2026-04-05T18:59:49Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Jesus: Perfeita Obedi\u00eancia, Sacrif\u00edcio Supremo - Pr. Marcio Soares",
-        "description": "",
+        "description": "Culto de Domingo (Manh\u00e3) | 05/04 | Pr. Marcio Soares.",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/mwDZmyT5qOo/default.jpg",
