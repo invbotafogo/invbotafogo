@@ -1,13 +1,81 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "ZLxF7CPJSZSG0MqvRiaHv7Ymlk0",
+  "etag": "Wr7lyFf90YGDBDIRF1fl6LJ3rng",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 291,
+    "totalResults": 295,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rsj8SPWFbk_ehI8CEgfwv18r1a0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "u2JpJUpZkm8"
+      },
+      "snippet": {
+        "publishedAt": "2026-04-19T19:11:21Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Mornid\u00e3o Espiritual: O Perigo do &quot;Meio-Termo&quot;",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/u2JpJUpZkm8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/u2JpJUpZkm8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/u2JpJUpZkm8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-04-19T19:11:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MeVDFPcCaQS-TahVzyZWlCqo2KM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zVhe85ACd48"
+      },
+      "snippet": {
+        "publishedAt": "2026-04-19T18:56:40Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Quarta - Pr. Humberto Torres",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zVhe85ACd48/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zVhe85ACd48/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zVhe85ACd48/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-04-19T18:56:40Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "zuZ4HfqLrgaR8Vhk4kcHoMs8EKk",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-04-12T17:33:44Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "5_JQnncMW0Ozg9GWanvuA43sFms",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "nYk5owPIgEg"
-      },
-      "snippet": {
-        "publishedAt": "2026-04-09T01:27:59Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Quem mandou largar a rede? - Pr. Luiz Carlos",
-        "description": "Culto de Quarta | 08/04 | Pr. Luiz Carlos.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/nYk5owPIgEg/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/nYk5owPIgEg/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/nYk5owPIgEg/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-04-09T01:27:59Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "80KYmgfbyg_giiEyVlc8UfE8EUM",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "mwDZmyT5qOo"
-      },
-      "snippet": {
-        "publishedAt": "2026-04-05T18:59:49Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Jesus: Perfeita Obedi\u00eancia, Sacrif\u00edcio Supremo - Pr. Marcio Soares",
-        "description": "Culto de Domingo (Manh\u00e3) | 05/04 | Pr. Marcio Soares.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/mwDZmyT5qOo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/mwDZmyT5qOo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/mwDZmyT5qOo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-04-05T18:59:49Z"
       }
     }
   ]
