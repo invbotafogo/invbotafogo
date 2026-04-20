@@ -1,8 +1,4 @@
-import { image } from "framer-motion/client";
 import "../css/styles.css";
-
-let lastExpandedId = null;
-
 document.addEventListener("DOMContentLoaded", async () => {
     await loadComponent("#header", "header.html");
     await setupMobileMenu();
@@ -46,13 +42,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (item) expandedContent.appendChild(item.cloneNode(true));
                 expandedContent.classList.remove("hidden");
                 expandedContent.scrollIntoView({ behavior: "smooth" });
-                lastExpandedId = id;
             });
         });
         expandedContent.addEventListener('click', () => {
             expandedContent.classList.add('hidden');
             expandedContent.innerHTML = '';
-            lastExpandedId = null;
         });
     }
 
