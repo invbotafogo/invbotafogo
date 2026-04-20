@@ -206,7 +206,14 @@ async function carregarEstudosBiblicos(tema) {
     // --- Cristologia ---
     if (tema == "cristologia") {
         const aulas = [
+<<<<<<< HEAD
             { titulo: "Cristologia - Parte I", imagem: `${basePathImgCR}/1.png`, pdf: `${basePath}/CRISTOLOGIA_Aula1.pdf`},
+=======
+            { titulo: "Cristologia - Parte I", imagem: `${basePathImgCR}/1.png`, pdf: `${basePath}/CRISTOLOGIA_Aula1.pdf` },
+            { titulo: "Cristologia - Parte II", imagem: `${basePathImgCR}/2.png`, pdf: `${basePath}/CRISTOLOGIA_Aula2.pdf` },
+            { titulo: "Cristologia - Parte III", imagem: `${basePathImgCR}/3.png`, pdf: `${basePath}/CRISTOLOGIA_Aula3.pdf` },
+            //{ titulo: "Cristologia - Parte IV", imagem: `${basePathImgCR}/4.png`, pdf: `${basePath}/CRISTOLOGIA_Aula4.pdf` },
+>>>>>>> d5f89c386445f0f20bb514da692cc4f82001b619
         ];
 
         aulas.forEach(aula => {
