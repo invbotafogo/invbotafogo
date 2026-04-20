@@ -206,7 +206,7 @@ async function carregarEstudosBiblicos(tema) {
     // --- Cristologia ---
     if (tema == "cristologia") {
         const aulas = [
-            { titulo: "Cristologia - Parte I", imagem: `${basePathImgCR}/1.png`, pdf: `${basePath}/CRISTOLOGIA_Aula1.pdf` },
+            { titulo: "Cristologia - Parte I", imagem: `${basePathImgCR}/1.png`, pdf: `${basePath}/CRISTOLOGIA_Aula1.pdf`},
         ];
 
         aulas.forEach(aula => {
