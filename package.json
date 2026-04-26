@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve --mode development --open",
+    "dev": "webpack serve --mode development",
     "deploy": "npm run build && gh-pages -d dist -b gh-pages --cname invbotafogo.com.br",
     "analyze:stats": "webpack --profile --json=dist/stats.json --mode production",
     "analyze": "npm run analyze:stats && npx webpack-bundle-analyzer dist/stats.json dist --port 8888",
@@ -23,7 +23,7 @@
     "webpack": "^5.76.0",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^1.16.5"
+    "webpack-dev-server": "^4.15.2"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
