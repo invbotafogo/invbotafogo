@@ -118,7 +118,7 @@ async function tentarLogin() {
         const senhaCorreta = CONFIG.senhasAdmin[ministerioAdmin];
         if (senhaDigitada === senhaCorreta) {
             // Redireciona para o painel admin passando o ministério como parâmetro
-            window.location.href = `./src/pages/admin.html?ministerio=${ministerioAdmin}&r=aW52Yg==`;
+            window.location.href = `./admin.html?ministerio=${ministerioAdmin}&r=aW52Yg==`;
         } else {
             exibirErro('Senha incorreta para este ministério.');
         }
