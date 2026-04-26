@@ -64,6 +64,11 @@
      box-shadow: var(--sombra), 0 0 40px rgba(184,151,58,0.08);
      text-align: center;
    }
+
+   .login-logo {
+    display: flex;
+    justify-content: center;
+  }
    
    .login-titulo {
      font-family: 'Cinzel', serif;
