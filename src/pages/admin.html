@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin — INVB</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="/src/css/loumi.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+
+        <!-- FORMULÁRIO -->
+        <section>
+            <div class="card-admin">
+                <div class="admin-header">
+                    <h2>Nova Escala</h2>
+                    <div class="mes-seletor-container">
+                        <label>Mês da Escala</label>
+                        <select id="adm-mes-seletor"></select>
+                    </div>
+                </div>
+
+                <form id="form-admin" class="login-form">
+
+                    <label>Ministério</label>
+                    <div class="badge-ministerio" id="adm-min-label">—</div>
+
+                    <label style="margin-top: 15px;">Data e Culto</label>
+                    <select id="adm-data-culto" class="input-estilo" required></select>
+
+                    <label style="margin-top: 15px;">Função</label>
+                    <select id="adm-funcao" class="input-estilo" required></select>
+
+                    <label style="margin-top: 15px;">Nome</label>
+                    <select id="adm-nome" class="input-estilo" required></select>
+
+                    <button type="submit" class="btn-entrar" style="margin-top: 25px;">ADICIONAR À ESCALA</button>
+                    <button
+                        type="button"
+                        class="btn-sair"
+                        onclick="window.location.href='../../loumi.html?r=aW52Yg=='"
+                        style="width: 100%; margin-top: 10px;"
+                    >
+                        Voltar ao Painel
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- LISTA -->
+        <section>
+            <h2 style="margin-bottom: 20px; font-size: 1.2rem; border-left: 4px solid var(--accent-color); padding-left: 10px;">Escalas Atuais</h2>
+            <div id="lista-escalas-grupos"></div>
+        </section>
+
+    </div>
+
+    <script src="/src/js/admin.js"></script>
+</body>
+</html>

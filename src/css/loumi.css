@@ -1,0 +1,894 @@
+/* =============================================
+   LOUMI.CSS — Área Interna INVB
+   Inclui estilos do loumi.html, admin.html e admin.css
+   ============================================= */
+
+   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+   /* ─── VARIÁVEIS ─── */
+   :root {
+     --cor-fundo:          #0d0d0d;
+     --cor-fundo-card:     #1a1a1a;
+     --cor-fundo-card2:    #222222;
+     --cor-primaria:       #b8973a;
+     --cor-primaria-hover: #d4af52;
+     --cor-texto:          #e8e8e8;
+     --cor-texto-suave:    #aaaaaa;
+     --cor-borda:          #333333;
+     --cor-destaque:       #8b0000;
+     --cor-sucesso:        #2e7d32;
+     --cor-erro:           #c62828;
+     --radius:             8px;
+     --sombra:             0 4px 20px rgba(0,0,0,0.5);
+   
+     /* Admin */
+     --bg-card:   #1a1a1a;
+     --bg-input:  #252525;
+     --accent-color: #ffd700;
+   }
+   
+   /* ─── RESET ─── */
+   *, *::before, *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   body {
+     font-family: 'Lato', sans-serif;
+     background-color: var(--cor-fundo);
+     color: var(--cor-texto);
+     min-height: 100vh;
+     line-height: 1.6;
+   }
+   
+   /* ══════════════════════════════════════════════
+      LOGIN
+   ══════════════════════════════════════════════ */
+   #tela-login {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     padding: 20px;
+     background: radial-gradient(ellipse at top, #1a1200 0%, #0d0d0d 60%);
+   }
+   
+   .login-box {
+     background: var(--cor-fundo-card);
+     border: 1px solid var(--cor-primaria);
+     border-radius: var(--radius);
+     padding: 48px 40px;
+     width: 100%;
+     max-width: 420px;
+     box-shadow: var(--sombra), 0 0 40px rgba(184,151,58,0.08);
+     text-align: center;
+   }
+   
+   .login-titulo {
+     font-family: 'Cinzel', serif;
+     font-size: 1.4rem;
+     font-weight: 700;
+     color: var(--cor-primaria);
+     margin-bottom: 4px;
+     letter-spacing: 1px;
+   }
+   
+   .login-subtitulo {
+     font-size: 0.85rem;
+     color: var(--cor-texto-suave);
+     margin-bottom: 32px;
+   }
+   
+   .login-form {
+     display: flex;
+     flex-direction: column;
+     gap: 14px;
+     text-align: left;
+   }
+   
+   .login-form label {
+     display: block;
+     font-size: 0.78rem;
+     color: var(--cor-texto-suave);
+     margin-bottom: 4px;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+   }
+   
+   .login-form select,
+   .login-form input[type="password"] {
+     width: 100%;
+     padding: 12px 14px;
+     background: #111;
+     border: 1px solid var(--cor-borda);
+     border-radius: var(--radius);
+     color: var(--cor-texto);
+     font-family: 'Lato', sans-serif;
+     font-size: 0.95rem;
+     transition: border-color 0.2s;
+     outline: none;
+     appearance: none;
+     -webkit-appearance: none;
+   }
+   
+   .login-form select:focus,
+   .login-form input[type="password"]:focus {
+     border-color: var(--cor-primaria);
+   }
+   
+   .login-form select option {
+     background: #111;
+   }
+   
+   .login-erro {
+     color: var(--cor-erro);
+     font-size: 0.85rem;
+     margin-top: 4px;
+   }
+   
+   /* Seletor de ministério admin — animação suave */
+   #wrap-ministerio-admin {
+     display: none;
+     animation: fadeIn 0.2s ease;
+   }
+   
+   /* ══════════════════════════════════════════════
+      BOTÕES GLOBAIS
+   ══════════════════════════════════════════════ */
+   .btn-entrar {
+     width: 100%;
+     padding: 13px;
+     background: var(--cor-primaria);
+     color: #0d0d0d;
+     border: none;
+     border-radius: var(--radius);
+     font-family: 'Cinzel', serif;
+     font-size: 0.95rem;
+     font-weight: 700;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: background 0.2s, transform 0.1s;
+   }
+   
+   .btn-entrar:hover  { background: var(--cor-primaria-hover); transform: translateY(-1px); }
+   .btn-entrar:active { transform: translateY(0); }
+   
+   .btn-sair {
+     background: transparent;
+     border: 1px solid #444;
+     color: var(--cor-texto-suave);
+     padding: 6px 14px;
+     border-radius: var(--radius);
+     font-family: 'Lato', sans-serif;
+     font-size: 0.8rem;
+     cursor: pointer;
+     transition: border-color 0.2s, color 0.2s;
+     white-space: nowrap;
+   }
+   
+   .btn-sair:hover {
+     border-color: var(--cor-primaria);
+     color: var(--cor-primaria);
+   }
+   
+   /* ══════════════════════════════════════════════
+      APP PRINCIPAL
+   ══════════════════════════════════════════════ */
+   #tela-app {
+     display: none;
+     flex-direction: column;
+     min-height: 100vh;
+   }
+   
+   /* ─── HEADER ─── */
+   .app-header {
+     background: #000;
+     /* border-bottom: 2px solid var(--cor-primaria); */
+     padding: 10px 24px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 16px;
+     position: sticky;
+     top: 0;
+     z-index: 100;
+     box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+   }
+   
+   .header-esquerda {
+     display: flex;
+     align-items: center;
+     gap: 14px;
+     flex-shrink: 0;
+   }
+   
+   .header-logo {
+     max-height: 65px;
+     width: auto;
+     object-fit: contain;
+     display: block;
+   }
+   
+   .header-titulo {
+     font-family: 'Cinzel', serif;
+     font-size: 1rem;
+     color: var(--cor-primaria);
+     line-height: 1.2;
+   }
+   
+   .header-subtitulo {
+     font-size: 0.7rem;
+     color: var(--cor-texto-suave);
+     text-transform: uppercase;
+     letter-spacing: 1px;
+   }
+   
+   /* Sair da row-bottom: visível só no mobile */
+   .header-row-bottom .btn-sair { display: none; }
+   
+   /* Desktop: row-top ocupa a esquerda, row-bottom a direita */
+   .header-row-top {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+   }
+   
+   /* No desktop, row-bottom fica ao lado do row-top (flex do header) */
+   .header-row-bottom {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+   }
+   
+   /* No desktop o seletor de ministério fica na row-bottom com o Sair */
+   .header-row-bottom #seletor-ministerio {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 5px;
+   }
+   
+   /* ─── SELETOR DE MINISTÉRIO (header) ─── */
+   #seletor-ministerio {
+     display: flex;
+     gap: 5px;
+     flex-wrap: wrap;
+   }
+   
+   .btn-ministerio {
+     padding: 5px 11px;
+     background: transparent;
+     color: var(--cor-texto-suave);
+     border: 1px solid var(--cor-borda);
+     border-radius: 6px;
+     font-size: 0.78rem;
+     cursor: pointer;
+     transition: all 0.2s;
+     white-space: nowrap;
+   }
+   
+   .btn-ministerio.ativo {
+     background: var(--cor-primaria);
+     color: #111;
+     border-color: var(--cor-primaria);
+     font-weight: 700;
+   }
+   
+   /* ─── NAVEGAÇÃO ABAS ─── */
+   .app-nav {
+     background: #161616;
+     border-top: 2px solid var(--cor-primaria);
+     padding: 0 24px;
+     display: flex;
+     gap: 4px;
+     overflow-x: auto;
+     scrollbar-width: none;
+     /* margin-top: 5vh; */
+   }
+   
+   .app-nav::-webkit-scrollbar { display: none; }
+   
+   .nav-btn {
+     background: transparent;
+     border: none;
+     border-bottom: 3px solid transparent;
+     color: var(--cor-texto-suave);
+     padding: 14px 18px;
+     font-family: 'Lato', sans-serif;
+     font-size: 0.88rem;
+     font-weight: 700;
+     cursor: pointer;
+     letter-spacing: 0.5px;
+     text-transform: uppercase;
+     transition: color 0.2s, border-color 0.2s;
+     white-space: nowrap;
+   }
+   
+   .nav-btn:hover    { color: var(--cor-primaria); }
+   .nav-btn.ativo {
+     color: var(--cor-primaria);
+     border-bottom-color: var(--cor-primaria);
+   }
+   
+   /* ─── CONTEÚDO PRINCIPAL ─── */
+   .app-conteudo {
+     flex: 1;
+     padding: 32px 24px;
+     max-width: 1100px;
+     margin: 0 auto;
+     width: 100%;
+   }
+   
+   .secao        { display: none; }
+   .secao.ativa  { display: block; }
+   
+   /* ─── TÍTULOS DE SEÇÃO ─── */
+   .secao-titulo {
+     font-family: 'Cinzel', serif;
+     font-size: 1.3rem;
+     color: var(--cor-primaria);
+     margin-bottom: 6px;
+   }
+   
+   .secao-desc {
+     font-size: 0.88rem;
+     color: var(--cor-texto-suave);
+     margin-bottom: 24px;
+   }
+   
+   .divider {
+     border: none;
+     border-top: 1px solid var(--cor-borda);
+     margin: 24px 0;
+   }
+   
+   /* ══════════════════════════════════════════════
+      ESCALA — CONTROLES DE FILTRO
+   ══════════════════════════════════════════════ */
+   .escala-controles {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 12px;
+     background: var(--cor-fundo-card);
+     padding: 14px;
+     border-radius: var(--radius);
+     margin-bottom: 20px;
+     border: 1px solid var(--cor-borda);
+   }
+   
+   .escala-controles label {
+     display: block;
+     font-size: 0.72rem;
+     color: var(--cor-texto-suave);
+     margin-bottom: 5px;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+   }
+   
+   .escala-controles select,
+   .escala-controles input {
+     width: 100%;
+     height: 42px;
+     background: var(--bg-input) !important;
+     color: white !important;
+     border: 1px solid #444;
+     border-radius: 6px;
+     padding: 0 10px;
+     outline: none;
+     font-family: 'Lato', sans-serif;
+     font-size: 0.88rem;
+     appearance: none;
+     -webkit-appearance: none;
+     box-sizing: border-box;
+   }
+   
+   .escala-controles select:focus,
+   .escala-controles input:focus {
+     border-color: var(--cor-primaria);
+   }
+   
+   /* ─── BADGE DE MÊS ─── */
+   #badge-mes-atual {
+     display: inline-flex;
+     align-items: center;
+     gap: 6px;
+     background: rgba(255,215,0,0.08);
+     border: 1px solid rgba(255,215,0,0.25);
+     color: #ffd700;
+     font-size: 0.75rem;
+     font-weight: 600;
+     padding: 5px 12px;
+     border-radius: 20px;
+     margin-bottom: 14px;
+     letter-spacing: 0.4px;
+   }
+   
+   /* ─── TABELA DE ESCALA ─── */
+   .tabela-wrapper {
+     overflow-x: auto;
+     border-radius: var(--radius);
+     border: 1px solid var(--cor-borda);
+     box-shadow: var(--sombra);
+     -webkit-overflow-scrolling: touch;
+   }
+   
+   .tabela-escala {
+     width: 100%;
+     border-collapse: collapse;
+     font-size: 0.9rem;
+   }
+   
+   .tabela-escala thead {
+     background: #1e1600;
+   }
+   
+   .tabela-escala thead th {
+     padding: 13px 16px;
+     text-align: left;
+     font-family: 'Cinzel', serif;
+     font-size: 0.75rem;
+     color: var(--cor-primaria);
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     border-bottom: 2px solid var(--cor-primaria);
+     white-space: nowrap;
+   }
+   
+   .tabela-escala tbody tr {
+     border-bottom: 1px solid #252525;
+     transition: background 0.15s;
+   }
+   
+   .tabela-escala tbody tr:hover  { background: var(--cor-fundo-card2); }
+   .tabela-escala tbody tr:last-child { border-bottom: none; }
+   
+   .tabela-escala tbody td {
+     padding: 12px 16px;
+     color: var(--cor-texto);
+     vertical-align: middle;
+   }
+   
+   .tabela-escala tbody td:first-child {
+     font-weight: 700;
+     color: var(--cor-primaria);
+     white-space: nowrap;
+   }
+   
+   /* ─── TAGS ─── */
+   .tag-funcao {
+     display: inline-block;
+     background: #1e1600;
+     border: 1px solid var(--cor-primaria);
+     color: var(--cor-primaria);
+     font-size: 0.7rem;
+     padding: 2px 10px;
+     border-radius: 20px;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+   }
+   
+   .tag-funcao.midia {
+     background: #0d1a2e;
+     border-color: #4a90d9;
+     color: #4a90d9;
+   }
+   
+   .tag-ministerio {
+     display: inline-block;
+     padding: 3px 8px;
+     border-radius: 4px;
+     font-size: 0.7rem;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 0.4px;
+   }
+   
+   .tag-louvor   { background: rgba(255,215,0,0.15);   color: #ffd700; border: 1px solid rgba(255,215,0,0.3); }
+   .tag-midia    { background: rgba(100,180,255,0.15); color: #64b4ff; border: 1px solid rgba(100,180,255,0.3); }
+   .tag-infantil { background: rgba(120,220,120,0.15); color: #78dc78; border: 1px solid rgba(120,220,120,0.3); }
+   
+   /* ─── BOTÃO DOWNLOAD FLUTUANTE ─── */
+   #btn-download-escala {
+     display: none;
+     position: fixed;
+     bottom: 24px;
+     right: 24px;
+     z-index: 100;
+     align-items: center;
+     gap: 8px;
+     background: #ffd700;
+     color: #111;
+     font-weight: 700;
+     font-size: 0.85rem;
+     border: none;
+     border-radius: 50px;
+     padding: 13px 22px;
+     cursor: pointer;
+     box-shadow: 0 4px 20px rgba(255,215,0,0.35);
+     transition: transform 0.15s, box-shadow 0.15s;
+     letter-spacing: 0.3px;
+   }
+   
+   #btn-download-escala:hover  { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(255,215,0,0.5); }
+   #btn-download-escala:active { transform: scale(0.97); }
+   
+   /* ══════════════════════════════════════════════
+      MATERIAIS / DRIVE
+   ══════════════════════════════════════════════ */
+   .drive-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 18px;
+     margin-bottom: 32px;
+   }
+   
+   .drive-card {
+     background: var(--cor-fundo-card);
+     border: 1px solid var(--cor-borda);
+     border-radius: var(--radius);
+     overflow: hidden;
+     transition: border-color 0.2s, transform 0.2s;
+     box-shadow: var(--sombra);
+   }
+   
+   .drive-card:hover {
+     border-color: var(--cor-primaria);
+     transform: translateY(-2px);
+   }
+   
+   .drive-card-header {
+     background: #1e1600;
+     padding: 14px 18px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     border-bottom: 1px solid #2a2000;
+   }
+   
+   .drive-card-icone  { font-size: 1.4rem; }
+   .drive-card-titulo { font-family: 'Cinzel', serif; font-size: 0.9rem; color: var(--cor-primaria); font-weight: 600; }
+   .drive-card-tipo   { font-size: 0.7rem; color: var(--cor-texto-suave); }
+   
+   .drive-card-body { padding: 14px 18px; }
+   
+   .drive-card-desc {
+     font-size: 0.83rem;
+     color: var(--cor-texto-suave);
+     margin-bottom: 14px;
+     line-height: 1.5;
+   }
+   
+   .btn-abrir-drive {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 6px;
+     width: 100%;
+     background: var(--cor-primaria);
+     color: #0d0d0d;
+     border: none;
+     border-radius: var(--radius);
+     padding: 9px 16px;
+     font-family: 'Lato', sans-serif;
+     font-size: 0.82rem;
+     font-weight: 700;
+     cursor: pointer;
+     text-decoration: none;
+     transition: background 0.2s;
+   }
+   
+   .btn-abrir-drive:hover         { background: var(--cor-primaria-hover); }
+   .btn-abrir-drive.midia         { background: #1a3a5c; color: #e0e8f0; }
+   .btn-abrir-drive.midia:hover   { background: #1e4a7a; }
+   
+   /* ══════════════════════════════════════════════
+      FOOTER
+   ══════════════════════════════════════════════ */
+   .app-footer {
+     background: #111;
+     border-top: 1px solid var(--cor-borda);
+     padding: 14px 24px;
+     text-align: center;
+     font-size: 0.75rem;
+     color: #444;
+   }
+   
+   .app-footer span { color: var(--cor-primaria); }
+   
+   /* ══════════════════════════════════════════════
+      ADMIN — LAYOUT
+   ══════════════════════════════════════════════ */
+   .admin-layout {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 24px;
+     padding: 24px;
+     max-width: 1200px;
+     margin: 0 auto;
+   }
+   
+   .card-admin {
+     background: var(--bg-card);
+     border: 1px solid var(--cor-borda);
+     border-radius: 12px;
+     padding: 24px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+   }
+   
+   /* ─── ADMIN HEADER ─── */
+   .admin-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 20px;
+     border-bottom: 1px solid #333;
+     padding-bottom: 15px;
+     gap: 12px;
+     flex-wrap: wrap;
+   }
+   
+   .admin-header h2 {
+     color: var(--accent-color);
+     margin: 0;
+     font-size: 1.2rem;
+   }
+   
+   .mes-seletor-container { text-align: right; }
+   
+   .mes-seletor-container label {
+     display: block;
+     font-size: 0.65rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     opacity: 0.6;
+     margin-bottom: 4px;
+   }
+   
+   #adm-mes-seletor {
+     background: var(--bg-input);
+     color: var(--accent-color);
+     border: 1px solid var(--accent-color);
+     padding: 6px 10px;
+     border-radius: 6px;
+     font-weight: bold;
+     cursor: pointer;
+     font-size: 0.85rem;
+   }
+   
+   /* ─── ADMIN — BADGE MINISTÉRIO FIXO ─── */
+   .badge-ministerio {
+     display: inline-block;
+     background: rgba(255,215,0,0.12);
+     color: var(--accent-color);
+     border: 1px solid rgba(255,215,0,0.35);
+     border-radius: 6px;
+     padding: 10px 16px;
+     font-size: 0.95rem;
+     font-weight: bold;
+     letter-spacing: 0.5px;
+     width: 100%;
+     box-sizing: border-box;
+     text-align: center;
+   }
+   
+   /* ─── ADMIN — INPUTS ─── */
+   .input-estilo {
+     width: 100%;
+     height: 46px;
+     background-color: var(--bg-input) !important;
+     color: white !important;
+     border: 1px solid var(--cor-borda);
+     border-radius: 8px;
+     padding: 0 15px;
+     font-size: 0.9rem;
+     outline: none;
+     box-sizing: border-box;
+     appearance: none;
+     -webkit-appearance: none;
+     font-family: 'Lato', sans-serif;
+     transition: border-color 0.2s;
+   }
+   
+   .input-estilo:focus { border-color: var(--accent-color); }
+   
+   input::-webkit-calendar-picker-indicator {
+     filter: invert(1);
+     opacity: 0.3;
+     margin-right: 5px;
+   }
+   
+   /* ─── ADMIN — BOTÃO DELETE ─── */
+   .btn-delete {
+     background: rgba(255,77,77,0.13);
+     color: #ff4d4d;
+     border: 1px solid #ff4d4d;
+     padding: 5px 10px;
+     border-radius: 4px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: background 0.2s, color 0.2s;
+     flex-shrink: 0;
+   }
+   
+   .btn-delete:hover { background: #ff4d4d; color: white; }
+   
+   /* ─── ADMIN — LABELS DO FORM ─── */
+   .login-form label,
+   #form-admin label {
+     display: block;
+     text-align: left;
+     font-size: 0.78rem;
+     color: var(--cor-texto-suave);
+     margin-bottom: 4px;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+   }
+   
+   /* ─── ADMIN — LISTA DE ESCALAS ─── */
+   #lista-escalas-grupos h2 {
+     font-size: 1.1rem;
+     border-left: 4px solid var(--accent-color);
+     padding-left: 10px;
+     margin-bottom: 18px;
+   }
+   
+   /* ══════════════════════════════════════════════
+      ANIMAÇÕES
+   ══════════════════════════════════════════════ */
+   @keyframes fadeIn {
+     from { opacity: 0; transform: translateY(-6px); }
+     to   { opacity: 1; transform: translateY(0); }
+   }
+   
+   /* ══════════════════════════════════════════════
+      RESPONSIVO — TABLET (≤ 900px)
+   ══════════════════════════════════════════════ */
+   @media (max-width: 900px) {
+     .admin-layout {
+       grid-template-columns: 1fr;
+       padding: 16px;
+       gap: 16px;
+     }
+   
+     .escala-controles {
+       grid-template-columns: 1fr 1fr;
+     }
+   }
+   
+   /* ══════════════════════════════════════════════
+      RESPONSIVO — MOBILE (≤ 640px)
+   ══════════════════════════════════════════════ */
+   @media (max-width: 640px) {
+   
+     /* ── Header mobile: 2 linhas
+        Linha 1: logo centralizada
+        Linha 2: [ministérios scroll] [Sair] */
+     .app-header {
+       flex-direction: column;
+       align-items: stretch;
+       padding: 14px 14px 12px; /* padding-bottom garante espaço antes da borda dourada */
+       gap: 0;
+     }
+   
+     /* Linha 1 — logo centrada */
+     .header-row-top {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding-bottom: 12px;
+     }
+   
+     /* Oculta o btn-sair da row-top no mobile */
+     .header-row-top .btn-sair {
+       display: none;
+     }
+   
+     .header-logo { height: 38px; }
+   
+     /* Linha 2 — ministérios + Sair */
+     .header-row-bottom {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       gap: 8px;
+       border-top: 1px solid #252525;
+       padding-top: 10px;
+     }
+   
+     /* Seletor com scroll horizontal */
+     #seletor-ministerio {
+       flex: 1;
+       min-width: 0;
+       display: flex;
+       flex-wrap: nowrap;
+       overflow-x: auto;
+       scrollbar-width: none;
+       gap: 6px;
+       -webkit-overflow-scrolling: touch;
+     }
+   
+     #seletor-ministerio::-webkit-scrollbar { display: none; }
+   
+     /* Sair fixo à direita da linha 2 */
+     .header-row-bottom .btn-sair {
+       display: flex;
+       flex-shrink: 0;
+       font-size: 0.72rem;
+       padding: 5px 10px;
+     }
+   
+     .btn-ministerio {
+       flex-shrink: 0;
+       font-size: 0.75rem;
+       padding: 5px 12px;
+     }
+   
+     /* Nav */
+     .app-nav  { padding: 0 10px; margin-top: 5vh; }
+     .nav-btn  { padding: 12px 14px; font-size: 0.8rem; }
+   
+     /* Conteúdo */
+     .app-conteudo { padding: 18px 14px; }
+   
+     /* Filtros escala — coluna única */
+     .escala-controles {
+       grid-template-columns: 1fr;
+       padding: 12px;
+       gap: 10px;
+     }
+   
+     /* Tabela */
+     .tabela-escala thead th,
+     .tabela-escala tbody td {
+       padding: 10px 12px;
+       font-size: 0.83rem;
+     }
+   
+     /* Login */
+     .login-box    { padding: 32px 20px; }
+     .login-titulo { font-size: 1.2rem; }
+   
+     /* Admin */
+     .admin-layout { padding: 12px; }
+   
+     .admin-header {
+       flex-direction: column;
+       align-items: flex-start;
+     }
+   
+     .mes-seletor-container { text-align: left; width: 100%; }
+     #adm-mes-seletor       { width: 100%; }
+   
+     .card-admin { padding: 18px 16px; }
+   
+     /* Botão flutuante */
+     #btn-download-escala {
+       bottom: 16px;
+       right: 14px;
+       font-size: 0.78rem;
+       padding: 11px 16px;
+     }
+   
+     /* Drive */
+     .drive-grid { grid-template-columns: 1fr; }
+   }
+   
+   /* ══════════════════════════════════════════════
+      RESPONSIVO — MOBILE PEQUENO (≤ 380px)
+   ══════════════════════════════════════════════ */
+   @media (max-width: 380px) {
+     .login-box    { padding: 28px 16px; }
+     .btn-entrar   { font-size: 0.88rem; }
+   
+     .tabela-escala thead th:first-child,
+     .tabela-escala tbody td:first-child {
+       display: none;
+     }
+   }
+
+   @media (max-width: 320px){
+    .app-nav {
+      margin-top: 10vh;
+  }
+   }
