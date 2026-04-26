@@ -119,7 +119,7 @@ async function tentarLogin() {
         if (senhaDigitada === senhaCorreta) {
             // Redireciona para o painel admin passando o ministério como parâmetro
             window.location.href = `./admin.html?ministerio=${ministerioAdmin}&r=aW52Yg==`;
-        } else {
+                } else {
             exibirErro('Senha incorreta para este ministério.');
         }
 
