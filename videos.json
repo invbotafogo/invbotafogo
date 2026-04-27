@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Y4X7qb88GrDjX9-tDA0MXEjtbl8",
+  "etag": "CqItHqVaXBXLsF2KDUT_VUPi_Bc",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,40 @@
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "uDyBM3A9hiNMYS16DZJDDYv5ehw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1Oojy80JG5A"
+      },
+      "snippet": {
+        "publishedAt": "2026-04-27T22:03:11Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1Oojy80JG5A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1Oojy80JG5A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1Oojy80JG5A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-04-27T22:03:11Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "RQmvFYB1c07TKE0zc6al-MbNjwA",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-04-24T12:27:49Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "jj2xKMuq0FKAv1wUQy2BJl6U9oM",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "lqS3Htf5NgM"
-      },
-      "snippet": {
-        "publishedAt": "2026-04-20T03:18:33Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/lqS3Htf5NgM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/lqS3Htf5NgM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/lqS3Htf5NgM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-04-20T03:18:33Z"
       }
     }
   ]
