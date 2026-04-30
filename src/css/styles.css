@@ -1994,3 +1994,142 @@ svg {
     }
 }
 
+/* ============================================================
+   MINISTÉRIOS — NOVO ESTILO: CARDS DOURADOS COM ÍCONES
+   ============================================================ */
+
+.ministerios-dark-container {
+    background: rgba(18, 10, 4, 0.88);
+    border-radius: 1.25rem;
+    margin: 40px auto;
+    max-width: 1300px;
+    padding: 50px 40px;
+}
+
+/* Override do grid herdado de .cards-container */
+.cards-container.ministerio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0;
+    margin-top: 0;
+    grid-template-columns: unset;
+}
+
+/* Base card — override completo dos estilos foto-card */
+.card.ministerio-card {
+    position: relative;
+    height: auto;
+    min-height: 160px;
+    width: 200px;
+    flex: 1 1 180px;
+    max-width: 230px;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(28, 16, 6, 0.85);
+    border: 1.5px solid #C5A059;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    padding: 1.75rem 1.25rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    color: #fff;
+}
+
+.card.ministerio-card:hover {
+    box-shadow: 0 0 22px rgba(197, 160, 89, 0.55), 0 0 6px rgba(197, 160, 89, 0.25);
+    border-color: #e0be7a;
+    transform: translateY(-5px);
+}
+
+/* Garante que os estilos de img herdados não afetem os novos cards */
+.card.ministerio-card img {
+    display: none;
+}
+
+.ministerio-card-icon {
+    font-size: 2.4rem;
+    color: #C5A059;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.card.ministerio-card:hover .ministerio-card-icon {
+    color: #e0be7a;
+}
+
+.ministerio-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.ministerio-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #C5A059;
+    text-transform: uppercase;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+.ministerio-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #f5f0e8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+
+/* Neutraliza overrides dos media queries para os novos cards */
+@media (max-width: 1023px) {
+    .card.ministerio-card {
+        height: auto;
+        min-height: 160px;
+        width: auto;
+        flex: 1 1 160px;
+        max-width: 210px;
+    }
+
+    .cards-container.ministerio-grid {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .ministerios-dark-container {
+        margin: 20px 12px;
+        padding: 35px 16px;
+    }
+
+    .card.ministerio-card {
+        flex: 1 1 140px;
+        max-width: 48%;
+        min-height: 140px;
+        padding: 1.25rem 0.75rem;
+    }
+
+    .ministerio-card-icon {
+        font-size: 2rem;
+    }
+
+    .ministerio-name {
+        font-size: 0.85rem;
+    }
+
+    .ministerio-label {
+        font-size: 0.55rem;
+    }
+}
+
