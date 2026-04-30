@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "G40L_05YSyEYrV_-J3pZX7frM4Y",
+  "etag": "kJFq6Om1I6OHsdMdFYSOZJYmi8c",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,40 @@
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GQFEPopkDxPR__4_tsHEAzSzvJk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kQQ3XWPYRRw"
+      },
+      "snippet": {
+        "publishedAt": "2026-04-30T10:19:22Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Rasgue o seu cora\u00e7\u00e3o! - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-04-30T10:19:22Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "Qlo_wl7gqPlRjmczKP6qCY9uL0c",
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "RQmvFYB1c07TKE0zc6al-MbNjwA",
+      "etag": "NULEQDZ2DkGZIiG_AlGE8UIkGLg",
       "id": {
         "kind": "youtube#video",
         "videoId": "HtUB_P26zzo"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-04-26T19:47:37Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "tpIF-p3Ro5PMarEQNFoc2QGn1X0",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "CvQvE1FTEmM"
-      },
-      "snippet": {
-        "publishedAt": "2026-04-24T12:27:49Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Quebrando a Crise de Identidade - Pra. Daniela Neves",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/CvQvE1FTEmM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/CvQvE1FTEmM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/CvQvE1FTEmM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-04-24T12:27:49Z"
       }
     }
   ]
