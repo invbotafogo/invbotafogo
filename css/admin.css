@@ -1,0 +1,22 @@
+/* Fundo da página */
+.admin-body {
+    background: var(--cor-fundo);
+    padding: 20px;
+}
+
+/* Container central */
+.admin-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Botão salvar */
+#form-admin .btn-entrar {
+    margin-top: 20px;
+}
+
+/* Botão voltar */
+#form-admin .btn-sair {
+    width: 100%;
+    margin-top: 10px;
+}

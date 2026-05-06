@@ -1,0 +1,307 @@
+// =============================================
+//  ADMIN.JS — Painel de Gestão INVB
+// =============================================
+
+// ─── VERIFICAÇÃO DE ACESSO POR TOKEN ─────────
+(function verificarToken() {
+    const params = new URLSearchParams(window.location.search);
+    const r = params.get('r');
+    try {
+        if (atob(r || '') !== 'invb') {
+            document.body.innerHTML = '';
+            window.location.href = '/';
+        }
+    } catch (_) {
+        document.body.innerHTML = '';
+        window.location.href = '/';
+    }
+})();
+
+const _URL = 'https://qzuwwboddnpptkbtsicc.supabase.co';
+const _KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6dXd3Ym9kZG5wcHRrYnRzaWNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NjQyMDcsImV4cCI6MjA5MjQ0MDIwN30.cycw6QQRcXMgLEJSakXapgP-mwAw4ZxrNJ6CGHhqlio';
+const supabaseAdmin = supabase.createClient(_URL, _KEY);
+
+let estaSalvando = false;
+
+// ─── MINISTÉRIO BLOQUEADO (vindo do login) ───
+// Lê o parâmetro ?ministerio=louvor da URL
+const _params           = new URLSearchParams(window.location.search);
+const MINISTERIO_FIXO   = _params.get('ministerio') || null;
+
+const MINISTERIOS_VALIDOS = ['louvor', 'midia', 'infantil'];
+
+// Se não veio parâmetro válido, manda de volta pro login
+if (!MINISTERIO_FIXO || !MINISTERIOS_VALIDOS.includes(MINISTERIO_FIXO)) {
+    alert('Acesso negado. Faça login novamente.');
+    window.location.href = '../../loumi.html?r=aW52Yg==';
+}
+
+// ─── FUNÇÕES POR MINISTÉRIO ──────────────────
+const FUNCOES = {
+    louvor:   ['Ministrante', 'Back', 'Instrumento'],
+    midia:    ['Mesa de Som', 'Transmissão', 'Slide'],
+    infantil: ['Berçário', 'Maternal', 'Juniores']
+};
+
+const NOMES = {
+    louvor: [
+        'Zema', 
+        'Leo', 
+        'Medeiros', 
+        'Matheus', 
+        'Bianca', 
+        'Anna Beatriz', 
+        'Daniela', 
+        'Raphaela', 
+        'Cris', 
+        'Mirian', 
+        'Vanessa R.', 
+        'Tiana', 
+        'Alessandro', 
+        'Pst. Humberto', 
+        'Rose', 
+        'Luciana'
+    ],
+    midia: [
+        'Matheus',
+        'Bianca',
+        'Jean',
+        'Alan',
+        'João', 
+        'Anna Beatriz', 
+        'Alex', 
+        'Luciana'
+    ],
+    infantil: [
+        'Alessandro',
+        'Bianca',
+        'Cris',
+        'Rapha',
+        'Suellen',
+        'Tiana',
+        'Vanessa R',
+        'Anna Beatriz',
+        'Alan',
+        'Luciane',
+        'Marilda',
+        'Marília',
+        'Medeiros',
+        'Vanessa H',
+        'Celiana',
+        'Ely',
+        'Francisca',
+        'Pr. Márcio'
+    ]
+};
+
+const NOMES_MINISTERIOS = {
+    louvor:   '🎵 Louvor',
+    midia:    '📷 Mídia',
+    infantil: '🧒 Infantil'
+};
+
+// ─── POPULA SELECTS FIXOS ────────────────────
+// Como o ministério é fixo, o select de ministério no HTML
+// será substituído por um campo estático/oculto.
+function popularFormulario() {
+    const selFuncao = document.getElementById('adm-funcao');
+    const selNome   = document.getElementById('adm-nome');
+    const labelMin  = document.getElementById('adm-min-label');
+
+    // Mostra o nome do ministério no lugar do select
+    if (labelMin) labelMin.textContent = NOMES_MINISTERIOS[MINISTERIO_FIXO] || MINISTERIO_FIXO;
+
+    // Popula funções
+    const funcoes = FUNCOES[MINISTERIO_FIXO] || [];
+    if (selFuncao) {
+        selFuncao.innerHTML = '<option value="">— Selecione a função —</option>' +
+            funcoes.map(f => `<option value="${f}">${f}</option>`).join('');
+    }
+
+    // Popula nomes
+    const nomes = NOMES[MINISTERIO_FIXO] || [];
+    if (selNome) {
+        selNome.innerHTML = '<option value="">— Selecione o nome —</option>' +
+            nomes.map(n => `<option value="${n}">${n}</option>`).join('');
+    }
+}
+
+// ─── SELETOR DE MESES ────────────────────────
+function configurarSeletorMeses() {
+    const seletor = document.getElementById('adm-mes-seletor');
+    if (!seletor) return;
+
+    const agora      = new Date();
+    const mesesNomes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+    let html = "";
+    for (let i = 0; i < 2; i++) {
+        const d    = new Date(agora.getFullYear(), agora.getMonth() + i, 1);
+        const mIdx = d.getMonth();
+        const ano  = d.getFullYear();
+        html += `<option value="${mIdx}-${ano}">${mesesNomes[mIdx]} / ${ano}</option>`;
+    }
+    seletor.innerHTML = html;
+
+    seletor.onchange = () => {
+        gerarDatasCultos();
+        carregarEscalas();
+    };
+}
+
+// ─── GERA DATAS DE CULTO ─────────────────────
+function gerarDatasCultos() {
+    const select     = document.getElementById('adm-data-culto');
+    const seletorMes = document.getElementById('adm-mes-seletor').value;
+    if (!select || !seletorMes) return;
+
+    const [mes, ano] = seletorMes.split('-').map(Number);
+    let opcoes = [];
+
+    for (let dia = 1; dia <= 31; dia++) {
+        const d = new Date(ano, mes, dia);
+        if (d.getMonth() !== mes) break;
+
+        const dF      = dia < 10 ? '0' + dia : dia;
+        const mF      = (mes + 1) < 10 ? '0' + (mes + 1) : (mes + 1);
+        const dataStr = `${dF}/${mF}`;
+
+        if (d.getDay() === 0) {
+            opcoes.push({ val: `${dataStr}|Domingo Manhã`, text: `${dataStr} - Domingo (10h)` });
+            opcoes.push({ val: `${dataStr}|Domingo Noite`, text: `${dataStr} - Domingo (19h)` });
+        } else if (d.getDay() === 3) {
+            opcoes.push({ val: `${dataStr}|Quarta`, text: `${dataStr} - Quarta (20h)` });
+        }
+    }
+    select.innerHTML = opcoes.map(o => `<option value="${o.val}">${o.text}</option>`).join('');
+}
+
+// ─── ADICIONAR ESCALA ────────────────────────
+async function adicionarEscala(event) {
+    if (event) event.preventDefault();
+    if (estaSalvando) return;
+
+    const dataCultoRaw = document.getElementById('adm-data-culto').value;
+    const funcao       = document.getElementById('adm-funcao').value;
+    const nome         = document.getElementById('adm-nome').value;
+
+    if (!funcao || !nome) return alert("Preencha todos os campos.");
+
+    estaSalvando = true;
+
+    const [dataStr, cultoStr] = dataCultoRaw.split('|');
+
+    const { error } = await supabaseAdmin
+        .from('escalas')
+        .insert([{ ministerio: MINISTERIO_FIXO, data: dataStr, culto: cultoStr, funcao, nome }]);
+
+    if (error) {
+        alert("Erro ao salvar: " + error.message);
+    } else {
+        document.getElementById('adm-nome').value = "";
+        carregarEscalas();
+    }
+
+    estaSalvando = false;
+}
+
+// ─── CARREGA LISTA ────────────────────────────
+async function carregarEscalas() {
+    const container  = document.getElementById('lista-escalas-grupos');
+    const seletorMes = document.getElementById('adm-mes-seletor').value;
+    if (!container || !seletorMes) return;
+
+    const [mes] = seletorMes.split('-').map(Number);
+    const mesFormatado = (mes + 1).toString().padStart(2, '0');
+
+    const { data, error } = await supabaseAdmin
+        .from('escalas')
+        .select('*')
+        .eq('ministerio', MINISTERIO_FIXO)
+        .like('data', `%/${mesFormatado}`)
+        .order('data', { ascending: true });
+
+    if (error) return;
+
+    const grupos = {};
+    data.forEach(item => {
+        const chave = `${item.data} - ${item.culto}`;
+        if (!grupos[chave]) grupos[chave] = [];
+        grupos[chave].push(item);
+    });
+
+    container.innerHTML = Object.keys(grupos).length === 0
+        ? `<p style="text-align:center; opacity:0.5;">Nenhuma escala para este mês.</p>`
+        : Object.keys(grupos).map(titulo => `
+            <div class="card-admin" style="margin-bottom: 15px; padding: 15px; border-left: 4px solid #ffd700; background: #1e1e1e; border-radius: 8px;">
+                <h3 style="font-size: 0.9rem; margin-bottom: 12px; color: #ffd700;">📅 ${titulo}</h3>
+                ${grupos[titulo].map(i => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; background: #252525; padding: 8px; border-radius: 4px;">
+                        <span style="font-size: 0.85rem;"><strong>${i.funcao}:</strong> ${i.nome}</span>
+                        <button onclick="deletarRegistro(${i.id})" class="btn-delete">✕</button>
+                    </div>
+                `).join('')}
+            </div>
+        `).join('');
+}
+
+// ─── DELETAR ─────────────────────────────────
+async function deletarRegistro(id) {
+    if (!confirm("Remover este integrante?")) return;
+    const { error } = await supabaseAdmin.from('escalas').delete().eq('id', id);
+    if (error) alert("Erro ao deletar.");
+    else carregarEscalas();
+}
+
+// ─── LIMPEZA AUTOMÁTICA DE ESCALAS ANTIGAS ───
+// Roda silenciosamente ao abrir o painel.
+// Deleta registros cujo MÊS/ANO é anterior ao mês atual.
+// Escalas do mês atual são sempre mantidas inteiras.
+async function limparEscalasAntigas() {
+    const { data, error } = await supabaseAdmin
+        .from('escalas')
+        .select('id, data');
+
+    if (error || !data) return;
+
+    const agora    = new Date();
+    const anoAtual = agora.getFullYear();
+    const mesAtual = agora.getMonth(); // 0-based
+
+    const idsParaDeletar = data
+        .filter(item => {
+            // data no formato "DD/MM"
+            const partes = item.data.split('/');
+            if (partes.length < 2) return false;
+            const mes = parseInt(partes[1], 10) - 1; // 0-based
+
+            // Se o mês do registro for maior que o atual, é do ano passado
+            const anoRegistro = mes > mesAtual ? anoAtual - 1 : anoAtual;
+
+            // Deleta só se o mês/ano do registro for anterior ao mês atual
+            if (anoRegistro < anoAtual) return true;
+            return anoRegistro === anoAtual && mes < mesAtual;
+        })
+        .map(item => item.id);
+
+    if (idsParaDeletar.length === 0) return;
+
+    await supabaseAdmin
+        .from('escalas')
+        .delete()
+        .in('id', idsParaDeletar);
+}
+
+// ─── INICIALIZAÇÃO ────────────────────────────
+document.addEventListener('DOMContentLoaded', async () => {
+    await limparEscalasAntigas(); // roda primeiro, silenciosamente
+    configurarSeletorMeses();
+    gerarDatasCultos();
+    popularFormulario();
+    carregarEscalas();
+
+    const form = document.getElementById('form-admin');
+    if (form) form.onsubmit = adicionarEscala;
+});
+
+window.deletarRegistro = deletarRegistro;
