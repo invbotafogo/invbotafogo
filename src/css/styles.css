@@ -368,10 +368,19 @@ nav ul li a:hover {
     margin-bottom: 4px;
 }
 
+.eventos-header h2 {
+    margin-bottom: 1.125rem;
+}
+
 .eventos-subtitulo {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.85);
     margin: 4px 0;
+}
+
+/* Respiro entre as duas linhas do bloco de eventos */
+.eventos-subtitulo + .eventos-subtitulo {
+    margin-top: 1.125rem;
 }
 
 .evento-mini {
@@ -407,7 +416,7 @@ nav ul li a:hover {
 
 .section-historia {
     background: transparent;
-    padding: 60px 5vw;
+    padding: 100px 5vw;
     display: flex;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
@@ -470,7 +479,6 @@ nav ul li a:hover {
 }
 
 
-/* Seção Contato */
 .section-contato {
     background-color: #14110e;
     background-image:
@@ -627,16 +635,15 @@ nav ul li a:hover {
     width: 100%;
     max-width: min(560px, 100%);
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid #c9a84c;
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-left: 5px solid #ffd700;
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
     padding: clamp(1.25rem, 4vw, 2rem);
     box-sizing: border-box;
 }
-
 .section-contato .contato-glass-card .text {
     width: 100%;
     max-width: none;
@@ -688,20 +695,26 @@ nav ul li a:hover {
 .contact-form input,
 .contact-form textarea {
     padding: 12px 15px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     font-size: 1rem;
-    background-color: #ffffffcc;
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #eee;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4);
+    background-color: rgba(240, 192, 64, 0.05);
+    box-shadow: 0 0 0 2px rgba(240, 192, 64, 0.3);
+    border-color: #f0c040;
 }
 
 .contact-form textarea {
@@ -1893,11 +1906,10 @@ body:has(.section-ministerios #expanded-content:not(.hidden)) {
     flex: 1;
     width: 400px;
     height: 400px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     padding: 25px 20px;
     border-radius: 16px;
     border-left: 5px solid #ffd700;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2977,4 +2989,194 @@ header {
     top: 0 !important;
     left: 0;
     width: 100%;
+}
+
+/* ===================================================
+   CORREÇÕES RESPONSIVAS — TODAS AS TELAS
+   =================================================== */
+
+/* ---- INDEX: corrige cards cultos/calendário colapsados ---- */
+@media (max-width: 1024px) {
+    .section-index .section-cultos-unificada {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding-top: calc(var(--navbar-height) + 20px);
+        padding-bottom: 2rem;
+    }
+
+    .section-index .cultos-eventos-container {
+        max-height: none !important;
+        overflow: visible !important;
+        flex-direction: column;
+    }
+
+    .section-index .cultos-box,
+    .section-index .eventos-box {
+        overflow: visible !important;
+        flex: none;
+        width: 100%;
+    }
+
+    .section-index .cultos-mapa,
+    .section-index #calendar-container {
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        flex: none !important;
+    }
+
+    .section-index .cultos-mapa iframe,
+    .section-index #calendar-container iframe {
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+
+    .section-index .cultos-conteudo {
+        flex: none !important;
+        min-height: 0 !important;
+    }
+}
+
+/* ---- MINISTÉRIOS: grade 3 colunas em tablet ---- */
+@media (min-width: 600px) and (max-width: 900px) {
+    .section-ministerios .cards-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ---- MINISTÉRIOS: grade 2 colunas em mobile ---- */
+@media (max-width: 599px) {
+    .section-ministerios .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: 100% !important;
+        gap: 12px;
+    }
+
+    .section-ministerios .cards-container .card {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 160px;
+        aspect-ratio: 1 / 1 !important;
+    }
+}
+
+/* ---- MINISTÉRIOS: corrige texto sobreposto no painel expandido ---- */
+@media (max-width: 1024px) {
+    .section-ministerios:has(#expanded-content:not(.hidden)) {
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: auto !important;
+        overscroll-behavior: auto !important;
+    }
+
+    body:has(.section-ministerios #expanded-content:not(.hidden)) {
+        overflow: auto !important;
+    }
+
+    .section-ministerios #expanded-content:not(.hidden) {
+        overflow-y: auto !important;
+        max-height: none !important;
+        padding: 16px !important;
+    }
+
+    .section-ministerios #expanded-content:not(.hidden) > .expanded-item.expanded-item--invb {
+        overflow-y: auto !important;
+        max-height: none !important;
+        height: auto !important;
+    }
+
+    .expanded-item--invb .expanded-text {
+        overflow: visible !important;
+        flex: none !important;
+    }
+
+    .expanded-item--invb .ministerio-atividades {
+        overflow: visible !important;
+        flex: none !important;
+    }
+
+    .ministerio-lead-in {
+        margin-top: 1rem !important;
+        position: relative !important;
+    }
+}
+
+/* ---- 3: Remove hifenização nos cards de ministérios ---- */
+.section-ministerios .cards-container .card-name,
+.section-ministerios .cards-container .card-label {
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+/* ---- 4: Corrige texto sobreposto no painel expandido mobile ---- */
+@media (max-width: 1024px) {
+    .section-ministerios:has(#expanded-content:not(.hidden)) {
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+
+    body:has(.section-ministerios #expanded-content:not(.hidden)) {
+        overflow: auto !important;
+    }
+
+    .section-ministerios #expanded-content:not(.hidden) {
+        overflow-y: auto !important;
+        max-height: none !important;
+        padding: 16px !important;
+    }
+
+    .section-ministerios #expanded-content:not(.hidden) > .expanded-item.expanded-item--invb {
+        overflow-y: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        flex: none !important;
+    }
+
+    .expanded-item--invb .expanded-text {
+        overflow: visible !important;
+        flex: none !important;
+        min-height: 0 !important;
+    }
+
+    .expanded-item--invb .ministerio-atividades {
+        overflow: visible !important;
+        flex: none !important;
+        padding-bottom: 1rem;
+    }
+
+    .expanded-item--invb .ministerio-lead-in {
+        position: relative !important;
+        margin-top: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .section-ministerios #expanded-content:not(.hidden) .expanded-item--invb .expanded-text {
+        overflow: visible !important;
+        flex: none !important;
+        gap: 0.75rem !important;
+    }
+}
+
+.section-ministerios .cards-container .card-name {
+    hyphens: none !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    font-size: 13px !important;
+}
+
+@media (max-width: 360px) {
+    .section-ministerios .cards-container .card-name {
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+    }
+    .section-ministerios .cards-container .card-label {
+        font-size: 9px !important;
+    }
+    .section-ministerios .cards-container .card {
+        padding: 16px 8px !important;
+    }
 }
