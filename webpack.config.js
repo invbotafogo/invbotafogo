@@ -4,6 +4,30 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const GITHUB_PAGES_BASE = '/nova-vida-site-teste/';
+
+/** Em subpath (*.github.io/repo/) o documento precisa de <base> para fetch() e links relativos. */
+class InjectBaseHrefPlugin {
+  constructor(href) {
+    this.href = href;
+  }
+
+  apply(compiler) {
+    compiler.hooks.compilation.tap('InjectBaseHrefPlugin', (compilation) => {
+      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(
+        'InjectBaseHrefPlugin',
+        (data, cb) => {
+          data.html = data.html.replace(
+            /<head(\s[^>]*)?>/i,
+            (match) => `${match}<base href="${this.href}">`
+          );
+          cb(null, data);
+        }
+      );
+    });
+  }
+}
+
 /**
  * Gera instâncias do HtmlWebpackPlugin para cada HTML encontrado em src/
  * Manter o nome base do arquivo (ex.: src/pages/about.html -> dist/about.html)
@@ -31,8 +55,11 @@ function generateHtmlPlugins(isProduction) {
   });
 }
 
-module.exports = (env, argv) => {
+module.exports = (env = {}, argv) => {
   const isProduction = argv.mode === 'production';
+  /** GitHub Pages (projeto): site fica em /nome-do-repo/ — assets precisam desse prefixo */
+  const useGithubPagesBase = isProduction && Boolean(env.githubPages);
+  const publicPath = useGithubPagesBase ? GITHUB_PAGES_BASE : '/';
 
   return {
     // Entrada principal do app
@@ -44,7 +71,7 @@ module.exports = (env, argv) => {
       chunkFilename: isProduction ? '[name].[contenthash].js' : '[name].js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
-      publicPath: '/',
+      publicPath,
       assetModuleFilename: 'assets/[name].[contenthash][ext][query]',
     },
 
@@ -58,7 +85,13 @@ module.exports = (env, argv) => {
         {
           test: /\.css$/i,
           use: [
-            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            isProduction
+              ? {
+                loader: MiniCssExtractPlugin.loader,
+                /** 'auto' = URLs relativas ao CSS; fundo e imagens funcionam em / e em /repo/ (GitHub Pages) */
+                options: { publicPath: 'auto' },
+              }
+              : 'style-loader',
             'css-loader',
           ],
         },
@@ -112,6 +145,8 @@ module.exports = (env, argv) => {
 
       // Uma instância por HTML encontrado em src/
       ...generateHtmlPlugins(isProduction),
+
+      ...(useGithubPagesBase ? [new InjectBaseHrefPlugin(GITHUB_PAGES_BASE)] : []),
     ],
 
     // Dev Server

@@ -24,8 +24,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
-    
-
     // Pix
     const botao = document.getElementById("copiar-btn");
     if (botao) botao.addEventListener("click", copiarPix);
@@ -90,18 +88,14 @@ async function carregarEstudosBiblicos(tema) {
     const container = document.getElementById(`${tema}-container`);
     if (!container) return;
   
-    // Fecha outros temas abertos
     document.querySelectorAll('.aulas-container').forEach(div => {
       if (div !== container) div.classList.add('hidden');
     });
   
-    // Alterna visibilidade do tema clicado
     container.classList.toggle("hidden");
   
-    // Se estiver fechando, não precisa carregar de novo
     if (container.classList.contains("hidden")) return;
   
-    // Se já tiver conteúdo carregado, não recarrega
     if (container.children.length > 0) return;
 
     const basePath = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/pdfs";
@@ -150,7 +144,6 @@ async function carregarEstudosBiblicos(tema) {
     }
   
     const basePathImgES = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesES";
-    // --- Espírito Santo ---
     if (tema === "espirito_santo") {
         const aulas = [
             { titulo: "Quem é o Espírito Santo?", imagem: `${basePathImgES}/1.jpg`, pdf: `${basePath}/ESPIRITO_Aula1.pdf` },
@@ -158,78 +151,72 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "O Espírito Santo e as Escrituras", imagem: `${basePathImgES}/3.jpg`, pdf: `${basePath}/ESPIRITO_Aula3.pdf` },
             { titulo: "Da criação até o nascimento de Jesus", imagem: `${basePathImgES}/4.jpg`, pdf: `${basePath}/ESPIRITO_Aula4.pdf` },
             { titulo: "Do nascimento de Jesus até Pentecostes", imagem: `${basePathImgES}/5.jpg`, pdf: `${basePath}/ESPIRITO_Aula5.pdf` },
-        
             { titulo: "Depois de Pentecostes", imagem: `${basePathImgES}/6.jpg`, pdf: `${basePath}/ESPIRITO_Aula6.pdf` },
             { titulo: "O Espírito Santo na vida do crente", imagem: `${basePathImgES}/7.jpg`, pdf: `${basePath}/ESPIRITO_Aula7.pdf` },
             { titulo: "A luta interior do crente", imagem: `${basePathImgES}/8.jpg`, pdf: `${basePath}/ESPIRITO_Aula8.pdf` },
             { titulo: "O batismo com o Espírito Santo", imagem: `${basePathImgES}/9.jpg`, pdf: `${basePath}/ESPIRITO_Aula9.pdf` },
             { titulo: "Pecados contra o Espírito Santo", imagem: `${basePathImgES}/10.jpg`, pdf: `${basePath}/ESPIRITO_Aula10.pdf` },
-            
-        
             { titulo: "O fruto do Espírito", imagem: `${basePathImgES}/11.png`, pdf: `${basePath}/ESPIRITO_Aula11.pdf` },
             { titulo: "Princípios e objetivos dos dons", imagem: `${basePathImgES}/12.png`, pdf: `${basePath}/ESPIRITO_Aula12.pdf` },
             { titulo: "Os dons de ministério", imagem: `${basePathImgES}/13.png`, pdf: `${basePath}/ESPIRITO_Aula13.pdf` },
             { titulo: "Os dons de serviço", imagem: `${basePathImgES}/14.png`, pdf: `${basePath}/ESPIRITO_Aula14.pdf` },
             { titulo: "Os dons de sinais", imagem: `${basePathImgES}/15.png`, pdf: `${basePath}/ESPIRITO_Aula15.pdf` },
-        
             { titulo: "Como reconhecer o seu dom", imagem: `${basePathImgES}/16.png`, pdf: `${basePath}/ESPIRITO_Aula16.pdf` },
             { titulo: "Como ficar cheio do Espírito Santo", imagem: `${basePathImgES}/17.png`, pdf: `${basePath}/ESPIRITO_Aula17.pdf` },
         ];
 
         aulas.forEach(aula => {
-        const card = document.createElement("div");
-        card.classList.add("aula-card");
+            const card = document.createElement("div");
+            card.classList.add("aula-card");
 
-        const midia = aula.imagem
-        ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
-        : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
+            const midia = aula.imagem
+            ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
+            : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
 
-        card.innerHTML = `
-            ${midia}
-            <h3>${aula.titulo}</h3>
-            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
-        `;
+            card.innerHTML = `
+                ${midia}
+                <h3>${aula.titulo}</h3>
+                <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+            `;
 
-        container.appendChild(card);
+            container.appendChild(card);
         });
     }
 
-
     const basePathImgCR = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCR";
 
-    // --- Cristologia ---
     if (tema == "cristologia") {
         const aulas = [
             { titulo: "Cristologia - Parte I", imagem: `${basePathImgCR}/1.png`, pdf: `${basePath}/CRISTOLOGIA_Aula1.pdf` },
             { titulo: "Cristologia - Parte II", imagem: `${basePathImgCR}/2.png`, pdf: `${basePath}/CRISTOLOGIA_Aula2.pdf` },
             { titulo: "Cristologia - Parte III", imagem: `${basePathImgCR}/3.png`, pdf: `${basePath}/CRISTOLOGIA_Aula3.pdf` },
             { titulo: "Cristologia - Parte IV", imagem: `${basePathImgCR}/4.png`, pdf: `${basePath}/CRISTOLOGIA_Aula4.pdf` },
-            //{ titulo: "Cristologia - Parte V", imagem: `${basePathImgCR}/5.png`, pdf: `${basePath}/CRISTOLOGIA_Aula5.pdf` },
+            { titulo: "Cristologia - Parte V", imagem: `${basePathImgCR}/5.png`, pdf: `${basePath}/CRISTOLOGIA_Aula5.pdf` },
+            { titulo: "Cristologia - Parte VI", imagem: `${basePathImgCR}/6.png`, pdf: `${basePath}/CRISTOLOGIA_Aula6.pdf` },
+            { titulo: "Cristologia - Parte VII", imagem: `${basePathImgCR}/7.png`, pdf: `${basePath}/CRISTOLOGIA_Aula7.pdf` },
         ];
 
         aulas.forEach(aula => {
-        const card = document.createElement("div");
-        card.classList.add("aula-card");
+            const card = document.createElement("div");
+            card.classList.add("aula-card");
 
-        const midia = aula.imagem
-        ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
-        : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
+            const midia = aula.imagem
+            ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
+            : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
 
-        card.innerHTML = `
-            ${midia}
-            <h3>${aula.titulo}</h3>
-            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
-        `;
+            card.innerHTML = `
+                ${midia}
+                <h3>${aula.titulo}</h3>
+                <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+            `;
 
-        container.appendChild(card);
+            container.appendChild(card);
         });
     }
-
 
     const basePathImgCC = "https://raw.githubusercontent.com/invbotafogo/invbotafogo/main/src/assets/imagesCC";
 
     if (tema === "evangelismo") {
-
         const aulas = [
             { titulo: "Capacitação para o Evangelismo - Parte I", videoID: "Hodgcydb7aY" },
             { titulo: "Capacitação para o Evangelismo - Parte II", videoID: "l2SjPiQY2do" },
@@ -267,32 +254,28 @@ async function carregarEstudosBiblicos(tema) {
         });
     }
 
-    // --- Capelania Cristã ---
     if (tema === "capelania") {
         const aulas = [
             { titulo: "Apostila", imagem: `${basePathImgCC}/capelania.jpg`, pdf: `${basePath}/CAPELANIA.pdf` },
         ];
 
         aulas.forEach(aula => {
-        const card = document.createElement("div");
-        card.classList.add("aula-card");
+            const card = document.createElement("div");
+            card.classList.add("aula-card");
 
-        const midia = aula.imagem
-        ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
-        : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
+            const midia = aula.imagem
+            ? `<img src="${aula.imagem}" alt="${aula.titulo}" class="video-thumb">`
+            : `<div class="sem-video" role="img" aria-label="Sem vídeo disponível">Sem vídeo</div>`;
 
-        card.innerHTML = `
-            ${midia}
-            <h3>${aula.titulo}</h3>
-            <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
-        `;
+            card.innerHTML = `
+                ${midia}
+                <h3>${aula.titulo}</h3>
+                <a href="${aula.pdf}" download class="btn">Baixar PDF</a>
+            `;
 
-        container.appendChild(card);
+            container.appendChild(card);
         });
     }
-
-
-
 }
 
 window.carregarEstudosBiblicos = carregarEstudosBiblicos;
@@ -337,10 +320,10 @@ async function carregarVideos() {
     } catch (error) { console.error("Erro ao carregar vídeos:", error); }
 }
 
-
-// Função para inicializar o calendário
 function initializeCalendar() {
     const calendarContainer = document.getElementById('calendar-container');
+    if (!calendarContainer) return;
+
     let lastMode = null;
     let lastUpdate = 0;
 
@@ -348,34 +331,36 @@ function initializeCalendar() {
         const now = Date.now();
         const hoursSinceLastUpdate = (now - lastUpdate) / (1000 * 60 * 60);
 
-        // Atualiza a cada 6 horas ou se for forçado
         if (!force && hoursSinceLastUpdate < 6) return;
 
         lastUpdate = now;
         const width = window.innerWidth;
         let newMode = width < 450 ? "AGENDA" : "MONTH";
 
-        // Evita recriar se o modo for o mesmo
         if (newMode === lastMode && !force) return;
         lastMode = newMode;
 
-        const src = `https://calendar.google.com/calendar/embed?src=mdc.invb%40gmail.com&ctz=America%2FSao_Paulo&mode=${newMode}&showTitle=1&showPrint=0&showCalendars=0&showTz=0`;
+        /* color/bgcolor: tons escuros no chrome do embed (complementa o filter no CSS) */
+        const src = `https://calendar.google.com/calendar/embed?src=mdc.invb%40gmail.com&ctz=America%2FSao_Paulo&mode=${newMode}&showTitle=1&showPrint=0&showCalendars=0&showTz=0&color=%231a1814&bgcolor=%231a1814`;
 
-        // Verifica se já existe um iframe dentro do container
         let iframe = calendarContainer.querySelector('iframe');
         if (iframe) {
-            // Só atualiza o src e propriedades
             iframe.src = src;
-            iframe.height = newMode === 'AGENDA' ? '600' : '550';
+            iframe.style.width = '100%';
+            iframe.removeAttribute('width');
+            iframe.style.height = '100%';
+            iframe.style.minHeight = '380px';
+            iframe.removeAttribute('height');
             iframe.scrolling = newMode === 'AGENDA' ? 'yes' : 'no';
         } else {
-            // Cria o iframe apenas uma vez
             iframe = document.createElement('iframe');
             iframe.src = src;
-            iframe.width = '100%';
-            iframe.height = newMode === 'AGENDA' ? '600' : '550';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.minHeight = '380px';
             iframe.style.border = 'none';
             iframe.style.borderRadius = '12px';
+            iframe.style.display = 'block';
             iframe.frameBorder = '0';
             iframe.scrolling = newMode === 'AGENDA' ? 'yes' : 'no';
             calendarContainer.appendChild(iframe);
@@ -390,12 +375,10 @@ function initializeCalendar() {
         resizeTimeout = setTimeout(() => updateCalendar(true), 1000);
     });
 
-    // Atualiza automaticamente a cada 6 horas
     setInterval(() => updateCalendar(true), 6 * 60 * 60 * 1000);
 }
+
 initializeCalendar();
-
-
 
 function mostrarProximoCulto() {
     const container = document.getElementById("proximo-culto");
@@ -416,16 +399,15 @@ function mostrarProximoCulto() {
         })
         .filter(data => data > agora || (agora - data <= 2 * 60 * 60 * 1000))
         .sort((a, b) => a - b)[0];
-        if (!proximoCulto) return;
-            const horaFormatada = proximoCulto.toLocaleString('pt-BR', { weekday: 'long', hour: '2-digit', minute: '2-digit' });
-            const link = "https://www.youtube.com/@igrejadenovavidabotafogo3785/live";
-            const estaAoVivo = proximoCulto <= agora;
-            container.innerHTML = estaAoVivo
-            ? `🎥 Culto ao vivo agora! <a href="${link}" target="_blank">Clique para assistir</a>`
-            : `🗓️ Próximo culto: ${horaFormatada}. <a href="${link}" target="_blank">Clique para assistir</a>`;
+    if (!proximoCulto) return;
+    const horaFormatada = proximoCulto.toLocaleString('pt-BR', { weekday: 'long', hour: '2-digit', minute: '2-digit' });
+    const link = "https://www.youtube.com/@igrejadenovavidabotafogo3785/live";
+    const estaAoVivo = proximoCulto <= agora;
+    container.innerHTML = estaAoVivo
+        ? `🎥 Culto ao vivo agora! <a href="${link}" target="_blank">Clique para assistir</a>`
+        : `🗓️ Próximo culto: ${horaFormatada}. <a href="${link}" target="_blank">Clique para assistir</a>`;
 }
 
-// ==== Novo: toggle menu (sem aria) ====
 async function setupMobileMenu() {
     const btn = document.querySelector('.navbar__toggle');
     const menu = document.querySelector('#menu');

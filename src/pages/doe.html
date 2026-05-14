@@ -4,6 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body { background-color: #14110e; }
+        html.preload-lock body { visibility: hidden; }
+        html.preload-lock body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: #14110e;
+            z-index: 2147483647;
+            visibility: visible;
+        }
+    </style>
+    <script>
+        document.documentElement.classList.add('preload-lock');
+        window.addEventListener('load', function () {
+            document.documentElement.classList.remove('preload-lock');
+        });
+    </script>
     <title>INVB - Doação</title>
     <!-- Favicon padrão -->
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo2.png">

@@ -4,6 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body { background-color: #14110e; }
+        html.preload-lock body { visibility: hidden; }
+        html.preload-lock body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: #14110e;
+            z-index: 2147483647;
+            visibility: visible;
+        }
+    </style>
+    <script>
+        document.documentElement.classList.add('preload-lock');
+        window.addEventListener('load', function () {
+            document.documentElement.classList.remove('preload-lock');
+        });
+    </script>
     <title>INVB - Igreja Nova Vida de Botafogo</title>
     <!-- Favicon padrão -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo2.png">
@@ -17,6 +35,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -43,32 +62,32 @@
                         <!-- Informações -->
                         <div class="cultos-info">
                             <h2><i class="fa-solid fa-church"></i> Nossos Cultos</h2>
-                            <p><strong>Domingo:</strong> 10h & 19h</p>
-                            <p><strong>Quarta-feira:</strong> 19h30</p>
-                            <p><strong>Quinta-feira:</strong> 7h15</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Rua da Matriz, 95 - Botafogo, RJ</p>
+                            <p class="cultos-horarios"><strong>Domingo:</strong> 10h &amp; 19h &nbsp;|&nbsp; <strong>Quarta-feira:</strong> 19h30 &nbsp;|&nbsp; <strong>Quinta-feira:</strong> 7h15</p>
+                            <p class="cultos-endereco"><i class="fa-solid fa-location-dot"></i> Rua da Matriz, 95 - Botafogo, RJ</p>
                         </div>
 
                         <!-- Mapa -->
                         <div class="cultos-mapa">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14629.225512768957!2d-43.1868425!3d-22.951573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fe5fe31a04b%3A0x2a11fcf4df0f6202!2sRua%20da%20Matriz%2C%2095%20-%20Botafogo%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022260-100!5e0!3m2!1spt-BR!2sbr!4v1717491000000!5m2!1spt-BR!2sbr&zoom=10"
-                                style="border:0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);"
+                                style="border:0;"
                                 allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloco separado: Eventos -->
                 <div class="eventos-box">
-                    <h2><i class="fa-solid fa-calendar-days"></i> Calendário de Eventos</h2>
-                    <!-- src="https://calendar.google.com/calendar/embed?src=en.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FSao_Paulo&mode=AGENDA" -->
+                    <div class="eventos-conteudo">
+                        <div class="eventos-header">
+                            <h2><i class="fa-solid fa-calendar-days"></i> Calendário de Eventos</h2>
+                            <p class="eventos-subtitulo">Programe-se para estar conosco nos próximos eventos.</p>
+                            <p class="eventos-subtitulo">Um lugar para você crescer, servir e pertencer.</p>
+                        </div>
+                    </div>
                     <div id="calendar-container"></div>
                 </div>
-                
-                    
 
             </div>
         </section>
@@ -109,15 +128,12 @@
                     <dl class="membros">
                         <div>
                             <p><strong>Pastores-Auxiliares: </strong>Sônia, Humberto, Marcio Soares e Daniela Soares</p>
-                        
                             <p><strong>Diáconos: </strong>Atayde, Luciana, Alfredo, Marilda e Wellington</p>
                         </div>
                     </dl>
                 </section>
             </div>
         </section>
-
-
 
         <div id="footer"></div> <!-- Footer será injetado aqui -->
 
