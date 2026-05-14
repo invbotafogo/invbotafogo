@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministério Infantil · Nova Vida Botafogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <div class="w">
+
+    <header class="hdr">
+      <div class="hdr-logo">
+        <img src="logo.png" alt="Nova Vida Botafogo" class="logo-img">
+      </div>
+      <div class="hdr-divider"></div>
+      <div class="hdr-text">
+        <h1>Ministério Infantil</h1>
+        <p class="sub">Lições Bíblicas</p>
+      </div>
+      <div class="sync" id="sync"></div>
+    </header>
+
+    <!-- Dashboard por grupo -->
+    <div class="dash">
+      <div class="dash-total">
+        <div class="dt-ring-wrap">
+          <!-- viewBox 88x88, r=34, circunferência ≈ 213.6 -->
+          <svg class="dt-ring" viewBox="0 0 88 88">
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fdd03a"/>
+                <stop offset="100%" stop-color="#e8a800"/>
+              </linearGradient>
+            </defs>
+            <circle class="ring-bg" cx="44" cy="44" r="34"/>
+            <circle class="ring-fill" id="ringFill" cx="44" cy="44" r="34" stroke-dasharray="0 213.6"/>
+          </svg>
+          <div class="dt-center">
+            <span class="dt-pct" id="dtPct">0%</span>
+            <span class="dt-lbl">geral</span>
+          </div>
+        </div>
+        <div class="dt-nums">
+          <div class="dn"><span id="sT">0</span><small>total</small></div>
+          <div class="dn done-num"><span id="sD">0</span><small>feitas</small></div>
+          <div class="dn rest-num"><span id="sL">0</span><small>faltam</small></div>
+        </div>
+      </div>
+
+      <div class="grp-bars">
+        <div class="gb">
+          <div class="gb-head">
+            <span class="gb-dot b"></span>
+            <span class="gb-label">Berçário</span>
+            <span class="gb-pct" id="pctB">0%</span>
+          </div>
+          <div class="gb-track"><div class="gb-fill b" id="fillB" style="width:0%"></div></div>
+          <div class="gb-sub" id="subB">0 / 0</div>
+        </div>
+        <div class="gb">
+          <div class="gb-head">
+            <span class="gb-dot m"></span>
+            <span class="gb-label">Maternal</span>
+            <span class="gb-pct" id="pctM">0%</span>
+          </div>
+          <div class="gb-track"><div class="gb-fill m" id="fillM" style="width:0%"></div></div>
+          <div class="gb-sub" id="subM">0 / 0</div>
+        </div>
+        <div class="gb">
+          <div class="gb-head">
+            <span class="gb-dot j"></span>
+            <span class="gb-label">Juniores</span>
+            <span class="gb-pct" id="pctJ">0%</span>
+          </div>
+          <div class="gb-track"><div class="gb-fill j" id="fillJ" style="width:0%"></div></div>
+          <div class="gb-sub" id="subJ">0 / 0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="ctrl">
+      <div class="tabs">
+        <button class="tab on" onclick="setTab('AT', this)" data-tab="AT">AT <span class="tab-n">65</span></button>
+        <button class="tab" onclick="setTab('NT', this)" data-tab="NT">NT <span class="tab-n">75</span></button>
+      </div>
+
+      <input class="srch" type="search" placeholder="🔍 Buscar lição..." id="q" oninput="render()">
+
+      <div class="filters">
+        <button class="fchip on" onclick="toggleFilter('all', this)">Todas</button>
+        <button class="fchip" onclick="toggleFilter('pending', this)">Pendentes</button>
+        <button class="fchip" onclick="toggleFilter('done', this)">Completas</button>
+        <div class="fsep"></div>
+        <button class="fchip fchip-b" onclick="toggleFilter('b', this)">🟢 Berç.</button>
+        <button class="fchip fchip-m" onclick="toggleFilter('m', this)">🔵 Mat.</button>
+        <button class="fchip fchip-j" onclick="toggleFilter('j', this)">🩷 Jun.</button>
+      </div>
+    </div>
+
+    <!-- Ações em massa -->
+    <div class="bulk" id="bulkBar">
+      <span class="bulk-label">Marcar grupo para todas visíveis:</span>
+      <button class="bulk-btn b" onclick="bulkMark('b')">✓ Berçário</button>
+      <button class="bulk-btn m" onclick="bulkMark('m')">✓ Maternal</button>
+      <button class="bulk-btn j" onclick="bulkMark('j')">✓ Juniores</button>
+      <button class="bulk-clr" onclick="bulkClear()">✕ Desmarcar tudo</button>
+    </div>
+
+    <div class="list" id="list"></div>
+
+    <footer class="ftr">
+      <img src="logo.png" alt="Nova Vida Botafogo" class="ftr-logo">
+      <span class="ftr-txt">Ministério Infantil</span>
+    </footer>
+  </div>
+
+  <canvas id="confetti" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:999"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
