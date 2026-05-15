@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "PqfA4u8Mj-083mxrM3RkE25UBY0",
+  "etag": "ENXpBWBX5Zf86SCzdb6NkSSPG5U",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,74 @@
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "awIzqNPevWzR9fwAcEvTi2K_jG8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Jfk2xn8aQFE"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-15T17:02:21Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O desafio de viver focado - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-15T17:02:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EPQQzwa9sJs5ZHhhRsoQGZ66x-s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WzBFEPpifvc"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-15T14:43:57Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WzBFEPpifvc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WzBFEPpifvc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WzBFEPpifvc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-15T14:43:57Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "yfWZ8ilFlDadE7xAept1bMJn_sk",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-05-10T20:42:10Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "TvorCLr13TYES8KI2LiQhxRBG_U",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "JbesZxRm2vA"
-      },
-      "snippet": {
-        "publishedAt": "2026-05-10T20:16:07Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Quarta - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/JbesZxRm2vA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/JbesZxRm2vA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/JbesZxRm2vA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-05-10T20:16:07Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "izAwihQK-v9rqIn9laCfxdw4FLo",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "kQQ3XWPYRRw"
-      },
-      "snippet": {
-        "publishedAt": "2026-04-30T10:19:22Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Rasgue o seu cora\u00e7\u00e3o! - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-04-30T10:19:22Z"
       }
     }
   ]
