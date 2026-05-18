@@ -164,6 +164,7 @@ nav ul li a:hover {
 }
 
 /* Estilos do dropdown */
+/*
 .menu-item {
     position: relative;
     z-index: 2600;
@@ -182,8 +183,6 @@ nav ul li a:hover {
     min-width: 180px;
     z-index: 2700;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Preto com 50% de opacidade */
-    /* background-color: transparent; */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -197,6 +196,7 @@ nav ul li a:hover {
     color: whitesmoke;
     display: block;
 }
+*/
 
 .submenu li a:hover {
     background-color: #ffcc00;
@@ -3181,4 +3181,4 @@ header {
     }
 }
 
-/*# sourceMappingURL=styles.811113758773b47a7b20.css.map*/
+/*# sourceMappingURL=styles.195bd4361f71e0c3736d.css.map*/
