@@ -1,16 +1,16 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "NhERnG2llOYwlgfyZ9x2fOAy8zg",
+  "etag": "sLOhwcd9qy1tONmVXZccZTjDIJI",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 306,
+    "totalResults": 262,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "EGOiMkypwGEtSJBGzLfJh_cpEY4",
+      "etag": "e9Cb7OxBmNEP8SEN0nZNA0zc6EE",
       "id": {
         "kind": "youtube#video",
         "videoId": "XsKt-0R5JJA"
@@ -40,40 +40,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-05-18T11:16:17Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "qekxWw2bH12w0uWz7nNXFRsJjxA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Jfk2xn8aQFE"
-      },
-      "snippet": {
-        "publishedAt": "2026-05-15T17:02:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O desafio de viver focado - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-05-15T17:02:21Z"
       }
     },
     {
@@ -108,6 +74,40 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-05-15T14:43:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "yfWZ8ilFlDadE7xAept1bMJn_sk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "d9WGp5hcIGk"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-10T20:42:10Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Presen\u00e7a de Deus: Maior Necessidade e Maior Tesouro - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/d9WGp5hcIGk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/d9WGp5hcIGk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/d9WGp5hcIGk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-10T20:42:10Z"
       }
     }
   ]
