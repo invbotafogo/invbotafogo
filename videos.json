@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Bfs-_kAGd67TFOn2QOVL2zApDhU",
+  "etag": "HLh9WXXkm75JK2kZFyZctgsAIiM",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 95,
+    "totalResults": 310,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "izAwihQK-v9rqIn9laCfxdw4FLo",
+      "etag": "sxG456KQemzJx0Wyho9C8lR949o",
       "id": {
         "kind": "youtube#video",
-        "videoId": "kQQ3XWPYRRw"
+        "videoId": "XsKt-0R5JJA"
       },
       "snippet": {
-        "publishedAt": "2026-04-30T10:19:22Z",
+        "publishedAt": "2026-05-18T11:16:17Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Rasgue o seu cora\u00e7\u00e3o! - Pr. Marcio Soares",
+        "title": "N\u00e3o seja ingrato com Deus. Viva o contentamento!",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/default.jpg",
+            "url": "https://i.ytimg.com/vi/XsKt-0R5JJA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/XsKt-0R5JJA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/XsKt-0R5JJA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-04-30T10:19:22Z"
+        "publishTime": "2026-05-18T11:16:17Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ibYh20ArXS3NsVNtVx33Xgh3JAw",
+      "etag": "60yCd_vLKjr9j6RjFzMYfwlI0pM",
       "id": {
         "kind": "youtube#video",
-        "videoId": "1Oojy80JG5A"
+        "videoId": "Jfk2xn8aQFE"
       },
       "snippet": {
-        "publishedAt": "2026-04-27T22:03:11Z",
+        "publishedAt": "2026-05-15T17:02:21Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O desafio de viver focado - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-05-15T17:02:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wSb-b90zHK29cV-jzIZWlekouWY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WzBFEPpifvc"
+      },
+      "snippet": {
+        "publishedAt": "2026-05-15T14:43:57Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Culto de Domingo - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/1Oojy80JG5A/default.jpg",
+            "url": "https://i.ytimg.com/vi/WzBFEPpifvc/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/1Oojy80JG5A/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/WzBFEPpifvc/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/1Oojy80JG5A/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/WzBFEPpifvc/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-04-27T22:03:11Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "LxPCOJLuO5bb1F0z08orNLRaD-A",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "HtUB_P26zzo"
-      },
-      "snippet": {
-        "publishedAt": "2026-04-26T19:47:37Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Clareando a sua vis\u00e3o espiritual - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/HtUB_P26zzo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/HtUB_P26zzo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/HtUB_P26zzo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-04-26T19:47:37Z"
+        "publishTime": "2026-05-15T14:43:57Z"
       }
     }
   ]
