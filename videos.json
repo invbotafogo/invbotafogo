@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "hPpueJZ7TkQrGjADNw0BV6dS8_o",
+  "etag": "sKrQ-ep-7DDtDy2wz_4gv9vPaa8",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,40 @@
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BlWDOQmwmkaXUtcU-CWRQ2Obmzs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "L5MbThHsVrI"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-03T15:31:27Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos ",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/L5MbThHsVrI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/L5MbThHsVrI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/L5MbThHsVrI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-03T15:31:27Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "r2cW9dSFYdbu_W8HGhA0xE6Z-VY",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-05-18T11:16:17Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "60yCd_vLKjr9j6RjFzMYfwlI0pM",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Jfk2xn8aQFE"
-      },
-      "snippet": {
-        "publishedAt": "2026-05-15T17:02:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O desafio de viver focado - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Jfk2xn8aQFE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-05-15T17:02:21Z"
       }
     }
   ]
