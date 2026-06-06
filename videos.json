@@ -1,16 +1,50 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "3JugWdydH23QTmvfVzeSOQP34oY",
+  "etag": "R9m1-vYZEiJltDZ6z72mZFWaoi8",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 311,
+    "totalResults": 312,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "BlWDOQmwmkaXUtcU-CWRQ2Obmzs",
+      "etag": "wdUIBV_gEJQJ-4QLd6fuHLWUfjI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CqDJQ_OAbAA"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-06T20:26:22Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Quarta - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CqDJQ_OAbAA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CqDJQ_OAbAA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CqDJQ_OAbAA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-06T20:26:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UumeAh-dyvg4ZUCMI72gG8N57Iw",
       "id": {
         "kind": "youtube#video",
         "videoId": "L5MbThHsVrI"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-05-31T20:36:43Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "sxG456KQemzJx0Wyho9C8lR949o",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "XsKt-0R5JJA"
-      },
-      "snippet": {
-        "publishedAt": "2026-05-18T11:16:17Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "N\u00e3o seja ingrato com Deus. Viva o contentamento!",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/XsKt-0R5JJA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/XsKt-0R5JJA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/XsKt-0R5JJA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-05-18T11:16:17Z"
       }
     }
   ]
