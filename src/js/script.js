@@ -196,6 +196,8 @@ async function carregarEstudosBiblicos(tema) {
             { titulo: "Cristologia - Parte VII", imagem: `${basePathImgCR}/7.png`, pdf: `${basePath}/CRISTOLOGIA_Aula7.pdf` },
             { titulo: "Cristologia - Parte VIII", imagem: `${basePathImgCR}/8.png`, pdf: `${basePath}/CRISTOLOGIA_Aula8.pdf` },
             { titulo: "Cristologia - Parte IX", imagem: `${basePathImgCR}/9.png`, pdf: `${basePath}/CRISTOLOGIA_Aula9.pdf` },
+            { titulo: "Cristologia - Parte X", imagem: `${basePathImgCR}/10.png`, pdf: `${basePath}/CRISTOLOGIA_Aula10.pdf` },
+            { titulo: "Cristologia - Parte XI", imagem: `${basePathImgCR}/11.png`, pdf: `${basePath}/CRISTOLOGIA_Aula11.pdf` },
         ];
 
         aulas.forEach(aula => {
