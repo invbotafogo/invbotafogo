@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "VCitlK_R8VNowCFZUlGd-2hJedM",
+  "etag": "28Kai2A5swI08MRsnokb_zAprFw",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 312,
+    "totalResults": 314,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d3i1ikHUKRpbA0W51bseLW4JhuI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TsRBa3GQ8_0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-07T18:18:58Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Descansar em Deus n\u00e3o \u00e9 viver descansado! - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-07T18:18:58Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "wdUIBV_gEJQJ-4QLd6fuHLWUfjI",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-06-03T15:31:27Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "B9b2CjsYAExfxtSog8axoM0ZMME",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "P33Wznh-M2E"
-      },
-      "snippet": {
-        "publishedAt": "2026-05-31T20:36:43Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "N\u00e3o \u00e9 dif\u00edcil ser um crist\u00e3o hip\u00f3crita! - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/P33Wznh-M2E/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/P33Wznh-M2E/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/P33Wznh-M2E/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-05-31T20:36:43Z"
       }
     }
   ]
