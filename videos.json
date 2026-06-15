@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "mEqpdNWcVoGOpO8T7XYz-_kCmT4",
+  "etag": "nYwzIAhQiKcDEFDYeNmCeYdbBjo",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 91,
+    "totalResults": 319,
     "resultsPerPage": 10
   },
   "items": [
@@ -78,36 +78,36 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "J4vT8tERwad2o9e8nixx0lIXM8A",
+      "etag": "z1LE2kv-LrtgNpg0l5KJqQOvu1o",
       "id": {
         "kind": "youtube#video",
-        "videoId": "TsRBa3GQ8_0"
+        "videoId": "LFUjKmnubnA"
       },
       "snippet": {
-        "publishedAt": "2026-06-07T18:18:58Z",
+        "publishedAt": "2026-06-08T02:54:32Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Descansar em Deus n\u00e3o \u00e9 viver descansado! - Pr. Marcio Soares",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/default.jpg",
+            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-06-07T18:18:58Z"
+        "publishTime": "2026-06-08T02:54:32Z"
       }
     }
   ]
