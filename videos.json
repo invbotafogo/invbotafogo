@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "jsQFlebd4qIJ0Y4LcJ1nd1RxTDk",
+  "etag": "hOpwJg5I382yz3kd9xxktxajle0",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 318,
+    "totalResults": 89,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "so83uAUH1swWA46sqSXncUcG9Mg",
+      "etag": "PsvezW7GlrfOprFq9mdhQLZBhHA",
       "id": {
         "kind": "youtube#video",
-        "videoId": "Vx0l52MX1kA"
+        "videoId": "BVKci4p4UUc"
       },
       "snippet": {
-        "publishedAt": "2026-06-14T18:19:06Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O desafio de esperar em Deus - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Vx0l52MX1kA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Vx0l52MX1kA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Vx0l52MX1kA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-06-14T18:19:06Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "31aCT5Xu5Xn2iRwAz1V3AVZXopU",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ocxsyD4omMQ"
-      },
-      "snippet": {
-        "publishedAt": "2026-06-13T01:53:32Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "A radicalidade que Deus aprova! - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ocxsyD4omMQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ocxsyD4omMQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ocxsyD4omMQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-06-13T01:53:32Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "z1LE2kv-LrtgNpg0l5KJqQOvu1o",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "LFUjKmnubnA"
-      },
-      "snippet": {
-        "publishedAt": "2026-06-08T02:54:32Z",
+        "publishedAt": "2026-06-17T19:33:07Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Culto de Domingo - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/default.jpg",
+            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-06-08T02:54:32Z"
+        "publishTime": "2026-06-17T19:33:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "J4vT8tERwad2o9e8nixx0lIXM8A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TsRBa3GQ8_0"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-07T18:18:58Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Descansar em Deus n\u00e3o \u00e9 viver descansado! - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TsRBa3GQ8_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-07T18:18:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "roTpXrlaMzA7fRLEPerV6XcU6XQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kQQ3XWPYRRw"
+      },
+      "snippet": {
+        "publishedAt": "2026-04-30T10:19:22Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Rasgue o seu cora\u00e7\u00e3o! - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kQQ3XWPYRRw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-04-30T10:19:22Z"
       }
     }
   ]
