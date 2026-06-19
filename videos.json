@@ -1,13 +1,47 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "-9_tTN7-t2y8ebcwekumR7O8hHw",
+  "etag": "J9bh5Ftz8N1fcXSgbJYRx5huMG8",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 318,
+    "totalResults": 319,
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LLe7m2WaObRoaGqFk15ryJa7avk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hshXbImHNTA"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-18T23:46:44Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "At\u00e9 Perder o Ch\u00e3o: A Profundidade que Gera Vida",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hshXbImHNTA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hshXbImHNTA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hshXbImHNTA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-18T23:46:44Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "PsvezW7GlrfOprFq9mdhQLZBhHA",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-06-14T18:19:06Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "31aCT5Xu5Xn2iRwAz1V3AVZXopU",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ocxsyD4omMQ"
-      },
-      "snippet": {
-        "publishedAt": "2026-06-13T01:53:32Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "A radicalidade que Deus aprova! - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ocxsyD4omMQ/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ocxsyD4omMQ/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ocxsyD4omMQ/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-06-13T01:53:32Z"
       }
     }
   ]
