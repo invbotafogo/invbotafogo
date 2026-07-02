@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "82hyW1DHk-wbnazlsMvYHTWziIQ",
+  "etag": "KjHv5uAuOPlu8Tp4t911aAlLPc8",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 234,
+    "totalResults": 325,
     "resultsPerPage": 10
   },
   "items": [
@@ -78,36 +78,36 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ftmbjE4xDgz3n3CoQKjw2PpCs0E",
+      "etag": "xfju01DOwtWKownXNlQw5s73jGM",
       "id": {
         "kind": "youtube#video",
-        "videoId": "LFUjKmnubnA"
+        "videoId": "Vx0l52MX1kA"
       },
       "snippet": {
-        "publishedAt": "2026-06-08T02:54:32Z",
+        "publishedAt": "2026-06-14T18:19:06Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "title": "O desafio de esperar em Deus - Pr. Marcio Soares",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/default.jpg",
+            "url": "https://i.ytimg.com/vi/Vx0l52MX1kA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/Vx0l52MX1kA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/LFUjKmnubnA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/Vx0l52MX1kA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-06-08T02:54:32Z"
+        "publishTime": "2026-06-14T18:19:06Z"
       }
     }
   ]
