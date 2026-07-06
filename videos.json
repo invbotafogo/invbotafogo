@@ -1,11 +1,46 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "SPJnVI9qhgRf2va-5DRofwH0CJo",
+  "etag": "tPGehjVddwEe8_lCEv-6AHyl4GY",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 327,
+    "totalResults": 328,
     "resultsPerPage": 10
   },
-  "items": []
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ShEO3NfDdSLdzEOHg0coHDI9-lc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hshXbImHNTA"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-18T23:46:44Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "At\u00e9 Perder o Ch\u00e3o: A Profundidade que Gera Vida",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hshXbImHNTA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hshXbImHNTA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hshXbImHNTA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-18T23:46:44Z"
+      }
+    }
+  ]
 }
