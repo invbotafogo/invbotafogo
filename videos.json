@@ -1,80 +1,11 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "1Q_8o2VXuwZuUGRFlD26LrHYgIE",
+  "etag": "WgeKbZx58tZu85rzF7n8hiTqmFg",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 235,
+    "totalResults": 328,
     "resultsPerPage": 10
   },
-  "items": [
-    {
-      "kind": "youtube#searchResult",
-      "etag": "ShEO3NfDdSLdzEOHg0coHDI9-lc",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "hshXbImHNTA"
-      },
-      "snippet": {
-        "publishedAt": "2026-06-18T23:46:44Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "At\u00e9 Perder o Ch\u00e3o: A Profundidade que Gera Vida",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/hshXbImHNTA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/hshXbImHNTA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/hshXbImHNTA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-06-18T23:46:44Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "eTrwjp61vGJGWIbEVJiKtAxQnjA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "BVKci4p4UUc"
-      },
-      "snippet": {
-        "publishedAt": "2026-06-17T19:33:07Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-06-17T19:33:07Z"
-      }
-    }
-  ]
+  "items": []
 }
