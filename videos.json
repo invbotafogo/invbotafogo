@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "U1KbnJEM6QYQw8IpIiGZQmB6CmA",
+  "etag": "KtVa-gf9gCj6zpeKHqMenAMwtL0",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,40 @@
     "resultsPerPage": 10
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xuuAwarKB-howj6RQNCDSuF5kwE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FztYeceR_c0"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-13T01:33:02Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "G\u00eanesis 27:28-29.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FztYeceR_c0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FztYeceR_c0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FztYeceR_c0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-13T01:33:02Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "CQMdb7dT_wWJhJnL9shxTquVL58",
