@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "CtsfeYamxES0H_yvm40JhvuoLDo",
+  "etag": "SUThb9bm3WSNFMj-Vv2W19RAkOw",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 91,
+    "totalResults": 332,
     "resultsPerPage": 10
   },
   "items": [
@@ -74,40 +74,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-07-12T18:38:05Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "PshHOOvpeADn4IIuMHPahRXnEJg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "BVKci4p4UUc"
-      },
-      "snippet": {
-        "publishedAt": "2026-06-17T19:33:07Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-06-17T19:33:07Z"
       }
     }
   ]
