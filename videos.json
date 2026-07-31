@@ -1,47 +1,13 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "qMH0U2E9cQrjU9I5djImWZhCCsw",
+  "etag": "W04a4x5gz1Ng8JkaA3RGwqM-NLQ",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 336,
+    "totalResults": 91,
     "resultsPerPage": 10
   },
   "items": [
-    {
-      "kind": "youtube#searchResult",
-      "etag": "6wb5wayYSdjS8n3UGErFYWBY8Aw",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Z7z1Qsv0Wvo"
-      },
-      "snippet": {
-        "publishedAt": "2026-07-21T05:44:06Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Vale de El\u00e1, como servir a Deus - Pr. Luiz Carlos",
-        "description": "Culto domingo de manh\u00e3 em 19/07/2026 1 Samuel 17:2.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Z7z1Qsv0Wvo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Z7z1Qsv0Wvo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Z7z1Qsv0Wvo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-07-21T05:44:06Z"
-      }
-    },
     {
       "kind": "youtube#searchResult",
       "etag": "aiYS2c2ytri-rKtP7sKBpPrsUfc",
@@ -108,6 +74,40 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-07-12T18:38:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PshHOOvpeADn4IIuMHPahRXnEJg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BVKci4p4UUc"
+      },
+      "snippet": {
+        "publishedAt": "2026-06-17T19:33:07Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-06-17T19:33:07Z"
       }
     }
   ]
