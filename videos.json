@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "P4PLbVFStPR5AHxv2MySBJ4Hr60",
+  "etag": "qI_7mB-VJmNIabZf89M9lBaM3D4",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 337,
+    "totalResults": 331,
     "resultsPerPage": 10
   },
   "items": [
@@ -74,40 +74,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-07-13T01:33:02Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "d4d0ItJ12j0E9AgRG9tKMQsxMpY",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "STdytBQFQq4"
-      },
-      "snippet": {
-        "publishedAt": "2026-07-12T18:38:05Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Medindo a sua maturidade",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-07-12T18:38:05Z"
       }
     }
   ]
