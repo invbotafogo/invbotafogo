@@ -1,45 +1,45 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "G-20SJdIZ-CAN7MmFTyHV-jIkxc",
+  "etag": "MZHRuDLb-HLVSk6Lakl0hnB9WGA",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 338,
+    "totalResults": 92,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "6wb5wayYSdjS8n3UGErFYWBY8Aw",
+      "etag": "t1FWjUO8N8yvjjOofzNV8rl5UPY",
       "id": {
         "kind": "youtube#video",
-        "videoId": "Z7z1Qsv0Wvo"
+        "videoId": "tEUX7mM5UP4"
       },
       "snippet": {
-        "publishedAt": "2026-07-21T05:44:06Z",
+        "publishedAt": "2026-08-07T19:37:44Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Vale de El\u00e1, como servir a Deus - Pr. Luiz Carlos",
-        "description": "Culto domingo de manh\u00e3 em 19/07/2026 1 Samuel 17:2.",
+        "title": "Culto de Quarta - Pra. Daniela Neves",
+        "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/Z7z1Qsv0Wvo/default.jpg",
+            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/Z7z1Qsv0Wvo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/Z7z1Qsv0Wvo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-07-21T05:44:06Z"
+        "publishTime": "2026-08-07T19:37:44Z"
       }
     },
     {
@@ -74,6 +74,40 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-07-13T01:33:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "d4d0ItJ12j0E9AgRG9tKMQsxMpY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "STdytBQFQq4"
+      },
+      "snippet": {
+        "publishedAt": "2026-07-12T18:38:05Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Medindo a sua maturidade",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/STdytBQFQq4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/STdytBQFQq4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/STdytBQFQq4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-07-12T18:38:05Z"
       }
     }
   ]
