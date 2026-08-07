@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "MZHRuDLb-HLVSk6Lakl0hnB9WGA",
+  "etag": "mqGNqDgULgXewFNIh-ZOmmymHbw",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 92,
+    "totalResults": 338,
     "resultsPerPage": 10
   },
   "items": [
@@ -44,70 +44,70 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "aiYS2c2ytri-rKtP7sKBpPrsUfc",
+      "etag": "hZtgsGynztzTcQuiDPP6VkSmWYU",
       "id": {
         "kind": "youtube#video",
-        "videoId": "FztYeceR_c0"
+        "videoId": "MdXiIxQWkdY"
       },
       "snippet": {
-        "publishedAt": "2026-07-13T01:33:02Z",
+        "publishedAt": "2026-08-05T19:11:52Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "G\u00eanesis 27:28-29.",
+        "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/FztYeceR_c0/default.jpg",
+            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/FztYeceR_c0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/FztYeceR_c0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-07-13T01:33:02Z"
+        "publishTime": "2026-08-05T19:11:52Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "d4d0ItJ12j0E9AgRG9tKMQsxMpY",
+      "etag": "VX2gaXZMNTmfdyBQmOCkLPkS-HA",
       "id": {
         "kind": "youtube#video",
-        "videoId": "STdytBQFQq4"
+        "videoId": "WeehKYD3U-s"
       },
       "snippet": {
-        "publishedAt": "2026-07-12T18:38:05Z",
+        "publishedAt": "2026-08-02T20:06:45Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Medindo a sua maturidade",
+        "title": "Vivendo o Bom Combate: Como Guardar a F\u00e9 no Mundo em que Vivemos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/default.jpg",
+            "url": "https://i.ytimg.com/vi/WeehKYD3U-s/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/WeehKYD3U-s/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/WeehKYD3U-s/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-07-12T18:38:05Z"
+        "publishTime": "2026-08-02T20:06:45Z"
       }
     }
   ]
