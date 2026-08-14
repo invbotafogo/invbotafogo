@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "eMsuOz9b8Tk2loEfcQig63rHJG8",
+  "etag": "I6mmm_rfTqNdMe2Ic-7GfDxAj54",
   "nextPageToken": "CAoQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 87,
+    "totalResults": 342,
     "resultsPerPage": 10
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "iG0WwYOhqXqSwCPzIMI8hFNDDOk",
+      "etag": "hPcsDCzHdx6t2RhIC_nzPybF9Fo",
       "id": {
         "kind": "youtube#video",
-        "videoId": "FztYeceR_c0"
+        "videoId": "AK4Iz6z27Hk"
       },
       "snippet": {
-        "publishedAt": "2026-07-13T01:33:02Z",
+        "publishedAt": "2026-08-09T18:02:45Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "G\u00eanesis 27:28-29.",
+        "title": "O Cont\u00ednuo Aperfei\u00e7oamento do Crist\u00e3o - Pr. Marcio Soares",
+        "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/FztYeceR_c0/default.jpg",
+            "url": "https://i.ytimg.com/vi/AK4Iz6z27Hk/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/FztYeceR_c0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/AK4Iz6z27Hk/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/FztYeceR_c0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/AK4Iz6z27Hk/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-07-13T01:33:02Z"
+        "publishTime": "2026-08-09T18:02:45Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "d4d0ItJ12j0E9AgRG9tKMQsxMpY",
+      "etag": "hSWstBw4P3FS0DY79B8l5GV4aZo",
       "id": {
         "kind": "youtube#video",
-        "videoId": "STdytBQFQq4"
+        "videoId": "tEUX7mM5UP4"
       },
       "snippet": {
-        "publishedAt": "2026-07-12T18:38:05Z",
+        "publishedAt": "2026-08-07T19:37:44Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Medindo a sua maturidade",
+        "title": "Culto de Quarta - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/default.jpg",
+            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/STdytBQFQq4/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-07-12T18:38:05Z"
+        "publishTime": "2026-08-07T19:37:44Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "PshHOOvpeADn4IIuMHPahRXnEJg",
+      "etag": "bdZuMYmgVBrGvzo9mk-3tEkDk1U",
       "id": {
         "kind": "youtube#video",
-        "videoId": "BVKci4p4UUc"
+        "videoId": "MdXiIxQWkdY"
       },
       "snippet": {
-        "publishedAt": "2026-06-17T19:33:07Z",
+        "publishedAt": "2026-08-05T19:11:52Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Culto de Domingo - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/default.jpg",
+            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/BVKci4p4UUc/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-06-17T19:33:07Z"
+        "publishTime": "2026-08-05T19:11:52Z"
       }
     }
   ]
