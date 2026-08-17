@@ -9,6 +9,8 @@
     color: #ffffff;
     /* margin-top: 25px; */
     padding: 75px 20px;
+    /* Garante folga sob o header fixo mesmo com safe-area (notch) */
+    padding-top: max(75px, calc(var(--navbar-height) + env(safe-area-inset-top, 0px) + 16px));
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }

@@ -4,6 +4,10 @@
     /* Altura da navbar fixa — manter igual a `header { height }` */
     --navbar-height: 70px;
 
+    /* Tom escuro de marca — mesmo fundo das seções (.section-cultos,
+       .section-contato, .section-ministerios) e do header fixo. */
+    --brand-dark: #14110e;
+
     /* ============================================================
        TAMANHO DA IMAGEM DOS MINISTÉRIOS (painel expandido)
        Altere APENAS este valor para mudar o tamanho da imagem

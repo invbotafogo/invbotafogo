@@ -4,8 +4,18 @@
 
 
 /* ESTUDO */
+
+/*
+ * Reserva a altura do header fixo: o título usava `padding-top: 5%` (percentual
+ * da largura), que em telas estreitas resultava em menos de 70px e deixava o
+ * "Estudos Bíblicos" parcialmente atrás da barra fixa.
+ */
+.section-estudo {
+    padding-top: calc(var(--navbar-height) + env(safe-area-inset-top, 0px));
+}
+
 .estudos-biblicos h2 {
-    padding-top: 5%;
+    padding-top: 24px;
     font-size: 36px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
@@ -150,7 +160,7 @@
     
 
     .estudos-biblicos h2 {
-        padding-top: 10%;
+        padding-top: 16px;
         font-size: 30px;
         
     }

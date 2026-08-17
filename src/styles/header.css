@@ -2,7 +2,13 @@
 
 
 
-/* Estilos do cabeçalho — fundo contínuo evita linha/sombra fantasma entre barra e página */
+/*
+ * Estilos do cabeçalho — barra fixa no topo.
+ * O fundo transparente deixava o menu se misturar com o que passava por baixo
+ * ao rolar (mapa do Google, claro; foto do hero, escura). Agora usa o mesmo tom
+ * escuro de marca das seções (#14110e) + sombra, para ficar sempre legível e
+ * claramente uma camada acima do conteúdo.
+ */
 header {
     color: whitesmoke;
     padding: 8px 0;
@@ -18,7 +24,9 @@ header {
     height: var(--navbar-height);
     overflow: visible;
     box-sizing: border-box;
-    background: transparent;
+    background-color: var(--brand-dark, #14110e);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Wrapper do header injetado: empilha acima do conteúdo (evita cards por cima da logo/menu) */
@@ -171,13 +179,18 @@ footer nav ul {
 
 /* ===== MENU MOBILE – TAP-FRIENDLY ===== */
 @media (max-width: 1024px) {
+    /*
+     * Mobile usava só `backdrop-filter: blur()` sobre fundo transparente — em
+     * navegador sem suporte (ou com o filtro desativado) o menu ficava ilegível
+     * sobre o conteúdo. Mesmo fundo sólido do desktop, sem depender do filtro.
+     */
     header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        background-color: var(--brand-dark, #14110e);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .navbar {
@@ -248,7 +261,8 @@ footer nav ul {
         display: none;
         flex-direction: column;
         gap: 0;
-        background: rgba(0, 0, 0, 0.94);
+        /* Gaveta sólida no mesmo tom do header — sem depender do blur para legibilidade */
+        background: var(--brand-dark, #14110e);
         border-radius: 12px;
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
         z-index: 12000;
@@ -349,10 +363,12 @@ footer nav ul {
     touch-action: manipulation;
 }
 
-/* Regra final de segurança: header sempre fixo no topo (web + mobile) */
+/* Regra final de segurança: header sempre fixo, opaco e acima do conteúdo (web + mobile) */
 header {
     position: fixed !important;
     top: 0 !important;
     left: 0;
     width: 100%;
+    background-color: var(--brand-dark, #14110e);
+    z-index: 5000;
 }
