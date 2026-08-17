@@ -10,104 +10,104 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "hPcsDCzHdx6t2RhIC_nzPybF9Fo",
+      "etag": "_2pabvef1i1tl5HafDPyIjB1Zqw",
       "id": {
         "kind": "youtube#video",
-        "videoId": "AK4Iz6z27Hk"
+        "videoId": "hh1yv3eNc3I"
       },
       "snippet": {
-        "publishedAt": "2026-08-09T18:02:45Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Cont\u00ednuo Aperfei\u00e7oamento do Crist\u00e3o - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/AK4Iz6z27Hk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/AK4Iz6z27Hk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/AK4Iz6z27Hk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-09T18:02:45Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "hSWstBw4P3FS0DY79B8l5GV4aZo",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "tEUX7mM5UP4"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-07T19:37:44Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Quarta - Pra. Daniela Neves",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/tEUX7mM5UP4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-07T19:37:44Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "bdZuMYmgVBrGvzo9mk-3tEkDk1U",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "MdXiIxQWkdY"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-05T19:11:52Z",
+        "publishedAt": "2026-08-17T00:10:49Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
         "title": "Culto de Domingo - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/default.jpg",
+            "url": "https://i.ytimg.com/vi/hh1yv3eNc3I/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/hh1yv3eNc3I/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/MdXiIxQWkdY/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/hh1yv3eNc3I/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-05T19:11:52Z"
+        "publishTime": "2026-08-17T00:10:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HKRMDdr6PQeFsL5AabPkAd37kCk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DBTB0S-Qsa8"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-16T21:50:46Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Unidos no Aperfei\u00e7oamento - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DBTB0S-Qsa8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DBTB0S-Qsa8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DBTB0S-Qsa8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-16T21:50:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kbvnnyD2jdOEohBFRpNtMA0lnwI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RYb40KQ_fXo"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-13T01:23:43Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Humildade: O Solo da Maturidade - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RYb40KQ_fXo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RYb40KQ_fXo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RYb40KQ_fXo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-13T01:23:43Z"
       }
     }
   ]
