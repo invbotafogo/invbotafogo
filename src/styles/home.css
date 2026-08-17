@@ -681,6 +681,16 @@
     .section-index .ed-loc .addr {
         justify-content: center;
     }
+
+    /* O header é `position: fixed`, então a seção começa atrás dele: sem este
+       padding o bloco de boas-vindas é centralizado na viewport inteira e fica
+       visualmente empurrado para baixo do meio da área visível. Com o padding,
+       o centro do hero coincide com o centro do que se vê no celular — e o
+       restante da página continua abaixo da dobra. */
+    .section-home {
+        padding-top: var(--navbar-height);
+        padding-bottom: 1.5rem;
+    }
 }
 
 @media (max-width: 540px) {
@@ -707,9 +717,21 @@
         margin-top: 2rem;
     }
 
+    /* Os dois CTAs dividem a mesma linha (antes empilhavam, um sob o outro). */
+    .section-index .cta-row {
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 0 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .section-index .cta-row .btn {
-        flex: 1 1 100%;
+        flex: 1 1 0;
+        min-width: 0;
         justify-content: center;
+        padding: 13px 12px;
+        white-space: nowrap;
     }
 }
 
