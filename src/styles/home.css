@@ -142,21 +142,6 @@
     margin-top: 8px;
 }
 
-/* O hero do invbotafogo é centralizado; o site-igreja usa esta mesma variação
-   do versículo na versão centralizada dele. O respiro maior acima separa o
-   versículo do bloco de título/subtítulo. */
-.section-home .verse {
-    border-left: 0;
-    padding-left: 0;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: none;
-    font-size: clamp(20px, 1.6vw, 22px);
-    font-weight: 400;
-    margin-top: 2.75rem;
-}
-
 .section-index .cta-row {
     display: flex;
     flex-wrap: wrap;
@@ -164,9 +149,33 @@
     margin-top: 32px;
 }
 
-.section-home .cta-row {
+/* ---------- VERSÍCULO + BOTÕES (seção própria) ---------- */
+/* Saíram do hero — que voltou a ser só as boas-vindas do site antigo — e agora
+   abrem os blocos editoriais, logo acima da programação semanal. Centralizado,
+   sem a barra dourada à esquerda: com texto centralizado a barra fica solta. */
+/* O respiro embaixo é maior que o de cima de propósito: sem ele os botões
+   encostam na linha dourada que abre a programação e os dois blocos passam a
+   ler como um conteúdo só. */
+.section-index .verse-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 56px 0 76px;
+}
+
+.section-index .verse-cta .verse {
+    margin-top: 0;
+    border-left: 0;
+    padding-left: 0;
+    max-width: 640px;
+    font-size: clamp(20px, 1.9vw, 24px);
+    font-weight: 400;
+}
+
+.section-index .verse-cta .cta-row {
     justify-content: center;
-    margin-top: 2.75rem;
+    margin-top: 30px;
 }
 
 .section-index .btn {
@@ -709,12 +718,12 @@
         margin-top: 0.625rem;
     }
 
-    .section-home .verse {
-        margin-top: 2rem;
+    .section-index .verse-cta {
+        padding: 40px 0 52px;
     }
 
-    .section-home .cta-row {
-        margin-top: 2rem;
+    .section-index .verse-cta .cta-row {
+        margin-top: 26px;
     }
 
     /* Os dois CTAs dividem a mesma linha (antes empilhavam, um sob o outro). */
