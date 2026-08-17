@@ -1,0 +1,533 @@
+/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+
+
+
+/* Fundo da foto: fixed na viewport; foto em cover (preenche web e mobile); degradê cobre a tela inteira. Mesmo padrão nas páginas que usam image.jpg */
+.section-index{
+    background-color: #14110e;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/image.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%, cover;
+    background-attachment: fixed, fixed;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+}
+
+
+
+/* Primeira Seção - Bem-vindo */
+.section-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 1s ease-out;
+    text-align: center;
+}
+
+.section-home .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-home .text h1,
+.section-home .text h4,
+.section-home .text p {
+    margin: 0;
+}
+
+.section-home .text h1 {
+    font-size: 3.5rem;
+}
+
+.section-home .text h4 {
+    font-size: 1.8rem;
+}
+
+.section-home .text p {
+    font-size: 1.5rem;
+}
+
+.section-home .text h1,
+.section-home .text h4,
+.section-home .text p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Quando a seção "Bem-vindo" estiver em fade-out */
+.section-home.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    /* Evita interação enquanto está em fade-out */
+}
+
+.section-cultos-unificada {
+    padding: 60px 5vw;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.cultos-eventos-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.cultos-box,
+.eventos-box {
+    flex: 1;
+    min-width: 260px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid #ffffff;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.cultos-conteudo,
+.eventos-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.cultos-info h2,
+.eventos-box h2 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cultos-info h2 i,
+.eventos-box h2 i {
+    color: #ffcc00;
+}
+
+.cultos-info p,
+.evento-mini p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.cultos-info p strong,
+.eventos-header p {
+    color: #fff;
+}
+
+.cultos-info p i {
+    color: #e74c3c;
+    margin-right: 8px;
+}
+
+/* Mapa e calendário com mesmas projeções */
+.cultos-mapa,
+#calendar-container {
+    flex: 1;
+    min-height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    /* Fundo atrás do embed (filtro pode deixar 1px de borda) */
+    background: #1a1814;
+}
+
+/* Tema escuro nos embeds (Google Maps + Calendar): inversão controlada na viewport */
+.cultos-mapa iframe,
+#calendar-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border: none;
+    display: block;
+    filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
+    -webkit-filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
+}
+
+.cultos-mapa iframe {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cultos-mapa iframe:hover {
+    transform: scale(1.03);
+    filter: invert(0.94) hue-rotate(180deg) saturate(0.78) brightness(0.95);
+    -webkit-filter: invert(0.94) hue-rotate(180deg) saturate(0.78) brightness(0.95);
+}
+
+/* Eventos */
+.eventos-header {
+    margin-bottom: 4px;
+}
+
+.eventos-header h2 {
+    margin-bottom: 1.125rem;
+}
+
+.eventos-subtitulo {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 4px 0;
+}
+
+/* Respiro entre as duas linhas do bloco de eventos */
+.eventos-subtitulo + .eventos-subtitulo {
+    margin-top: 1.125rem;
+}
+
+.evento-mini {
+    background-color: #fffbe5;
+    border-left: 4px solid #ffcc00;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
+}
+
+.evento-mini:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cultos-eventos-container {
+        flex-direction: column;
+    }
+
+    .cultos-mapa,
+    #calendar-container {
+        min-height: 300px;
+    }
+
+    .cultos-mapa iframe,
+    #calendar-container iframe {
+        min-height: 300px;
+    }
+}
+
+.section-historia {
+    background: transparent;
+    padding: 100px 5vw;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.historia-container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 5vw;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    /* centro transparente */
+    border: 3px solid #ffffff;
+    /* bordas brancas sólidas */
+    backdrop-filter: blur(12px);
+    /* efeito vidro fosco */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.historia-container h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.historia-container p {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.section-cultos-unificada,
+.section-historia {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.membros {
+    margin: 0;
+}
+
+.membros dt,
+.membros dd {
+    display: inline;
+    /* coloca lado a lado */
+    margin: 0;
+}
+
+.membros div {
+    margin-bottom: 0.5rem;
+    /* espaço só entre cargos diferentes */
+}
+
+@media only screen and (max-width: 1440px) {
+    .section-index {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .section-home .text h1{
+        font-size: 2.5rem;
+    }
+    .section-home .text h4{
+        font-size: 1.5rem;
+    }
+    .section-home .text p{
+        font-size: 1.2rem;
+    }
+    .section-historia h2{
+        font-size: 1.5rem;
+    }
+    .section-historia p{
+        font-size: 0.9rem;
+    }
+    
+    .cultos-mapa{
+        height: auto;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cultos-info h2, 
+    .eventos-box h3 {
+        font-size: 1.3rem;
+    }
+    .cultos-info p, 
+    .eventos-box p,
+    .eventos-box strong, 
+    .historia-container p{
+        font-size: 0.8rem;
+    }
+    
+    .cultos-mapa{
+        height: auto;
+        min-width: auto;
+    }
+    
+}
+
+@media (max-width: 320px){
+    .cultos-conteudo {
+        gap: 5px
+    }
+    .cultos-info h2, 
+    .eventos-box h3 {
+        font-size: 1.3rem;
+    }
+    .cultos-info p, 
+    .eventos-box p,
+    .eventos-box strong, 
+    .historia-container p{
+        font-size: 0.8rem;
+    }
+    .section-home .text p{
+        font-size: 0.7rem;
+    }
+    
+
+
+
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cultos-mapa{
+        height: auto;
+        min-width: 250px;
+    }
+
+    /* Home: mapa/calendário seguem a coluna flex (evita height:auto “solto”) */
+    .section-index .cultos-mapa,
+    .section-index #calendar-container {
+        height: 100%;
+        min-height: 0;
+        flex: 1 1 0;
+    }
+
+
+}
+@media (max-width: 1024px) {
+
+    .historia-container h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #ffcc00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cultos-eventos-container {
+        display: flex;
+        flex-direction: column; /* empilha os blocos verticalmente */
+        gap: 20px; /* espaço entre os blocos */
+    }
+
+    /* opcional: para os conteúdos internos se adaptarem */
+    .cultos-box,
+    .eventos-box {
+        width: 100%; /* ocupam toda a largura */
+    }
+
+    /* opcional: para o mapa se adaptar ao tamanho da tela */
+    .cultos-mapa iframe {
+        width: 100%;
+        height: 300px; /* ajuste como quiser */
+    }
+
+    /* Home: altura viewport − navbar; mapa e calendário dividem o espaço (sem 300px fixo) */
+    .section-index .section-cultos-unificada {
+        height: calc(100dvh - var(--navbar-height));
+        max-height: calc(100dvh - var(--navbar-height));
+        min-height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        scroll-margin-top: var(--navbar-height);
+        padding-top: max(8px, env(safe-area-inset-top, 0px));
+        padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+        padding-left: clamp(14px, 4vw, 28px);
+        padding-right: clamp(14px, 4vw, 28px);
+    }
+
+    .section-index .cultos-eventos-container {
+        flex: 1 1 0;
+        min-height: 0;
+        max-height: 100%;
+        overflow: hidden;
+        align-items: stretch;
+        gap: clamp(12px, 3vw, 20px);
+    }
+
+    .section-index .cultos-box,
+    .section-index .eventos-box {
+        flex: 1 1 0;
+        min-height: 0;
+        overflow: hidden;
+        padding: 10px clamp(10px, 3vw, 16px) 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid #c9a84c;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .section-index .cultos-mapa,
+    .section-index #calendar-container {
+        flex: 1 1 0;
+        min-height: 0;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .section-index .cultos-conteudo {
+        flex: 1 1 0;
+        min-height: 0;
+    }
+
+    .section-index .cultos-mapa iframe,
+    .section-index #calendar-container iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        max-height: 100%;
+        display: block;
+        border: none;
+    }
+
+    .section-home .text h1 {
+        font-size: 2.3rem;
+    }
+  
+    
+    
+
+
+
+
+}
+
+/* ===================================================
+   CORREÇÕES RESPONSIVAS — TODAS AS TELAS
+   =================================================== */
+
+/* ---- INDEX: corrige cards cultos/calendário colapsados ---- */
+@media (max-width: 1024px) {
+    .section-index .section-cultos-unificada {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding-top: calc(var(--navbar-height) + 20px);
+        padding-bottom: 2rem;
+    }
+
+    .section-index .cultos-eventos-container {
+        max-height: none !important;
+        overflow: visible !important;
+        flex-direction: column;
+    }
+
+    .section-index .cultos-box,
+    .section-index .eventos-box {
+        overflow: visible !important;
+        flex: none;
+        width: 100%;
+    }
+
+    .section-index .cultos-mapa,
+    .section-index #calendar-container {
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        flex: none !important;
+    }
+
+    .section-index .cultos-mapa iframe,
+    .section-index #calendar-container iframe {
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+
+    .section-index .cultos-conteudo {
+        flex: none !important;
+        min-height: 0 !important;
+    }
+}

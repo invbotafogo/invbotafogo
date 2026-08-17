@@ -1,9 +1,7 @@
-# node
-node_modules
-
-# IDE
-dist
-.DS_Store
-.idea
+node_modules/
+dist/
 .env
-.vscode
+.env.local
+*.log
+.DS_Store
+.vite/
