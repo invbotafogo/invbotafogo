@@ -33,11 +33,13 @@
     text-align: center;
 }
 
+/* O respiro entre os elementos vem das margens de cada um, não de um `gap`
+   uniforme — é o espaçamento desigual que marca a hierarquia do hero. */
 .section-home .text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0;
 }
 
 .section-home .text h1,
@@ -46,16 +48,29 @@
     margin: 0;
 }
 
+/* Maior elemento da página: é a referência da hierarquia. */
 .section-home .text h1 {
     font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.12;
 }
 
+/* Subtítulo: mesmo tamanho de antes seria quase o do título — entra menor e
+   com peso médio para ficar claramente um degrau abaixo. */
 .section-home .text h4 {
-    font-size: 1.8rem;
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: 1.5rem;
 }
 
+/* Frase de transição: não deve competir com o subtítulo. */
 .section-home .text p {
-    font-size: 1.5rem;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(245, 245, 245, 0.8);
+    margin-top: 0.75rem;
 }
 
 .section-home .text h1,
@@ -128,7 +143,8 @@
 }
 
 /* O hero do invbotafogo é centralizado; o site-igreja usa esta mesma variação
-   do versículo na versão centralizada dele. */
+   do versículo na versão centralizada dele. O respiro maior acima separa o
+   versículo do bloco de título/subtítulo. */
 .section-home .verse {
     border-left: 0;
     padding-left: 0;
@@ -136,6 +152,9 @@
     margin-left: auto;
     margin-right: auto;
     max-width: none;
+    font-size: clamp(20px, 1.6vw, 22px);
+    font-weight: 400;
+    margin-top: 2.75rem;
 }
 
 .section-index .cta-row {
@@ -147,6 +166,7 @@
 
 .section-home .cta-row {
     justify-content: center;
+    margin-top: 2.75rem;
 }
 
 .section-index .btn {
@@ -475,15 +495,19 @@
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid var(--line);
-    background: var(--glass);
+    /* Fundo atrás do embed — o filtro pode deixar 1px de borda clara. */
+    background: #0b0b0c;
 }
 
+/* Mapa escuro: mesma inversão controlada que o invbotafogo já usava nos embeds
+   do Google (Maps e Calendar) antes desta home. */
 .section-index .map-frame iframe {
     width: 100%;
     height: 100%;
     border: 0;
     display: block;
-    filter: grayscale(.35) contrast(1.05) brightness(.9);
+    filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
+    -webkit-filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
 }
 
 .section-index .addr {
@@ -660,8 +684,27 @@
 }
 
 @media (max-width: 540px) {
+    /* Mesma hierarquia do desktop, reduzida proporcionalmente. */
     .section-home .text h1 {
         font-size: 2.3rem;
+    }
+
+    .section-home .text h4 {
+        font-size: 1.125rem;
+        margin-top: 1.125rem;
+    }
+
+    .section-home .text p {
+        font-size: 0.9375rem;
+        margin-top: 0.625rem;
+    }
+
+    .section-home .verse {
+        margin-top: 2rem;
+    }
+
+    .section-home .cta-row {
+        margin-top: 2rem;
     }
 
     .section-index .cta-row .btn {
@@ -681,4 +724,20 @@
         position: relative;
         z-index: 1;
     }
+}
+
+/* ---------- CARD DO "QUEM SOMOS" ---------- */
+/* Mesmo tratamento do card da página de Contato (`.contato-glass-card` em
+   contato.css): fundo levemente escurecido, borda dourada à esquerda,
+   cantos de 16px e a mesma sombra funda. Fica no fim do arquivo para vencer
+   as regras de `.ed` das media queries acima. */
+.section-index .ed.ed-hist {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ffd700;
+    border-top: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    margin: 34px 0 56px;
+    box-sizing: border-box;
 }

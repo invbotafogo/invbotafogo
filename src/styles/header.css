@@ -61,6 +61,18 @@ header nav ul {
     /* Garante que os links sejam alinhados à direita */
 }
 
+/*
+ * Desktop: o último item do menu parava a ~10px da borda direita, enquanto a
+ * logo tem 25px de recuo à esquerda — o menu ficava colado no canto.
+ * Só a partir de 1025px: abaixo disso o menu vira gaveta `position: fixed`
+ * (com left/right próprios) e uma margem lateral maior a deslocaria.
+ */
+@media (min-width: 1025px) {
+    header nav ul {
+        margin-right: 40px;
+    }
+}
+
 
 
 nav ul li {
