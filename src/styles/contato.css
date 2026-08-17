@@ -137,6 +137,28 @@
     transform: translateY(-2px);
 }
 
+.contact-form button:disabled {
+    cursor: progress;
+    opacity: 0.7;
+    transform: none;
+}
+
+/* Retorno do envio (apenas sucesso/erro — o estado "Enviando…" fica no botão) */
+.contact-form p.contact-form__status {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.contact-form p.contact-form__status--ok {
+    color: #4ade80;
+}
+
+.contact-form p.contact-form__status--erro {
+    color: #f87171;
+}
+
 @media (max-width: 320px){
     #email{
         
