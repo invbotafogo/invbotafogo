@@ -4,10 +4,18 @@ export const IGREJA = {
   nome: 'Igreja de Nova Vida em Botafogo',
   nomeCurto: 'INV Botafogo',
   endereco: 'Rua da Matriz, 95 - Botafogo, RJ',
+  enderecoCompleto: 'Rua da Matriz, 95 - Botafogo, Rio de Janeiro - RJ, 22260-100',
   enderecoFooter: 'Rua da Matriz, 95 - Rio de Janeiro/RJ',
+  fundacao: '2003',
   email: 'invbotafogo.contato@gmail.com',
   telefone: '(21) 98298-2802',
   telefoneHref: 'tel:+5521982982802',
+} as const;
+
+/** Versículo em destaque no hero — mesmo do site-igreja (`CHURCH.verse`). */
+export const VERSICULO = {
+  texto: 'Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.',
+  referencia: 'Mateus 11:28',
 } as const;
 
 export const REDES = {

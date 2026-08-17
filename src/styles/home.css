@@ -71,463 +71,614 @@
     /* Evita interação enquanto está em fade-out */
 }
 
-.section-cultos-unificada {
-    padding: 60px 5vw;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
+
+/* ============================================================
+   SEÇÕES COPIADAS DO PROJETO `site-igreja` (src/styles.jsx)
+   ------------------------------------------------------------
+   Versículo + botões do hero, programação semanal/mensal,
+   localização e "Quem somos". Substituem o bloco de cultos+mapa,
+   o iframe do Google Calendar e a seção "Nossa História".
+
+   Tudo está escopado em `.section-index` para não afetar as
+   demais páginas (Cultos, Doação, Estudos, Ministérios, Contato),
+   que seguem com o visual original do invbotafogo.
+   ============================================================ */
+
+.section-index {
+    --ink: #0B0B0C;
+    --glass: rgba(20, 20, 22, .55);
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    /* Tipografia original do invbotafogo — o site-igreja usava
+       Cormorant Garamond + Inter, aqui tudo roda em Montserrat. */
+    --serif: 'Montserrat', sans-serif;
+    --sans: 'Montserrat', sans-serif;
 }
 
-.cultos-eventos-container {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    max-width: 1600px;
+.section-index .wrap {
+    max-width: 1120px;
     margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
 }
 
-.cultos-box,
-.eventos-box {
-    flex: 1;
-    min-width: 260px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 3px solid #ffffff;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    padding: 30px;
-    box-sizing: border-box;
+/* ---------- VERSÍCULO + BOTÕES (hero) ---------- */
+.section-index .verse {
+    margin-top: 26px;
+    padding-left: 18px;
+    border-left: 2px solid var(--gold);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(20px, 2.6vw, 25px);
+    max-width: 540px;
+    color: var(--paper);
+    line-height: 1.35;
+}
+
+.section-index .verse small {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-top: 8px;
+}
+
+/* O hero do invbotafogo é centralizado; o site-igreja usa esta mesma variação
+   do versículo na versão centralizada dele. */
+.section-home .verse {
+    border-left: 0;
+    padding-left: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+}
+
+.section-index .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.section-home .cta-row {
+    justify-content: center;
+}
+
+.section-index .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 13px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform .15s, background .2s, color .2s;
+    text-decoration: none;
+}
+
+.section-index .btn:hover {
+    transform: translateY(-2px);
+}
+
+.section-index .btn-gold {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.section-index .btn-gold:hover {
+    background: var(--gold-hi);
+}
+
+.section-index .btn-ghost {
+    border-color: var(--line);
+    color: var(--paper);
+    background: rgba(11, 11, 12, .4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.section-index .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(11, 11, 12, .6);
+}
+
+.section-index .btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* ---------- BLOCOS EDITORIAIS ---------- */
+.section-index .ed-home {
+    margin-top: 34px;
+    font-family: var(--sans);
+    color: var(--paper);
+    font-size: 19px;
+}
+
+.section-index .ed {
+    display: grid;
+    grid-template-columns: .42fr 1fr;
+    gap: 34px;
+    align-items: center;
+    padding: 64px 0;
+}
+
+.section-index .ed + .ed {
+    border-top: 1px solid var(--line);
+}
+
+.section-index .ed-home > .ed:first-child {
+    border-top: 1px solid var(--line);
+}
+
+.section-index .ed.ed-top {
+    align-items: start;
+}
+
+.section-index .ed.ed-top .agenda {
+    margin-top: 0;
+}
+
+.section-index .ed h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: .2px;
+}
+
+.section-index .kicker {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+}
+
+.section-index .ed .lead-col h3 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+/* ---------- AGENDA / PROGRAMAÇÃO ---------- */
+.section-index .agenda {
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
-.cultos-conteudo,
-.eventos-conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-}
-
-.cultos-info h2,
-.eventos-box h2 {
-    font-size: 1.8rem;
-    margin: 0 0 10px 0;
-    color: #fff;
+.section-index .slot {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.cultos-info h2 i,
-.eventos-box h2 i {
-    color: #ffcc00;
-}
-
-.cultos-info p,
-.evento-mini p {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-.cultos-info p strong,
-.eventos-header p {
-    color: #fff;
-}
-
-.cultos-info p i {
-    color: #e74c3c;
-    margin-right: 8px;
-}
-
-/* Mapa e calendário com mesmas projeções */
-.cultos-mapa,
-#calendar-container {
-    flex: 1;
-    min-height: 380px;
+    gap: 16px;
+    padding: 16px 18px;
     border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    box-sizing: border-box;
-    /* Fundo atrás do embed (filtro pode deixar 1px de borda) */
-    background: #1a1814;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, .06);
 }
 
-/* Tema escuro nos embeds (Google Maps + Calendar): inversão controlada na viewport */
-.cultos-mapa iframe,
-#calendar-container iframe {
+.section-index .slot.next {
+    border-color: var(--line);
+    background: rgba(230, 178, 62, .08);
+}
+
+.section-index .slot .day {
+    width: 46px;
+    height: 46px;
+    flex: none;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-index .slot .day.day-stack {
+    width: auto;
+    min-width: 56px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    gap: 2px;
+}
+
+.section-index .slot .day.day-stack small {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold-hi);
+    letter-spacing: .5px;
+}
+
+.section-index .slot .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-index .slot .ev {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 0;
+}
+
+.section-index .slot .ev:first-child {
+    padding-top: 0;
+}
+
+.section-index .slot .ev:last-child {
+    padding-bottom: 0;
+}
+
+.section-index .slot .ev + .ev {
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.section-index .slot .info b {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.section-index .slot .info p {
+    font-size: 14px;
+    color: var(--dim);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.section-index .slot .info p svg {
+    width: 13px;
+    height: 13px;
+    color: var(--gold);
+}
+
+.section-index .tag {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--ink);
+    background: var(--gold);
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-weight: 600;
+    flex: none;
+}
+
+.section-index .month-link {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: none;
+    border: 0;
+    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: gap .2s, color .2s;
+}
+
+.section-index .month-link svg {
+    width: 15px;
+    height: 15px;
+}
+
+.section-index .month-link:hover {
+    color: var(--gold-hi);
+    gap: 11px;
+}
+
+.section-index .week-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    max-width: 300px;
+}
+
+.section-index .week-badge {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid var(--line);
+    color: var(--dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 8px 13px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color .2s, border-color .2s, background .2s;
+}
+
+.section-index .week-badge:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+.section-index .week-badge.on {
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
+    font-weight: 600;
+}
+
+.section-index .week-range {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+}
+
+.section-index .week-hint {
+    color: var(--dim);
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.section-index .slot .info p.slot-note {
+    color: var(--gold-hi);
+    margin-top: 4px;
+}
+
+.section-index .month-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 22px;
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 9px 15px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+}
+
+.section-index .month-back:hover {
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
+}
+
+.section-index .month-back svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ---------- LOCALIZAÇÃO ---------- */
+.section-index .map-frame {
+    margin-top: 18px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--glass);
+}
+
+.section-index .map-frame iframe {
     width: 100%;
     height: 100%;
-    min-height: 380px;
-    border: none;
+    border: 0;
     display: block;
-    filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
-    -webkit-filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
+    filter: grayscale(.35) contrast(1.05) brightness(.9);
 }
 
-.cultos-mapa iframe {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.cultos-mapa iframe:hover {
-    transform: scale(1.03);
-    filter: invert(0.94) hue-rotate(180deg) saturate(0.78) brightness(0.95);
-    -webkit-filter: invert(0.94) hue-rotate(180deg) saturate(0.78) brightness(0.95);
-}
-
-/* Eventos */
-.eventos-header {
-    margin-bottom: 4px;
-}
-
-.eventos-header h2 {
-    margin-bottom: 1.125rem;
-}
-
-.eventos-subtitulo {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 4px 0;
-}
-
-/* Respiro entre as duas linhas do bloco de eventos */
-.eventos-subtitulo + .eventos-subtitulo {
-    margin-top: 1.125rem;
-}
-
-.evento-mini {
-    background-color: #fffbe5;
-    border-left: 4px solid #ffcc00;
-    border-radius: 0 8px 8px 0;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease-in-out;
-}
-
-.evento-mini:hover {
-    transform: translateY(-3px);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .cultos-eventos-container {
-        flex-direction: column;
-    }
-
-    .cultos-mapa,
-    #calendar-container {
-        min-height: 300px;
-    }
-
-    .cultos-mapa iframe,
-    #calendar-container iframe {
-        min-height: 300px;
-    }
-}
-
-.section-historia {
-    background: transparent;
-    padding: 100px 5vw;
+.section-index .addr {
     display: flex;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 16px;
+    font-size: 16px;
+    color: var(--dim);
 }
 
-.historia-container {
-    max-width: 1000px;
-    width: 100%;
-    padding: 0 5vw;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    /* centro transparente */
-    border: 3px solid #ffffff;
-    /* bordas brancas sólidas */
-    backdrop-filter: blur(12px);
-    /* efeito vidro fosco */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    text-align: center;
+.section-index .addr svg {
+    width: 18px;
+    height: 18px;
+    color: var(--gold);
+    flex: none;
+    margin-top: 1px;
 }
 
-.historia-container h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: #ffcc00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.section-index .ed .addr {
+    margin-top: 16px;
 }
 
-.historia-container p {
-    font-size: 1.1rem;
-    color: #fff;
-    font-weight: 500;
+.section-index .ed-map {
+    margin-top: 0;
+    height: 300px;
+}
+
+.section-index .map-link {
+    margin-top: 18px;
+}
+
+/* ---------- QUEM SOMOS ---------- */
+.section-index .ed-text {
+    color: var(--dim);
     line-height: 1.8;
-    margin-bottom: 20px;
+    font-size: 18px;
+    max-width: 660px;
+    margin-bottom: 14px;
 }
 
+/* Invertido em relação ao site-igreja: o rótulo ("Pastores-Auxiliares:",
+   "Diáconos:") fica branco e os nomes em dourado. */
+.section-index .ed-roles {
+    color: var(--gold);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 2px;
+}
 
-.section-cultos-unificada,
-.section-historia {
+.section-index .ed-roles b {
+    color: var(--paper);
+    font-weight: 500;
+}
+
+.section-index .bignum {
+    font-family: var(--serif);
+    font-size: clamp(68px, 10vw, 100px);
+    color: var(--gold-hi);
+    line-height: .95;
+    margin-top: 14px;
+}
+
+.section-index .bignum-lbl {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section-index .ed-hist-title {
+    font-size: 35px;
+    margin-bottom: 14px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- REVEAL AO ROLAR ---------- */
+.section-index .reveal {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transform: translateY(20px);
+    transition: opacity .7s ease, transform .7s ease;
 }
 
-.membros {
-    margin: 0;
+.section-index .reveal.in {
+    opacity: 1;
+    transform: none;
 }
 
-.membros dt,
-.membros dd {
-    display: inline;
-    /* coloca lado a lado */
-    margin: 0;
+@media (prefers-reduced-motion: reduce) {
+    .section-index .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
 
-.membros div {
-    margin-bottom: 0.5rem;
-    /* espaço só entre cargos diferentes */
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 860px) {
+    .section-index .ed {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 40px 0;
+        align-items: start;
+        align-content: start;
+    }
+
+    .section-index .ed-map {
+        height: 240px;
+    }
+
+    .section-index .ed-hist-title {
+        font-size: 26px;
+    }
+
+    .section-index .ed-text {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+
+    .section-index .ed-hist {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .section-index .ed-hist .lead-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-index .ed-hist .ed-text {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-index .ed-cal,
+    .section-index .ed-loc {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .section-index .ed-cal .lead-col,
+    .section-index .ed-loc .lead-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-index .ed-cal .week-badges {
+        justify-content: center;
+    }
+
+    .section-index .ed-cal .prog-col,
+    .section-index .ed-loc .map-frame {
+        width: 100%;
+    }
+
+    .section-index .ed-cal .prog-col {
+        text-align: left;
+    }
+
+    .section-index .ed-cal .week-range,
+    .section-index .ed-cal .week-hint {
+        text-align: center;
+    }
+
+    .section-index .ed-loc .addr {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px) {
+    .section-home .text h1 {
+        font-size: 2.3rem;
+    }
+
+    .section-index .cta-row .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .section-home .text h1 {
+        font-size: 2rem !important;
+    }
 }
 
 @media only screen and (max-width: 1440px) {
     .section-index {
         position: relative;
         z-index: 1;
-    }
-}
-
-@media (max-width: 540px) {
-
-    .section-home .text h1{
-        font-size: 2.5rem;
-    }
-    .section-home .text h4{
-        font-size: 1.5rem;
-    }
-    .section-home .text p{
-        font-size: 1.2rem;
-    }
-    .section-historia h2{
-        font-size: 1.5rem;
-    }
-    .section-historia p{
-        font-size: 0.9rem;
-    }
-    
-    .cultos-mapa{
-        height: auto;
-        min-width: 200px;
-    }
-}
-
-@media (max-width: 375px) {
-    .cultos-info h2, 
-    .eventos-box h3 {
-        font-size: 1.3rem;
-    }
-    .cultos-info p, 
-    .eventos-box p,
-    .eventos-box strong, 
-    .historia-container p{
-        font-size: 0.8rem;
-    }
-    
-    .cultos-mapa{
-        height: auto;
-        min-width: auto;
-    }
-    
-}
-
-@media (max-width: 320px){
-    .cultos-conteudo {
-        gap: 5px
-    }
-    .cultos-info h2, 
-    .eventos-box h3 {
-        font-size: 1.3rem;
-    }
-    .cultos-info p, 
-    .eventos-box p,
-    .eventos-box strong, 
-    .historia-container p{
-        font-size: 0.8rem;
-    }
-    .section-home .text p{
-        font-size: 0.7rem;
-    }
-    
-
-
-
-    
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .cultos-mapa{
-        height: auto;
-        min-width: 250px;
-    }
-
-    /* Home: mapa/calendário seguem a coluna flex (evita height:auto “solto”) */
-    .section-index .cultos-mapa,
-    .section-index #calendar-container {
-        height: 100%;
-        min-height: 0;
-        flex: 1 1 0;
-    }
-
-
-}
-@media (max-width: 1024px) {
-
-    .historia-container h2 {
-        font-size: 2rem;
-        margin-bottom: 25px;
-        color: #ffcc00;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .cultos-eventos-container {
-        display: flex;
-        flex-direction: column; /* empilha os blocos verticalmente */
-        gap: 20px; /* espaço entre os blocos */
-    }
-
-    /* opcional: para os conteúdos internos se adaptarem */
-    .cultos-box,
-    .eventos-box {
-        width: 100%; /* ocupam toda a largura */
-    }
-
-    /* opcional: para o mapa se adaptar ao tamanho da tela */
-    .cultos-mapa iframe {
-        width: 100%;
-        height: 300px; /* ajuste como quiser */
-    }
-
-    /* Home: altura viewport − navbar; mapa e calendário dividem o espaço (sem 300px fixo) */
-    .section-index .section-cultos-unificada {
-        height: calc(100dvh - var(--navbar-height));
-        max-height: calc(100dvh - var(--navbar-height));
-        min-height: 0;
-        overflow: hidden;
-        box-sizing: border-box;
-        scroll-margin-top: var(--navbar-height);
-        padding-top: max(8px, env(safe-area-inset-top, 0px));
-        padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
-        padding-left: clamp(14px, 4vw, 28px);
-        padding-right: clamp(14px, 4vw, 28px);
-    }
-
-    .section-index .cultos-eventos-container {
-        flex: 1 1 0;
-        min-height: 0;
-        max-height: 100%;
-        overflow: hidden;
-        align-items: stretch;
-        gap: clamp(12px, 3vw, 20px);
-    }
-
-    .section-index .cultos-box,
-    .section-index .eventos-box {
-        flex: 1 1 0;
-        min-height: 0;
-        overflow: hidden;
-        padding: 10px clamp(10px, 3vw, 16px) 12px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid #c9a84c;
-        border-radius: 20px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-    }
-
-    .section-index .cultos-mapa,
-    .section-index #calendar-container {
-        flex: 1 1 0;
-        min-height: 0;
-        height: 100%;
-        max-height: 100%;
-    }
-
-    .section-index .cultos-conteudo {
-        flex: 1 1 0;
-        min-height: 0;
-    }
-
-    .section-index .cultos-mapa iframe,
-    .section-index #calendar-container iframe {
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        max-height: 100%;
-        display: block;
-        border: none;
-    }
-
-    .section-home .text h1 {
-        font-size: 2.3rem;
-    }
-  
-    
-    
-
-
-
-
-}
-
-/* ===================================================
-   CORREÇÕES RESPONSIVAS — TODAS AS TELAS
-   =================================================== */
-
-/* ---- INDEX: corrige cards cultos/calendário colapsados ---- */
-@media (max-width: 1024px) {
-    .section-index .section-cultos-unificada {
-        height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-        padding-top: calc(var(--navbar-height) + 20px);
-        padding-bottom: 2rem;
-    }
-
-    .section-index .cultos-eventos-container {
-        max-height: none !important;
-        overflow: visible !important;
-        flex-direction: column;
-    }
-
-    .section-index .cultos-box,
-    .section-index .eventos-box {
-        overflow: visible !important;
-        flex: none;
-        width: 100%;
-    }
-
-    .section-index .cultos-mapa,
-    .section-index #calendar-container {
-        height: 300px !important;
-        min-height: 300px !important;
-        max-height: 300px !important;
-        flex: none !important;
-    }
-
-    .section-index .cultos-mapa iframe,
-    .section-index #calendar-container iframe {
-        height: 300px !important;
-        min-height: 300px !important;
-    }
-
-    .section-index .cultos-conteudo {
-        flex: none !important;
-        min-height: 0 !important;
     }
 }
