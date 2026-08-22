@@ -5,7 +5,7 @@ Critério de seleção (um vídeo entra se):
   - tem a tag de inclusão (TAG_INCLUIR), OU
   - dura pelo menos DURACAO_MINIMA_MIN minutos.
 
-E nunca entra se tiver a tag de exclusão (TAG_EXCLUIR).
+E nunca entra se tiver a tag de exclusão (TAG_EXCLUIR), ex.: conteúdo extra que não é culto.
 
 A regra de duração existe para o site não depender de alguém lembrar de marcar
 a tag no YouTube. A tag continua funcionando como atalho manual.
@@ -33,7 +33,7 @@ QUANTIDADE_FINAL = 3        # quantos vídeos vão para o site
 JANELA_BUSCA = 50           # quantos vídeos recentes do canal são analisados (máx. 50)
 DURACAO_MINIMA_MIN = 35     # abaixo disso não é culto (Shorts, recortes, avisos)
 TAG_INCLUIR = "pregação"    # força a entrada de um vídeo
-TAG_EXCLUIR = "sem-site"    # força a saída de um vídeo
+TAG_EXCLUIR = "extra"       # conteúdo extra (não culto) — não aparece na aba Cultos
 
 
 def normalizar(texto: str) -> str:
