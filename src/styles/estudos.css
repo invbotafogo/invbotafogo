@@ -1,0 +1,190 @@
+/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+
+
+
+
+/* ESTUDO */
+
+/*
+ * Reserva a altura do header fixo: o título usava `padding-top: 5%` (percentual
+ * da largura), que em telas estreitas resultava em menos de 70px e deixava o
+ * "Estudos Bíblicos" parcialmente atrás da barra fixa.
+ */
+.section-estudo {
+    padding-top: calc(var(--navbar-height) + env(safe-area-inset-top, 0px));
+}
+
+.estudos-biblicos h2 {
+    padding-top: 24px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.estudos-biblicos p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+
+
+
+.tema-btn {
+    width: 95%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 auto 10px auto; /* centraliza horizontalmente */
+    display: block;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.tema-btn:hover {
+    background-color: #333;
+}
+
+.aulas-container {
+    width: 95%;
+    margin: 0 auto 20px auto; /* mesma margem do botão */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+.aulas-container.hidden {
+    display: none;
+}
+
+
+.aulas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.aula-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px rgba(255,255,255,0.1); */
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 350px;
+    margin: 0 auto;
+    max-height: 480px;
+}
+
+/* .aula-card iframe,
+.aula-card .sem-video{
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    box-sizing: border-box;
+    aspect-ratio: 16 / 9;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    background-color: #111;
+    width: 100%;
+    height: 215px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+} */
+
+.aula-card img.video-thumb,
+.aula-card iframe,
+.aula-card .sem-video {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  max-height: 480px;
+  border: none;
+  box-sizing: border-box;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  object-fit: cover;
+}
+  
+
+.aula-card .sem-video {
+  background: #111;
+  color: #666;
+  font: 600 1rem/1.2 system-ui, sans-serif;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.aula-card h3{
+    text-align: center;
+}
+
+.aula-card .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #ffcc00;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: auto;
+}
+
+.aula-card .btn:hover {
+    background-color: #222;
+}
+
+@media (max-width: 540px) {
+    
+
+    .estudos-biblicos h2 {
+        padding-top: 16px;
+        font-size: 30px;
+        
+    }
+    
+    .estudos-biblicos p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .tema-btn {
+        width: 90%;
+    }
+
+    .aulas-container {
+        width: 90%;
+    }
+}
+
+/* Tema sem aulas cadastradas ainda (ex.: Oração, enquanto o material não sobe). */
+.tema-vazio {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 15px;
+    color: #9a9a9a;
+    font-style: italic;
+}

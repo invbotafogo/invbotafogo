@@ -1,0 +1,374 @@
+/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+
+
+
+/*
+ * Estilos do cabeçalho — barra fixa no topo.
+ * O fundo transparente deixava o menu se misturar com o que passava por baixo
+ * ao rolar (mapa do Google, claro; foto do hero, escura). Agora usa o mesmo tom
+ * escuro de marca das seções (#14110e) + sombra, para ficar sempre legível e
+ * claramente uma camada acima do conteúdo.
+ */
+header {
+    color: whitesmoke;
+    padding: 8px 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5000;
+    height: var(--navbar-height);
+    overflow: visible;
+    box-sizing: border-box;
+    background-color: var(--brand-dark, #14110e);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Wrapper do header injetado: empilha acima do conteúdo (evita cards por cima da logo/menu) */
+#header {
+    position: relative;
+    z-index: 6000;
+    overflow: visible;
+}
+
+.logo {
+    flex-shrink: 0;
+    /* Impede que o logo encolha */
+}
+
+.logo img {
+    max-height: 65px;
+    filter: brightness(0) invert(1);
+    margin-left: 25px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    /* Alinha os itens do menu à direita */
+    flex-grow: 1;
+    /* Ocupa o espaço restante */
+    margin-left: 40px;
+    position: relative;
+    z-index: 2500;
+    overflow: visible;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    /* Garante que os links sejam alinhados à direita */
+}
+
+/*
+ * Desktop: o último item do menu parava a ~10px da borda direita, enquanto a
+ * logo tem 25px de recuo à esquerda — o menu ficava colado no canto.
+ * Só a partir de 1025px: abaixo disso o menu vira gaveta `position: fixed`
+ * (com left/right próprios) e uma margem lateral maior a deslocaria.
+ */
+@media (min-width: 1025px) {
+    header nav ul {
+        margin-right: 40px;
+    }
+}
+
+
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Estilos do dropdown */
+/*
+.menu-item {
+    position: relative;
+    z-index: 2600;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    min-width: 180px;
+    z-index: 2700;
+    background-color: rgba(0, 0, 0, 0.5);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: block;
+}
+*/
+
+.submenu li a:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    /* Garante que os links sejam alinhados à direita */
+}
+
+/* Botão hamburguer padrão (desktop escondido) */
+.navbar__toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: whitesmoke;
+    margin-right: 16px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Menu aberto (classe adicionada via JS) */
+.navbar__menu.is-open {
+    display: flex !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+}
+
+/* ===== MENU MOBILE – TAP-FRIENDLY ===== */
+@media (max-width: 1024px) {
+    /*
+     * Mobile usava só `backdrop-filter: blur()` sobre fundo transparente — em
+     * navegador sem suporte (ou com o filtro desativado) o menu ficava ilegível
+     * sobre o conteúdo. Mesmo fundo sólido do desktop, sem depender do filtro.
+     */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--brand-dark, #14110e);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    /*
+     * Hambúrguer → X: deslocamento = altura da barra + gap até o centro da barra do meio.
+     * (Antes usava 7px + metade da barra no lugar errado e o X ficava descentrado.)
+     */
+    .navbar__toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        --toggle-bar-h: 5px;
+        --toggle-gap: 7px;
+        gap: var(--toggle-gap);
+        padding: 8px;
+        font-size: 1.75rem;
+        min-width: 52px;
+        min-height: 52px;
+        background: none;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .navbar__toggle.active span:nth-child(1) {
+        transform: translateY(calc(var(--toggle-bar-h) + var(--toggle-gap))) rotate(45deg);
+    }
+
+    .navbar__toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .navbar__toggle.active span:nth-child(3) {
+        transform: translateY(calc(-1 * (var(--toggle-bar-h) + var(--toggle-gap)))) rotate(-45deg);
+    }
+
+    .navbar__toggle span {
+        display: block;
+        flex-shrink: 0;
+        height: var(--toggle-bar-h);
+        width: 26px;
+        background: whitesmoke;
+        border-radius: 2px;
+        transform-origin: center center;
+        transition: transform 0.25s ease, opacity 0.2s ease;
+    }
+
+    .navbar__toggle.active {
+        border: none;
+        outline: none;
+        background: rgba(0, 0, 0, 0.35);
+    }
+
+    /* Menu: fixed ao viewport — absolute + top 70px ficava relativo ao nav e cortava o painel */
+    .navbar__menu {
+        position: fixed;
+        left: max(12px, env(safe-area-inset-left, 0px));
+        right: max(12px, env(safe-area-inset-right, 0px));
+        top: calc(70px + env(safe-area-inset-top, 0px) + 10px);
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        /* Gaveta sólida no mesmo tom do header — sem depender do blur para legibilidade */
+        background: var(--brand-dark, #14110e);
+        border-radius: 12px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+        z-index: 12000;
+        padding: 8px 0;
+        backdrop-filter: blur(8px);
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        max-height: calc(100vh - 70px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 28px);
+        max-height: calc(100dvh - 70px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 28px);
+    }
+
+    /* Itens maiores, com área de toque confortável */
+    .navbar__menu li {
+        min-height: 52px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .navbar__menu a {
+        display: block;
+        width: 100%;
+        padding: 16px 18px;
+        font-size: 1.125rem;
+        line-height: 1.35;
+        letter-spacing: 0.2px;
+        border-bottom: 0px solid rgba(255, 255, 255, .08);
+    }
+
+    .navbar__menu a:active {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar__menu a:last-child {
+        border-bottom: 0;
+    }
+
+    /* Submenu no mobile (em coluna) */
+    .submenu {
+        position: static;
+        display: none;
+        margin: 0;
+        padding: 6px 0;
+        background: rgba(255, 255, 255, 0.05);
+        border-top: 1px solid rgba(255, 255, 255, .08);
+        box-shadow: none;
+        border-radius: 0;
+        max-height: none;
+        overflow: visible;
+    }
+
+    /* Use .submenu--open via JS se desejar abrir por clique */
+    .submenu.submenu--open {
+        display: block;
+    }
+
+    .menu-item:hover>.submenu {
+        display: none;
+    }
+
+    /* desativa hover no mobile */
+
+    .submenu li {
+        min-height: 48px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .submenu a {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        border-bottom: 0px dashed rgba(255, 255, 255, .08);
+    }
+
+    .submenu a:last-child {
+        border-bottom: 0;
+    }
+
+    .logo img {
+        max-height: 65px;
+        filter: brightness(0) invert(1);
+        margin-left: 0;
+    }
+  
+    
+    
+
+
+
+
+}
+
+/* Pequenas melhorias gerais (todas as telas) */
+.navbar__menu a,
+.submenu a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Regra final de segurança: header sempre fixo, opaco e acima do conteúdo (web + mobile) */
+header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    background-color: var(--brand-dark, #14110e);
+    z-index: 5000;
+}

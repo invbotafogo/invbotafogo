@@ -1,0 +1,291 @@
+/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+
+:root {
+    /* Altura da navbar fixa — manter igual a `header { height }` */
+    --navbar-height: 70px;
+
+    /* Tom escuro de marca — mesmo fundo das seções (.section-cultos,
+       .section-contato, .section-ministerios) e do header fixo. */
+    --brand-dark: #14110e;
+
+    /* ============================================================
+       TAMANHO DA IMAGEM DOS MINISTÉRIOS (painel expandido)
+       Altere APENAS este valor para mudar o tamanho da imagem
+       em todos os breakpoints proporcionalmente.
+       Valores sugeridos: 1.0 = padrão | 1.35 = maior | 0.8 = menor
+    ============================================================ */
+    --ministerio-img-scale: 1.5;
+
+    /* Calculados automaticamente — não edite */
+    --ministerio-img-desktop:   calc(168px * var(--ministerio-img-scale));
+    --ministerio-img-desktop-vmin: calc(20vmin * var(--ministerio-img-scale));
+    --ministerio-img-md:        calc(260px * var(--ministerio-img-scale));
+    --ministerio-img-md-vmin:   calc(52vh  * var(--ministerio-img-scale));
+    --ministerio-img-panel:     calc(132px * var(--ministerio-img-scale));
+    --ministerio-img-panel-vmin: calc(26vmin * var(--ministerio-img-scale));
+    --ministerio-img-panel-img: calc(120px * var(--ministerio-img-scale));
+    --ministerio-img-panel-img-vmin: calc(24vmin * var(--ministerio-img-scale));
+    --ministerio-img-sm:        calc(200px * var(--ministerio-img-scale));
+    --ministerio-img-sm-vw:     calc(48vw  * var(--ministerio-img-scale));
+    --ministerio-img-xs-panel:  calc(122px * var(--ministerio-img-scale));
+    --ministerio-img-xs-vw:     calc(36vw  * var(--ministerio-img-scale));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* garante que o body ocupe a altura inteira da tela */
+}
+
+/* O React monta tudo dentro de #root. Sem isto, as regras 'flex: 1 0 auto' abaixo
+   deixam de valer (elas contavam com ser filhas diretas do body) e o rodapé
+   sobe no meio da tela em páginas de conteúdo curto. */
+#root {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* Conteúdo principal que ocupa espaço restante (sticky footer sem position: fixed) */
+main,
+#main,
+.section-index,
+.section-cultos,
+.section-estudo,
+.section-home,
+.section-historia,
+.section-doe,
+.section-contato,
+.section-ministerios {
+    flex: 1 0 auto; /* cresce para ocupar espaço restante */
+}
+.section-cultos,
+.section-doe,
+.section-estudo {
+    background-color: #14110e;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/image.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%, cover;
+    background-attachment: fixed, fixed;
+}
+
+/*
+ * Safari iOS: background-attachment:fixed faz o cover usar viewport/documento errado.
+ * Em touch sem hover estilo telefone: fundo via ::before fixed + attachment implícito scroll + altura fill-available.
+ */
+@supports (-webkit-touch-callout: none) {
+    @media (hover: none) {
+        .section-index {
+            background-image: none !important;
+            background-color: transparent !important;
+            position: relative;
+            z-index: 0;
+        }
+
+        .section-index::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+            min-height: -webkit-fill-available;
+            z-index: -1;
+            pointer-events: none;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            background-color: #14110e;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/image.jpg');
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, center center;
+            background-size: 100% 100%, cover;
+        }
+
+        .section-cultos,
+        .section-doe,
+        .section-estudo {
+            background-image: none !important;
+            background-color: transparent !important;
+            position: relative;
+            z-index: 0;
+        }
+
+        .section-cultos::before,
+        .section-doe::before,
+        .section-estudo::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+            min-height: -webkit-fill-available;
+            z-index: -1;
+            pointer-events: none;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            background-color: #14110e;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/image.jpg');
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, center center;
+            background-size: 100% 100%, cover;
+        }
+
+        .section-contato {
+            background-image: none !important;
+            background-color: transparent !important;
+            position: relative;
+            z-index: 0;
+        }
+
+        .section-contato::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+            min-height: -webkit-fill-available;
+            z-index: -1;
+            pointer-events: none;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            background-color: #14110e;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/image.jpg');
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, center center;
+            background-size: 100% 100%, cover;
+        }
+
+        .section-ministerios::before {
+            min-height: 100vh;
+            min-height: 100dvh;
+            min-height: -webkit-fill-available;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        /*
+         * iPhone Safari: blur + sombra grande em card grande gera micro travadas no scroll.
+         * Mantemos o visual próximo, mas com composição mais leve.
+         */
+        .historia-container {
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            will-change: auto;
+        }
+
+        #footer,
+        footer {
+            position: relative;
+            z-index: 3;
+        }
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 5px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* ======================
+   AJUSTES GERAIS + MENU MOBILE (TAP-FRIENDLY)
+   ====================== */
+
+/* Base responsiva / evitar overflow lateral */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 375px) {
+    .section-home .text h1, 
+    .historia-container h2, 
+    .ofertas-container h2{
+        font-size: 2rem !important;
+    }
+    .section-home .text h4, 
+    .versiculo{
+        font-size: 1.0rem;
+    }
+    
+}
+
+@media (max-width: 320px){
+    .section-home .text h1, 
+    .historia-container h2, 
+    .ofertas-container h2{
+        font-size: 1.8rem !important;
+    }
+    .section-home .text h4, 
+    .versiculo{
+        font-size: 1.0rem;
+    }
+    
+
+
+
+    
+}
+
+/* Se ainda houver overflow por algum 100vw, force 100% */
+@media (max-width: 768px) {
+
+    .section,
+    header,
+    main,
+    footer {
+        width: 100%;
+        /* preferir 100% a 100vw */
+    }
+}

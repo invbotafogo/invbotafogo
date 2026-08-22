@@ -1,0 +1,196 @@
+/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+
+
+
+
+/* DOE - Estilo atualizado */
+
+.section-ofertas {
+    color: #ffffff;
+    /* margin-top: 25px; */
+    padding: 75px 20px;
+    /* Garante folga sob o header fixo mesmo com safe-area (notch) */
+    padding-top: max(75px, calc(var(--navbar-height) + env(safe-area-inset-top, 0px) + 16px));
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.ofertas-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+
+.section-ofertas h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #ffdd57;
+    font-weight: 600;
+}
+
+.versiculo {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #e6e6e6;
+}
+
+.versiculo span {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #d0d0d0;
+}
+
+.descricao {
+    margin-bottom: 35px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #f0f0f0;
+}
+
+/* Container dos blocos de doação */
+.blocos-doacao {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Blocos com dados */
+.dados-bancarios,
+.pix-box {
+    flex: 1;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 25px 20px;
+    border-radius: 16px;
+    border-left: 5px solid #ffd700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dados-bancarios:hover,
+.pix-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos das seções */
+.dados-bancarios h3,
+.pix-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #ffdd57;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 6px;
+}
+
+.pix-box p,
+.dados-bancarios p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* Botão PIX */
+.botao-pix {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffdd57;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-pix:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
+}
+
+/* Confirmação de cópia */
+.confirmacao {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #9effa8;
+}
+
+
+.qrcode {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto 0;
+    border-radius: 8px;
+    background-image: url('../assets/images/qrcode_pix.png');
+    /* caminho relativo da imagem */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#copiar-btn{
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    /* margin-top: 10px; */
+    background-color: #ffcc00;
+    border: none;
+
+    border-radius: 5px;
+}
+
+#confirmacao-pix{
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 375px) {
+
+    .dados-bancarios, .pix-box{
+        width: 100%;
+        height: 100%;
+        /* margin: 20px; */
+    }
+    .dados-bancarios h3{
+        font-size: 1.1rem;
+    }
+    
+}
+
+@media (max-width: 320px){
+    .ofertas-container {
+        
+        backdrop-filter: none;
+
+    }
+
+    .qrcode {
+        width: 150px;
+        height: 150px;
+    }
+    .dados-bancarios p{
+        font-size: 0.9rem;
+    }
+    .pix-box p{
+        font-size: 0.87rem;
+    }
+    
+
+
+
+    
+}

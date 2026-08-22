@@ -1,0 +1,60 @@
+/* Componente novo da migração: abas internas de /estudos.
+   Segue a linguagem visual existente (dourado #ffcc00 + vidro escuro). */
+
+.tabs {
+    width: 100%;
+}
+
+.tabs__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 30px auto;
+    padding: 0 16px;
+    list-style: none;
+}
+
+.tabs__tab {
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    min-height: 48px;
+}
+
+.tabs__tab:hover {
+    background-color: #333;
+}
+
+.tabs__tab[aria-selected="true"] {
+    color: #ffcc00;
+    border-color: #c9a84c;
+    background: rgba(201, 168, 76, 0.18);
+}
+
+.tabs__tab:focus-visible {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.35);
+}
+
+@media (max-width: 540px) {
+    .tabs__list {
+        gap: 8px;
+    }
+
+    .tabs__tab {
+        flex: 1 1 auto;
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}

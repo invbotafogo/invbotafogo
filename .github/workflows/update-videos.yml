@@ -2,11 +2,11 @@ name: Atualizar vídeos do YouTube
 
 on:
   schedule:
-    - cron: '0 12,22 * * *'  # Roda 12:00 e 22:00 horas todo dia
+    - cron: '0 */4 * * *'  # a cada 4 horas
   workflow_dispatch:
 
 permissions:
-  contents: write  
+  contents: write
 
 jobs:
   gerar-json:
@@ -14,14 +14,9 @@ jobs:
     environment: data
     steps:
       - name: Clonar o repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # necessário para histórico completo
-
-      - name: Clonar a branch `data`
-        run: |
-          git checkout data
-          git merge -X main
+          fetch-depth: 0
 
       - name: Instalar Python e dependências
         run: pip install requests
@@ -32,10 +27,21 @@ jobs:
           CHANNEL_ID: ${{ vars.CHANNEL_ID }}
         run: python ./scripts/save_last_three_youtube_videos.py
 
-      - name: Copiar videos.json para branch `data`
+      # O script só grava o arquivo quando encontra algum culto.
+      # Sem arquivo, nada é publicado e o videos.json anterior continua no ar.
+      - name: Publicar videos.json na branch `data`
         run: |
+          if [ ! -f videos.json ]; then
+            echo "Nenhum culto novo encontrado — mantendo o videos.json anterior."
+            exit 0
+          fi
+
+          cp videos.json /tmp/videos.json
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          git fetch origin data
+          git checkout data
+          cp /tmp/videos.json videos.json
           git add videos.json
           git commit -m "Atualiza videos.json" || echo "Sem mudanças"
           git push origin data

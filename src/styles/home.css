@@ -1,0 +1,789 @@
+/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+
+
+
+/* Fundo da foto: fixed na viewport; foto em cover (preenche web e mobile); degradê cobre a tela inteira. Mesmo padrão nas páginas que usam image.jpg */
+.section-index{
+    background-color: #14110e;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/image.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%, cover;
+    background-attachment: fixed, fixed;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+}
+
+
+
+/* Primeira Seção - Bem-vindo */
+.section-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 1s ease-out;
+    text-align: center;
+}
+
+/* O respiro entre os elementos vem das margens de cada um, não de um `gap`
+   uniforme — é o espaçamento desigual que marca a hierarquia do hero. */
+.section-home .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.section-home .text h1,
+.section-home .text h4,
+.section-home .text p {
+    margin: 0;
+}
+
+/* Maior elemento da página: é a referência da hierarquia. */
+.section-home .text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.12;
+}
+
+/* Subtítulo: mesmo tamanho de antes seria quase o do título — entra menor e
+   com peso médio para ficar claramente um degrau abaixo. */
+.section-home .text h4 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: 1.5rem;
+}
+
+/* Frase de transição: não deve competir com o subtítulo. */
+.section-home .text p {
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(245, 245, 245, 0.8);
+    margin-top: 0.75rem;
+}
+
+.section-home .text h1,
+.section-home .text h4,
+.section-home .text p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Quando a seção "Bem-vindo" estiver em fade-out */
+.section-home.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    /* Evita interação enquanto está em fade-out */
+}
+
+
+/* ============================================================
+   SEÇÕES COPIADAS DO PROJETO `site-igreja` (src/styles.jsx)
+   ------------------------------------------------------------
+   Versículo + botões do hero, programação semanal/mensal,
+   localização e "Quem somos". Substituem o bloco de cultos+mapa,
+   o iframe do Google Calendar e a seção "Nossa História".
+
+   Tudo está escopado em `.section-index` para não afetar as
+   demais páginas (Cultos, Doação, Estudos, Ministérios, Contato),
+   que seguem com o visual original do invbotafogo.
+   ============================================================ */
+
+.section-index {
+    --ink: #0B0B0C;
+    --glass: rgba(20, 20, 22, .55);
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    /* Tipografia original do invbotafogo — o site-igreja usava
+       Cormorant Garamond + Inter, aqui tudo roda em Montserrat. */
+    --serif: 'Montserrat', sans-serif;
+    --sans: 'Montserrat', sans-serif;
+}
+
+.section-index .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
+}
+
+/* ---------- VERSÍCULO + BOTÕES (hero) ---------- */
+.section-index .verse {
+    margin-top: 26px;
+    padding-left: 18px;
+    border-left: 2px solid var(--gold);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(20px, 2.6vw, 25px);
+    max-width: 540px;
+    color: var(--paper);
+    line-height: 1.35;
+}
+
+.section-index .verse small {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-top: 8px;
+}
+
+.section-index .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* ---------- VERSÍCULO + BOTÕES (seção própria) ---------- */
+/* Saíram do hero — que voltou a ser só as boas-vindas do site antigo — e agora
+   abrem os blocos editoriais, logo acima da programação semanal. Centralizado,
+   sem a barra dourada à esquerda: com texto centralizado a barra fica solta. */
+/* O respiro embaixo é maior que o de cima de propósito: sem ele os botões
+   encostam na linha dourada que abre a programação e os dois blocos passam a
+   ler como um conteúdo só. */
+.section-index .verse-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 56px 0 76px;
+}
+
+.section-index .verse-cta .verse {
+    margin-top: 0;
+    border-left: 0;
+    padding-left: 0;
+    max-width: 640px;
+    font-size: clamp(20px, 1.9vw, 24px);
+    font-weight: 400;
+}
+
+.section-index .verse-cta .cta-row {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.section-index .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 13px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform .15s, background .2s, color .2s;
+    text-decoration: none;
+}
+
+.section-index .btn:hover {
+    transform: translateY(-2px);
+}
+
+.section-index .btn-gold {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.section-index .btn-gold:hover {
+    background: var(--gold-hi);
+}
+
+.section-index .btn-ghost {
+    border-color: var(--line);
+    color: var(--paper);
+    background: rgba(11, 11, 12, .4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.section-index .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(11, 11, 12, .6);
+}
+
+.section-index .btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* ---------- BLOCOS EDITORIAIS ---------- */
+.section-index .ed-home {
+    margin-top: 34px;
+    font-family: var(--sans);
+    color: var(--paper);
+    font-size: 19px;
+}
+
+.section-index .ed {
+    display: grid;
+    grid-template-columns: .42fr 1fr;
+    gap: 34px;
+    align-items: center;
+    padding: 64px 0;
+}
+
+.section-index .ed + .ed {
+    border-top: 1px solid var(--line);
+}
+
+.section-index .ed-home > .ed:first-child {
+    border-top: 1px solid var(--line);
+}
+
+.section-index .ed.ed-top {
+    align-items: start;
+}
+
+.section-index .ed.ed-top .agenda {
+    margin-top: 0;
+}
+
+.section-index .ed h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: .2px;
+}
+
+.section-index .kicker {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+}
+
+.section-index .ed .lead-col h3 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+/* ---------- AGENDA / PROGRAMAÇÃO ---------- */
+.section-index .agenda {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-index .slot {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.section-index .slot.next {
+    border-color: var(--line);
+    background: rgba(230, 178, 62, .08);
+}
+
+.section-index .slot .day {
+    width: 46px;
+    height: 46px;
+    flex: none;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-index .slot .day.day-stack {
+    width: auto;
+    min-width: 56px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    gap: 2px;
+}
+
+.section-index .slot .day.day-stack small {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold-hi);
+    letter-spacing: .5px;
+}
+
+.section-index .slot .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-index .slot .ev {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 0;
+}
+
+.section-index .slot .ev:first-child {
+    padding-top: 0;
+}
+
+.section-index .slot .ev:last-child {
+    padding-bottom: 0;
+}
+
+.section-index .slot .ev + .ev {
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.section-index .slot .info b {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.section-index .slot .info p {
+    font-size: 14px;
+    color: var(--dim);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.section-index .slot .info p svg {
+    width: 13px;
+    height: 13px;
+    color: var(--gold);
+}
+
+.section-index .tag {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--ink);
+    background: var(--gold);
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-weight: 600;
+    flex: none;
+}
+
+.section-index .month-link {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: none;
+    border: 0;
+    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: gap .2s, color .2s;
+}
+
+.section-index .month-link svg {
+    width: 15px;
+    height: 15px;
+}
+
+.section-index .month-link:hover {
+    color: var(--gold-hi);
+    gap: 11px;
+}
+
+.section-index .week-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    max-width: 300px;
+}
+
+.section-index .week-badge {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid var(--line);
+    color: var(--dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 8px 13px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color .2s, border-color .2s, background .2s;
+}
+
+.section-index .week-badge:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+.section-index .week-badge.on {
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
+    font-weight: 600;
+}
+
+.section-index .week-range {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+}
+
+.section-index .week-hint {
+    color: var(--dim);
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.section-index .slot .info p.slot-note {
+    color: var(--gold-hi);
+    margin-top: 4px;
+}
+
+.section-index .month-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 22px;
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--dim);
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 9px 15px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+}
+
+.section-index .month-back:hover {
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
+}
+
+.section-index .month-back svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ---------- LOCALIZAÇÃO ---------- */
+.section-index .map-frame {
+    margin-top: 18px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    /* Fundo atrás do embed — o filtro pode deixar 1px de borda clara. */
+    background: #0b0b0c;
+}
+
+/* Mapa escuro: mesma inversão controlada que o invbotafogo já usava nos embeds
+   do Google (Maps e Calendar) antes desta home. */
+.section-index .map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
+    -webkit-filter: invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.9);
+}
+
+.section-index .addr {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 16px;
+    font-size: 16px;
+    color: var(--dim);
+}
+
+.section-index .addr svg {
+    width: 18px;
+    height: 18px;
+    color: var(--gold);
+    flex: none;
+    margin-top: 1px;
+}
+
+.section-index .ed .addr {
+    margin-top: 16px;
+}
+
+.section-index .ed-map {
+    margin-top: 0;
+    height: 300px;
+}
+
+.section-index .map-link {
+    margin-top: 18px;
+}
+
+/* ---------- QUEM SOMOS ---------- */
+.section-index .ed-text {
+    color: var(--dim);
+    line-height: 1.8;
+    font-size: 18px;
+    max-width: 660px;
+    margin-bottom: 14px;
+}
+
+/* Invertido em relação ao site-igreja: o rótulo ("Pastores-Auxiliares:",
+   "Diáconos:") fica branco e os nomes em dourado. */
+.section-index .ed-roles {
+    color: var(--gold);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 2px;
+}
+
+.section-index .ed-roles b {
+    color: var(--paper);
+    font-weight: 500;
+}
+
+.section-index .bignum {
+    font-family: var(--serif);
+    font-size: clamp(68px, 10vw, 100px);
+    color: var(--gold-hi);
+    line-height: .95;
+    margin-top: 14px;
+}
+
+.section-index .bignum-lbl {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section-index .ed-hist-title {
+    font-size: 35px;
+    margin-bottom: 14px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- REVEAL AO ROLAR ---------- */
+.section-index .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.section-index .reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-index .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 860px) {
+    .section-index .ed {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 40px 0;
+        align-items: start;
+        align-content: start;
+    }
+
+    .section-index .ed-map {
+        height: 240px;
+    }
+
+    .section-index .ed-hist-title {
+        font-size: 26px;
+    }
+
+    .section-index .ed-text {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+
+    .section-index .ed-hist {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .section-index .ed-hist .lead-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-index .ed-hist .ed-text {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-index .ed-cal,
+    .section-index .ed-loc {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .section-index .ed-cal .lead-col,
+    .section-index .ed-loc .lead-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-index .ed-cal .week-badges {
+        justify-content: center;
+    }
+
+    .section-index .ed-cal .prog-col,
+    .section-index .ed-loc .map-frame {
+        width: 100%;
+    }
+
+    .section-index .ed-cal .prog-col {
+        text-align: left;
+    }
+
+    .section-index .ed-cal .week-range,
+    .section-index .ed-cal .week-hint {
+        text-align: center;
+    }
+
+    .section-index .ed-loc .addr {
+        justify-content: center;
+    }
+
+    /* O header é `position: fixed`, então a seção começa atrás dele: sem este
+       padding o bloco de boas-vindas é centralizado na viewport inteira e fica
+       visualmente empurrado para baixo do meio da área visível. Com o padding,
+       o centro do hero coincide com o centro do que se vê no celular — e o
+       restante da página continua abaixo da dobra. */
+    .section-home {
+        padding-top: var(--navbar-height);
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    /* Mesma hierarquia do desktop, reduzida proporcionalmente. */
+    .section-home .text h1 {
+        font-size: 2.3rem;
+    }
+
+    .section-home .text h4 {
+        font-size: 1.125rem;
+        margin-top: 1.125rem;
+    }
+
+    .section-home .text p {
+        font-size: 0.9375rem;
+        margin-top: 0.625rem;
+    }
+
+    .section-index .verse-cta {
+        padding: 40px 0 52px;
+    }
+
+    .section-index .verse-cta .cta-row {
+        margin-top: 26px;
+    }
+
+    /* Os dois CTAs dividem a mesma linha (antes empilhavam, um sob o outro). */
+    .section-index .cta-row {
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 0 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .section-index .cta-row .btn {
+        flex: 1 1 0;
+        min-width: 0;
+        justify-content: center;
+        padding: 13px 12px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .section-home .text h1 {
+        font-size: 2rem !important;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .section-index {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* ---------- CARD DO "QUEM SOMOS" ---------- */
+/* Mesmo tratamento do card da página de Contato (`.contato-glass-card` em
+   contato.css): fundo levemente escurecido, borda dourada à esquerda,
+   cantos de 16px e a mesma sombra funda. Fica no fim do arquivo para vencer
+   as regras de `.ed` das media queries acima. */
+.section-index .ed.ed-hist {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ffd700;
+    border-top: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    margin: 34px 0 56px;
+    box-sizing: border-box;
+}
+
+/* ---------- DIVISÓRIA DOURADA (Localização → Nossa história) ---------- */
+/* Linha fina em degradê: some nas pontas e ganha brilho no centro, para não
+   competir com a borda dourada do card do "Quem somos" logo abaixo. */
+.section-index .ed-divider {
+    height: 1px;
+    border: 0;
+    margin: 0;
+    background: linear-gradient(90deg,
+            rgba(230, 178, 62, 0) 0%,
+            rgba(230, 178, 62, .5) 15%,
+            rgba(246, 210, 122, .95) 50%,
+            rgba(230, 178, 62, .5) 85%,
+            rgba(230, 178, 62, 0) 100%);
+}

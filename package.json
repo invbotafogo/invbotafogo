@@ -1,34 +1,31 @@
 {
-  "name": "home-page",
-  "version": "1.0.0",
-  "description": "Site estático da Igreja Nova Vida de Botafogo.",
-  "main": "index.js",
+  "name": "invbotafogo",
+  "version": "2.0.0",
+  "description": "Site da Igreja Nova Vida de Botafogo (React + Vite + TypeScript).",
   "scripts": {
-    "build": "webpack --mode production",
-    "build:github": "webpack --mode production --env githubPages",
-    "dev": "webpack serve --mode development",
-    "deploy": "npm run build && gh-pages -d dist -b gh-pages --cname invbotafogo.com.br",
-    "deploy:github": "npm run build:github && gh-pages -d dist -b gh-pages",
-    "analyze:stats": "webpack --profile --json=dist/stats.json --mode production",
-    "analyze": "npm run analyze:stats && npx webpack-bundle-analyzer dist/stats.json dist --port 8888",
-    "serve:dist": "npx serve dist -l 5000"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist -b gh-pages --cname invbotafogo.com.br"
   },
   "keywords": [],
-  "devDependencies": {
-    "css-loader": "^6.7.3",
-    "gh-pages": "^6.3.0",
-    "glob": "^11.0.1",
-    "html-loader": "^3.0.0",
-    "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.4",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.76.0",
-    "webpack-bundle-analyzer": "^4.10.1",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.15.2"
-  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "framer-motion": "^12.38.0",
-    "react": "^19.2.5"
-  }
+    "@emailjs/browser": "^4.4.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "gh-pages": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  },
+  "private": true,
+  "type": "module"
 }
