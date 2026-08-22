@@ -25,7 +25,12 @@ export function TopicCard({ tema, aberto, aoAlternar }: TopicCardProps) {
         className={`aulas-container${aberto ? '' : ' hidden'}`}
       >
         {/* Só monta as aulas quando abre — evita carregar dezenas de iframes de uma vez. */}
-        {aberto && tema.aulas.map((aula) => <ClassCard key={aula.titulo} aula={aula} />)}
+        {aberto &&
+          (tema.aulas.length > 0 ? (
+            tema.aulas.map((aula) => <ClassCard key={aula.titulo} aula={aula} />)
+          ) : (
+            <p className="tema-vazio">Aulas em breve.</p>
+          ))}
       </div>
     </div>
   );

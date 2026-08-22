@@ -177,3 +177,14 @@
         width: 90%;
     }
 }
+
+/* Tema sem aulas cadastradas ainda (ex.: Oração, enquanto o material não sobe). */
+.tema-vazio {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 15px;
+    color: #9a9a9a;
+    font-style: italic;
+}

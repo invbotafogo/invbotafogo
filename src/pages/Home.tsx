@@ -26,6 +26,8 @@ export default function Home() {
         <div className="ed-home">
           <EdCalendar />
           <EdLocation />
+          {/* Linha fina dourada separando "Localização" de "Nossa história". */}
+          <hr className="ed-divider" aria-hidden="true" />
           <EdHistory />
         </div>
       </div>

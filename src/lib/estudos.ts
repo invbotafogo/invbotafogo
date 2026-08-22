@@ -4,6 +4,7 @@ const PDF = `${ASSETS_RAW_BASE}/pdfs`;
 const IMG_ES = `${ASSETS_RAW_BASE}/imagesES`;
 const IMG_CR = `${ASSETS_RAW_BASE}/imagesCR`;
 const IMG_CC = `${ASSETS_RAW_BASE}/imagesCC`;
+const IMG_OR = `${ASSETS_RAW_BASE}/imagesOR`;
 
 export interface Aula {
   titulo: string;
@@ -87,14 +88,38 @@ export const TEMAS_EBD: Tema[] = [
       { titulo: 'Cristologia - Parte VIII', imagem: `${IMG_CR}/8.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula8.pdf` },
       { titulo: 'Cristologia - Parte IX', imagem: `${IMG_CR}/9.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula9.pdf` },
       { titulo: 'Cristologia - Parte X', imagem: `${IMG_CR}/10.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula10.pdf` },
-      // Corrigido na migração: o arquivo no repositório é CRISTOLOGIA_Aula11.pdf (o link antigo apontava para "Aula11a").
       { titulo: 'Cristologia - Parte XI', imagem: `${IMG_CR}/11.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula11.pdf` },
       { titulo: 'Cristologia - Parte XII', imagem: `${IMG_CR}/12.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula12.pdf` },
       { titulo: 'Cristologia - Parte XIII', imagem: `${IMG_CR}/13.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula13.pdf` },
       { titulo: 'Cristologia - Parte XIV', imagem: `${IMG_CR}/14.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula14.pdf` },
       { titulo: 'Cristologia - Parte XV', imagem: `${IMG_CR}/15.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula15.pdf` },
       { titulo: 'Cristologia - Parte XVI', imagem: `${IMG_CR}/16.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula16.pdf` },
-      // Parte XVII permanece fora, como já estava comentada no site antigo.
+      { titulo: 'Cristologia - Parte XVII', imagem: `${IMG_CR}/17.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula17.pdf` },
+    ],
+  },
+  {
+    id: 'oracao',
+    titulo: 'Oração',
+    // Capas em src/assets/imagesOR, apostilas em src/assets/pdfs.
+    // As aulas 2 a 16 já estão escritas: descomente cada uma conforme o
+    // material for para o repositório (imagem + PDF no branch main).
+    aulas: [
+      { titulo: 'Aula 1', imagem: `${IMG_OR}/1.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula1.pdf` },
+      // { titulo: 'Aula 2', imagem: `${IMG_OR}/2.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula2.pdf` },
+      // { titulo: 'Aula 3', imagem: `${IMG_OR}/3.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula3.pdf` },
+      // { titulo: 'Aula 4', imagem: `${IMG_OR}/4.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula4.pdf` },
+      // { titulo: 'Aula 5', imagem: `${IMG_OR}/5.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula5.pdf` },
+      // { titulo: 'Aula 6', imagem: `${IMG_OR}/6.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula6.pdf` },
+      // { titulo: 'Aula 7', imagem: `${IMG_OR}/7.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula7.pdf` },
+      // { titulo: 'Aula 8', imagem: `${IMG_OR}/8.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula8.pdf` },
+      // { titulo: 'Aula 9', imagem: `${IMG_OR}/9.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula9.pdf` },
+      // { titulo: 'Aula 10', imagem: `${IMG_OR}/10.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula10.pdf` },
+      // { titulo: 'Aula 11', imagem: `${IMG_OR}/11.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula11.pdf` },
+      // { titulo: 'Aula 12', imagem: `${IMG_OR}/12.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula12.pdf` },
+      // { titulo: 'Aula 13', imagem: `${IMG_OR}/13.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula13.pdf` },
+      // { titulo: 'Aula 14', imagem: `${IMG_OR}/14.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula14.pdf` },
+      // { titulo: 'Aula 15', imagem: `${IMG_OR}/15.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula15.pdf` },
+      // { titulo: 'Aula 16', imagem: `${IMG_OR}/16.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula16.pdf` },
     ],
   },
 ];
