@@ -105,7 +105,7 @@ export const TEMAS_EBD: Tema[] = [
     // material for para o repositório (imagem + PDF no branch main).
     aulas: [
       { titulo: 'Aula 1', imagem: `${IMG_OR}/1.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula1.pdf` },
-      // { titulo: 'Aula 2', imagem: `${IMG_OR}/2.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula2.pdf` },
+      { titulo: 'Aula 2', imagem: `${IMG_OR}/2.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula2.pdf` },
       // { titulo: 'Aula 3', imagem: `${IMG_OR}/3.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula3.pdf` },
       // { titulo: 'Aula 4', imagem: `${IMG_OR}/4.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula4.pdf` },
       // { titulo: 'Aula 5', imagem: `${IMG_OR}/5.png`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula5.pdf` },
