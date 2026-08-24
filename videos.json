@@ -1,113 +1,113 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "BXx68_dE0d0ms_KVqg-nlNDDmKk",
-  "nextPageToken": "CAoQAA",
+  "etag": "FRO5occqZshthLvfIuBPgIDhVyw",
+  "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 346,
-    "resultsPerPage": 10
+    "totalResults": 345,
+    "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "_WQFSGR1RP7e_iIhQtsaE-EOAYM",
+      "etag": "FbIvsmVQ9rz1h0D-hV3bEOXewaE",
       "id": {
         "kind": "youtube#video",
-        "videoId": "hh1yv3eNc3I"
+        "videoId": "lsv2p50GqwY"
       },
       "snippet": {
-        "publishedAt": "2026-08-17T00:10:49Z",
+        "publishedAt": "2026-08-24T04:16:51Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "title": "Deus tem um refúgio para você - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/hh1yv3eNc3I/default.jpg",
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/hh1yv3eNc3I/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/hh1yv3eNc3I/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-17T00:10:49Z"
+        "publishTime": "2026-08-24T04:16:51Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "kTfgzOo36xoyg9upL8HslyFoh8Q",
+      "etag": "jwQ4E6I--DGhugRxpvqvpgxFfq4",
       "id": {
         "kind": "youtube#video",
-        "videoId": "DBTB0S-Qsa8"
+        "videoId": "MpkqpmlpNvI"
       },
       "snippet": {
-        "publishedAt": "2026-08-16T21:50:46Z",
+        "publishedAt": "2026-08-24T03:41:40Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Unidos no Aperfei\u00e7oamento - Pr. Marcio Soares",
+        "title": "Águas agitadas: O lugar onde Deus se revela - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/DBTB0S-Qsa8/default.jpg",
+            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/DBTB0S-Qsa8/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/DBTB0S-Qsa8/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-16T21:50:46Z"
+        "publishTime": "2026-08-24T03:41:40Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "p1UFEDMl8j0wi6WdtAMGX9ZNkco",
+      "etag": "lVLDQf14LtO7XybTifRe4aICTyQ",
       "id": {
         "kind": "youtube#video",
-        "videoId": "RYb40KQ_fXo"
+        "videoId": "iSRQp0JcHZ4"
       },
       "snippet": {
-        "publishedAt": "2026-08-13T01:23:43Z",
+        "publishedAt": "2026-08-20T01:07:56Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Humildade: O Solo da Maturidade - Pr. Marcio Soares",
+        "title": "Não desista antes da hora - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/RYb40KQ_fXo/default.jpg",
+            "url": "https://i.ytimg.com/vi/iSRQp0JcHZ4/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/RYb40KQ_fXo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/iSRQp0JcHZ4/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/RYb40KQ_fXo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/iSRQp0JcHZ4/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-13T01:23:43Z"
+        "publishTime": "2026-08-20T01:07:56Z"
       }
     }
   ]
