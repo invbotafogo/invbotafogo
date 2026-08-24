@@ -37,6 +37,11 @@
     /* attachment scroll: o próprio ::before já é fixed; fixed aqui quebra cover no Safari iOS */
     z-index: 0;
     pointer-events: none;
+    /* Camada própria no compositor: sem isto esta capa fixa de tela cheia é
+       repintada a cada quadro do scroll, e é ela que arrastava o header
+       para o mesmo caminho de repintura (os "rastros" nas letras do menu).
+       Seguro num pseudo-elemento: não tem descendente `position: fixed`. */
+    transform: translateZ(0);
 }
 
 /* Rodapé no fluxo normal — evita sobrepor os cards (position absolute tirava altura do fluxo) */
@@ -261,6 +266,11 @@
 .section-ministerios #expanded-content {
     position: relative;
     z-index: 2;
+    /* O header é fixo e cobre os primeiros 70px da viewport. Sem isto,
+       qualquer rolagem até o painel (scrollIntoView, deep link
+       ?ministerio=..., âncora) para com o topo do card escondido atrás
+       dele — era o "salto" para cima ao abrir um ministério. */
+    scroll-margin-top: calc(70px + env(safe-area-inset-top, 0px));
 }
 
 /* Painel aberto: sem rolagem interna no wrapper; cartão tem altura padronizada no desktop */

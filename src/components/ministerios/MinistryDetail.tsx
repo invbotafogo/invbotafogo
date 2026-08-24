@@ -41,6 +41,8 @@ export function MinistryDetail({ ministerio, aoFechar, painelRef }: MinistryDeta
               className="expanded-image"
               src={ministerio.imagem}
               alt={ministerio.imagemAlt}
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
           <div className="expanded-text">

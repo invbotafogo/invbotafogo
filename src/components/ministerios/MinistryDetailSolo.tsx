@@ -42,6 +42,8 @@ export function MinistryDetailSolo({ ministerio, aoFechar, painelRef }: Ministry
               className="ministerio-solo__image"
               src={ministerio.imagem}
               alt={ministerio.imagemAlt}
+              fetchPriority="high"
+              decoding="async"
             />
           </figure>
 

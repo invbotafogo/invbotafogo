@@ -23,6 +23,12 @@
     --solo-gold-hi: #f6d27a;
     --solo-paper: #f0f0f0;
     --solo-line: rgba(230, 178, 62, 0.26);
+
+    /* Caixa máxima da capa. A imagem é reduzida para caber dentro dela
+       mantendo a proporção original do arquivo — nunca é cortada.
+       As media queries de monitor baixo só reescrevem --solo-img-h. */
+    --solo-img-h: min(236px, 26vh);
+    --solo-img-w: min(420px, 100%);
 }
 
 /* ---------- 1. Devolve o comportamento de página normal ---------- */
@@ -56,7 +62,11 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
     min-height: 0;
     max-height: none;
     overflow: visible;
-    margin: 0 auto;
+    /* `margin: auto` (e não `0 auto`): a seção é um flex column de no mínimo
+       100vh, então as margens verticais automáticas absorvem a sobra e
+       deixam o card centrado entre o header e o rodapé. Quando o conteúdo
+       passa da tela a sobra é zero e a página volta a rolar normalmente. */
+    margin: auto;
     /* Respiro vertical em vh: em telas baixas encolhe para o card caber
        inteiro numa tela só, sem rolagem. */
     padding: clamp(0.9rem, 2.6vh, 2.25rem) clamp(16px, 4vw, 40px) clamp(1rem, 3vh, 2.5rem);
@@ -66,9 +76,14 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
     box-shadow: none;
 }
 
-/* O rodapé volta a aparecer — a página inteira rola normalmente. */
+/* O rodapé volta a aparecer — a página inteira rola normalmente.
+   `margin-top: 0` anula o `margin-top: auto` de ministerios.css: com ele o
+   rodapé engolia toda a sobra vertical e empurrava o card para o topo, colado
+   no header. Sem ele, quem fica com a sobra são as margens automáticas do
+   painel — e o card nasce centrado. */
 .section-ministerios.section-ministerios--solo #expanded-content:not(.hidden) ~ #footer {
     display: block !important;
+    margin-top: 0;
 }
 
 /* ---------- 2. Card de vidro (padrão Contato / Nossa história) ---------- */
@@ -91,25 +106,39 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
 
 /* ---------- 3. Imagem ---------- */
 
-/* A imagem é limitada pela ALTURA (não pela largura): é ela que decide se o
-   card cabe ou não numa tela só. Em monitores baixos encolhe sozinha. */
+/* As capas têm proporções bem diferentes entre si (de ~3:4 em pé até
+   ~16:9 deitada). Um quadro fixo com `object-fit: cover` cortava todas
+   elas, então aqui a figura é só um trilho centrado: quem manda no
+   tamanho é a própria imagem, limitada por --solo-img-w/--solo-img-h. */
 .section-ministerios--solo .ministerio-solo__figure {
     display: flex;
+    align-items: center;
     justify-content: center;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto clamp(0.5rem, 1.4vh, 1rem);
     padding: 0;
+    background: transparent;
 }
 
+/* width/height auto + max-* = a imagem inteira aparece, sem corte e sem
+   distorção. `object-fit: contain` é redundante aqui, mas fica como
+   guarda caso alguma regra externa volte a fixar width/height.
+
+   Sem fundo nem cantos arredondados: os arquivos .webp são recortados
+   (canal alpha), então a arte fica solta sobre o fundo do card. */
 .section-ministerios--solo .ministerio-solo__image {
     display: block;
     width: auto;
     height: auto;
-    max-width: min(420px, 100%);
-    max-height: min(240px, 26vh);
+    max-width: var(--solo-img-w);
+    max-height: var(--solo-img-h);
     object-fit: contain;
-    border-radius: 12px;
-    border: 1px solid rgba(201, 168, 76, 0.28);
+    object-position: center center;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* ---------- 4. Títulos ---------- */
@@ -234,8 +263,8 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
    continuar cabendo numa tela só mesmo nos ministérios com mais conteúdo
    (Infantil e Evangelismo têm 5 atividades). */
 @media (min-width: 900px) and (max-height: 940px) {
-    .section-ministerios--solo .ministerio-solo__image {
-        max-height: min(240px, 20vh);
+    .section-ministerios--solo {
+        --solo-img-h: min(200px, 20vh);
     }
 
     .section-ministerios--solo .ministerio-solo__texto {
@@ -248,8 +277,8 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
 }
 
 @media (min-width: 900px) and (max-height: 780px) {
-    .section-ministerios--solo .ministerio-solo__image {
-        max-height: min(200px, 18vh);
+    .section-ministerios--solo {
+        --solo-img-h: min(170px, 18vh);
     }
 
     .section-ministerios--solo .ministerio-solo__texto {
@@ -337,8 +366,11 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
 }
 
 @media (max-width: 480px) {
-    .section-ministerios--solo .ministerio-solo__figure {
-        max-width: 100%;
+    /* Celular: a capa pode ocupar a largura do card; a altura acompanha a
+       proporção do arquivo (em vh para não empurrar o texto para fora). */
+    .section-ministerios--solo {
+        --solo-img-w: 100%;
+        --solo-img-h: min(260px, 34vh);
     }
 
     .section-ministerios--solo .ministerio-solo__atividades li {
