@@ -1,0 +1,351 @@
+/* ============================================================
+   MINISTÉRIOS — card ampliado no padrão "Contato / Nossa história"
+
+   Layout novo (teste): card de vidro centrado em coluna única, com
+   borda dourada à esquerda, cantos de 16px e a mesma sombra funda de
+   `.contato-glass-card` (contato.css) e `.section-index .ed.ed-hist`
+   (home.css).
+
+   Hoje vale só para o Ministério de Louvor — a lista fica em
+   `MINISTERIOS_LAYOUT_SOLO` (lib/ministerios.ts). Para estender aos
+   demais ministérios basta acrescentar o id lá; nada aqui muda.
+
+   IMPORTANTE: este arquivo é importado DEPOIS de ministerios.css e
+   todos os seletores carregam `.section-ministerios--solo`, de modo a
+   vencer por especificidade as regras do painel antigo (que trava a
+   seção em 75% × 30vh, esconde o rodapé e bloqueia a rolagem do body)
+   sem precisar alterá-las. Assim os outros oito ministérios seguem
+   exatamente como estavam.
+   ============================================================ */
+
+.section-ministerios--solo {
+    --solo-gold: #c9a84c;
+    --solo-gold-hi: #f6d27a;
+    --solo-paper: #f0f0f0;
+    --solo-line: rgba(230, 178, 62, 0.26);
+}
+
+/* ---------- 1. Devolve o comportamento de página normal ---------- */
+
+/* O painel antigo trava a rolagem do documento; aqui o conteúdo rola. */
+body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.hidden)) {
+    overflow: auto;
+}
+
+/* O painel antigo encolhe a seção para 75% × 30vh; aqui ela volta ao fluxo. */
+.section-ministerios.section-ministerios--solo:has(#expanded-content:not(.hidden)) {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
+}
+
+/* Wrapper: caixa comum, centrada, sem altura travada nem scroll interno. */
+.section-ministerios.section-ministerios--solo #expanded-content:not(.hidden),
+.section-ministerios.section-ministerios--solo:has(#expanded-content:not(.hidden))
+    #expanded-content:not(.hidden) {
+    display: block;
+    flex: 0 0 auto;
+    flex-grow: 0;
+    align-self: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1360px;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    margin: 0 auto;
+    /* Respiro vertical em vh: em telas baixas encolhe para o card caber
+       inteiro numa tela só, sem rolagem. */
+    padding: clamp(0.9rem, 2.6vh, 2.25rem) clamp(16px, 4vw, 40px) clamp(1rem, 3vh, 2.5rem);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* O rodapé volta a aparecer — a página inteira rola normalmente. */
+.section-ministerios.section-ministerios--solo #expanded-content:not(.hidden) ~ #footer {
+    display: block !important;
+}
+
+/* ---------- 2. Card de vidro (padrão Contato / Nossa história) ---------- */
+
+.section-ministerios--solo .ministerio-solo-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: clamp(1rem, 2.4vh, 1.75rem) clamp(1.25rem, 3vw, 2.5rem);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ffd700;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--solo-paper);
+    text-align: center;
+    cursor: default;
+}
+
+/* ---------- 3. Imagem ---------- */
+
+/* A imagem é limitada pela ALTURA (não pela largura): é ela que decide se o
+   card cabe ou não numa tela só. Em monitores baixos encolhe sozinha. */
+.section-ministerios--solo .ministerio-solo__figure {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto clamp(0.5rem, 1.4vh, 1rem);
+    padding: 0;
+}
+
+.section-ministerios--solo .ministerio-solo__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(420px, 100%);
+    max-height: min(240px, 26vh);
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid rgba(201, 168, 76, 0.28);
+}
+
+/* ---------- 4. Títulos ---------- */
+
+/* Mesmo "kicker" do bloco "Quem somos" da Home. */
+.section-ministerios--solo .ministerio-solo__kicker {
+    display: block;
+    margin: 0 0 6px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--solo-gold);
+}
+
+/* Mesmo tratamento de `.section-contato h2`. */
+.section-ministerios--solo .ministerio-solo__nome {
+    margin: 0 0 clamp(8px, 1.5vh, 14px);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.25;
+    color: var(--solo-gold);
+}
+
+/* ---------- 5. Texto ---------- */
+
+.section-ministerios--solo .ministerio-solo__texto {
+    /* O card é largo, mas a linha de texto fica numa medida legível
+       (~80 caracteres) e centrada. */
+    max-width: none;
+    margin: 0 0 12px;
+    font-size: clamp(0.95rem, 2.8vw, 1rem);
+    line-height: 1.7;
+    color: var(--solo-paper);
+    text-align: left;
+}
+
+.section-ministerios--solo .ministerio-solo__texto:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Linha fina em degradê, igual à `.ed-divider` da Home. */
+.section-ministerios--solo .ministerio-solo__divider {
+    height: 1px;
+    border: 0;
+    margin: clamp(12px, 2.2vh, 22px) 0 clamp(10px, 1.8vh, 18px);
+    background: linear-gradient(90deg,
+            rgba(230, 178, 62, 0) 0%,
+            rgba(230, 178, 62, 0.5) 15%,
+            rgba(246, 210, 122, 0.95) 50%,
+            rgba(230, 178, 62, 0.5) 85%,
+            rgba(230, 178, 62, 0) 100%);
+}
+
+/* ---------- 6. Atividades ---------- */
+
+.section-ministerios--solo .ministerio-solo__lead-in {
+    margin: 0 0 clamp(8px, 1.4vh, 12px);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--solo-gold);
+    text-align: center;
+}
+
+.section-ministerios--solo .ministerio-solo__atividades {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section-ministerios--solo .ministerio-solo__atividades li {
+    --solo-li-pad: clamp(6px, 1.1vh, 10px);
+    position: relative;
+    padding: var(--solo-li-pad) 0 var(--solo-li-pad) 30px;
+    border-bottom: 1px solid var(--solo-line);
+    font-size: clamp(0.92rem, 2.6vw, 1rem);
+    line-height: 1.65;
+    color: #e8dfd0;
+    text-align: left;
+}
+
+.section-ministerios--solo .ministerio-solo__atividades li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-ministerios--solo .ministerio-solo__atividades li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 2px;
+    top: calc(var(--solo-li-pad) + 0.55em);
+    font-size: 0.68rem;
+    line-height: 1;
+    color: var(--solo-gold);
+    opacity: 0.95;
+}
+
+/* Card largo: as atividades vão para duas colunas — usa o espaço horizontal
+   e derruba a altura pela metade, para o conteúdo caber numa tela só. */
+@media (min-width: 900px) {
+    .section-ministerios--solo .ministerio-solo__atividades {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: clamp(28px, 4vw, 64px);
+        row-gap: 0;
+        align-items: start;
+    }
+
+    .section-ministerios--solo .ministerio-solo__atividades li,
+    .section-ministerios--solo .ministerio-solo__atividades li:last-child {
+        border-bottom: 0;
+        padding-bottom: var(--solo-li-pad);
+    }
+}
+
+/* Monitores baixos: aperta imagem e entrelinhas em dois degraus, para o card
+   continuar cabendo numa tela só mesmo nos ministérios com mais conteúdo
+   (Infantil e Evangelismo têm 5 atividades). */
+@media (min-width: 900px) and (max-height: 940px) {
+    .section-ministerios--solo .ministerio-solo__image {
+        max-height: min(240px, 20vh);
+    }
+
+    .section-ministerios--solo .ministerio-solo__texto {
+        line-height: 1.55;
+    }
+
+    .section-ministerios--solo .ministerio-solo__atividades li {
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 900px) and (max-height: 780px) {
+    .section-ministerios--solo .ministerio-solo__image {
+        max-height: min(200px, 18vh);
+    }
+
+    .section-ministerios--solo .ministerio-solo__texto {
+        line-height: 1.45;
+    }
+
+    .section-ministerios--solo .ministerio-solo__atividades li {
+        --solo-li-pad: 5px;
+        line-height: 1.42;
+    }
+}
+
+/* ---------- 7. Botão "Voltar" ---------- */
+
+.section-ministerios--solo .ministerio-solo__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(14px, 2.4vh, 26px);
+}
+
+.section-ministerios--solo .ministerio-solo__voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.35rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #1f1810;
+    background: linear-gradient(180deg, #f2d57a 0%, #d4a832 55%, #b88920 100%);
+    border: 1px solid rgba(232, 201, 120, 0.95);
+    border-radius: 0.45rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.section-ministerios--solo .ministerio-solo__voltar:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+}
+
+.section-ministerios--solo .ministerio-solo__voltar:active {
+    transform: translateY(0);
+    filter: brightness(0.98);
+}
+
+.section-ministerios--solo .ministerio-solo__voltar:focus-visible {
+    outline: 2px solid #ffd700;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-ministerios--solo .ministerio-solo__voltar {
+        transition: none;
+    }
+
+    .section-ministerios--solo .ministerio-solo__voltar:hover {
+        transform: none;
+    }
+}
+
+/* ---------- 8. Telas estreitas ---------- */
+
+/* ministerios.css tem, em `@media (max-width: 1024px)`, regras `!important`
+   que travam o padding do wrapper em 16px e criam rolagem interna
+   (`overflow-y: auto`) — necessárias no painel antigo, indesejadas aqui,
+   onde quem rola é a página. Desfeitas só para o layout novo. */
+@media (max-width: 1024px) {
+    .section-ministerios.section-ministerios--solo:has(#expanded-content:not(.hidden)) {
+        height: auto !important;
+        overflow: visible !important;
+        overflow-y: visible !important;
+    }
+
+    .section-ministerios.section-ministerios--solo #expanded-content:not(.hidden) {
+        overflow: visible !important;
+        overflow-y: visible !important;
+        max-height: none !important;
+        padding: clamp(1.25rem, 5vw, 2rem) clamp(12px, 4vw, 24px) clamp(1.75rem, 6vw, 2.5rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-ministerios--solo .ministerio-solo__figure {
+        max-width: 100%;
+    }
+
+    .section-ministerios--solo .ministerio-solo__atividades li {
+        padding-left: 26px;
+    }
+
+    .section-ministerios--solo .ministerio-solo__voltar {
+        width: 100%;
+    }
+}

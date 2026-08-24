@@ -185,3 +185,21 @@ export const MINISTERIOS: Ministerio[] = [
 export const NOME_EXPANDIDO: Record<string, string> = {
   introducao: 'Introdução & Recepção',
 };
+
+/**
+ * Ministérios cujo card ampliado já usa o layout novo — card de vidro em
+ * coluna única, no padrão das seções Contato e "Nossa história"
+ * (ver components/ministerios/MinistryDetailSolo.tsx e
+ * styles/ministerios-solo.css).
+ *
+ * Hoje vale para todos. Para devolver um ministério ao painel antigo, troque
+ * pela lista explícita dos ids que devem usar o layout novo — por exemplo
+ * `new Set(['louvor'])` — sem mexer em nenhum outro arquivo.
+ */
+export const MINISTERIOS_LAYOUT_SOLO: ReadonlySet<string> = new Set(
+  MINISTERIOS.map((ministerio) => ministerio.id),
+);
+
+export function usaLayoutSolo(id?: string | null): boolean {
+  return !!id && MINISTERIOS_LAYOUT_SOLO.has(id);
+}

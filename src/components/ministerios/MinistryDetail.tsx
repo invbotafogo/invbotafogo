@@ -1,5 +1,6 @@
 import type { Ref } from 'react';
-import { NOME_EXPANDIDO, type Ministerio } from '../../lib/ministerios';
+import { NOME_EXPANDIDO, usaLayoutSolo, type Ministerio } from '../../lib/ministerios';
+import { MinistryDetailSolo } from './MinistryDetailSolo';
 
 interface MinistryDetailProps {
   ministerio: Ministerio | null;
@@ -13,6 +14,16 @@ interface MinistryDetailProps {
 }
 
 export function MinistryDetail({ ministerio, aoFechar, painelRef }: MinistryDetailProps) {
+  /**
+   * Ministérios já migrados para o layout novo (padrão Contato / "Nossa
+   * história") usam o outro card. Os demais seguem no painel original.
+   */
+  if (usaLayoutSolo(ministerio?.id)) {
+    return (
+      <MinistryDetailSolo ministerio={ministerio} aoFechar={aoFechar} painelRef={painelRef} />
+    );
+  }
+
   return (
     <div
       ref={painelRef}

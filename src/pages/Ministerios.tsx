@@ -3,9 +3,12 @@ import { useSearchParams } from 'react-router-dom';
 import { MinistryCard } from '../components/ministerios/MinistryCard';
 import { MinistryDetail } from '../components/ministerios/MinistryDetail';
 import { FooterSlot } from '../components/layout/Footer';
-import { MINISTERIOS } from '../lib/ministerios';
+import { MINISTERIOS, usaLayoutSolo } from '../lib/ministerios';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import '../styles/ministerios.css';
+/* Layout novo do card ampliado (padrão Contato / "Nossa história").
+   Precisa vir depois de ministerios.css para vencer as regras do painel antigo. */
+import '../styles/ministerios-solo.css';
 
 export default function Ministerios() {
   useDocumentTitle('INVB - Ministérios');
@@ -15,11 +18,14 @@ export default function Ministerios() {
   const selecionadoId = searchParams.get('ministerio');
   const selecionado = MINISTERIOS.find((m) => m.id === selecionadoId) ?? null;
 
+  /** Só com o layout novo aberto a seção volta a rolar como uma página normal. */
+  const layoutSolo = usaLayoutSolo(selecionado?.id);
+
   const painelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (selecionado) {
-      painelRef.current?.scrollIntoView({ behavior: 'smooth' });
+      painelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [selecionado]);
 
@@ -27,7 +33,10 @@ export default function Ministerios() {
   const fechar = () => setSearchParams({}, { replace: true });
 
   return (
-    <div className="section-ministerios" id="main">
+    <div
+      className={`section-ministerios${layoutSolo ? ' section-ministerios--solo' : ''}`}
+      id="main"
+    >
       <MinistryDetail ministerio={selecionado} aoFechar={fechar} painelRef={painelRef} />
 
       <div className="cards-container">
