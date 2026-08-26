@@ -1,9 +1,9 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import { useMobileMenu } from '../../hooks/useMobileMenu';
+import { useScrollProgress } from '../../hooks/useScrollProgress';
 import '../../styles/header.css';
 
-/** EBD e Capacitação foram unificados no item único "Estudos". */
 const ITENS = [
   { para: '/', rotulo: 'Home' },
   { para: '/contato', rotulo: 'Contato' },
@@ -15,9 +15,12 @@ const ITENS = [
 
 export function Header() {
   const { aberto, alternar, fechar } = useMobileMenu();
+  const progresso = useScrollProgress();
 
   return (
     <header className="navbar">
+      <div className="navbar__progress" style={{ width: `${progresso}%` }} />
+
       <div className="logo navbar__brand">
         <Link to="/">
           <img src={logo} alt="INVB Logo" />

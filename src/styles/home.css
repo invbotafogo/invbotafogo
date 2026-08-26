@@ -120,28 +120,7 @@
     /* padding: 0 clamp(16px, 4vw, 40px); */
 }
 
-/* ---------- VERSÍCULO + BOTÕES (hero) ---------- */
-.section-index .verse {
-    margin-top: 26px;
-    padding-left: 18px;
-    border-left: 2px solid var(--gold);
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: clamp(20px, 2.6vw, 25px);
-    max-width: 540px;
-    color: var(--paper);
-    line-height: 1.35;
-}
-
-.section-index .verse small {
-    display: block;
-    font-family: var(--sans);
-    font-style: normal;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--gold);
-    margin-top: 8px;
-}
+/* ---------- BOTÕES (hero) ---------- */
 
 .section-index .cta-row {
     display: flex;
@@ -150,34 +129,7 @@
     margin-top: 32px;
 }
 
-/* ---------- VERSÍCULO + BOTÕES (seção própria) ---------- */
-/* Saíram do hero — que voltou a ser só as boas-vindas do site antigo — e agora
-   abrem os blocos editoriais, logo acima da programação semanal. Centralizado,
-   sem a barra dourada à esquerda: com texto centralizado a barra fica solta. */
-/* O respiro embaixo é maior que o de cima de propósito: sem ele os botões
-   encostam na linha dourada que abre a programação e os dois blocos passam a
-   ler como um conteúdo só. */
-.section-index .verse-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 56px 0 76px;
-}
 
-.section-index .verse-cta .verse {
-    margin-top: 0;
-    border-left: 0;
-    padding-left: 0;
-    max-width: 640px;
-    font-size: clamp(20px, 1.9vw, 24px);
-    font-weight: 400;
-}
-
-.section-index .verse-cta .cta-row {
-    justify-content: center;
-    margin-top: 30px;
-}
 
 .section-index .btn {
     display: inline-flex;
@@ -718,14 +670,6 @@
     .section-home .text p {
         font-size: 0.9375rem;
         margin-top: 0.625rem;
-    }
-
-    .section-index .verse-cta {
-        padding: 40px 0 52px;
-    }
-
-    .section-index .verse-cta .cta-row {
-        margin-top: 26px;
     }
 
     /* Os dois CTAs dividem a mesma linha (antes empilhavam, um sob o outro). */

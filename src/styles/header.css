@@ -1,7 +1,5 @@
 /* Migrado de src/css/styles.css — regras preservadas na ordem original. */
 
-
-
 /*
  * Estilos do cabeçalho — barra fixa no topo.
  * O fundo transparente deixava o menu se misturar com o que passava por baixo
@@ -24,7 +22,7 @@ header {
     height: var(--navbar-height);
     overflow: visible;
     box-sizing: border-box;
-    background-color: var(--brand-dark, #14110e);
+    background-color: black;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -92,16 +90,28 @@ nav ul li a {
     color: whitesmoke;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    /* Era `transition: 0.3s`, que é atalho de `transition-property: all`:
-       qualquer propriedade animável que mudasse (inclusive por troca de
-       rota do NavLink) reanimava o link e forçava nova rasterização do
-       texto. Só a cor precisa de transição. */
     transition: color 0.3s ease;
     font-size: 1.1rem;
+    position: relative;      /* necessário pro ::after se posicionar */
+    padding-bottom: 4px;      /* dá espaço pra linha não colar no texto */
 }
 
-nav ul li a:hover {
-    color: #ffcc00;
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffcc00; /* mesma cor do hover que você já usa */
+    transform: scaleX(0);
+    transform-origin: left;    /* a linha "nasce" da esquerda */
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);      /* cresce até 100% da largura */
 }
 
 /* Estilos do dropdown */
@@ -193,7 +203,7 @@ footer nav ul {
         top: 0;
         left: 0;
         width: 100%;
-        background-color: var(--brand-dark, #14110e);
+        background-color: black;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
@@ -266,7 +276,7 @@ footer nav ul {
         flex-direction: column;
         gap: 0;
         /* Gaveta sólida no mesmo tom do header — sem depender do blur para legibilidade */
-        background: var(--brand-dark, #14110e);
+        background: black;
         border-radius: 12px;
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
         z-index: 12000;
@@ -307,6 +317,8 @@ footer nav ul {
     .navbar__menu a:last-child {
         border-bottom: 0;
     }
+
+    
 
     /* Submenu no mobile (em coluna) */
     .submenu {
@@ -376,7 +388,7 @@ header {
     top: 0 !important;
     left: 0;
     width: 100%;
-    background-color: var(--brand-dark, #14110e);
+    background-color: black;
     z-index: 5000;
 
     /*
@@ -407,4 +419,16 @@ header {
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+
+.navbar__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold, #E6B23E), var(--gold-hi, #F6D27A));
+    transition: width 0.1s linear;
+    z-index: 6001;
+    pointer-events: none;
 }
