@@ -17,7 +17,9 @@ export const REDES = {
   youtubeLive: 'https://www.youtube.com/@igrejadenovavidabotafogo3785/live',
   facebook: 'https://www.facebook.com/igrejanovavidadebotafogo',
   instagram: 'https://www.instagram.com/igrejanvb',
-  whatsapp: 'https://wa.me/5521982982802',
+  whatsapp: `https://wa.me/5521982982802?text=${encodeURIComponent(
+    'Olá! Estou entrando em contato através do site da igreja e gostaria de obter algumas informações.',
+  )}`,
 } as const;
 
 export const PIX = {
