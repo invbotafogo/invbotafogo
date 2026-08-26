@@ -21,7 +21,7 @@ export default function Home() {
       {/* Blocos editoriais copiados do site-igreja. */}
       <div className="wrap">
         {/* Versículo + botões: fora do hero, abrindo os blocos editoriais. */}
-        <VerseCta />
+        {/* <VerseCta /> */}
 
         <div className="ed-home">
           <EdCalendar />
