@@ -8,15 +8,17 @@ export default function Cultos() {
   useDocumentTitle('INVB - Cultos');
 
   return (
-    <div className="section-cultos">
-      <NextService />
+    <>
+      <div className="section-cultos">
+        <NextService />
 
-      <section id="ultimos-cultos" className="ultimos-cultos">
-        <h2>Últimos Cultos</h2>
-        <VideoList />
-      </section>
+        <section id="ultimos-cultos" className="ultimos-cultos">
+          <h2>Últimos Cultos</h2>
+          <VideoList />
+        </section>
+      </div>
 
       <FooterSlot />
-    </div>
+    </>
   );
 }
