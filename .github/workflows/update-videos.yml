@@ -29,6 +29,9 @@ jobs:
 
       # O script só grava o arquivo quando encontra algum culto.
       # Sem arquivo, nada é publicado e o videos.json anterior continua no ar.
+      # Usamos `mv` (não `cp`) para tirar o videos.json da working tree antes do
+      # checkout — senão o Git aborta: o arquivo untracked colidiria com o da
+      # branch `data`.
       - name: Publicar videos.json na branch `data`
         run: |
           if [ ! -f videos.json ]; then
@@ -36,7 +39,7 @@ jobs:
             exit 0
           fi
 
-          cp videos.json /tmp/videos.json
+          mv videos.json /tmp/videos.json
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git fetch origin data

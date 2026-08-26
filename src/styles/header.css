@@ -92,7 +92,11 @@ nav ul li a {
     color: whitesmoke;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    transition: 0.3s;
+    /* Era `transition: 0.3s`, que é atalho de `transition-property: all`:
+       qualquer propriedade animável que mudasse (inclusive por troca de
+       rota do NavLink) reanimava o link e forçava nova rasterização do
+       texto. Só a cor precisa de transição. */
+    transition: color 0.3s ease;
     font-size: 1.1rem;
 }
 
@@ -267,7 +271,10 @@ footer nav ul {
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
         z-index: 12000;
         padding: 8px 0;
-        backdrop-filter: blur(8px);
+        /* `backdrop-filter: blur(8px)` removido: o fundo da gaveta é opaco
+           (--brand-dark), então o blur nunca aparecia — só custava uma
+           camada extra de composição, que é justamente o tipo de coisa que
+           produz artefato de repintura no scroll. */
         -webkit-overflow-scrolling: touch;
         overflow-x: hidden;
         overflow-y: auto;
@@ -371,4 +378,33 @@ header {
     width: 100%;
     background-color: var(--brand-dark, #14110e);
     z-index: 5000;
+
+    /*
+     * "Rastros" nas letras do menu ao rolar
+     * -------------------------------------
+     * O header é `position: fixed`, mas não tinha camada própria no
+     * compositor. A página tem outras camadas fixas por baixo dele — o
+     * `::before` de `.section-ministerios` (fixed, inset 0) e o
+     * `background-attachment: fixed` de Cultos/Doe/Estudos —, o que joga a
+     * rolagem no caminho de repintura pela thread principal. Aí o texto do
+     * menu é redesenhado a cada quadro por cima do conteúdo que passa por
+     * baixo e, quando a área invalidada sai curta, sobra o resíduo do
+     * quadro anterior: o rastro. É intermitente porque depende da decisão
+     * de promoção de camada do compositor, que muda com o conteúdo da
+     * página, o zoom e a aceleração de GPU disponível.
+     *
+     * `translateZ(0)` + `backface-visibility: hidden` prendem o header numa
+     * camada própria e opaca — ele passa a ser apenas recomposto, nunca
+     * repintado durante o scroll.
+     *
+     * Efeito colateral conhecido e conferido: o transform faz do header o
+     * bloco contêiner dos descendentes `position: fixed`, ou seja a gaveta
+     * `.navbar__menu` (≤1024px). Como o header já é fixed, começa em (0,0)
+     * e ocupa 100% da largura da viewport, a geometria da gaveta não muda;
+     * e o novo contexto de empilhamento não a prejudica, porque `#header`
+     * já está em z-index 6000, acima de tudo (os FABs ficam em 45).
+     */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }

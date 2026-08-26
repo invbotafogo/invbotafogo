@@ -1,12 +1,12 @@
-import louvor from '../assets/images/louvor.png';
-import infantil from '../assets/images/infantil.png';
-import intercessao from '../assets/images/intercessao.png';
-import comunicacoes from '../assets/images/comunicacoes.png';
-import juventude from '../assets/images/juventude.png';
-import mulheres from '../assets/images/mulheres.png';
-import guerreiros from '../assets/images/guerreiros.png';
-import intro from '../assets/images/intro.png';
-import evangelismo from '../assets/images/evangelismo2.png';
+import louvor from '../assets/images/louvor.webp';
+import infantil from '../assets/images/infantil.webp';
+import intercessao from '../assets/images/intercessao.webp';
+import comunicacoes from '../assets/images/comunicacoes.webp';
+import juventude from '../assets/images/juventude.webp';
+import mulheres from '../assets/images/mulheres.webp';
+import guerreiros from '../assets/images/guerreiros.webp';
+import intro from '../assets/images/intro.webp';
+import evangelismo from '../assets/images/evangelismo2.webp';
 
 export interface Ministerio {
   id: string;
@@ -185,3 +185,21 @@ export const MINISTERIOS: Ministerio[] = [
 export const NOME_EXPANDIDO: Record<string, string> = {
   introducao: 'Introdução & Recepção',
 };
+
+/**
+ * Ministérios cujo card ampliado já usa o layout novo — card de vidro em
+ * coluna única, no padrão das seções Contato e "Nossa história"
+ * (ver components/ministerios/MinistryDetailSolo.tsx e
+ * styles/ministerios-solo.css).
+ *
+ * Hoje vale para todos. Para devolver um ministério ao painel antigo, troque
+ * pela lista explícita dos ids que devem usar o layout novo — por exemplo
+ * `new Set(['louvor'])` — sem mexer em nenhum outro arquivo.
+ */
+export const MINISTERIOS_LAYOUT_SOLO: ReadonlySet<string> = new Set(
+  MINISTERIOS.map((ministerio) => ministerio.id),
+);
+
+export function usaLayoutSolo(id?: string | null): boolean {
+  return !!id && MINISTERIOS_LAYOUT_SOLO.has(id);
+}

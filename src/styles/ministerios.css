@@ -37,6 +37,11 @@
     /* attachment scroll: o próprio ::before já é fixed; fixed aqui quebra cover no Safari iOS */
     z-index: 0;
     pointer-events: none;
+    /* Camada própria no compositor: sem isto esta capa fixa de tela cheia é
+       repintada a cada quadro do scroll, e é ela que arrastava o header
+       para o mesmo caminho de repintura (os "rastros" nas letras do menu).
+       Seguro num pseudo-elemento: não tem descendente `position: fixed`. */
+    transform: translateZ(0);
 }
 
 /* Rodapé no fluxo normal — evita sobrepor os cards (position absolute tirava altura do fluxo) */
@@ -84,8 +89,14 @@
     box-sizing: border-box;
     height: 300px;
     justify-self: stretch;
-    border-radius: 10px;
-    border: 1px solid #c9a84c;
+    /* Padrão de card do site — mesmo tratamento de `.contato-glass-card`
+       (contato.css), `.ed.ed-hist` (home.css) e `.dados-bancarios` / `.pix-box`
+       (doacao.css): barra dourada de 5px à esquerda, cantos de 16px e a
+       sombra funda. */
+    border-radius: 16px;
+    border: none;
+    border-left: 5px solid #ffd700;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
     background: rgba(42, 33, 24, 0.62);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -120,27 +131,20 @@
 }
 
 /* Hover: brilho de fundo e sombra (borda da cor padrão no mobile; na web ver @media abaixo) */
+/* Hover: brilho de fundo e um anel fino claro. O realce NÃO usa mais
+   `border-color` — isso pintaria a barra dourada da esquerda. */
 .section-ministerios .cards-container .card:hover {
     background: rgba(201, 168, 76, 0.18);
-    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.35), 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5), 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Web (≥768px): uma só borda branca no hover/foco — sem anel extra no box-shadow */
+/* Web (≥768px): anel branco fino no hover/foco, preservando a barra dourada */
 @media (min-width: 768px) {
-    .section-ministerios .cards-container .card:hover {
-        border-color: #ffffff;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    }
-
-    .section-ministerios .cards-container .card:active {
-        border-color: #ffffff;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    }
-
+    .section-ministerios .cards-container .card:hover,
+    .section-ministerios .cards-container .card:active,
     .section-ministerios .cards-container .card:focus-visible {
-        border-color: #ffffff;
         outline: none;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6), 0 8px 40px rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -223,17 +227,12 @@
         line-height: 1.2;
     }
 
-    .section-ministerios .cards-container .card:hover {
-        border-color: #e8c96a;
-        background: rgba(201, 168, 76, 0.18);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    }
-
+    .section-ministerios .cards-container .card:hover,
     .section-ministerios .cards-container .card:active,
     .section-ministerios .cards-container .card:focus-visible {
         outline: none;
-        border-color: #e8c96a;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        background: rgba(201, 168, 76, 0.18);
+        box-shadow: 0 0 0 1px rgba(232, 201, 106, 0.6), 0 8px 40px rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -267,6 +266,11 @@
 .section-ministerios #expanded-content {
     position: relative;
     z-index: 2;
+    /* O header é fixo e cobre os primeiros 70px da viewport. Sem isto,
+       qualquer rolagem até o painel (scrollIntoView, deep link
+       ?ministerio=..., âncora) para com o topo do card escondido atrás
+       dele — era o "salto" para cima ao abrir um ministério. */
+    scroll-margin-top: calc(70px + env(safe-area-inset-top, 0px));
 }
 
 /* Painel aberto: sem rolagem interna no wrapper; cartão tem altura padronizada no desktop */
