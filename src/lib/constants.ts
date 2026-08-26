@@ -12,12 +12,6 @@ export const IGREJA = {
   telefoneHref: 'tel:+5521982982802',
 } as const;
 
-/** Versículo em destaque no hero — mesmo do site-igreja (`CHURCH.verse`). */
-export const VERSICULO = {
-  texto: 'Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.',
-  referencia: 'Mateus 11:28',
-} as const;
-
 export const REDES = {
   youtube: 'https://www.youtube.com/@igrejadenovavidabotafogo3785',
   youtubeLive: 'https://www.youtube.com/@igrejadenovavidabotafogo3785/live',
