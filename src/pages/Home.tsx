@@ -1,5 +1,5 @@
 import { HeroHome } from '../components/home/HeroHome';
-import { VerseCta } from '../components/home/VerseCta';
+// import { VerseCta } from '../components/home/VerseCta';
 import { EdCalendar } from '../components/home/EdCalendar';
 import { EdLocation } from '../components/home/EdLocation';
 import { EdHistory } from '../components/home/EdHistory';
