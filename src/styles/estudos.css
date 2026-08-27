@@ -58,16 +58,21 @@
 
 /* ---------------- índice ---------------- */
 
+/*
+ * Mesmo card do painel do estudo ao lado: a mesma transparência dos cards de
+ * Contato e Doe (`rgba(0, 0, 0, 0.05)` + blur), borda dourada à esquerda,
+ * cantos de 16px e a sombra funda.
+ */
 .estudos-indice {
     position: sticky;
     top: calc(var(--navbar-height) + 16px);
-    background: rgba(42, 33, 24, 0.62);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ffd700;
+    border-radius: 16px;
     padding: 14px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 34px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
 .estudos-indice__titulo {
@@ -89,9 +94,7 @@
 }
 
 .estudo-item {
-    display: grid;
-    grid-template-columns: 66px minmax(0, 1fr);
-    gap: 12px;
+    display: flex;
     align-items: center;
     width: 100%;
     text-align: left;
@@ -119,50 +122,12 @@
     border-color: rgba(201, 168, 76, 0.5);
 }
 
-.estudo-item__thumb {
-    width: 66px;
-    aspect-ratio: 16 / 9;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #000;
-}
-
-.estudo-item__thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Tema ainda sem arte — marcador, não buraco. */
-.estudo-item__thumb--vazia {
-    display: grid;
-    place-items: center;
-    background:
-        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 6px, transparent 6px 12px),
-        #1c1711;
-    border: 1px solid rgba(255, 204, 0, 0.25);
-}
-
-.estudo-item__thumb--vazia::after {
-    content: "?";
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #ffcc00;
-}
-
-.estudo-item__txt {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-}
-
 .estudo-item__nome {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 14.5px;
     color: #eee6d7;
+    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -172,67 +137,34 @@
     color: #ffcc00;
 }
 
-.estudo-item__meta {
-    font-size: 11.5px;
-    color: #a79c8a;
-    font-variant-numeric: tabular-nums;
-}
-
 
 /* ---------------- painel do estudo ---------------- */
 
+/*
+ * Mesmo tratamento dos cards de Contato (`.contato-glass-card`) e Doe
+ * (`.ofertas-container`): fundo quase transparente com blur, cantos de 16px e
+ * a sombra funda — sem a borda dourada lateral. A foto de fundo do site
+ * aparece por trás, como nos outros cards.
+ */
 .estudo-painel {
-    --painel-bg: #191410;
-    background: var(--painel-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 34px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
 /*
- * Faixa de ambiência: a arte entra escurecida e desfocada de propósito.
- * As capas já trazem o nome do estudo escrito — sem isso, a arte disputaria
- * com o título do painel logo abaixo.
+ * O topo é 14px — o mesmo padding do card do índice ao lado —, para que o
+ * título do estudo e o rótulo "Estudos · EBD" comecem na mesma altura. Os dois
+ * cards abrem no mesmo ponto da grade; sem isso, o cabeçalho daqui descia e o
+ * card da direita parecia começar mais embaixo.
  */
-.estudo-painel__capa {
-    position: relative;
-    height: 112px;
-    background: #0b0908;
-    overflow: hidden;
-}
-
-.estudo-painel__capa img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 45%;
-    opacity: 0.5;
-    filter: blur(3px) saturate(0.85);
-    transform: scale(1.06);
-}
-
-.estudo-painel__capa::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top,
-        var(--painel-bg) 0%,
-        rgba(25, 20, 16, 0.55) 62%,
-        rgba(25, 20, 16, 0.25) 100%);
-}
-
-.estudo-painel__capa--vazia {
-    background:
-        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0 14px, transparent 14px 28px),
-        radial-gradient(120% 140% at 50% 0%, #251e15, #150f0b);
-}
-
 .estudo-painel__cab {
     position: relative;
     z-index: 1;
-    margin-top: -16px;
-    padding: 0 clamp(16px, 2.5vw, 28px);
+    padding: 14px clamp(16px, 2.5vw, 28px) 0;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -243,6 +175,9 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: clamp(22px, 3.4vw, 30px);
+    /* Entrelinha curta: o espaço extra que o navegador põe acima da letra
+       empurrava o título para baixo do rótulo do índice ao lado. */
+    line-height: 1.15;
     color: #ffcc00;
     margin: 0;
     text-wrap: balance;
@@ -273,17 +208,24 @@
 }
 
 
-/* ---------------- card de aula (inalterado) ---------------- */
+/* ---------------- card de aula ---------------- */
 
+/* Mesmo tratamento dos cards de "Nossa história" (`.ed-hist` em home.css) e da
+   página de Contato (`.contato-glass-card` em contato.css): fundo levemente
+   escurecido, cantos de 16px e a mesma sombra funda — sem borda lateral, que
+   fica só no painel que envolve a grade. O padding é um degrau menor porque
+   aqui o card é um bloco da grade de aulas, não uma seção inteira da página. */
 .aula-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #111;
-    padding: 14px;
-    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    padding: clamp(0.9rem, 2.5vw, 1.25rem);
     width: 100%;
+    box-sizing: border-box;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -345,14 +287,10 @@
         gap: 16px;
     }
 
+    /* O card continua — só perde a fixação lateral e fica mais compacto. */
     .estudos-indice {
         position: static;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        padding: 0;
+        padding: 14px 12px;
     }
 
     .estudos-indice__titulo {
@@ -403,25 +341,12 @@
         border-color: #c9a84c;
     }
 
-    /* Miniatura ali deixaria os botões altos demais e comeria a tela. */
-    .estudo-item__thumb,
-    .estudo-item__meta {
-        display: none;
-    }
-
     .estudo-item__nome {
         font-size: 14px;
         white-space: normal;
         color: #e6ded0;
     }
 
-    .estudo-painel__capa {
-        height: 86px;
-    }
-
-    .estudo-painel__cab {
-        margin-top: -14px;
-    }
 }
 
 @media (max-width: 540px) {

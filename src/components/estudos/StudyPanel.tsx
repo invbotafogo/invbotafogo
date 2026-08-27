@@ -3,21 +3,13 @@ import { ClassCard } from './ClassCard';
 import { resumo } from './StudyIndex';
 
 /**
- * Painel do estudo selecionado: faixa da capa, cabeçalho e as aulas.
- * A faixa entra escurecida e desfocada de propósito — as artes já trazem o
- * nome do estudo escrito, e o título do painel não pode disputar com elas.
+ * Painel do estudo selecionado: cabeçalho e as aulas.
+ * Sem faixa de capa — o painel é um card de vidro limpo, no mesmo tratamento
+ * dos cards de "Nossa história" e da página de Contato.
  */
 export function StudyPanel({ tema }: { tema: Tema }) {
   return (
     <article className="estudo-painel" aria-labelledby={`estudo-${tema.id}`}>
-      {tema.capa ? (
-        <div className="estudo-painel__capa">
-          <img src={tema.capa} alt="" />
-        </div>
-      ) : (
-        <div className="estudo-painel__capa estudo-painel__capa--vazia" />
-      )}
-
       {/*
         Não usar <header> aqui: header.css estiliza a tag `header` como a
         navbar fixa do site (position: fixed !important), e o cabeçalho do

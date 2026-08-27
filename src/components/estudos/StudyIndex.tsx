@@ -10,8 +10,11 @@ interface StudyIndexProps {
 
 /**
  * Índice dos estudos da categoria aberta.
+ * Lista apenas os nomes dos estudos — sem miniaturas/capas, para manter a
+ * escolha simples e limpa. A capa e o resumo do estudo continuam no painel
+ * ao lado (StudyPanel).
  * Em telas largas é uma coluna fixa ao lado do painel; abaixo de 900px o CSS
- * transforma a mesma lista numa faixa de botões que rola na horizontal.
+ * transforma a mesma lista numa grade de botões.
  */
 export function StudyIndex({ temas, rotuloAba, temaAtivo, aoSelecionar }: StudyIndexProps) {
   return (
@@ -30,18 +33,7 @@ export function StudyIndex({ temas, rotuloAba, temaAtivo, aoSelecionar }: StudyI
               aria-current={ativo}
               onClick={() => aoSelecionar(tema.id)}
             >
-              {tema.capa ? (
-                <span className="estudo-item__thumb">
-                  <img src={tema.capa} alt="" loading="lazy" />
-                </span>
-              ) : (
-                <span className="estudo-item__thumb estudo-item__thumb--vazia" />
-              )}
-
-              <span className="estudo-item__txt">
-                <span className="estudo-item__nome">{tema.titulo}</span>
-                <span className="estudo-item__meta">{resumo(tema)}</span>
-              </span>
+              <span className="estudo-item__nome">{tema.titulo}</span>
             </button>
           );
         })}
