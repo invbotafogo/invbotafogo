@@ -229,20 +229,6 @@ footer nav {
     
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
-
-    .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    .footer_infos {
-        display: static;
-    }
-        
-}
-
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
     #esconder{
