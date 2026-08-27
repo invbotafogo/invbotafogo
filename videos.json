@@ -1,16 +1,50 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "6sCeWksF5i6roQwkXg6kFd4dklI",
+  "etag": "YTbtEMYC8y8a0jtM8OALPbwhNb0",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 345,
+    "totalResults": 248,
     "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "FbIvsmVQ9rz1h0D-hV3bEOXewaE",
+      "etag": "9Bwps92_m7mFKWzQTHRzlitei2A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "J3Azk_tfe4A"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-27T01:37:41Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Noite de Adoração e Clamor - Pr. Humberto Torres",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-27T01:37:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5m2VjlQ5QiULwid3gewabP8YfYw",
       "id": {
         "kind": "youtube#video",
         "videoId": "lsv2p50GqwY"
@@ -44,7 +78,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "jwQ4E6I--DGhugRxpvqvpgxFfq4",
+      "etag": "h8zGtMp4lmOOTfAPcrZwwc36Ltw",
       "id": {
         "kind": "youtube#video",
         "videoId": "MpkqpmlpNvI"
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-08-24T03:41:40Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "lVLDQf14LtO7XybTifRe4aICTyQ",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "iSRQp0JcHZ4"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-20T01:07:56Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Não desista antes da hora - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/iSRQp0JcHZ4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/iSRQp0JcHZ4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/iSRQp0JcHZ4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-20T01:07:56Z"
       }
     }
   ]
