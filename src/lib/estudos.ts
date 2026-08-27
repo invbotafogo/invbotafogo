@@ -164,3 +164,48 @@ export const ABAS_ESTUDOS = [
   { id: 'ebd' as const, rotulo: 'EBD', titulo: 'Escola Bíblica Dominical', temas: TEMAS_EBD },
   { id: 'capacitacao' as const, rotulo: 'Capacitação', titulo: 'Capacitação', temas: TEMAS_CAPACITACAO },
 ];
+
+/* ============================================================
+ *  ESTUDO ATUAL
+ *
+ *  É ISTO QUE ABRE SOZINHO quando a pessoa entra em /estudos.
+ *  Não é o primeiro da lista, nem a ordem do array: é o id escrito aqui.
+ *
+ *  >>> Para trocar o estudo em andamento, mude o id abaixo. Só aqui. <<<
+ *
+ *  O id é o campo `id` do tema (ex.: 'oracao', 'apocalipse', 'cristologia').
+ *  Cada aba tem o seu, porque cada uma abre com um estudo diferente.
+ * ============================================================ */
+export const ESTUDO_ATUAL: Record<AbaEstudos, string> = {
+  ebd: 'oracao',
+  capacitacao: 'evangelismo',
+};
+
+/** Temas de uma aba. */
+export function temasDaAba(aba: AbaEstudos): Tema[] {
+  return ABAS_ESTUDOS.find((a) => a.id === aba)!.temas;
+}
+
+/**
+ * O tema que a aba deve abrir por padrão — a tradução de ESTUDO_ATUAL para o
+ * objeto do tema. É o único lugar do projeto que decide isso.
+ *
+ * Se o id configurado não existir na aba (erro de digitação, ou o estudo foi
+ * renomeado/removido), o fallback é o primeiro tema — mas com aviso no
+ * console, para que a configuração quebrada não passe despercebida.
+ */
+export function estudoAtual(aba: AbaEstudos): Tema | undefined {
+  const temas = temasDaAba(aba);
+  const idConfigurado = ESTUDO_ATUAL[aba];
+  const configurado = temas.find((t) => t.id === idConfigurado);
+
+  if (configurado) return configurado;
+
+  console.warn(
+    `[estudos] ESTUDO_ATUAL.${aba} aponta para "${idConfigurado}", que não existe nesta aba. ` +
+      `Ids disponíveis: ${temas.map((t) => t.id).join(', ')}. ` +
+      'Abrindo o primeiro estudo como emergência — corrija o id em src/lib/estudos.ts.',
+  );
+
+  return temas[0];
+}

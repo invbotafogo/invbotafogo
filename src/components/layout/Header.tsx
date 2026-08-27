@@ -15,11 +15,11 @@ const ITENS = [
 
 export function Header() {
   const { aberto, alternar, fechar } = useMobileMenu();
-  const progresso = useScrollProgress();
+  const barraProgresso = useScrollProgress<HTMLDivElement>();
 
   return (
     <header className="navbar">
-      <div className="navbar__progress" style={{ width: `${progresso}%` }} />
+      <div ref={barraProgresso} className="navbar__progress" />
 
       <div className="logo navbar__brand">
         <Link to="/">

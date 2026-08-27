@@ -4,7 +4,7 @@ import { Tabs } from '../components/ui/Tabs';
 import { StudyIndex } from '../components/estudos/StudyIndex';
 import { StudyPanel } from '../components/estudos/StudyPanel';
 import { FooterSlot } from '../components/layout/Footer';
-import { ABAS_ESTUDOS, type AbaEstudos } from '../lib/estudos';
+import { ABAS_ESTUDOS, estudoAtual, type AbaEstudos } from '../lib/estudos';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import '../styles/estudos.css';
 
@@ -19,18 +19,20 @@ export default function Estudos() {
   const parametro = searchParams.get('aba');
   const abaAtiva: AbaEstudos = ehAba(parametro) ? parametro : 'ebd';
 
-  /** Estudo aberto no painel. Nulo = o primeiro da categoria. */
+  /** Estudo aberto no painel. Nulo = ainda ninguém escolheu nesta aba. */
   const [temaSelecionado, setTemaSelecionado] = useState<string | null>(null);
 
   const secao = ABAS_ESTUDOS.find((a) => a.id === abaAtiva)!;
   useDocumentTitle(`INVB - ${secao.rotulo === 'EBD' ? 'EBD' : 'Capacitação'}`);
 
   /*
-   * Quando a aba muda, o id guardado deixa de existir nesta categoria e o
-   * `??` já devolve o primeiro tema — nunca sobra estudo de uma aba na outra.
+   * Sem escolha da pessoa, abre o ESTUDO ATUAL da aba (definido em
+   * src/lib/estudos.ts) — não o primeiro da lista. O mesmo `??` cobre a troca
+   * de aba: o id guardado deixa de existir na nova categoria, então volta ao
+   * estudo atual dela e nunca sobra estudo de uma aba na outra.
    */
   const tema =
-    secao.temas.find((t) => t.id === temaSelecionado) ?? secao.temas[0];
+    secao.temas.find((t) => t.id === temaSelecionado) ?? estudoAtual(abaAtiva);
 
   const trocarAba = (id: AbaEstudos) => {
     setTemaSelecionado(null);
