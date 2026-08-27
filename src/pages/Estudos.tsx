@@ -45,7 +45,7 @@ export default function Estudos() {
         <section id="estudos-biblicos" className="estudos-biblicos">
           <h2>{secao.titulo}</h2>
           <p className="estudos-intro">
-            Todos os estudos ficam à vista — escolha um para trocar o conteúdo.
+          Escolha um tema para acessar as aulas e PDFs correspondentes.
           </p>
 
           <Tabs abas={ABAS} ativa={abaAtiva} aoTrocar={trocarAba} rotuloLista="Estudos">
