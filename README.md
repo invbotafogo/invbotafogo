@@ -39,18 +39,21 @@ src/
   main.tsx                 monta o React e o BrowserRouter
   App.tsx                  rotas e redirecionamentos das URLs antigas
   components/
-    layout/                Header, Footer, Layout
+    layout/                Header, Footer, Layout, WhatsAppFab
     ui/                    Tabs (abas reutilizáveis)
-    home/                  HeroHome, ServiceInfo, EventsCalendar, ChurchHistory
+    home/                  HeroHome, EdCalendar, EdLocation, EdHistory,
+                           CountUp, icons
     cultos/                NextService, VideoList, VideoCard
     doacao/                BankDetails, PixButton
-    estudos/               TopicCard, ClassCard
-    ministerios/           MinistryGrid, MinistryCard, MinistryDetail
+    estudos/               StudyIndex, StudyPanel, ClassCard
+    ministerios/           MinistryCard, MinistryDetail, MinistryDetailSolo
     contato/               ContactForm
   pages/                   Home, Cultos, Doacao, Contato, Estudos, Ministerios
-  hooks/                   useLatestVideos, useNextService, useMobileMenu,
-                           useScrollFade, useCalendarMode, useDocumentTitle
-  lib/                     constants, youtube, estudos, ministerios, cultos
+  hooks/                   useLatestVideos, useNextService, useProgramacaoMensal,
+                           useMobileMenu, useScrollFade, useScrollProgress,
+                           useReveal, useRodapeAVista, useDocumentTitle
+  lib/                     constants, cultos, estudos, ministerios,
+                           programacao, youtube
   styles/                  um .css por componente + global.css
   assets/                  imagens, PDFs e fontes
 ```
@@ -81,7 +84,8 @@ continuam funcionando.
 ## Dados que vêm de fora do build
 
 **Vídeos dos cultos.** O workflow `.github/workflows/update-videos.yml` roda o
-script Python `scripts/save_last_three_youtube_videos.py` duas vezes por dia e
+script Python `scripts/save_last_three_youtube_videos.py` a cada 4 horas (6× por
+dia) e
 grava o `videos.json` na branch `data`. O hook `useLatestVideos()` consome esse
 arquivo direto do GitHub. Nem o script nem o workflow foram alterados na migração.
 
@@ -208,7 +212,23 @@ VITE_EMAILJS_TEMPLATE_ID=template_xxx
 VITE_EMAILJS_PUBLIC_KEY=xxxxxxxx
 ```
 
-O template do EmailJS precisa esperar os campos `nome`, `email` e `mensagem`.
+O template do EmailJS precisa esperar exatamente estes três campos. Eles são os
+atributos `name` dos inputs em `src/components/contato/ContactForm.tsx` — é esse
+arquivo que manda, não este README:
+
+| Campo | Conteúdo | No template do EmailJS |
+| --- | --- | --- |
+| `from_name` | nome de quem escreveu | `{{from_name}}` |
+| `reply_to` | e-mail de quem escreveu | `{{reply_to}}` |
+| `message` | a mensagem | `{{message}}` |
+
+O envio usa `emailjs.sendForm()`, que leva os campos do formulário pelo atributo
+`name`. **Se um nome não bater com a variável do template, o e-mail chega com
+aquele trecho em branco — e o site não acusa erro nenhum**, porque o envio foi
+aceito. Ao renomear um input, renomeie a variável no template junto.
+
+Vale também apontar o campo *Reply To* do template para `{{reply_to}}`: assim,
+responder o e-mail vai direto para quem escreveu, em vez da conta da igreja.
 
 Como o Vite injeta essas variáveis no build, elas também precisam existir no
 ambiente que gera o build de produção (GitHub Actions) e no projeto da Vercel.

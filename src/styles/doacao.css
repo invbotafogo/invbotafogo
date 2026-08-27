@@ -142,6 +142,7 @@
 }
 
 #copiar-btn{
+    font-family: inherit; /* <button> não herda a fonte sozinho */
     color: black;
     font-weight: bold;
     padding: 5px;
