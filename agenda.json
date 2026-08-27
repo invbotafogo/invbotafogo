@@ -1,0 +1,103 @@
+{
+  "rotulo": "Agosto de 2026",
+  "semanas": [
+    {
+      "rotulo": "Semana 1",
+      "intervalo": "1 a 8 de agosto",
+      "eventos": [
+        {
+          "dia": "SÁB",
+          "data": "01/08",
+          "titulo": "Consagração",
+          "horario": "8h",
+          "nota": "Obreiros/planejamento Dia das Crianças"
+        },
+        {
+          "dia": "DOM",
+          "data": "02/08",
+          "titulo": "Culto",
+          "horario": "10h e 19h",
+          "nota": "Ceia do Senhor / Ínicio Ensaio Dia das Crianças"
+        }
+      ]
+    },
+    {
+      "rotulo": "Semana 2",
+      "intervalo": "9 a 15 de agosto",
+      "eventos": [
+        {
+          "dia": "SEG",
+          "data": "10/08",
+          "titulo": "Jejum da Edificação",
+          "nota": "Início"
+        }
+      ]
+    },
+    {
+      "rotulo": "Semana 3",
+      "intervalo": "16 a 22 de agosto",
+      "eventos": [
+        {
+          "dia": "SEX",
+          "data": "21/08",
+          "titulo": "Encontro de Casados",
+          "horario": "19h45",
+          "nota": "12° Encontro de Casados"
+        }
+      ]
+    },
+    {
+      "rotulo": "Semana 4",
+      "intervalo": "23 a 29 de agosto",
+      "eventos": [
+        {
+          "dia": "QUA",
+          "data": "26/08",
+          "titulo": "Culto",
+          "horario": "19h30",
+          "nota": "Noite de Adoração e Clamor"
+        },
+        {
+          "dia": "SEX",
+          "data": "28/08",
+          "titulo": "Batismo / Luau",
+          "horario": "20h",
+          "nota": "Praia da Urca"
+        }
+      ]
+    },
+    {
+      "rotulo": "Semana 5",
+      "intervalo": "30 a 31 de agosto",
+      "eventos": [
+        {
+          "dia": "DOM",
+          "data": "30/08",
+          "titulo": "Culto",
+          "horario": "10h e 19h",
+          "nota": "Término Jejum da Edificação"
+        },
+        {
+          "dia": "SEG",
+          "data": "31/08",
+          "titulo": "Encontro de Amigas",
+          "horario": "19h",
+          "nota": "Reunião Mensal"
+        },
+        {
+          "dia": "SEG",
+          "data": "31/08",
+          "titulo": "Encontro de Guerreiros",
+          "horario": "19h",
+          "nota": "Reunião Mensal"
+        }
+      ]
+    }
+  ],
+  "atualizadoEm": "2026-08-27T04:21:54+00:00",
+  "fonte": {
+    "planilha": "1_fXS_OxpG3bQk-CO-d8uNVAvblU-KbEsXTaJDH_S8wU",
+    "aba": "Agosto",
+    "coluna": "F"
+  }
+}
