@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, ArrowLeft, Clock } from './icons';
-import { PROGRAMACAO_SEMANAL, PROGRAMACAO_MENSAL } from '../../lib/programacao';
+import { PROGRAMACAO_SEMANAL, type ProgramacaoMensal } from '../../lib/programacao';
+import { useProgramacaoMensal } from '../../hooks/useProgramacaoMensal';
 
 /* Hora atual no fuso de Brasília (independe do fuso do visitante) */
 const agoraSP = () =>
@@ -30,16 +31,16 @@ function proximoSlot() {
   return res;
 }
 
-/* Meses em português → índice (0 = janeiro) para ler PROGRAMACAO_MENSAL.rotulo */
+/* Meses em português → índice (0 = janeiro) para ler o rótulo da programação */
 const MESES_PT = [
   'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
   'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro',
 ];
 
-/* Índice da semana vigente dentro de PROGRAMACAO_MENSAL (Brasília).
+/* Índice da semana vigente dentro da programação mensal (Brasília).
    Retorna -1 se hoje estiver fora do mês/ano do calendário. */
-function semanaAtual(): number {
-  const lbl = (PROGRAMACAO_MENSAL.rotulo || '').toLowerCase();
+function semanaAtual(programacao: ProgramacaoMensal): number {
+  const lbl = (programacao.rotulo || '').toLowerCase();
   const mIdx = MESES_PT.findIndex((m) => lbl.includes(m));
   const ano = lbl.match(/\d{4}/);
   if (mIdx < 0 || !ano) return -1;
@@ -48,7 +49,7 @@ function semanaAtual(): number {
   if (n.getMonth() !== mIdx || n.getFullYear() !== Number(ano[0])) return -1;
 
   const hoje = n.getDate();
-  return PROGRAMACAO_MENSAL.semanas.findIndex((s) => {
+  return programacao.semanas.findIndex((s) => {
     const r = (s.intervalo || '').match(/(\d+)\s*a\s*(\d+)/);
     if (!r) return false;
     return hoje >= Number(r[1]) && hoje <= Number(r[2]);
@@ -65,11 +66,18 @@ export function EdCalendar() {
   const [semanaSelecionada, setSemanaSelecionada] = useState<number | null>(null);
   const proximo = useMemo(() => proximoSlot(), []);
 
+  /* Eventos extras do mês: vêm da planilha. A programação semanal acima é fixa. */
+  const {
+    programacao: programacaoMensal,
+    carregando: agendaCarregando,
+    erro: agendaComErro,
+  } = useProgramacaoMensal();
+
   const abrirMes = () => {
     setVerMes(true);
-    const atual = semanaAtual();
+    const atual = semanaAtual(programacaoMensal);
     setSemanaSelecionada(
-      atual >= 0 ? atual : PROGRAMACAO_MENSAL.semanas.findIndex((s) => s.eventos.length > 0),
+      atual >= 0 ? atual : programacaoMensal.semanas.findIndex((s) => s.eventos.length > 0),
     );
   };
 
@@ -82,7 +90,7 @@ export function EdCalendar() {
         ) : (
           <>
             <div className="week-badges">
-              {PROGRAMACAO_MENSAL.semanas.map((s, i) => (
+              {programacaoMensal.semanas.map((s, i) => (
                 <button
                   key={s.rotulo}
                   type="button"
@@ -133,13 +141,13 @@ export function EdCalendar() {
           <div className="agenda">
             {semanaSelecionada != null && semanaSelecionada >= 0 && (
               <p className="week-range">
-                {PROGRAMACAO_MENSAL.semanas[semanaSelecionada].intervalo}
+                {programacaoMensal.semanas[semanaSelecionada].intervalo}
               </p>
             )}
             {semanaSelecionada != null &&
             semanaSelecionada >= 0 &&
-            PROGRAMACAO_MENSAL.semanas[semanaSelecionada].eventos.length ? (
-              PROGRAMACAO_MENSAL.semanas[semanaSelecionada].eventos.map((ev) => (
+            programacaoMensal.semanas[semanaSelecionada].eventos.length ? (
+              programacaoMensal.semanas[semanaSelecionada].eventos.map((ev) => (
                 <div className="slot" key={`${ev.data}-${ev.titulo}`}>
                   <div className="day day-stack">
                     <span>{ev.dia}</span>
@@ -156,6 +164,10 @@ export function EdCalendar() {
                   </div>
                 </div>
               ))
+            ) : agendaCarregando ? (
+              <p className="week-hint">Carregando a agenda do mês…</p>
+            ) : agendaComErro ? (
+              <p className="week-hint">Não foi possível carregar a agenda agora.</p>
             ) : (
               <p className="week-hint">Sem eventos extras nesta semana.</p>
             )}

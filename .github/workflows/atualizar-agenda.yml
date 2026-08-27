@@ -1,0 +1,53 @@
+name: Atualizar agenda do mês
+
+# Fonte: planilha do Google Sheets (uma aba por mês, coluna F como controle).
+# Só as linhas marcadas com X viram eventos no calendário do site.
+# A programação semanal fixa não passa por aqui — ela mora no código.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 03:00 em Brasília, todo dia
+  workflow_dispatch:      # permite rodar na mão logo depois de mexer na planilha
+
+permissions:
+  contents: write
+
+jobs:
+  gerar-json:
+    runs-on: ubuntu-latest
+    environment: data
+    steps:
+      - name: Clonar o repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar Python e dependências
+        run: pip install requests
+
+      - name: Rodar script para gerar agenda.json
+        env:
+          GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
+          AGENDA_SHEET_ID: ${{ vars.AGENDA_SHEET_ID }}
+        run: python ./scripts/importar_agenda_do_sheets.py
+
+      # O script só grava o arquivo quando consegue ler a planilha. Se a leitura
+      # falhar, nada é publicado e o agenda.json anterior continua no ar.
+      # Um mês sem nenhum X gera um arquivo válido e vazio — tirar o X da
+      # planilha precisa mesmo tirar o evento do site.
+      - name: Publicar agenda.json na branch `data`
+        run: |
+          if [ ! -f agenda.json ]; then
+            echo "Planilha não pôde ser lida — mantendo o agenda.json anterior."
+            exit 0
+          fi
+
+          mv agenda.json /tmp/agenda.json
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git fetch origin data
+          git checkout data
+          cp /tmp/agenda.json agenda.json
+          git add agenda.json
+          git commit -m "Atualiza agenda.json" || echo "Sem mudanças"
+          git push origin data

@@ -5,3 +5,7 @@ dist/
 *.log
 .DS_Store
 .vite/
+
+# Gerado pelo workflow atualizar-agenda.yml e publicado na branch `data`.
+# Na main ele só aparece quando alguém roda o script para testar.
+agenda.json

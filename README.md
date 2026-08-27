@@ -85,6 +85,12 @@ script Python `scripts/save_last_three_youtube_videos.py` duas vezes por dia e
 grava o `videos.json` na branch `data`. O hook `useLatestVideos()` consome esse
 arquivo direto do GitHub. Nem o script nem o workflow foram alterados na migração.
 
+**Agenda do mês (Google Sheets).** Os eventos extras do mês vêm de uma planilha,
+não do código. O workflow `.github/workflows/atualizar-agenda.yml` roda o script
+`scripts/importar_agenda_do_sheets.py` todo dia às 3h de Brasília e grava o
+`agenda.json` na branch `data`; o hook `useProgramacaoMensal()` consome esse
+arquivo. Veja a seção "Agenda do mês" abaixo.
+
 **PDFs e imagens das aulas.** São servidos direto do repositório via
 `raw.githubusercontent.com/.../main/src/assets/...` (constante `ASSETS_RAW_BASE`
 em `src/lib/constants.ts`).
@@ -92,6 +98,78 @@ em `src/lib/constants.ts`).
 > ⚠️ **Não mova a pasta `src/assets/`.** Esses links dependem do caminho exato do
 > arquivo dentro do repositório. Mover a pasta quebra os PDFs e as imagens de
 > todas as aulas de uma vez.
+
+---
+
+## Agenda do mês (Google Sheets)
+
+O calendário da home tem duas partes, e só uma delas vem da planilha:
+
+| Parte | De onde vem | Como mudar |
+| --- | --- | --- |
+| Programação **semanal** (EBD, cultos de domingo, quarta e quinta) | Fixa no código | `PROGRAMACAO_SEMANAL` em `src/lib/programacao.ts` |
+| Eventos **extras do mês** | Planilha do Google Sheets | Marcar `X` na coluna de controle |
+
+### A regra
+
+Uma aba por mês. Numa linha, o `X` na **coluna F** publica aquele evento no
+site; célula vazia, o evento não aparece. Maiúscula/minúscula e espaços não
+importam. As colunas lidas são:
+
+| Coluna | Conteúdo | Vira o quê no site |
+| --- | --- | --- |
+| A | Dia da semana | nada (o site calcula pelo dia da data) |
+| B | Data `DD/MM` | data do card — células mescladas repetem a última data preenchida |
+| C | Evento | título do card |
+| D | Horário | horário do card (`19:30` vira `19h30`) |
+| E | Observação | texto dourado abaixo do título |
+| F | **Controle** | `X` publica; vazio não publica |
+
+Linha marcada com `X` mas sem nada na coluna C usa a observação como título —
+é o caso dos feriados.
+
+### Configuração
+
+Tudo que descreve a planilha está no bloco `CONFIGURAÇÃO DA PLANILHA`, no topo
+de `scripts/importar_agenda_do_sheets.py`. Só ali. Para trocar de planilha,
+mudar a coluna de controle ou a faixa lida, é esse bloco que se edita.
+
+Duas coisas ficam fora do código, nas configurações do repositório
+(*Settings → Secrets and variables → Actions*), no environment `data`:
+
+| Onde | Nome | O que é |
+| --- | --- | --- |
+| Variable | `AGENDA_SHEET_ID` | o trecho entre `/d/` e `/edit` na URL da planilha |
+| Secret | `GOOGLE_SHEETS_API_KEY` | chave da API do Google com a **Google Sheets API** ativada |
+
+A chave nunca chega ao navegador: quem fala com o Google é o GitHub Actions, e
+o site só lê o `agenda.json` já pronto.
+
+A planilha precisa estar compartilhada como *"qualquer pessoa com o link pode
+ver"* — é o que a chave de API exige.
+
+### No dia a dia
+
+Alterou a planilha, o site acompanha na próxima execução (3h da manhã). Para
+ver antes, rode o workflow na mão em *Actions → Atualizar agenda do mês → Run
+workflow*.
+
+- pôr `X` → o evento passa a aparecer;
+- tirar `X` → o evento some;
+- mudar horário, observação ou data → o card muda junto;
+- linha nova com `X` → card novo, na semana certa.
+
+Se a planilha não puder ser lida (chave errada, aba do mês faltando, Google
+fora do ar), o `agenda.json` anterior continua no ar e o log do workflow diz o
+motivo. Se a planilha for lida e nenhuma linha estiver marcada, o mês fica
+mesmo vazio — tirar o `X` precisa tirar o evento do site.
+
+`PROGRAMACAO_MENSAL`, em `src/lib/programacao.ts`, está **vazia de propósito**.
+Não há mais cadastro manual de evento no código: dado escrito à mão ali
+esconderia uma integração quebrada, porque o site mostraria o mês antigo como
+se estivesse tudo certo. Enquanto o `agenda.json` carrega, o calendário diz
+"Carregando a agenda do mês…"; se ele não vier, diz "Não foi possível carregar
+a agenda agora" — a falha aparece, em vez de virar um mês sem eventos.
 
 ---
 
