@@ -130,18 +130,29 @@
     line-height: 1.2;
 }
 
-/* Hover: brilho de fundo e sombra (borda da cor padrão no mobile; na web ver @media abaixo) */
-/* Hover: brilho de fundo e um anel fino claro. O realce NÃO usa mais
-   `border-color` — isso pintaria a barra dourada da esquerda. */
+/*
+ * Hover: só o brilho de fundo.
+ *
+ * Havia aqui um anel branco de 1px (`box-shadow: 0 0 0 1px`) que lia como
+ * borda. Saiu a pedido. A sombra funda continua vindo da regra base do card,
+ * então o cartão não perde profundidade ao passar o mouse.
+ *
+ * O realce nunca usou `border-color`: isso pintaria a barra dourada da
+ * esquerda junto.
+ */
 .section-ministerios .cards-container .card:hover {
     background: rgba(201, 168, 76, 0.18);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5), 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Web (≥768px): anel branco fino no hover/foco, preservando a barra dourada */
+/*
+ * Web (≥768px): o anel claro sobrou APENAS como indicador de foco de teclado.
+ *
+ * Ele saiu de `:hover` e `:active` — passar o mouse agora só acende o fundo.
+ * Em `:focus-visible` ele precisa ficar: o `outline: none` logo abaixo remove
+ * o anel padrão do navegador, e sem nada no lugar quem navega por Tab não
+ * enxergaria mais qual card está selecionado.
+ */
 @media (min-width: 768px) {
-    .section-ministerios .cards-container .card:hover,
-    .section-ministerios .cards-container .card:active,
     .section-ministerios .cards-container .card:focus-visible {
         outline: none;
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6), 0 8px 40px rgba(0, 0, 0, 0.6);
