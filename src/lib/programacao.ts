@@ -79,6 +79,37 @@ export interface ProgramacaoMensal {
 export const AGENDA_JSON_URL =
   'https://raw.githubusercontent.com/invbotafogo/invbotafogo/refs/heads/data/agenda.json';
 
+export const MESES_PT = [
+  'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+  'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro',
+];
+
+/** Lê "Setembro de 2026" e devolve { mes: 8, ano: 2026 }. Nulo se não entender. */
+export function mesDoRotulo(rotulo: string): { mes: number; ano: number } | null {
+  const texto = (rotulo || '').toLowerCase();
+  const mes = MESES_PT.findIndex((m) => texto.includes(m));
+  const ano = texto.match(/\d{4}/);
+  if (mes < 0 || !ano) return null;
+  return { mes, ano: Number(ano[0]) };
+}
+
+/**
+ * A agenda publicada é mesmo a do mês em que estamos?
+ *
+ * A sincronização acontece uma vez por mês, no dia 1. Se ela falhar, o
+ * agenda.json do mês anterior continua no ar — JSON válido, mês errado. Sem
+ * esta verificação o site mostraria a agenda de agosto durante setembro
+ * inteiro, sem nenhum sinal de que algo deu errado.
+ */
+export function ehDoMesCorrente(rotulo: string, agora: Date): boolean {
+  const referencia = mesDoRotulo(rotulo);
+  return (
+    !!referencia &&
+    referencia.mes === agora.getMonth() &&
+    referencia.ano === agora.getFullYear()
+  );
+}
+
 function ehEventoMensal(valor: unknown): valor is EventoMensal {
   const e = valor as EventoMensal;
   return !!e && typeof e.dia === 'string' && typeof e.data === 'string'

@@ -87,9 +87,12 @@ arquivo direto do GitHub. Nem o script nem o workflow foram alterados na migraç
 
 **Agenda do mês (Google Sheets).** Os eventos extras do mês vêm de uma planilha,
 não do código. O workflow `.github/workflows/atualizar-agenda.yml` roda o script
-`scripts/importar_agenda_do_sheets.py` todo dia às 3h de Brasília e grava o
-`agenda.json` na branch `data`; o hook `useProgramacaoMensal()` consome esse
-arquivo. Veja a seção "Agenda do mês" abaixo.
+`scripts/importar_agenda_do_sheets.py` **no dia 1 de cada mês**, às 3h de
+Brasília, e grava o `agenda.json` na branch `data`; o hook
+`useProgramacaoMensal()` consome esse arquivo. A planilha é fonte de
+atualização mensal, não de consulta em tempo real — o Sheets é chamado 12 vezes
+por ano, e nunca pelo navegador de quem visita. Veja a seção "Agenda do mês"
+abaixo.
 
 **PDFs e imagens das aulas.** São servidos direto do repositório via
 `raw.githubusercontent.com/.../main/src/assets/...` (constante `ASSETS_RAW_BASE`
@@ -148,21 +151,42 @@ o site só lê o `agenda.json` já pronto.
 A planilha precisa estar compartilhada como *"qualquer pessoa com o link pode
 ver"* — é o que a chave de API exige.
 
-### No dia a dia
+### Quando a sincronização acontece
 
-Alterou a planilha, o site acompanha na próxima execução (3h da manhã). Para
-ver antes, rode o workflow na mão em *Actions → Atualizar agenda do mês → Run
-workflow*.
+**Uma vez por mês, no dia 1 às 3h de Brasília.** A agenda daquele mês fica
+publicada e serve o mês inteiro, sem nenhuma consulta nova ao Sheets — nem pelo
+workflow, nem pelo navegador de quem abre o site.
+
+Prepare o mês na planilha **antes do dia 1**. Para qualquer mudança fora dessa
+janela — corrigir um horário, incluir um evento que surgiu no meio do mês,
+refazer a sincronização que falhou — rode na mão em *Actions → Atualizar agenda
+do mês → Run workflow*. Leva um minuto e vale para o que estiver marcado
+naquele momento.
 
 - pôr `X` → o evento passa a aparecer;
 - tirar `X` → o evento some;
 - mudar horário, observação ou data → o card muda junto;
 - linha nova com `X` → card novo, na semana certa.
 
+A execução é **idempotente**: o script monta o mês inteiro do zero e sobrescreve
+o `agenda.json`. Rodar duas vezes no mesmo mês dá exatamente o mesmo arquivo,
+sem duplicar evento; se nada mudou, o commit nem acontece ("Sem mudanças").
+
+### Quando alguma coisa falha
+
 Se a planilha não puder ser lida (chave errada, aba do mês faltando, Google
-fora do ar), o `agenda.json` anterior continua no ar e o log do workflow diz o
-motivo. Se a planilha for lida e nenhuma linha estiver marcada, o mês fica
-mesmo vazio — tirar o `X` precisa tirar o evento do site.
+fora do ar), o script sai com erro **sem escrever o arquivo**: a execução
+aparece vermelha no Actions, o GitHub avisa o dono do repositório por e-mail, e
+o log diz o motivo. Rode de novo na mão depois de corrigir.
+
+Nesse caso o `agenda.json` do mês anterior continua sendo servido — JSON válido,
+mês errado. O site percebe isso: compara o mês do arquivo com o mês corrente e,
+se não baterem, mostra **"A agenda deste mês ainda não foi publicada"** em vez
+dos eventos do mês passado. Um mês sem sincronização fica visível, não passa por
+mês tranquilo.
+
+Se a planilha for lida e nenhuma linha estiver marcada, o mês fica mesmo vazio —
+tirar o `X` precisa tirar o evento do site.
 
 `PROGRAMACAO_MENSAL`, em `src/lib/programacao.ts`, está **vazia de propósito**.
 Não há mais cadastro manual de evento no código: dado escrito à mão ali

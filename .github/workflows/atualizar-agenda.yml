@@ -3,11 +3,15 @@ name: Atualizar agenda do mês
 # Fonte: planilha do Google Sheets (uma aba por mês, coluna F como controle).
 # Só as linhas marcadas com X viram eventos no calendário do site.
 # A programação semanal fixa não passa por aqui — ela mora no código.
+#
+# A agenda é MENSAL: roda uma vez, no dia 1, e o resultado serve o mês inteiro.
+# Ninguém consulta o Sheets de novo até a virada do mês — nem o site, nem o
+# workflow. São 12 chamadas por ano, independentemente do tráfego.
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # 03:00 em Brasília, todo dia
-  workflow_dispatch:      # permite rodar na mão logo depois de mexer na planilha
+    - cron: '0 6 1 * *'  # dia 1 de cada mês, 03:00 em Brasília
+  workflow_dispatch:      # execução manual: correção no meio do mês ou falha do dia 1
 
 permissions:
   contents: write

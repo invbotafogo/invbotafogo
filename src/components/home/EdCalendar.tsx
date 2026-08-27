@@ -1,7 +1,15 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, ArrowLeft, Clock } from './icons';
-import { PROGRAMACAO_SEMANAL, type ProgramacaoMensal } from '../../lib/programacao';
+import {
+  PROGRAMACAO_SEMANAL,
+  ehDoMesCorrente,
+  mesDoRotulo,
+  type ProgramacaoMensal,
+} from '../../lib/programacao';
 import { useProgramacaoMensal } from '../../hooks/useProgramacaoMensal';
+
+/* Nada para mostrar: agenda carregando, com erro, ou de outro mês. */
+const SEM_PROGRAMACAO: ProgramacaoMensal = { rotulo: '', semanas: [] };
 
 /* Hora atual no fuso de Brasília (independe do fuso do visitante) */
 const agoraSP = () =>
@@ -31,22 +39,14 @@ function proximoSlot() {
   return res;
 }
 
-/* Meses em português → índice (0 = janeiro) para ler o rótulo da programação */
-const MESES_PT = [
-  'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
-  'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro',
-];
-
 /* Índice da semana vigente dentro da programação mensal (Brasília).
    Retorna -1 se hoje estiver fora do mês/ano do calendário. */
 function semanaAtual(programacao: ProgramacaoMensal): number {
-  const lbl = (programacao.rotulo || '').toLowerCase();
-  const mIdx = MESES_PT.findIndex((m) => lbl.includes(m));
-  const ano = lbl.match(/\d{4}/);
-  if (mIdx < 0 || !ano) return -1;
+  const referencia = mesDoRotulo(programacao.rotulo);
+  if (!referencia) return -1;
 
   const n = agoraSP();
-  if (n.getMonth() !== mIdx || n.getFullYear() !== Number(ano[0])) return -1;
+  if (n.getMonth() !== referencia.mes || n.getFullYear() !== referencia.ano) return -1;
 
   const hoje = n.getDate();
   return programacao.semanas.findIndex((s) => {
@@ -73,12 +73,35 @@ export function EdCalendar() {
     erro: agendaComErro,
   } = useProgramacaoMensal();
 
+  /*
+   * A sincronização é mensal. Se a do dia 1 falhar, o agenda.json do mês
+   * passado continua sendo servido — válido, porém do mês errado. Melhor dizer
+   * que não sincronizou do que exibir setembro com os eventos de agosto.
+   */
+  const agendaDeOutroMes =
+    !agendaCarregando &&
+    !agendaComErro &&
+    !ehDoMesCorrente(programacaoMensal.rotulo, agoraSP());
+
+  /* Enquanto a agenda não é confiável, não há semana nenhuma para mostrar. */
+  const agendaValida = !agendaCarregando && !agendaComErro && !agendaDeOutroMes;
+  const programacao = agendaValida ? programacaoMensal : SEM_PROGRAMACAO;
+
+  /*
+   * A semana aberta é derivada, não guardada no clique: a agenda chega depois
+   * da primeira renderização, e um índice escolhido antes dela ficaria preso
+   * no valor errado. `semanaSelecionada` só existe quando a pessoa escolhe.
+   */
+  const semanaPadrao = useMemo(() => {
+    const atual = semanaAtual(programacao);
+    return atual >= 0 ? atual : programacao.semanas.findIndex((s) => s.eventos.length > 0);
+  }, [programacao]);
+
+  const semanaAberta = semanaSelecionada ?? semanaPadrao;
+
   const abrirMes = () => {
     setVerMes(true);
-    const atual = semanaAtual(programacaoMensal);
-    setSemanaSelecionada(
-      atual >= 0 ? atual : programacaoMensal.semanas.findIndex((s) => s.eventos.length > 0),
-    );
+    setSemanaSelecionada(null);
   };
 
   return (
@@ -90,11 +113,11 @@ export function EdCalendar() {
         ) : (
           <>
             <div className="week-badges">
-              {programacaoMensal.semanas.map((s, i) => (
+              {programacao.semanas.map((s, i) => (
                 <button
                   key={s.rotulo}
                   type="button"
-                  className={`week-badge ${semanaSelecionada === i ? 'on' : ''}`}
+                  className={`week-badge ${semanaAberta === i ? 'on' : ''}`}
                   onClick={() => setSemanaSelecionada(i)}
                 >
                   {s.rotulo}
@@ -139,15 +162,13 @@ export function EdCalendar() {
           </>
         ) : (
           <div className="agenda">
-            {semanaSelecionada != null && semanaSelecionada >= 0 && (
+            {semanaAberta >= 0 && (
               <p className="week-range">
-                {programacaoMensal.semanas[semanaSelecionada].intervalo}
+                {programacao.semanas[semanaAberta].intervalo}
               </p>
             )}
-            {semanaSelecionada != null &&
-            semanaSelecionada >= 0 &&
-            programacaoMensal.semanas[semanaSelecionada].eventos.length ? (
-              programacaoMensal.semanas[semanaSelecionada].eventos.map((ev) => (
+            {semanaAberta >= 0 && programacao.semanas[semanaAberta].eventos.length ? (
+              programacao.semanas[semanaAberta].eventos.map((ev) => (
                 <div className="slot" key={`${ev.data}-${ev.titulo}`}>
                   <div className="day day-stack">
                     <span>{ev.dia}</span>
@@ -168,6 +189,8 @@ export function EdCalendar() {
               <p className="week-hint">Carregando a agenda do mês…</p>
             ) : agendaComErro ? (
               <p className="week-hint">Não foi possível carregar a agenda agora.</p>
+            ) : agendaDeOutroMes ? (
+              <p className="week-hint">A agenda deste mês ainda não foi publicada.</p>
             ) : (
               <p className="week-hint">Sem eventos extras nesta semana.</p>
             )}
