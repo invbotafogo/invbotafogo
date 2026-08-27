@@ -7,7 +7,7 @@
     background-color: #14110e;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../assets/images/image.jpg');
+        url('../assets/images/image.webp');
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: 100% 100%, cover;

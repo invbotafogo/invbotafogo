@@ -55,7 +55,7 @@ src/
   lib/                     constants, cultos, estudos, ministerios,
                            programacao, youtube
   styles/                  um .css por componente + global.css
-  assets/                  imagens, PDFs e fontes
+  assets/                  imagens e PDFs das aulas
 ```
 
 ### Estilos

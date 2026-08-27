@@ -1,12 +1,12 @@
 /* Migrado de src/css/styles.css — regras preservadas na ordem original. */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@400;500;700&display=swap');
 
-/* Fundo da foto: fixed na viewport; foto em cover (preenche web e mobile); degradê cobre a tela inteira. Mesmo padrão nas páginas que usam image.jpg */
+/* Fundo da foto: fixed na viewport; foto em cover (preenche web e mobile); degradê cobre a tela inteira. Mesmo padrão nas páginas que usam image.webp */
 .section-index{
     background-color: #14110e;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
-        url('../assets/images/image.jpg');
+        url('../assets/images/image.webp');
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: 100% 100%, cover;
