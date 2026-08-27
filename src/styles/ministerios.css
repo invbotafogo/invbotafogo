@@ -175,9 +175,15 @@
     letter-spacing: 0.04em;
     line-height: 1.22;
     max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
+    /*
+     * O nome do card nunca quebra no meio da palavra: os nomes são curtos e
+     * cabem nas larguras usadas hoje. Se algum dia entrar um ministério de
+     * nome mais longo que a caixa, ele vai transbordar em vez de quebrar —
+     * o sinal de que o tamanho da fonte precisa de ajuste, não a quebra.
+     */
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 /* Ministérios — mobile: cards 250×250 com padding 24px (referência layout) */
@@ -1137,14 +1143,6 @@ body:has(.section-ministerios #expanded-content:not(.hidden)) {
     }
 }
 
-/* ---- 3: Remove hifenização nos cards de ministérios ---- */
-.section-ministerios .cards-container .card-name,
-.section-ministerios .cards-container .card-label {
-    hyphens: none !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-}
-
 /* ---- 4: Corrige texto sobreposto no painel expandido mobile ---- */
 @media (max-width: 1024px) {
     .section-ministerios:has(#expanded-content:not(.hidden)) {
@@ -1195,10 +1193,8 @@ body:has(.section-ministerios #expanded-content:not(.hidden)) {
     }
 }
 
+/* Tamanho fixo do nome do card — sobrepõe de propósito o clamp da regra base. */
 .section-ministerios .cards-container .card-name {
-    hyphens: none !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
     font-size: 13px !important;
 }
 

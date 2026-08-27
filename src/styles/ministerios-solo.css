@@ -167,10 +167,28 @@ body:has(.section-ministerios.section-ministerios--solo #expanded-content:not(.h
 /* ---------- 5. Texto ---------- */
 
 .section-ministerios--solo .ministerio-solo__texto {
-    /* O card é largo, mas a linha de texto fica numa medida legível
-       (~80 caracteres) e centrada. */
-    max-width: none;
-    margin: 0 0 12px;
+    /*
+     * Bloco centrado no card, texto alinhado à esquerda dentro dele.
+     *
+     * São duas coisas diferentes, e é a combinação que faz o card funcionar:
+     * `margin: 0 auto` centra a CAIXA (ela não fica jogada na borda), e
+     * `text-align: left` dá ao texto um eixo de leitura — toda linha começa
+     * no mesmo ponto. Centralizar o texto tira esse eixo: cada linha passa a
+     * começar num lugar diferente, e o olho perde o começo da linha seguinte.
+     *
+     * No celular esse ponto de início cai na mesma coluna das gaivotas (✓) da
+     * lista de atividades, então parágrafo e lista dividem a mesma margem.
+     *
+     * A largura máxima é o que segura a leitura em tela grande: o card chega
+     * a 1120px e, sem limite, a linha passava de 120 caracteres. No celular
+     * ela nem chega a valer — a tela já é mais estreita que 65ch.
+     *
+     * O kicker e o nome do ministério, acima, seguem centralizados (vêm do
+     * `text-align: center` do card): título centrado sobre bloco de texto
+     * alinhado é o mesmo arranjo da seção "Quem somos" da home no desktop.
+     */
+    max-width: 65ch;
+    margin: 0 auto 12px;
     font-size: clamp(0.95rem, 2.8vw, 1rem);
     line-height: 1.7;
     color: var(--solo-paper);

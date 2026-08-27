@@ -21,22 +21,54 @@ export interface Ministerio {
   atividades: string[];
 }
 
+/**
+ * A ORDEM DESTE ARRAY É A ORDEM DA TELA.
+ *
+ * É ela que define a sequência dos cards em /ministerios e a lista do rodapé
+ * (Footer.tsx fatia este mesmo array em duas colunas). Não há nenhuma
+ * ordenação em tempo de execução: para mover um card, mova o bloco aqui.
+ *
+ * Regra em vigor:
+ *   1. os "Ministério de/da" vêm primeiro, em ordem alfabética pelo `nome`;
+ *   2. o "Grupo de Guerreiros" fecha a lista, por não ser um ministério.
+ *
+ * Ao acrescentar um ministério novo, encaixe-o na posição alfabética — o
+ * Guerreiros continua sendo o último.
+ */
 export const MINISTERIOS: Ministerio[] = [
   {
-    id: 'louvor',
+    id: 'comunicacoes',
     label: 'Ministério de',
-    nome: 'Louvor',
-    icone: 'fa-solid fa-music',
-    imagem: louvor,
-    imagemAlt: 'Ministério de Louvor',
+    nome: 'Comunicações',
+    icone: 'fa-solid fa-tower-broadcast',
+    imagem: comunicacoes,
+    imagemAlt: 'Ministério de Comunicações',
     paragrafos: [
-      'O Ministério de Louvor tem como missão conduzir a igreja à adoração a Deus com reverência, excelência e sensibilidade espiritual. Por meio da música, buscamos preparar os corações para receber a Palavra e promover um ambiente de comunhão com o Espírito Santo. Nosso foco não está na performance, mas no serviço ao altar — com dedicação, santidade e amor pela presença de Deus.',
+      'O Ministério de Comunicação tem como missão propagar a Palavra de Deus e as ações da igreja, por meio de mensagens, fotos e vídeos em nossas redes sociais. Também buscamos fortalecer a identidade visual da igreja e apoiar outros ministérios em suas necessidades de comunicação.',
     ],
     atividades: [
-      'Conduzir momentos de louvor e adoração durante os cultos e eventos da igreja',
-      'Interceder espiritualmente por meio da música, promovendo cura, libertação e encorajamento',
-      'Preparar espiritualmente o ambiente para a ministração da Palavra de Deus',
-      'Promover unidade e sensibilidade ao mover do Espírito Santo em cada ministração',
+      'Produção de material audiovisual para as redes sociais',
+      'Atualização e manutenção do site da igreja',
+      'Apoio na criação de conteúdo para eventos e apresentações internas e externas',
+      'Operação e gerenciamento dos equipamentos de mídia utilizados nas transmissões dos eventos',
+    ],
+  },
+  {
+    id: 'evangelismo',
+    label: 'Ministério de',
+    nome: 'Evangelismo',
+    icone: 'fa-solid fa-book-bible',
+    imagem: evangelismo,
+    imagemAlt: 'Ministério de Evangelismo',
+    paragrafos: [
+      'O Ministério de Evangelismo tem como propósitos basilares proclamar o Evangelho de Cristo para despertar a fé nas pessoas, com o objetivo de levá-las a uma decisão de salvação, capacitar a igreja para cumprir a Grande Comissão e promover a integração dos novos convertidos ao corpo de Cristo.',
+    ],
+    atividades: [
+      'Desenvolver a capacitação pessoal para o evangelismo, com estudos direcionados para esse fim',
+      'Preparar um programa de evangelização que ofereça a oportunidade de todos participarem, segundo os dons recebidos por Deus',
+      'Promover evangelização em locais públicos (rua, hospitais e presídios) e nos lares',
+      'Promover imediata integração dos novos convertidos ao seio da Igreja',
+      'Estimular e apoiar projetos evangelísticos elaborados por outros ministérios da Igreja',
     ],
   },
   {
@@ -75,20 +107,19 @@ export const MINISTERIOS: Ministerio[] = [
     ],
   },
   {
-    id: 'comunicacoes',
+    id: 'introducao',
     label: 'Ministério de',
-    nome: 'Comunicações',
-    icone: 'fa-solid fa-tower-broadcast',
-    imagem: comunicacoes,
-    imagemAlt: 'Ministério de Comunicações',
+    nome: 'Introdução',
+    icone: 'fa-solid fa-handshake',
+    imagem: intro,
+    imagemAlt: 'Ministério de Introdução e recepção',
     paragrafos: [
-      'O Ministério de Comunicação tem como missão propagar a Palavra de Deus e as ações da igreja, por meio de mensagens, fotos e vídeos em nossas redes sociais. Também buscamos fortalecer a identidade visual da igreja e apoiar outros ministérios em suas necessidades de comunicação.',
+      'O Ministério de Introdução & Recepção tem como responsabilidade garantir que todos os que chegam à igreja sejam bem recebidos com cordialidade e cuidado. Além disso, oferece suporte nas atividades internas, colaborando para o bom andamento dos cultos e eventos.',
     ],
     atividades: [
-      'Produção de material audiovisual para as redes sociais',
-      'Atualização e manutenção do site da igreja',
-      'Apoio na criação de conteúdo para eventos e apresentações internas e externas',
-      'Operação e gerenciamento dos equipamentos de mídia utilizados nas transmissões dos eventos',
+      'Auxiliar no bom funcionamento dos cultos e eventos da igreja',
+      'Dar apoio aos pastores, membros e demais ministérios',
+      'Servir com zelo na preparação da ceia, recepção e manutenção do templo',
     ],
   },
   {
@@ -106,6 +137,23 @@ export const MINISTERIOS: Ministerio[] = [
       'Encontros semanais para estudo da Bíblia e oração',
       'Comunhão e integração dos jovens',
       'Discipulado e suporte espiritual para os jovens',
+    ],
+  },
+  {
+    id: 'louvor',
+    label: 'Ministério de',
+    nome: 'Louvor',
+    icone: 'fa-solid fa-music',
+    imagem: louvor,
+    imagemAlt: 'Ministério de Louvor',
+    paragrafos: [
+      'O Ministério de Louvor tem como missão conduzir a igreja à adoração a Deus com reverência, excelência e sensibilidade espiritual. Por meio da música, buscamos preparar os corações para receber a Palavra e promover um ambiente de comunhão com o Espírito Santo. Nosso foco não está na performance, mas no serviço ao altar — com dedicação, santidade e amor pela presença de Deus.',
+    ],
+    atividades: [
+      'Conduzir momentos de louvor e adoração durante os cultos e eventos da igreja',
+      'Interceder espiritualmente por meio da música, promovendo cura, libertação e encorajamento',
+      'Preparar espiritualmente o ambiente para a ministração da Palavra de Deus',
+      'Promover unidade e sensibilidade ao mover do Espírito Santo em cada ministração',
     ],
   },
   {
@@ -140,40 +188,6 @@ export const MINISTERIOS: Ministerio[] = [
       'Incentivar cada homem a orar, estudar a Palavra e buscar a santificação',
       'Estimular amizades saudáveis e oferecer apoio emocional e espiritual entre os irmãos',
       'Criar um ambiente onde os homens possam compartilhar suas lutas, desafios e vitórias',
-    ],
-  },
-  {
-    id: 'introducao',
-    label: 'Ministério de',
-    nome: 'Introdução',
-    icone: 'fa-solid fa-handshake',
-    imagem: intro,
-    imagemAlt: 'Ministério de Introdução e recepção',
-    paragrafos: [
-      'O Ministério de Introdução & Recepção tem como responsabilidade garantir que todos os que chegam à igreja sejam bem recebidos com cordialidade e cuidado. Além disso, oferece suporte nas atividades internas, colaborando para o bom andamento dos cultos e eventos.',
-    ],
-    atividades: [
-      'Auxiliar no bom funcionamento dos cultos e eventos da igreja',
-      'Dar apoio aos pastores, membros e demais ministérios',
-      'Servir com zelo na preparação da ceia, recepção e manutenção do templo',
-    ],
-  },
-  {
-    id: 'evangelismo',
-    label: 'Ministério de',
-    nome: 'Evangelismo',
-    icone: 'fa-solid fa-book-bible',
-    imagem: evangelismo,
-    imagemAlt: 'Ministério de Evangelismo',
-    paragrafos: [
-      'O Ministério de Evangelismo tem como propósitos basilares proclamar o Evangelho de Cristo para despertar a fé nas pessoas, com o objetivo de levá-las a uma decisão de salvação, capacitar a igreja para cumprir a Grande Comissão e promover a integração dos novos convertidos ao corpo de Cristo.',
-    ],
-    atividades: [
-      'Desenvolver a capacitação pessoal para o evangelismo, com estudos direcionados para esse fim',
-      'Preparar um programa de evangelização que ofereça a oportunidade de todos participarem, segundo os dons recebidos por Deus',
-      'Promover evangelização em locais públicos (rua, hospitais e presídios) e nos lares',
-      'Promover imediata integração dos novos convertidos ao seio da Igreja',
-      'Estimular e apoiar projetos evangelísticos elaborados por outros ministérios da Igreja',
     ],
   },
 ];
