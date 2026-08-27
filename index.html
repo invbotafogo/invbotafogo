@@ -17,10 +17,27 @@
         }
     </style>
     <script>
+        /*
+         * Cortina de abertura: esconde a página até ela ter conteúdo de verdade.
+         *
+         * Libera no DOMContentLoaded — nesse ponto o HTML já foi analisado e o
+         * módulo main.tsx (adiado por padrão) já montou o React. Antes isto
+         * esperava o evento `load`, que só dispara depois da foto de fundo, dos
+         * iframes e de tudo o que vem de CDN externo: a página ficava preta
+         * mesmo estando pronta.
+         *
+         * O setTimeout é o teto, não um atraso — vale o que vier primeiro. Ele
+         * cobre o caso em que uma folha de estilo externa (Font Awesome, Google
+         * Fonts) está lenta ou fora do ar: sem ele, o site não aparece.
+         */
         document.documentElement.classList.add('preload-lock');
-        window.addEventListener('load', function () {
+
+        function liberarTela() {
             document.documentElement.classList.remove('preload-lock');
-        });
+        }
+
+        document.addEventListener('DOMContentLoaded', liberarTela);
+        setTimeout(liberarTela, 1200);
     </script>
     <title>INVB - Igreja Nova Vida de Botafogo</title>
     <meta name="description" content="Igreja Nova Vida de Botafogo — Não apenas uma Igreja, mas uma Família! Rua da Matriz, 95 - Botafogo, RJ.">
