@@ -19,6 +19,11 @@ export interface Aula {
 export interface Tema {
   id: string;
   titulo: string;
+  /**
+   * Capa do tema, usada na faixa do painel e na miniatura do índice.
+   * Sem capa, a interface cai no marcador listrado — nada quebra.
+   */
+  capa?: string;
   aulas: Aula[];
 }
 
@@ -27,6 +32,8 @@ export const TEMAS_EBD: Tema[] = [
   {
     id: 'apocalipse',
     titulo: 'Apocalipse',
+    // Sem arte própria: usa a miniatura do vídeo da Aula 1 no YouTube.
+    capa: 'https://img.youtube.com/vi/W-9M-PvIs3I/hqdefault.jpg',
     aulas: [
       { titulo: 'Aula 1', videoId: 'W-9M-PvIs3I', pdf: `${PDF}/APOCALIPSE_Aula1.pdf` },
       { titulo: 'Aula 2', videoId: 'UjytdzVytzI', pdf: `${PDF}/APOCALIPSE_Aula2.pdf` },
@@ -54,6 +61,7 @@ export const TEMAS_EBD: Tema[] = [
   {
     id: 'espirito_santo',
     titulo: 'Espírito Santo',
+    capa: `${IMG_ES}/1.webp`,
     aulas: [
       { titulo: 'Quem é o Espírito Santo?', imagem: `${IMG_ES}/1.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ESPIRITO_Aula1.pdf` },
       { titulo: 'Os símbolos do Espírito Santo', imagem: `${IMG_ES}/2.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ESPIRITO_Aula2.pdf` },
@@ -77,6 +85,7 @@ export const TEMAS_EBD: Tema[] = [
   {
     id: 'cristologia',
     titulo: 'Cristologia',
+    capa: `${IMG_CR}/1.webp`,
     aulas: [
       { titulo: 'Cristologia - Parte I', imagem: `${IMG_CR}/1.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula1.pdf` },
       { titulo: 'Cristologia - Parte II', imagem: `${IMG_CR}/2.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/CRISTOLOGIA_Aula2.pdf` },
@@ -100,6 +109,7 @@ export const TEMAS_EBD: Tema[] = [
   {
     id: 'oracao',
     titulo: 'Oração',
+    capa: `${IMG_OR}/1.webp`,
     // Capas em src/assets/imagesOR, apostilas em src/assets/pdfs.
     // As aulas 2 a 16 já estão escritas: descomente cada uma conforme o
     // material for para o repositório (imagem + PDF no branch main).
@@ -129,6 +139,7 @@ export const TEMAS_CAPACITACAO: Tema[] = [
   {
     id: 'evangelismo',
     titulo: 'Evangelismo',
+    capa: `${IMG_CC}/evangelismo.jpg`,
     aulas: [
       { titulo: 'Capacitação para o Evangelismo - Parte I', videoId: 'Hodgcydb7aY' },
       { titulo: 'Capacitação para o Evangelismo - Parte II', videoId: 'l2SjPiQY2do' },
@@ -140,6 +151,7 @@ export const TEMAS_CAPACITACAO: Tema[] = [
   {
     id: 'capelania',
     titulo: 'Capelania Cristã',
+    capa: `${IMG_CC}/capelania.jpg`,
     aulas: [
       { titulo: 'Apostila', imagem: `${IMG_CC}/capelania.jpg`, imagemClasse: 'video-thumb', pdf: `${PDF}/CAPELANIA.pdf` },
     ],

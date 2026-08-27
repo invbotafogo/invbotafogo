@@ -1,83 +1,279 @@
-/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+/* ============================================================
+   ESTUDOS — biblioteca (índice + painel)
+   Em telas largas o índice é uma coluna fixa ao lado do painel;
+   abaixo de 900px a mesma lista vira uma faixa de botões que
+   rola na horizontal.
+   ============================================================ */
 
-
-
-
-/* ESTUDO */
-
-/*
- * Reserva a altura do header fixo: o título usava `padding-top: 5%` (percentual
- * da largura), que em telas estreitas resultava em menos de 70px e deixava o
- * "Estudos Bíblicos" parcialmente atrás da barra fixa.
- */
 .section-estudo {
+    /*
+     * Reserva a altura do header fixo: o título usava `padding-top: 5%`
+     * (percentual da largura), que em telas estreitas dava menos de 70px e
+     * deixava o "Estudos Bíblicos" atrás da barra fixa.
+     */
     padding-top: calc(var(--navbar-height) + env(safe-area-inset-top, 0px));
 }
 
 .estudos-biblicos h2 {
-    padding-top: 24px;
-    font-size: 36px;
+    /*
+     * Tamanho fluido: em 36px fixo, "Escola Bíblica Dominical" em Montserrat
+     * passava da largura do celular e era cortado nas duas pontas.
+     */
+    padding: 24px 16px 0;
+    font-size: clamp(26px, 6.4vw, 36px);
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     color: #ffcc00;
     text-align: center;
+    text-wrap: balance;
+    overflow-wrap: break-word;
     margin-bottom: 15px;
 }
 
-.estudos-biblicos p {
+.estudos-intro {
     font-size: 18px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     text-align: center;
     max-width: 700px;
+    padding: 0 16px;
     margin: 0 auto 30px auto;
     line-height: 1.6;
 }
 
 
+/* ---------------- estrutura ---------------- */
 
-
-.tema-btn {
+.biblioteca {
     width: 95%;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    backdrop-filter: blur(8px);
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffcc00;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 0 auto 10px auto; /* centraliza horizontalmente */
-    display: block;
-    transition: background-color 0.3s;
-    text-align: center;
+    max-width: 1320px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 26px;
+    align-items: start;
 }
 
-.tema-btn:hover {
-    background-color: #333;
+
+/* ---------------- índice ---------------- */
+
+.estudos-indice {
+    position: sticky;
+    top: calc(var(--navbar-height) + 16px);
+    background: rgba(42, 33, 24, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 14px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 34px rgba(0, 0, 0, 0.45);
+}
+
+.estudos-indice__titulo {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #a79c8a;
+    padding: 4px 8px 12px;
+    margin: 0;
+}
+
+.estudos-indice__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.estudo-item {
+    display: grid;
+    grid-template-columns: 66px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 10px;
+    font: inherit;
+    color: inherit;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.estudo-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.estudo-item:focus-visible {
+    outline: 2px solid #ffcc00;
+    outline-offset: 1px;
+}
+
+.estudo-item[aria-current="true"] {
+    background: rgba(201, 168, 76, 0.16);
+    border-color: rgba(201, 168, 76, 0.5);
+}
+
+.estudo-item__thumb {
+    width: 66px;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+}
+
+.estudo-item__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tema ainda sem arte — marcador, não buraco. */
+.estudo-item__thumb--vazia {
+    display: grid;
+    place-items: center;
+    background:
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 6px, transparent 6px 12px),
+        #1c1711;
+    border: 1px solid rgba(255, 204, 0, 0.25);
+}
+
+.estudo-item__thumb--vazia::after {
+    content: "?";
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+.estudo-item__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.estudo-item__nome {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    color: #eee6d7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.estudo-item[aria-current="true"] .estudo-item__nome {
+    color: #ffcc00;
+}
+
+.estudo-item__meta {
+    font-size: 11.5px;
+    color: #a79c8a;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* ---------------- painel do estudo ---------------- */
+
+.estudo-painel {
+    --painel-bg: #191410;
+    background: var(--painel-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 34px rgba(0, 0, 0, 0.5);
 }
 
 /*
- * auto-fill (não auto-fit): com poucas aulas (ex.: Oração com 2), o auto-fit
- * colapsa as faixas vazias e estica as colunas — cards ficam nas pontas com
- * um vão enorme. auto-fill mantém faixas vazias e o gap fica igual ao de
- * Cristologia / temas com a grade cheia.
+ * Faixa de ambiência: a arte entra escurecida e desfocada de propósito.
+ * As capas já trazem o nome do estudo escrito — sem isso, a arte disputaria
+ * com o título do painel logo abaixo.
  */
-.aulas-container {
-    width: 95%;
-    margin: 0 auto 20px auto; /* mesma margem do botão */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-    justify-content: start;
+.estudo-painel__capa {
+    position: relative;
+    height: 112px;
+    background: #0b0908;
+    overflow: hidden;
 }
 
-.aulas-container.hidden {
-    display: none;
+.estudo-painel__capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    opacity: 0.5;
+    filter: blur(3px) saturate(0.85);
+    transform: scale(1.06);
 }
+
+.estudo-painel__capa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+        var(--painel-bg) 0%,
+        rgba(25, 20, 16, 0.55) 62%,
+        rgba(25, 20, 16, 0.25) 100%);
+}
+
+.estudo-painel__capa--vazia {
+    background:
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0 14px, transparent 14px 28px),
+        radial-gradient(120% 140% at 50% 0%, #251e15, #150f0b);
+}
+
+.estudo-painel__cab {
+    position: relative;
+    z-index: 1;
+    margin-top: -16px;
+    padding: 0 clamp(16px, 2.5vw, 28px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 16px;
+}
+
+.estudo-painel__cab h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(22px, 3.4vw, 30px);
+    color: #ffcc00;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.estudo-painel__meta {
+    font-size: 13.5px;
+    color: #cfc6b6;
+}
+
+.estudo-painel__corpo {
+    padding: 18px clamp(16px, 2.5vw, 28px) 26px;
+}
+
+.estudo-aulas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
+    gap: 18px;
+}
+
+.estudo-vazio {
+    margin: 0;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 15px;
+    color: #9a9a9a;
+    font-style: italic;
+}
+
+
+/* ---------------- card de aula (inalterado) ---------------- */
 
 .aula-card {
     display: flex;
@@ -85,58 +281,41 @@
     align-items: center;
     justify-content: space-between;
     background-color: #111;
-    padding: 15px;
+    padding: 14px;
     border-radius: 12px;
-    /* box-shadow: 0 4px 8px rgba(255,255,255,0.1); */
-    transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 350px;
-    margin: 0 auto;
-    max-height: 480px;
-}
-
-/* .aula-card iframe,
-.aula-card .sem-video{
-    padding: 15px;
-    font-family: 'Poppins', sans-serif;
-    color: #111;
-    box-sizing: border-box;
-    aspect-ratio: 16 / 9;
-    flex-direction: column;
-    align-items: center;
-    object-fit: contain;
-    background-color: #111;
     width: 100%;
-    height: 215px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-} */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
 .aula-card img.video-thumb,
+.aula-card img.aula-imagem,
 .aula-card iframe,
 .aula-card .sem-video {
-  width: 100%;
-  height: auto;
-  max-width: 640px;
-  max-height: 480px;
-  border: none;
-  box-sizing: border-box;
-  aspect-ratio: 16 / 9;
-  border-radius: 8px;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    border: none;
+    box-sizing: border-box;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    object-fit: cover;
 }
-  
 
 .aula-card .sem-video {
-  background: #111;
-  color: #666;
-  font: 600 1rem/1.2 system-ui, sans-serif;
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
+    background: #0a0a0a;
+    border: 1px solid #262626;
+    color: #7d7568;
+    font: 600 0.95rem/1.2 'Montserrat', system-ui, sans-serif;
+    display: grid;
+    place-items: center;
 }
 
-.aula-card h3{
+.aula-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
     text-align: center;
+    margin: 12px 0;
+    color: #f0ece4;
 }
 
 .aula-card .btn {
@@ -155,35 +334,120 @@
     background-color: #222;
 }
 
-@media (max-width: 540px) {
-    
 
-    .estudos-biblicos h2 {
-        padding-top: 16px;
-        font-size: 30px;
-        
-    }
-    
-    .estudos-biblicos p {
-        font-size: 15px;
-        font-weight: 400;
-    }
-    .tema-btn {
-        width: 90%;
+/* ---------------- mobile: índice vira faixa ---------------- */
+
+@media (max-width: 900px) {
+    .biblioteca {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
     }
 
-    .aulas-container {
-        width: 90%;
+    .estudos-indice {
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 0;
+    }
+
+    .estudos-indice__titulo {
+        text-align: center;
+        padding: 0 0 10px;
+    }
+
+    /*
+     * Grade de duas colunas iguais em vez de rolagem lateral: os botões
+     * ficam alinhados entre si e todos do mesmo tamanho. Largura
+     * `fit-content` mantém o bloco mais estreito que as abas de cima.
+     */
+    .estudos-indice__lista {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Se um nome longo quebrar em duas linhas numa tela estreita, todas
+           as linhas acompanham — os botões nunca ficam de alturas diferentes. */
+        grid-auto-rows: 1fr;
+        gap: 8px;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 0 4px;
+    }
+
+    .estudo-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        min-width: 0;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        /* Mesmo canto das abas EBD/Capacitação (tabs.css). */
+        border-radius: 8px;
+        /*
+         * Um degrau abaixo das abas EBD/Capacitação (48px / 16px): o estudo
+         * é escolha secundária, a categoria é a principal. Ainda acima do
+         * alvo de toque mínimo de 40px.
+         */
+        padding: 9px 16px;
+        min-height: 40px;
+    }
+
+    .estudo-item[aria-current="true"] {
+        background: rgba(201, 168, 76, 0.2);
+        border-color: #c9a84c;
+    }
+
+    /* Miniatura ali deixaria os botões altos demais e comeria a tela. */
+    .estudo-item__thumb,
+    .estudo-item__meta {
+        display: none;
+    }
+
+    .estudo-item__nome {
+        font-size: 14px;
+        white-space: normal;
+        color: #e6ded0;
+    }
+
+    .estudo-painel__capa {
+        height: 86px;
+    }
+
+    .estudo-painel__cab {
+        margin-top: -14px;
     }
 }
 
-/* Tema sem aulas cadastradas ainda (ex.: Oração, enquanto o material não sobe). */
-.tema-vazio {
-    grid-column: 1 / -1;
-    margin: 0;
-    padding: 24px 0;
-    text-align: center;
-    font-size: 15px;
-    color: #9a9a9a;
-    font-style: italic;
+@media (max-width: 540px) {
+    .estudos-biblicos h2 {
+        padding-top: 16px;
+    }
+
+    .estudos-intro {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .biblioteca {
+        width: 90%;
+    }
+
+    .estudo-aulas {
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .estudo-item {
+        padding: 9px 12px;
+    }
+
+    .estudo-item__nome {
+        font-size: 13px;
+    }
 }

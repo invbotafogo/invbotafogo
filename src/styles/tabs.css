@@ -5,17 +5,26 @@
     width: 100%;
 }
 
+/*
+ * Grade de colunas iguais em vez de flex: com `1fr` num container de largura
+ * `fit-content`, todas as abas ficam do tamanho da mais larga — "EBD" e
+ * "Capacitação" saem idênticas em vez de cada uma medir o próprio texto.
+ */
 .tabs__list {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto 30px auto;
     padding: 0 16px;
     list-style: none;
 }
 
 .tabs__tab {
+    min-width: 0;
     padding: 12px 28px;
     font-size: 18px;
     font-weight: 600;
@@ -48,12 +57,13 @@
 }
 
 @media (max-width: 540px) {
+    /* No celular as duas ocupam a linha inteira, ainda com a mesma largura. */
     .tabs__list {
         gap: 8px;
+        width: 100%;
     }
 
     .tabs__tab {
-        flex: 1 1 auto;
         padding: 12px 16px;
         font-size: 16px;
     }

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Tabs } from '../components/ui/Tabs';
-import { TopicCard } from '../components/estudos/TopicCard';
+import { StudyIndex } from '../components/estudos/StudyIndex';
+import { StudyPanel } from '../components/estudos/StudyPanel';
 import { FooterSlot } from '../components/layout/Footer';
 import { ABAS_ESTUDOS, type AbaEstudos } from '../lib/estudos';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
@@ -18,14 +19,21 @@ export default function Estudos() {
   const parametro = searchParams.get('aba');
   const abaAtiva: AbaEstudos = ehAba(parametro) ? parametro : 'ebd';
 
-  /** Tema aberto no momento — no site antigo, abrir um recolhia os demais. */
-  const [temaAberto, setTemaAberto] = useState<string | null>(null);
+  /** Estudo aberto no painel. Nulo = o primeiro da categoria. */
+  const [temaSelecionado, setTemaSelecionado] = useState<string | null>(null);
 
   const secao = ABAS_ESTUDOS.find((a) => a.id === abaAtiva)!;
   useDocumentTitle(`INVB - ${secao.rotulo === 'EBD' ? 'EBD' : 'Capacitação'}`);
 
+  /*
+   * Quando a aba muda, o id guardado deixa de existir nesta categoria e o
+   * `??` já devolve o primeiro tema — nunca sobra estudo de uma aba na outra.
+   */
+  const tema =
+    secao.temas.find((t) => t.id === temaSelecionado) ?? secao.temas[0];
+
   const trocarAba = (id: AbaEstudos) => {
-    setTemaAberto(null);
+    setTemaSelecionado(null);
     setSearchParams(id === 'ebd' ? {} : { aba: id }, { replace: true });
   };
 
@@ -34,20 +42,24 @@ export default function Estudos() {
       <div className="section-estudo">
         <section id="estudos-biblicos" className="estudos-biblicos">
           <h2>{secao.titulo}</h2>
-          <p>Escolha um tema para acessar as aulas e PDFs correspondentes.</p>
+          <p className="estudos-intro">
+            Todos os estudos ficam à vista — escolha um para trocar o conteúdo.
+          </p>
 
           <Tabs abas={ABAS} ativa={abaAtiva} aoTrocar={trocarAba} rotuloLista="Estudos">
-            <div className="temas-container">
-              {secao.temas.map((tema) => (
-                <TopicCard
-                  key={tema.id}
-                  tema={tema}
-                  aberto={temaAberto === tema.id}
-                  aoAlternar={() =>
-                    setTemaAberto((atual) => (atual === tema.id ? null : tema.id))
-                  }
-                />
-              ))}
+            <div className="biblioteca">
+              <StudyIndex
+                temas={secao.temas}
+                rotuloAba={secao.rotulo}
+                temaAtivo={tema?.id ?? ''}
+                aoSelecionar={setTemaSelecionado}
+              />
+
+              {tema ? (
+                <StudyPanel tema={tema} />
+              ) : (
+                <p className="estudo-vazio">Estudos em breve.</p>
+              )}
             </div>
           </Tabs>
         </section>

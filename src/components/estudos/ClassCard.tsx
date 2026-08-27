@@ -23,7 +23,7 @@ export function ClassCard({ aula }: { aula: Aula }) {
         </div>
       )}
 
-      <h3>{aula.titulo}</h3>
+      <h4>{aula.titulo}</h4>
 
       {aula.pdf && (
         <a href={aula.pdf} download className="btn">

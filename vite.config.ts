@@ -29,5 +29,7 @@ export default defineConfig({
   server: {
     port: 8080,
     open: true,
+    /* Túnel do ngrok para testar o site no celular. */
+    allowedHosts: ['onboard-ferris-spectator.ngrok-free.dev'],
   },
 });
