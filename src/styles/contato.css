@@ -7,7 +7,7 @@
     background-color: #14110e;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../assets/images/image.jpg');
+        url('../assets/images/image.webp');
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: 100% 100%, cover;
@@ -91,6 +91,11 @@
 
 .contact-form input,
 .contact-form textarea {
+    /* Controles de formulário não herdam fonte: o navegador aplica a sua
+       própria e ela vence a herança. Sem esta linha, os campos ficam numa
+       fonte diferente do texto logo acima. Só a família — o tamanho continua
+       sendo o `font-size` abaixo. */
+    font-family: inherit;
     padding: 12px 15px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -120,6 +125,7 @@
 }
 
 .contact-form button {
+    font-family: inherit; /* idem: <button> não herda a fonte sozinho */
     background-color: #ffd700;
     color: #333;
     font-weight: 600;

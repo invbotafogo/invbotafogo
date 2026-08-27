@@ -151,35 +151,6 @@ footer nav {
     display: none;
 }
 
-@media (max-width: 540px) {
-
-    .footer-contact{
-        display: none;
-    }
-
-    .footer-links {
-        display: flex;
-        justify-content: center; /* centraliza o bloco de links */
-        flex-wrap: wrap; /* permite quebra de linha */
-        gap: 40px; /* espaço entre os grupos de links, ajuste como quiser */
-    }
-
-    .footer-links ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* duas colunas para os links */
-        gap: 8px; /* espaço entre os links */
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        text-align: left; /* mantém texto alinhado à esquerda */
-    }
-
-    .footer-copyright{
-        font-size: 0.75rem;
-        margin-top: 10px;
-    }
-}
-
 @media (max-width: 768px) {
 
     .footer-contact{
@@ -201,6 +172,33 @@ footer nav {
         list-style: none;
     }
     
+}
+
+/*
+ * Abaixo de 540px vale tudo o que o bloco de 768px acima já faz (ele também
+ * casa aqui). Este bloco fica só com o que É DIFERENTE na tela pequena.
+ *
+ * As colunas de links continuam TRÊS, de propósito. Havia aqui um
+ * `grid-template-columns: 1fr 1fr` que nunca chegou a rodar: este bloco
+ * ficava ANTES do de 768px e, como os dois casam numa tela de 400px com a
+ * mesma especificidade, o `repeat(3, 1fr)` de lá vencia. Ao pôr os blocos na
+ * ordem certa a regra finalmente valeu — e ficou pior: abaixo de 1024px só
+ * uma lista aparece no rodapé (as de ministérios ficam ocultas) e ela tem 6
+ * itens. Em 3 colunas são 2 linhas cheias; em 2 colunas viram 3 linhas com a
+ * metade direita vazia. A regra de duas colunas foi removida.
+ *
+ * Ao acrescentar um breakpoint novo, mantenha a ordem do maior para o menor.
+ */
+@media (max-width: 540px) {
+
+    .footer-links ul {
+        text-align: left; /* mantém texto alinhado à esquerda */
+    }
+
+    .footer-copyright{
+        font-size: 0.75rem;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -229,20 +227,6 @@ footer nav {
 
 
     
-}
-
-@media (min-width: 1024px) and (max-width: 1440px) {
-
-    .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    .footer_infos {
-        display: static;
-    }
-        
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

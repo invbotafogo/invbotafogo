@@ -310,7 +310,9 @@
 }
 
 .aula-card h4 {
-    font-family: 'Poppins', sans-serif;
+    /* Sem font-family: herda a base do site. Aqui pedia 'Poppins', que nunca
+       foi carregada — o título da aula ficava numa fonte diferente do botão
+       "Baixar PDF" logo abaixo, dentro do mesmo card. */
     font-weight: 500;
     font-size: 15px;
     text-align: center;

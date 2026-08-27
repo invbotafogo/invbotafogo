@@ -30,7 +30,7 @@
     background-color: #14110e;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.72)),
-        url('../assets/images/image.jpg');
+        url('../assets/images/image.webp');
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: 100% 100%, cover;
@@ -130,18 +130,29 @@
     line-height: 1.2;
 }
 
-/* Hover: brilho de fundo e sombra (borda da cor padrão no mobile; na web ver @media abaixo) */
-/* Hover: brilho de fundo e um anel fino claro. O realce NÃO usa mais
-   `border-color` — isso pintaria a barra dourada da esquerda. */
+/*
+ * Hover: só o brilho de fundo.
+ *
+ * Havia aqui um anel branco de 1px (`box-shadow: 0 0 0 1px`) que lia como
+ * borda. Saiu a pedido. A sombra funda continua vindo da regra base do card,
+ * então o cartão não perde profundidade ao passar o mouse.
+ *
+ * O realce nunca usou `border-color`: isso pintaria a barra dourada da
+ * esquerda junto.
+ */
 .section-ministerios .cards-container .card:hover {
     background: rgba(201, 168, 76, 0.18);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5), 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Web (≥768px): anel branco fino no hover/foco, preservando a barra dourada */
+/*
+ * Web (≥768px): o anel claro sobrou APENAS como indicador de foco de teclado.
+ *
+ * Ele saiu de `:hover` e `:active` — passar o mouse agora só acende o fundo.
+ * Em `:focus-visible` ele precisa ficar: o `outline: none` logo abaixo remove
+ * o anel padrão do navegador, e sem nada no lugar quem navega por Tab não
+ * enxergaria mais qual card está selecionado.
+ */
 @media (min-width: 768px) {
-    .section-ministerios .cards-container .card:hover,
-    .section-ministerios .cards-container .card:active,
     .section-ministerios .cards-container .card:focus-visible {
         outline: none;
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6), 0 8px 40px rgba(0, 0, 0, 0.6);
@@ -175,9 +186,15 @@
     letter-spacing: 0.04em;
     line-height: 1.22;
     max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
+    /*
+     * O nome do card nunca quebra no meio da palavra: os nomes são curtos e
+     * cabem nas larguras usadas hoje. Se algum dia entrar um ministério de
+     * nome mais longo que a caixa, ele vai transbordar em vez de quebrar —
+     * o sinal de que o tamanho da fonte precisa de ajuste, não a quebra.
+     */
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 /* Ministérios — mobile: cards 250×250 com padding 24px (referência layout) */
@@ -1137,14 +1154,6 @@ body:has(.section-ministerios #expanded-content:not(.hidden)) {
     }
 }
 
-/* ---- 3: Remove hifenização nos cards de ministérios ---- */
-.section-ministerios .cards-container .card-name,
-.section-ministerios .cards-container .card-label {
-    hyphens: none !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-}
-
 /* ---- 4: Corrige texto sobreposto no painel expandido mobile ---- */
 @media (max-width: 1024px) {
     .section-ministerios:has(#expanded-content:not(.hidden)) {
@@ -1195,10 +1204,8 @@ body:has(.section-ministerios #expanded-content:not(.hidden)) {
     }
 }
 
+/* Tamanho fixo do nome do card — sobrepõe de propósito o clamp da regra base. */
 .section-ministerios .cards-container .card-name {
-    hyphens: none !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
     font-size: 13px !important;
 }
 

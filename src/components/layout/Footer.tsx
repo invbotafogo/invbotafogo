@@ -1,7 +1,9 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import { IGREJA, REDES } from '../../lib/constants';
 import { MINISTERIOS } from '../../lib/ministerios';
+import { useRodapeAVista } from '../../hooks/useRodapeAVista';
 import '../../styles/footer.css';
 
 const LINKS_INSTITUCIONAIS = [
@@ -116,8 +118,13 @@ export function Footer() {
 
 /** Wrapper com o id que o CSS antigo usa (`.section-ministerios #footer`, `#footer, footer`). */
 export function FooterSlot() {
+  /* O rodapé avisa o CSS quando entra na tela, para o botão flutuante de
+     WhatsApp sair da frente dos links. Ver hooks/useRodapeAVista.ts. */
+  const rodape = useRef<HTMLDivElement>(null);
+  useRodapeAVista(rodape);
+
   return (
-    <div id="footer">
+    <div id="footer" ref={rodape}>
       <Footer />
     </div>
   );

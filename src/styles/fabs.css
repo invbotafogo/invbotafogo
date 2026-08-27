@@ -19,7 +19,7 @@
     place-items: center;
     text-decoration: none;
     box-shadow: 0 8px 22px rgba(0, 0, 0, .4);
-    transition: transform .2s;
+    transition: transform .2s, opacity .25s ease, visibility .25s;
     animation: waPulse 2.6s ease-out infinite;
 }
 
@@ -30,6 +30,44 @@
 .wa-fab svg {
     width: 25px;
     height: 25px;
+}
+
+/*
+ * Rodapé na tela: o botão sai de cena.
+ *
+ * Ele é fixo no canto inferior direito e, ao rolar até o fim, ficava por cima
+ * dos links do rodapé — no celular chegava a cobrir "Ministérios". Como o
+ * botão captura o toque, o link ficava parcialmente inacessível.
+ *
+ * Nada se perde escondendo: o rodapé já traz o WhatsApp entre os ícones
+ * sociais, além do telefone e do e-mail. Quem põe e tira a classe no <html> é
+ * o próprio rodapé — ver hooks/useRodapeAVista.ts.
+ *
+ * `visibility: hidden` (e não só `opacity: 0`) é o que tira o botão da ordem
+ * de tabulação: escondido, ele também some para quem navega pelo teclado.
+ */
+html.rodape-a-vista .wa-fab {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.85);
+    animation: none;
+}
+
+/*
+ * "Reduzir movimento" ligado no sistema: sem pulso e sem transição.
+ * O resto do projeto já respeita esta preferência (useReveal, CountUp);
+ * este arquivo era o que faltava.
+ */
+@media (prefers-reduced-motion: reduce) {
+    .wa-fab {
+        animation: none;
+        transition: none;
+    }
+
+    .wa-fab:hover {
+        transform: none;
+    }
 }
 
 @keyframes waPulse {
