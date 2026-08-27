@@ -1,5 +1,4 @@
 import { HeroHome } from '../components/home/HeroHome';
-// import { VerseCta } from '../components/home/VerseCta';
 import { EdCalendar } from '../components/home/EdCalendar';
 import { EdLocation } from '../components/home/EdLocation';
 import { EdHistory } from '../components/home/EdHistory';
@@ -20,9 +19,6 @@ export default function Home() {
 
       {/* Blocos editoriais copiados do site-igreja. */}
       <div className="wrap">
-        {/* Versículo + botões: fora do hero, abrindo os blocos editoriais. */}
-        {/* <VerseCta /> */}
-
         <div className="ed-home">
           <EdCalendar />
           <EdLocation />

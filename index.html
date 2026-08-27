@@ -52,7 +52,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/images/logo2.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Montserrat é a fonte base do site (global.css). O peso 700 vinha de um
+         @import dentro de home.css: funcionava por acidente, porque o App importa
+         as seis páginas de uma vez. Com carregamento sob demanda, quem entrasse
+         direto em /contato ficaria sem ele. Agora vem daqui, para todas as rotas. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
