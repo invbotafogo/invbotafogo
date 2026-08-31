@@ -5,7 +5,14 @@ Critério de seleção (um vídeo entra se):
   - tem a tag de inclusão (TAG_INCLUIR), OU
   - dura pelo menos DURACAO_MINIMA_MIN minutos.
 
-E nunca entra se tiver a tag de exclusão (TAG_EXCLUIR), ex.: conteúdo extra que não é culto.
+E nunca entra se:
+  - tiver a tag de exclusão (TAG_EXCLUIR), ex.: conteúdo extra que não é culto; ou
+  - for transmissão ao vivo (ou o replay dela).
+
+Só sobem vídeos da aba "Vídeos" do canal. O replay de uma live fica na aba "Ao
+vivo", e é um vídeo diferente do culto editado que vai para a aba "Vídeos" — sem
+essa regra o site publicava a transmissão bruta, que dura horas e passa folgado
+no critério de duração.
 
 A regra de duração existe para o site não depender de alguém lembrar de marcar
 a tag no YouTube. A tag continua funcionando como atalho manual.
@@ -75,7 +82,8 @@ def buscar_videos_recentes(api_key: str, channel_id: str, quantidade: int) -> di
 
 
 def detalhar_videos(api_key: str, busca: dict) -> dict:
-    """Retorna {videoId: item} com snippet (tags) e contentDetails (duração)."""
+    """Retorna {videoId: item} com snippet (tags), contentDetails (duração) e
+    liveStreamingDetails (presente só em transmissões ao vivo)."""
     ids = [
         item["id"]["videoId"]
         for item in busca.get("items", [])
@@ -92,7 +100,10 @@ def detalhar_videos(api_key: str, busca: dict) -> dict:
             urljoin(API_URL, "videos"),
             params={
                 "key": api_key,
-                "part": "snippet,contentDetails",
+                # `liveStreamingDetails` só vem preenchido em vídeos que são ou
+                # foram transmissão ao vivo — é assim que se separa a aba
+                # "Vídeos" da aba "Ao vivo".
+                "part": "snippet,contentDetails,liveStreamingDetails",
                 "id": ",".join(lote),
             },
             timeout=30,
@@ -103,6 +114,17 @@ def detalhar_videos(api_key: str, busca: dict) -> dict:
     return detalhes
 
 
+def e_transmissao(item: dict) -> bool:
+    """O vídeo é (ou foi) uma transmissão ao vivo?
+
+    A API só devolve o bloco `liveStreamingDetails` para vídeos de live — nos
+    uploads comuns da aba "Vídeos" ele nem aparece. Vale também para o replay:
+    o bloco continua lá depois que a transmissão termina, que é exatamente o
+    caso que queremos barrar.
+    """
+    return bool(item.get("liveStreamingDetails"))
+
+
 def e_culto(item: dict) -> tuple[bool, str]:
     """Decide se o vídeo entra no site. Devolve (entra, motivo) para o log."""
     snippet = item.get("snippet", {})
@@ -111,6 +133,8 @@ def e_culto(item: dict) -> tuple[bool, str]:
 
     if normalizar(TAG_EXCLUIR) in tags:
         return False, f"excluído pela tag '{TAG_EXCLUIR}'"
+    if e_transmissao(item):
+        return False, "transmissão ao vivo (aba 'Ao vivo', não a aba 'Vídeos')"
     if normalizar(TAG_INCLUIR) in tags:
         return True, f"tag '{TAG_INCLUIR}'"
     if minutos >= DURACAO_MINIMA_MIN:
