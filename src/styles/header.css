@@ -624,6 +624,114 @@ header {
     transform: scaleY(1);
 }
 
+/* ---------- RODAPÉ DA GAVETA: versículo + redes ---------- */
+/* `margin-top: auto` cola o bloco no fim: a gaveta é um flex column, então o
+   espaço que sobrava embaixo dos links vira a folga acima daqui. */
+.navbar__drawer-foot {
+    margin-top: auto;
+    padding: 22px 22px calc(22px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    /* Tudo centralizado — versículo, referência e ícones. Os links do menu
+       continuam alinhados à esquerda: o rodapé é outro bloco. */
+    text-align: center;
+    /* Entra depois do último item da lista, fechando o escalonamento. */
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.navbar__drawer.is-open .navbar__drawer-foot {
+    opacity: 1;
+    transform: none;
+    transition-delay: .42s;
+}
+
+/* Tipografia leve de propósito: o versículo acompanha, não compete com os
+   links do menu, que são Montserrat bold 1.125rem. */
+.navbar__drawer-verso {
+    margin: 0 0 20px;
+    /* Aspas curvas pelo CSS, não no texto: a constante guarda o versículo, a
+       pontuação de citação é apresentação. Assim trocar o versículo não exige
+       lembrar de digitar as aspas certas. */
+    quotes: '\201C' '\201D';
+}
+
+.navbar__drawer-verso p::before {
+    content: open-quote;
+}
+
+.navbar__drawer-verso p::after {
+    content: close-quote;
+}
+
+.navbar__drawer-verso p {
+    margin: 0 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .875rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.65;
+    color: rgba(245, 245, 245, .62);
+}
+
+.navbar__drawer-verso cite {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+    /* O letter-spacing também entra depois da última letra, o que puxa um
+       texto centralizado 2px para a esquerda. O text-indent devolve. */
+    text-indent: 2px;
+    text-transform: uppercase;
+    color: #E6B23E;
+}
+
+/* Ícones e espaçamento iguais aos do `.social-icons` (footer.css): mesmas
+   classes do Font Awesome com `fa-xl`, `font-size: 20px` — que o fa-xl leva a
+   30px — e gap de 5px. Mudou o rodapé? Estes três números vêm de lá. */
+.navbar__drawer-redes {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__drawer-redes a {
+    display: grid;
+    place-items: center;
+    /*
+     * Altura de 44px (o alvo confortável de toque) com a largura do próprio
+     * ícone: é o que deixa o espaçamento idêntico ao do rodapé sem encolher a
+     * área do dedo na vertical. Uma caixa de 44x44 empurraria os ícones uns
+     * 14px a mais um do outro, e aí não seria o mesmo desenho.
+     */
+    height: 44px;
+    padding: 0 3px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: color .3s ease-in-out, transform .3s;
+}
+
+/* Mesmo motivo da lista: o `nav ul li a::after` do menu horizontal alcança
+   qualquer <a> dentro de um <nav>, e aqui não há sublinhado a mostrar. */
+.navbar__drawer-redes a::after {
+    content: none;
+}
+
+/* O realce é o do rodapé (cor + leve zoom), no dourado que a gaveta já usa. */
+.navbar__drawer-redes a:hover,
+.navbar__drawer-redes a:active {
+    color: #E6B23E;
+    transform: scale(1.1);
+}
+
 /* A gaveta só existe no mobile — acima disso o menu horizontal volta. */
 @media (max-width: 1024px) {
     .navbar__drawer {
@@ -637,6 +745,7 @@ header {
     .navbar__overlay,
     .navbar__drawer,
     .navbar__drawer-list li,
+    .navbar__drawer-foot,
     .navbar__drawer-list a::before {
         transition-duration: .01ms;
         transition-delay: 0s !important;

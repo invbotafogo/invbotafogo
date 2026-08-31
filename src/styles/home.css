@@ -393,13 +393,16 @@
     height: calc(50% - var(--tl-cut) - var(--tl-inset));
 }
 
-/* O pontinho de cada evento, alinhado à prumada da linha. O deslocamento é
-   negativo porque `.ev` começa depois do selo e do gap. */
-.section-index .agenda-week .slot-timeline .ev {
+/* O pontinho de cada evento, alinhado à prumada da linha. Ele mora no
+   parágrafo do horário, não no bloco do evento inteiro: é o horário que marca
+   o ponto na linha do tempo, então é com ele que a bolinha se alinha — no
+   centro do bloco ela caía entre o título e a hora, sem apontar para nada.
+   O deslocamento é negativo porque o texto começa depois do selo e do gap. */
+.section-index .agenda-week .slot-timeline .ev-main p {
     position: relative;
 }
 
-.section-index .agenda-week .slot-timeline .ev::before {
+.section-index .agenda-week .slot-timeline .ev-main p::before {
     content: '';
     position: absolute;
     left: calc(-1 * (var(--tl-day) / 2 + var(--tl-gap)));
@@ -422,12 +425,12 @@
  *
  * `:nth-child(2):nth-last-child(2)` = o segundo de exatamente três.
  */
-.section-index .agenda-week .slot-timeline .ev:nth-child(2):nth-last-child(2)::before {
+.section-index .agenda-week .slot-timeline .ev:nth-child(2):nth-last-child(2) .ev-main p::before {
     display: none;
 }
 
 /* O próximo evento é o único ponto preenchido — mesma lógica do selo PRÓXIMO. */
-.section-index .agenda-week .slot-timeline .ev.is-next::before {
+.section-index .agenda-week .slot-timeline .ev.is-next .ev-main p::before {
     background: var(--gold);
     box-shadow: 0 0 0 3px rgba(230, 178, 62, .16);
 }

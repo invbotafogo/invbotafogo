@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import { useMobileMenu } from '../../hooks/useMobileMenu';
 import { useScrollProgress } from '../../hooks/useScrollProgress';
+import { REDES, VERSICULO_MENU } from '../../lib/constants';
 import '../../styles/header.css';
 
 const ITENS = [
@@ -11,6 +12,17 @@ const ITENS = [
   { para: '/ministerios', rotulo: 'Ministérios' },
   { para: '/doacao', rotulo: 'Doe' },
   { para: '/cultos', rotulo: 'Cultos' },
+];
+
+/* As mesmas redes do rodapé do site, na mesma ordem do Footer.tsx e lendo de
+   REDES — nenhuma URL duplicada. Os ícones vêm do Font Awesome já carregado no
+   index.html. Mudou a ordem lá? Mude aqui: quem usa o site nos dois lugares
+   espera encontrar os ícones na mesma sequência. */
+const REDES_GAVETA = [
+  { href: REDES.youtube, icone: 'fa-brands fa-youtube fa-xl', nome: 'YouTube' },
+  { href: REDES.facebook, icone: 'fa-brands fa-facebook fa-xl', nome: 'Facebook' },
+  { href: REDES.instagram, icone: 'fa-brands fa-instagram fa-xl', nome: 'Instagram' },
+  { href: REDES.whatsapp, icone: 'fa-brands fa-whatsapp fa-xl', nome: 'WhatsApp' },
 ];
 
 export function Header() {
@@ -118,6 +130,31 @@ export function Header() {
             </li>
           ))}
         </ul>
+
+        {/* `margin-top: auto` no CSS empurra este bloco para o fim da gaveta,
+            ocupando o vazio que sobrava abaixo dos links. */}
+        <div className="navbar__drawer-foot">
+          <blockquote className="navbar__drawer-verso">
+            <p>{VERSICULO_MENU.texto}</p>
+            <cite>{VERSICULO_MENU.referencia}</cite>
+          </blockquote>
+
+          <ul className="navbar__drawer-redes">
+            {REDES_GAVETA.map((rede) => (
+              <li key={rede.nome}>
+                <a
+                  href={rede.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={rede.nome}
+                  onClick={fechar}
+                >
+                  <i className={rede.icone} aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </>
   );

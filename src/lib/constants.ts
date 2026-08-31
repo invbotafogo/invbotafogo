@@ -21,6 +21,18 @@ export const REDES = {
   )}`,
 } as const;
 
+/**
+ * Versículo do rodapé da gaveta do menu mobile.
+ *
+ * Um só, fixo: trocar é editar aqui — nada no componente precisa saber qual é.
+ * Texto na Almeida Revista e Atualizada (ARA), da Sociedade Bíblica do Brasil.
+ */
+export const VERSICULO_MENU = {
+  texto:
+    'Vinde a mim, todos os que estais cansados e sobrecarregados, e eu vos aliviarei.',
+  referencia: 'Mateus 11.28',
+} as const;
+
 export const PIX = {
   chave: '04.800.134/0001-48',
   instituicao: 'BCO SANTANDER (BRASIL) S.A.',
