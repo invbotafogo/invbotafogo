@@ -178,11 +178,6 @@ footer nav ul {
     touch-action: manipulation;
 }
 
-/* Menu aberto (classe adicionada via JS) */
-.navbar__menu.is-open {
-    display: flex !important;
-}
-
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .navbar {
         padding: 0 5%;
@@ -266,59 +261,13 @@ footer nav ul {
         background: rgba(0, 0, 0, 0.35);
     }
 
-    /* Menu: fixed ao viewport — absolute + top 70px ficava relativo ao nav e cortava o painel */
-    .navbar__menu {
-        position: fixed;
-        left: max(12px, env(safe-area-inset-left, 0px));
-        right: max(12px, env(safe-area-inset-right, 0px));
-        top: calc(70px + env(safe-area-inset-top, 0px) + 10px);
+    /*
+     * O menu horizontal é só do desktop. No mobile quem mostra os links é a
+     * gaveta (`.navbar__drawer`), que vive fora do <header> — ver Header.tsx.
+     */
+    .navbar__nav {
         display: none;
-        flex-direction: column;
-        gap: 0;
-        /* Gaveta sólida no mesmo tom do header — sem depender do blur para legibilidade */
-        background: black;
-        border-radius: 12px;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-        z-index: 12000;
-        padding: 8px 0;
-        /* `backdrop-filter: blur(8px)` removido: o fundo da gaveta é opaco
-           (--brand-dark), então o blur nunca aparecia — só custava uma
-           camada extra de composição, que é justamente o tipo de coisa que
-           produz artefato de repintura no scroll. */
-        -webkit-overflow-scrolling: touch;
-        overflow-x: hidden;
-        overflow-y: auto;
-        scrollbar-width: thin;
-        max-height: calc(100vh - 70px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 28px);
-        max-height: calc(100dvh - 70px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 28px);
     }
-
-    /* Itens maiores, com área de toque confortável */
-    .navbar__menu li {
-        min-height: 52px;
-        display: flex;
-        align-items: stretch;
-    }
-
-    .navbar__menu a {
-        display: block;
-        width: 100%;
-        padding: 16px 18px;
-        font-size: 1.125rem;
-        line-height: 1.35;
-        letter-spacing: 0.2px;
-        border-bottom: 0px solid rgba(255, 255, 255, .08);
-    }
-
-    .navbar__menu a:active {
-        background: rgba(255, 255, 255, 0.08);
-    }
-
-    .navbar__menu a:last-child {
-        border-bottom: 0;
-    }
-
-    
 
     /* Submenu no mobile (em coluna) */
     .submenu {
@@ -409,12 +358,13 @@ header {
      * camada própria e opaca — ele passa a ser apenas recomposto, nunca
      * repintado durante o scroll.
      *
-     * Efeito colateral conhecido e conferido: o transform faz do header o
-     * bloco contêiner dos descendentes `position: fixed`, ou seja a gaveta
-     * `.navbar__menu` (≤1024px). Como o header já é fixed, começa em (0,0)
-     * e ocupa 100% da largura da viewport, a geometria da gaveta não muda;
-     * e o novo contexto de empilhamento não a prejudica, porque `#header`
-     * já está em z-index 6000, acima de tudo (os FABs ficam em 45).
+     * Efeito colateral que vale lembrar: o transform faz do header o bloco
+     * contêiner de qualquer descendente `position: fixed` — dentro dele,
+     * `bottom: 0` é a base da barra de 70px, não a da tela. É por isso que a
+     * gaveta do menu mobile (`.navbar__drawer`) e o overlay são irmãos do
+     * <header>, e não filhos: precisam medir pela viewport para ter altura
+     * inteira. Os dois continuam acima de tudo porque `#header` está em
+     * z-index 6000 (os FABs ficam em 45).
      */
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -439,4 +389,256 @@ header {
     will-change: transform;
     z-index: 6001;
     pointer-events: none;
+}
+/* ============================================================
+   GAVETA DO MENU MOBILE
+   ============================================================
+   Substitui o painel que caía por baixo do header. Agora é uma gaveta que
+   entra pela direita, com a página escurecida atrás — mesmo modelo de
+   navegação de celular que o resto do mercado usa, no visual do site: preto
+   do header, dourado da marca (#E6B23E) e Montserrat.
+
+   Overlay e gaveta são irmãos do <header>, não filhos (o transform do header
+   os prenderia à barra de 70px — a explicação completa está no Header.tsx).
+   Empilhamento dentro de `#header` (z-index 6000, acima de tudo na página):
+   overlay 4990 < header 5000 < gaveta 5010. O overlay passa por baixo do
+   header de propósito, para a barra continuar nítida; a gaveta passa por cima
+   e cobre o hambúrguer, por isso ela traz o próprio botão de fechar.
+
+   A gaveta nunca sai do DOM: aberta e fechada são a mesma caixa em posições
+   diferentes, e é isso que permite animar também a saída. `visibility` troca
+   com atraso igual ao da transição, senão ela sumiria antes de terminar de
+   deslizar — e, fechada, é a `visibility: hidden` que a tira do tab e do
+   leitor de tela. */
+
+.navbar__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 4990;
+    background: rgba(0, 0, 0, .62);
+    /* Sem isto, arrastar sobre o overlay rola a página por trás no iOS. */
+    touch-action: none;
+    overscroll-behavior: contain;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s ease, visibility 0s linear .3s;
+}
+
+.navbar__overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity .3s ease, visibility 0s linear 0s;
+}
+
+.navbar__drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5010;
+    display: none;
+    flex-direction: column;
+    width: min(320px, 80vw);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: #000;
+    border-left: 1px solid rgba(230, 178, 62, .26);
+    box-shadow: -18px 0 40px rgba(0, 0, 0, .55);
+    transform: translateX(100%);
+    visibility: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    /* `pan-y` deixa a rolagem vertical com o navegador e reserva o arrasto
+       horizontal para o gesto de fechar (useMobileMenu). */
+    touch-action: pan-y;
+    transition: transform .32s cubic-bezier(.4, 0, .2, 1), visibility 0s linear .32s;
+}
+
+.navbar__drawer.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform .32s cubic-bezier(.4, 0, .2, 1), visibility 0s linear 0s;
+}
+
+/* Enquanto o dedo arrasta, a posição vem do style inline e a transição sai de
+   cena — com ela ligada a gaveta corre atrás do dedo.
+   Precisa das duas classes (`is-open.is-arrastando`) e de vir depois: com só
+   `.is-arrastando` a regra empata em especificidade com `.is-open` acima e
+   perde por ordem, que foi exatamente o que aconteceu na primeira versão. */
+.navbar__drawer.is-open.is-arrastando {
+    transition: none;
+}
+
+/* Topo da gaveta: rótulo dourado + X, na mesma altura da barra do header. */
+.navbar__drawer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex: none;
+    height: var(--navbar-height);
+    padding: 0 10px 0 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.navbar__drawer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #E6B23E;
+}
+
+/* O X é o próprio hambúrguer fechado: mesmas barras (26x5, raio 2), mesma área
+   de toque de 52px, só que duas e cruzadas. Os números são os do
+   `.navbar__toggle` lá em cima — mudou um, mude o outro. */
+.navbar__drawer-close {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: background .2s ease, color .2s ease;
+}
+
+.navbar__drawer-close span {
+    position: absolute;
+    width: 26px;
+    height: 5px;
+    border-radius: 2px;
+    /* `currentColor` para as barras acompanharem a cor do botão no :active. */
+    background: currentColor;
+}
+
+.navbar__drawer-close span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.navbar__drawer-close span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.navbar__drawer-close:active {
+    background: rgba(255, 255, 255, .08);
+    color: #E6B23E;
+}
+
+.navbar__drawer-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__drawer-list li {
+    display: flex;
+    align-items: stretch;
+    min-height: 52px;
+    /* Entrada escalonada: os itens chegam depois da gaveta, um a um. O atraso
+       vive só na regra `.is-open`, então na saída todos somem juntos — uma
+       gaveta que fecha em cascata parece travada. */
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.navbar__drawer.is-open .navbar__drawer-list li {
+    opacity: 1;
+    transform: none;
+}
+
+.navbar__drawer.is-open .navbar__drawer-list li:nth-child(1) { transition-delay: .12s; }
+.navbar__drawer.is-open .navbar__drawer-list li:nth-child(2) { transition-delay: .17s; }
+.navbar__drawer.is-open .navbar__drawer-list li:nth-child(3) { transition-delay: .22s; }
+.navbar__drawer.is-open .navbar__drawer-list li:nth-child(4) { transition-delay: .27s; }
+.navbar__drawer.is-open .navbar__drawer-list li:nth-child(5) { transition-delay: .32s; }
+.navbar__drawer.is-open .navbar__drawer-list li:nth-child(6) { transition-delay: .37s; }
+
+
+.navbar__drawer-list a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.35;
+    letter-spacing: .2px;
+    color: whitesmoke;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: color .2s ease, background .2s ease;
+}
+
+/* Marcador dourado à esquerda do item — o eco vertical do sublinhado que os
+   links do desktop ganham no hover. */
+.navbar__drawer-list a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: #E6B23E;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform .25s ease;
+}
+
+/* O `nav ul li a::after` lá de cima (sublinhado dourado do menu horizontal)
+   também alcança a gaveta, porque ela é um <nav><ul><li><a>. Aqui o marcador
+   é a barra lateral do ::before — o sublinhado sai de cena. */
+.navbar__drawer-list a::after {
+    content: none;
+}
+
+.navbar__drawer-list a:active {
+    background: rgba(255, 255, 255, .08);
+}
+
+/* `.active` é a classe que o NavLink do react-router põe na rota atual. */
+.navbar__drawer-list a.active {
+    color: #E6B23E;
+}
+
+.navbar__drawer-list a.active::before {
+    transform: scaleY(1);
+}
+
+/* A gaveta só existe no mobile — acima disso o menu horizontal volta. */
+@media (max-width: 1024px) {
+    .navbar__drawer {
+        display: flex;
+    }
+}
+
+/* Quem prefere menos movimento recebe a mesma gaveta, sem o deslize. */
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar__overlay,
+    .navbar__drawer,
+    .navbar__drawer-list li,
+    .navbar__drawer-list a::before {
+        transition-duration: .01ms;
+        transition-delay: 0s !important;
+    }
 }
