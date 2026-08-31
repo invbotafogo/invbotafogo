@@ -432,6 +432,27 @@ header {
     transition: opacity .3s ease, visibility 0s linear 0s;
 }
 
+/*
+ * Desfoque na faixa de página que sobra ao lado da gaveta.
+ *
+ * Não confundir com o `backdrop-filter` que saiu do menu antigo: aquele ficava
+ * atrás de uma gaveta opaca, onde nunca apareceria: só custava uma camada de
+ * composição. Aqui o elemento é translúcido de propósito, e o borrão é
+ * justamente o que se vê.
+ *
+ * Onde o filtro existe, o véu clareia de 62% para 42%: um preto forte demais
+ * esconderia o desfoque e o efeito viraria só uma tela escura. Onde não
+ * existe, a regra inteira é ignorada e fica o véu escuro de sempre, que é
+ * quem garante o contraste nesse caso.
+ */
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .navbar__overlay {
+        background: rgba(0, 0, 0, .42);
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+    }
+}
+
 .navbar__drawer {
     position: fixed;
     top: 0;

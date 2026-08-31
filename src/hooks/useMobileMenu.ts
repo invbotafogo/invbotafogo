@@ -137,7 +137,23 @@ export function useMobileMenu() {
       body.style.position = anterior.position;
       body.style.top = anterior.top;
       body.style.width = anterior.width;
+
+      /*
+       * Com o body fixo a rolagem do documento vai a zero; o scrollTo abaixo é
+       * quem devolve a pessoa ao lugar em que ela estava. Só que o site tem
+       * `html { scroll-behavior: smooth }` (global.css), e isso transformava
+       * essa devolução numa animação: quem apenas abria e fechava o menu via a
+       * página saltar para o topo e descer de volta sozinha.
+       *
+       * O comportamento é desligado no átimo da restauração e devolvido em
+       * seguida — mexer no global.css tiraria a rolagem suave dos links
+       * âncora, que é intencional.
+       */
+      const raiz = document.documentElement;
+      const rolagemAnterior = raiz.style.scrollBehavior;
+      raiz.style.scrollBehavior = 'auto';
       window.scrollTo(0, posicao);
+      raiz.style.scrollBehavior = rolagemAnterior;
     };
   }, [aberto]);
 
