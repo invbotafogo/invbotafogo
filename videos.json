@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "mtUR_u0M2z1Q7wIubnoa8-FbMsM",
+  "etag": "aRDvUOChkS3XaU77lf43H7EqLMo",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,36 +10,36 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "awyL4WA48DZ-FEo5ZUzqXC8_Jis",
+      "etag": "Xceqyj9emZW4tGXFamsLRJGjmTY",
       "id": {
         "kind": "youtube#video",
-        "videoId": "_QusGuoYAIQ"
+        "videoId": "kVbvbFAWafg"
       },
       "snippet": {
-        "publishedAt": "2026-08-30T21:10:21Z",
+        "publishedAt": "2026-08-31T02:15:55Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "CULTO AO VIVO | Igreja de Nova Vida Botafogo",
-        "description": "Seja bem-vindo(a) ao culto ao vivo da Igreja de Nova Vida Botafogo. Onde quer que você esteja, este é um espaço para adorar, ...",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/_QusGuoYAIQ/default.jpg",
+            "url": "https://i.ytimg.com/vi/kVbvbFAWafg/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/_QusGuoYAIQ/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/kVbvbFAWafg/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/_QusGuoYAIQ/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/kVbvbFAWafg/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-30T21:10:21Z"
+        "publishTime": "2026-08-31T02:15:55Z"
       }
     },
     {
