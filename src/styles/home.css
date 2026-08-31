@@ -344,6 +344,94 @@
     flex: none;
 }
 
+/* ---------- LINHA DO TEMPO DO DIA (programação semanal) ---------- */
+/* Um fio vertical atravessa o cartão do dia e transforma o selo no marcador
+   central dele; cada evento ganha um pontinho na mesma prumada. Assim os
+   horários deixam de ser uma lista solta e passam a ser lidos como a sequência
+   do dia.
+
+   Só entra em cartões com mais de um evento (`.slot-timeline`, ligado no
+   EdCalendar): num dia de culto único o fio não ligaria nada e, cruzando a
+   borda dos cartões, faria DOM, QUA e QUI parecerem uma sequência contínua —
+   quando são dias distintos.
+
+   O fio é desenhado em dois trechos — acima e abaixo do selo — porque o fundo
+   do selo é translúcido: uma linha contínua apareceria por dentro dele em vez
+   de passar por trás. */
+.section-index .agenda-week .slot-timeline {
+    /* Espelham o padding do cartão, a largura do selo e o gap entre eles: é
+       daqui que sai a prumada da linha. Mudou lá em cima? Mude aqui também. */
+    --tl-pad: 18px;
+    --tl-day: 46px;
+    --tl-gap: 16px;
+    /* Centro horizontal do selo, medido da borda esquerda do cartão. */
+    --tl-x: calc(var(--tl-pad) + var(--tl-day) / 2);
+    /* Meia altura do selo + um respiro, para o fio morrer antes de tocá-lo. */
+    --tl-cut: calc(var(--tl-day) / 2 + 6px);
+    /* Folga nas pontas: o fio não encosta na borda de cima nem na de baixo. */
+    --tl-inset: 12px;
+    position: relative;
+}
+
+.section-index .agenda-week .slot-timeline::before,
+.section-index .agenda-week .slot-timeline::after {
+    content: '';
+    position: absolute;
+    left: var(--tl-x);
+    width: 1px;
+    background: var(--line);
+    pointer-events: none;
+}
+
+.section-index .agenda-week .slot-timeline::before {
+    top: var(--tl-inset);
+    height: calc(50% - var(--tl-cut) - var(--tl-inset));
+}
+
+.section-index .agenda-week .slot-timeline::after {
+    bottom: var(--tl-inset);
+    height: calc(50% - var(--tl-cut) - var(--tl-inset));
+}
+
+/* O pontinho de cada evento, alinhado à prumada da linha. O deslocamento é
+   negativo porque `.ev` começa depois do selo e do gap. */
+.section-index .agenda-week .slot-timeline .ev {
+    position: relative;
+}
+
+.section-index .agenda-week .slot-timeline .ev::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * (var(--tl-day) / 2 + var(--tl-gap)));
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    background: var(--ink);
+}
+
+/*
+ * O evento do meio de três cai exatamente na altura do selo: a prumada da
+ * linha passa pelo centro do selo, e o centro vertical do bloco de eventos
+ * coincide com ele. O ponto ficava desenhado por cima da letra do meio de
+ * "DOM" — daí o O sair estranho. Aqui o selo é o marcador dessa linha (é o que
+ * a referência mostra: ponto, selo, ponto), então o ponto sai de cena.
+ *
+ * `:nth-child(2):nth-last-child(2)` = o segundo de exatamente três.
+ */
+.section-index .agenda-week .slot-timeline .ev:nth-child(2):nth-last-child(2)::before {
+    display: none;
+}
+
+/* O próximo evento é o único ponto preenchido — mesma lógica do selo PRÓXIMO. */
+.section-index .agenda-week .slot-timeline .ev.is-next::before {
+    background: var(--gold);
+    box-shadow: 0 0 0 3px rgba(230, 178, 62, .16);
+}
+
 .section-index .month-link {
     margin-top: 16px;
     display: inline-flex;

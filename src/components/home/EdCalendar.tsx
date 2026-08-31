@@ -134,24 +134,36 @@ export function EdCalendar() {
       <div className="prog-col">
         {!verMes ? (
           <>
-            <div className="agenda">
+            <div className="agenda agenda-week">
               {PROGRAMACAO_SEMANAL.map((dia, d) => (
-                <div key={dia.dia} className={`slot ${d === proximo.d ? 'next' : ''}`}>
+                /*
+                 * `slot-timeline` liga o fio vertical do CSS, e só faz sentido
+                 * quando o dia tem mais de um evento para ligar: em QUA e QUI,
+                 * com um culto só, a linha não conectaria nada e ainda sugeriria
+                 * que os cartões são uma sequência contínua.
+                 */
+                <div
+                  key={dia.dia}
+                  className={`slot ${d === proximo.d ? 'next' : ''} ${
+                    dia.eventos.length > 1 ? 'slot-timeline' : ''
+                  }`}
+                >
                   <div className="day">{dia.dia}</div>
                   <div className="info">
-                    {dia.eventos.map((ev, e) => (
-                      <div className="ev" key={ev.titulo}>
-                        <div className="ev-main">
-                          <b>{ev.titulo}</b>
-                          <p>
-                            <Clock /> {ev.horario}
-                          </p>
+                    {dia.eventos.map((ev, e) => {
+                      const ehProximo = d === proximo.d && e === proximo.e;
+                      return (
+                        <div className={`ev ${ehProximo ? 'is-next' : ''}`} key={ev.titulo}>
+                          <div className="ev-main">
+                            <b>{ev.titulo}</b>
+                            <p>
+                              <Clock /> {ev.horario}
+                            </p>
+                          </div>
+                          {ehProximo && <span className="tag">PRÓXIMO</span>}
                         </div>
-                        {d === proximo.d && e === proximo.e && (
-                          <span className="tag">PRÓXIMO</span>
-                        )}
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               ))}

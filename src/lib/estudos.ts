@@ -111,7 +111,7 @@ export const TEMAS_EBD: Tema[] = [
     titulo: 'Oração',
     capa: `${IMG_OR}/1.webp`,
     // Capas em src/assets/imagesOR, apostilas em src/assets/pdfs.
-    // As aulas 2 a 16 já estão escritas: descomente cada uma conforme o
+    // As aulas 1 a 16 já estão escritas: descomente cada uma conforme o
     // material for para o repositório (imagem + PDF no branch main).
     aulas: [
       { titulo: 'Aula 1', imagem: `${IMG_OR}/1.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula1.pdf` },
