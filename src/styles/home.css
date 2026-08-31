@@ -358,6 +358,33 @@
    O fio é desenhado em dois trechos — acima e abaixo do selo — porque o fundo
    do selo é translúcido: uma linha contínua apareceria por dentro dele em vez
    de passar por trás. */
+/* Medidas do bloco do evento, fixadas para o alinhamento do selo (mais abaixo)
+   ser aritmética e não medida de fonte. Os valores são os que já se calculavam
+   sozinhos, então na tela nada se move — a diferença é que agora são nossos.
+   Valem para os três cartões da semana: entrelinha diferente entre o domingo e
+   os outros dias apareceria. */
+.section-index .agenda-week .slot {
+    /* Linha do título (os 22px de `.slot .info b`). */
+    --tl-titulo-lh: 27px;
+    /* Espelha o margin-top de `.slot .info p`. */
+    --tl-hora-mt: 6px;
+    /* Era a margem inferior padrão que o navegador dá a todo <p>. */
+    --tl-hora-mb: 14px;
+}
+
+/* `block` para a linha do título medir exatamente `--tl-titulo-lh`: como
+   inline, ela ainda dependia do "strut" do bloco em volta, que usa outro
+   tamanho de fonte e esticava a linha em uns 3px. */
+.section-index .agenda-week .slot .ev-main b {
+    display: block;
+    line-height: var(--tl-titulo-lh);
+}
+
+.section-index .agenda-week .slot .ev-main p {
+    margin-top: var(--tl-hora-mt);
+    margin-bottom: var(--tl-hora-mb);
+}
+
 .section-index .agenda-week .slot-timeline {
     /* Espelham o padding do cartão, a largura do selo e o gap entre eles: é
        daqui que sai a prumada da linha. Mudou lá em cima? Mude aqui também. */
@@ -370,7 +397,28 @@
     --tl-cut: calc(var(--tl-day) / 2 + 6px);
     /* Folga nas pontas: o fio não encosta na borda de cima nem na de baixo. */
     --tl-inset: 12px;
+    /*
+     * Quanto o selo desce para pousar na linha do horário.
+     *
+     * O selo é centralizado no cartão, e o cartão é simétrico: o centro dele
+     * cai no centro do bloco do evento do meio. Dentro desse bloco o horário
+     * não fica no centro — acima dele há a linha do título e a margem que os
+     * separa; abaixo, a margem que sobra no pé. O selo desce metade dessa
+     * diferença e pousa exatamente no centro do parágrafo da hora.
+     *
+     * As três medidas são fixadas logo abaixo justamente para esta conta
+     * existir: com `line-height: normal` e a margem padrão do <p>, quem as
+     * decide é a métrica da fonte e o navegador.
+     */
+    --tl-selo-desce: calc((var(--tl-titulo-lh) + var(--tl-hora-mt) - var(--tl-hora-mb)) / 2);
     position: relative;
+}
+
+/* `relative` de propósito: o selo se desloca sem tirar nada do lugar, então a
+   altura do cartão e a posição dos eventos continuam as mesmas. */
+.section-index .agenda-week .slot-timeline .day {
+    position: relative;
+    top: var(--tl-selo-desce);
 }
 
 .section-index .agenda-week .slot-timeline::before,
@@ -383,14 +431,16 @@
     pointer-events: none;
 }
 
+/* O selo desceu, então os dois trechos acompanham: sem isto a folga de cima
+   cresceria e a de baixo entraria por dentro do selo. */
 .section-index .agenda-week .slot-timeline::before {
     top: var(--tl-inset);
-    height: calc(50% - var(--tl-cut) - var(--tl-inset));
+    height: calc(50% - var(--tl-cut) - var(--tl-inset) + var(--tl-selo-desce));
 }
 
 .section-index .agenda-week .slot-timeline::after {
     bottom: var(--tl-inset);
-    height: calc(50% - var(--tl-cut) - var(--tl-inset));
+    height: calc(50% - var(--tl-cut) - var(--tl-inset) - var(--tl-selo-desce));
 }
 
 /* O pontinho de cada evento, alinhado à prumada da linha. Ele mora no
