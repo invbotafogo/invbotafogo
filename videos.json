@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "oCAX5cXyHswz1V43Epz5ERhlNv4",
+  "etag": "5aGqa5mSjf4YLlvg4-b7HhZvqRY",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 86,
+    "totalResults": 339,
     "resultsPerPage": 50
   },
   "items": [
@@ -44,70 +44,70 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "5m2VjlQ5QiULwid3gewabP8YfYw",
+      "etag": "Mzh5CT8PcrxDmJK9JePiB1_eblk",
       "id": {
         "kind": "youtube#video",
-        "videoId": "lsv2p50GqwY"
+        "videoId": "0moYhkvr8og"
       },
       "snippet": {
-        "publishedAt": "2026-08-24T04:16:51Z",
+        "publishedAt": "2026-08-30T18:23:35Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Deus tem um refúgio para você - Pr. Luiz Carlos",
+        "title": "O Impacto do Verdadeiro Encontro com Deus - Pr. Marcio Soares",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/default.jpg",
+            "url": "https://i.ytimg.com/vi/0moYhkvr8og/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/0moYhkvr8og/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/0moYhkvr8og/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-24T04:16:51Z"
+        "publishTime": "2026-08-30T18:23:35Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "h8zGtMp4lmOOTfAPcrZwwc36Ltw",
+      "etag": "cY7PgV7I2S0XKUKsratTOH2lcUg",
       "id": {
         "kind": "youtube#video",
-        "videoId": "MpkqpmlpNvI"
+        "videoId": "J3Azk_tfe4A"
       },
       "snippet": {
-        "publishedAt": "2026-08-24T03:41:40Z",
+        "publishedAt": "2026-08-27T01:37:41Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Águas agitadas: O lugar onde Deus se revela - Pra. Daniela Neves",
+        "title": "Noite de Adoração e Clamor - Pr. Humberto Torres",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/default.jpg",
+            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-24T03:41:40Z"
+        "publishTime": "2026-08-27T01:37:41Z"
       }
     }
   ]
