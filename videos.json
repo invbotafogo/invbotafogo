@@ -1,79 +1,45 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "eteAC081-SpAVm_PKQ46cmTK5Sw",
+  "etag": "oCAX5cXyHswz1V43Epz5ERhlNv4",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 339,
+    "totalResults": 86,
     "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "Mzh5CT8PcrxDmJK9JePiB1_eblk",
+      "etag": "rtPPmIEsznBxemV7bPg5fQ2_5vw",
       "id": {
         "kind": "youtube#video",
-        "videoId": "0moYhkvr8og"
+        "videoId": "IIrLuGTTyVo"
       },
       "snippet": {
-        "publishedAt": "2026-08-30T18:23:35Z",
+        "publishedAt": "2026-09-03T12:09:21Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Impacto do Verdadeiro Encontro com Deus - Pr. Marcio Soares",
+        "title": "Lábios Purificados, Céus Abertos! - Pr. Marcio Soares",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/0moYhkvr8og/default.jpg",
+            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/0moYhkvr8og/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/0moYhkvr8og/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-08-30T18:23:35Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "cY7PgV7I2S0XKUKsratTOH2lcUg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "J3Azk_tfe4A"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-27T01:37:41Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Noite de Adoração e Clamor - Pr. Humberto Torres",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-27T01:37:41Z"
+        "publishTime": "2026-09-03T12:09:21Z"
       }
     },
     {
@@ -108,6 +74,40 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-08-24T04:16:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "h8zGtMp4lmOOTfAPcrZwwc36Ltw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MpkqpmlpNvI"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-24T03:41:40Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Águas agitadas: O lugar onde Deus se revela - Pra. Daniela Neves",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MpkqpmlpNvI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-24T03:41:40Z"
       }
     }
   ]
