@@ -1,47 +1,13 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "vNc09AjxGJjYVV0zawStOp8-0g4",
+  "etag": "1rVQMMPSQKrw5AYUJJe1kexBEN4",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 251,
+    "totalResults": 250,
     "resultsPerPage": 50
   },
   "items": [
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Xceqyj9emZW4tGXFamsLRJGjmTY",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "kVbvbFAWafg"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-31T02:15:55Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/kVbvbFAWafg/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/kVbvbFAWafg/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/kVbvbFAWafg/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-31T02:15:55Z"
-      }
-    },
     {
       "kind": "youtube#searchResult",
       "etag": "Mzh5CT8PcrxDmJK9JePiB1_eblk",
@@ -108,6 +74,40 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-08-27T01:37:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5m2VjlQ5QiULwid3gewabP8YfYw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lsv2p50GqwY"
+      },
+      "snippet": {
+        "publishedAt": "2026-08-24T04:16:51Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Deus tem um refúgio para você - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-08-24T04:16:51Z"
       }
     }
   ]
