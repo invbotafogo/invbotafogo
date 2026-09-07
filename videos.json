@@ -1,8 +1,8 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "IFKYMZFyk07p5vq61lftBokNEac",
+  "etag": "5doYKHlfk314ALVIj-ecW6cnQZY",
   "nextPageToken": "CDIQAA",
-  "regionCode": "CA",
+  "regionCode": "US",
   "pageInfo": {
     "totalResults": 252,
     "resultsPerPage": 50
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "grTZbykF8PohgYJ0WiDzUY65Xbc",
+      "etag": "nYDrahbhEnnXN2YzEkHR0fXFkWY",
       "id": {
         "kind": "youtube#video",
         "videoId": "Itq2cSmXleE"
@@ -18,7 +18,7 @@
       "snippet": {
         "publishedAt": "2026-09-07T02:45:30Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "title": "Culto de Domingo (Noite) - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
@@ -44,7 +44,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "x9u-5OTa-AkzVOuTykeHF7mlOpc",
+      "etag": "KEXYNyeh7FD-7uZfKVqrKK0RLKc",
       "id": {
         "kind": "youtube#video",
         "videoId": "AU13Gs565Vo"
@@ -52,7 +52,7 @@
       "snippet": {
         "publishedAt": "2026-09-07T02:45:27Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pra. Daniela Neves",
+        "title": "Culto de Domingo (Manhã) - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
