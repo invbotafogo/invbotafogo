@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "9WW4tHlO6N0Oy0Z3OPeqNWyjAuY",
+  "etag": "ER_EInn65kjlbGDpvVvW8s6gmHc",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,74 @@
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "grTZbykF8PohgYJ0WiDzUY65Xbc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Itq2cSmXleE"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-07T02:45:30Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Itq2cSmXleE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Itq2cSmXleE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Itq2cSmXleE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-07T02:45:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x9u-5OTa-AkzVOuTykeHF7mlOpc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AU13Gs565Vo"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-07T02:45:27Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pra. Daniela Neves",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-07T02:45:27Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "jWNl7WqEayjWGvT0xDIaG5GS5O0",
@@ -40,74 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-09-03T12:09:21Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Mzh5CT8PcrxDmJK9JePiB1_eblk",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "0moYhkvr8og"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-30T18:23:35Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Impacto do Verdadeiro Encontro com Deus - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/0moYhkvr8og/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/0moYhkvr8og/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/0moYhkvr8og/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-30T18:23:35Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "cY7PgV7I2S0XKUKsratTOH2lcUg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "J3Azk_tfe4A"
-      },
-      "snippet": {
-        "publishedAt": "2026-08-27T01:37:41Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Noite de Adoração e Clamor - Pr. Humberto Torres",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/J3Azk_tfe4A/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-08-27T01:37:41Z"
       }
     }
   ]
