@@ -873,3 +873,154 @@
             rgba(230, 178, 62, .5) 85%,
             rgba(230, 178, 62, 0) 100%);
 }
+
+
+
+/* ---------- DEVOCIONAL DO DIA ---------- */
+/* Mesma grade dos outros blocos editoriais (`.ed`): coluna estreita à esquerda
+   com o rótulo e o contador, texto à direita. Só o que é próprio do devocional
+   está aqui — cores, bordas e espaçamentos continuam vindo de `.ed`. */
+
+   .section-index .ed-dev .dev-data {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.section-index .ed-dev .dev-contador {
+    margin-top: 4px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+}
+
+.section-index .ed-dev .dev-contador b {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Fio dourado à esquerda: dá ao devocional o ar de citação e o distingue do
+   calendário e da localização sem precisar de um card inteiro. */
+.section-index .ed-dev .dev-texto {
+    border-left: 2px solid var(--line);
+    padding-left: clamp(16px, 3vw, 26px);
+    color: var(--paper);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.section-index .ed-dev .dev-texto p {
+    margin: 0 0 14px;
+}
+
+.section-index .ed-dev .dev-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Itens de lista: o texto original vinha com marcadores manuais. */
+.section-index .ed-dev .dev-item {
+    position: relative;
+    padding-left: 18px;
+    color: var(--dim);
+    margin-bottom: 8px;
+}
+
+.section-index .ed-dev .dev-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .72em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+/* Respiro entre os blocos do texto original (linha em branco). */
+.section-index .ed-dev .dev-espaco {
+    height: 10px;
+}
+
+/* Esmaecimento no pé da prévia, para o corte não parecer texto faltando. */
+.section-index .ed-dev .dev-texto.is-cortado {
+    -webkit-mask-image: linear-gradient(180deg, #000 62%, rgba(0, 0, 0, .15) 100%);
+    mask-image: linear-gradient(180deg, #000 62%, rgba(0, 0, 0, .15) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-index .ed-dev .dev-texto.is-cortado {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+
+@media (max-width: 860px) {
+    .section-index .ed-dev {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .section-index .ed-dev .lead-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* O texto volta a ser lido da esquerda para a direita: centralizar
+       parágrafos longos atrapalha a leitura. */
+    .section-index .ed-dev .dev-col {
+        width: 100%;
+        text-align: left;
+    }
+
+    .section-index .ed-dev .dev-texto {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+/* ---------- SÉRIES: contexto e parte anterior ---------- */
+/* Etiqueta na coluna da esquerda dizendo de que série o texto faz parte, para
+   quem cai na parte 5 sem ter visto as outras. */
+.section-index .ed-dev .dev-serie {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--paper);
+    max-width: 260px;
+}
+
+.section-index .ed-dev .dev-serie span {
+    display: block;
+    margin-top: 3px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+/* O link e o texto da parte anterior. O recuo cresce a cada nível aberto — é
+   o que mostra que a pessoa está voltando na série, e não lendo o de hoje. */
+.section-index .ed-dev .dev-anterior {
+    margin-top: 18px;
+}
+
+.section-index .ed-dev .dev-texto-anterior {
+    margin-top: 14px;
+    border-left-style: dashed;
+    color: var(--dim);
+    font-size: 15px;
+}
+
+.section-index .ed-dev .dev-texto-anterior .dev-item {
+    color: var(--dim);
+}
+
+@media (max-width: 860px) {
+    .section-index .ed-dev .dev-serie {
+        max-width: 100%;
+    }
+}
