@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "5doYKHlfk314ALVIj-ecW6cnQZY",
+  "etag": "Bq8cb9-Oheod5LC2Nb3b7r4gE_4",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 252,
+    "totalResults": 87,
     "resultsPerPage": 50
   },
   "items": [
@@ -78,36 +78,36 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "jWNl7WqEayjWGvT0xDIaG5GS5O0",
+      "etag": "5m2VjlQ5QiULwid3gewabP8YfYw",
       "id": {
         "kind": "youtube#video",
-        "videoId": "IIrLuGTTyVo"
+        "videoId": "lsv2p50GqwY"
       },
       "snippet": {
-        "publishedAt": "2026-09-03T12:09:21Z",
+        "publishedAt": "2026-08-24T04:16:51Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Lábios Purificados, Céus Abertos! - Pr. Marcio Soares",
+        "title": "Deus tem um refúgio para você - Pr. Luiz Carlos",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/default.jpg",
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/lsv2p50GqwY/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-09-03T12:09:21Z"
+        "publishTime": "2026-08-24T04:16:51Z"
       }
     }
   ]
