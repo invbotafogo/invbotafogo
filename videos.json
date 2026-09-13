@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "YARNDezl7zjfWVY2pCKiYPMhEf4",
+  "etag": "p48j0s6R4VYP5yCSP00huCdwEsc",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,40 @@
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kAdYEznHNbMSGXHF-dHzKla1ZDI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1vWL-04TG8Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-13T16:51:22Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Caminho da Obediência e a Plenitude da Paz - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-13T16:51:22Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "EfkjZzdfMUKcB25s9Zq0zGJVMmU",
@@ -74,40 +108,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-09-07T02:45:27Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "3n2-yABz3-a_2bh2InpXu111fYg",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "IIrLuGTTyVo"
-      },
-      "snippet": {
-        "publishedAt": "2026-09-03T12:09:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Lábios Purificados, Céus Abertos! - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/IIrLuGTTyVo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-09-03T12:09:21Z"
       }
     }
   ]
