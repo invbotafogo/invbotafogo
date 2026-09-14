@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "uJ2ArMCttLukv0W03VGpsRgXNS8",
+  "etag": "H5mDN_Ei-Xie5VagXvG6xejhjTE",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "mGir-u_lYlRHMhkeyP73QJwO3H8",
+      "etag": "TqrMeGhjdXnxxxdt9gJmNUXNvOc",
       "id": {
         "kind": "youtube#video",
         "videoId": "esJdl8ItQ08"
@@ -35,6 +35,16 @@
             "url": "https://i.ytimg.com/vi/esJdl8ItQ08/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/esJdl8ItQ08/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/esJdl8ItQ08/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
@@ -44,7 +54,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "kAdYEznHNbMSGXHF-dHzKla1ZDI",
+      "etag": "Dn3sy5axvULmom07-g9m8bMiJbU",
       "id": {
         "kind": "youtube#video",
         "videoId": "1vWL-04TG8Q"
@@ -69,6 +79,16 @@
             "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
@@ -78,7 +98,7 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "EfkjZzdfMUKcB25s9Zq0zGJVMmU",
+      "etag": "UeuFpef5SCqJUdqyGKzmQ_qdEAM",
       "id": {
         "kind": "youtube#video",
         "videoId": "HpwUIssr68I"
@@ -103,6 +123,16 @@
             "url": "https://i.ytimg.com/vi/HpwUIssr68I/hqdefault.jpg",
             "width": 480,
             "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
