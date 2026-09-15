@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "NpDEEqXjZ8oPESZa2kzTJpC4INg",
+  "etag": "ezvWQV7wjX_ceR5oVQaH8-cHNw8",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 84,
+    "totalResults": 254,
     "resultsPerPage": 50
   },
   "items": [
@@ -98,46 +98,46 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ZKWXMvwFUeTRlTVXokwgTlf-ptU",
+      "etag": "UeuFpef5SCqJUdqyGKzmQ_qdEAM",
       "id": {
         "kind": "youtube#video",
-        "videoId": "AU13Gs565Vo"
+        "videoId": "HpwUIssr68I"
       },
       "snippet": {
-        "publishedAt": "2026-09-07T02:45:27Z",
+        "publishedAt": "2026-09-10T02:03:03Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo (Manhã) - Pra. Daniela Neves",
+        "title": "Discernindo as Guerras Espirituais - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/default.jpg",
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/hqdefault.jpg",
             "width": 480,
             "height": 360
           },
           "standard": {
-            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/sddefault.jpg",
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/sddefault.jpg",
             "width": 640,
             "height": 480
           },
           "maxres": {
-            "url": "https://i.ytimg.com/vi/AU13Gs565Vo/maxresdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HpwUIssr68I/maxresdefault.jpg",
             "width": 1280,
             "height": 720
           }
         },
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
-        "publishTime": "2026-09-07T02:45:27Z"
+        "publishTime": "2026-09-10T02:03:03Z"
       }
     }
   ]
