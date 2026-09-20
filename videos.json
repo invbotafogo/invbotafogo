@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "0j_rvH1SoJrh2RcSn6so9x8vJ3Y",
+  "etag": "PCTLIat4JYlx62crE1BVpbTTmxM",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 255,
+    "totalResults": 256,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jVNbgT1g81RoHYxXeu-aQCZq_Q0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "X2YAi8dtqpw"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-20T19:13:33Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Vigiai: O Relógio De Deus Não Atrasa - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-20T19:13:33Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "2f-hrlpTS3wIFUgooUMPUTdEgkQ",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-09-13T16:51:22Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "UeuFpef5SCqJUdqyGKzmQ_qdEAM",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "HpwUIssr68I"
-      },
-      "snippet": {
-        "publishedAt": "2026-09-10T02:03:03Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Discernindo as Guerras Espirituais - Pra. Daniela Neves",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/HpwUIssr68I/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/HpwUIssr68I/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/HpwUIssr68I/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/HpwUIssr68I/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/HpwUIssr68I/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-09-10T02:03:03Z"
       }
     }
   ]
