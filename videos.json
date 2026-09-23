@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "aAw-uwwxrPSsZ36S4tk5crU98OY",
+  "etag": "6iXZobezPqpsQf6GjDI1ItuxXrk",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -54,50 +54,6 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "jVNbgT1g81RoHYxXeu-aQCZq_Q0",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "X2YAi8dtqpw"
-      },
-      "snippet": {
-        "publishedAt": "2026-09-20T19:13:33Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Vigiai: O Relógio De Deus Não Atrasa - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/X2YAi8dtqpw/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-09-20T19:13:33Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
       "etag": "2f-hrlpTS3wIFUgooUMPUTdEgkQ",
       "id": {
         "kind": "youtube#video",
@@ -138,6 +94,50 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-09-14T02:18:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZHUuH-Tmr68Olftf4h0EZ0Jks5U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1vWL-04TG8Q"
+      },
+      "snippet": {
+        "publishedAt": "2026-09-13T16:51:22Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Caminho da Obediência e a Plenitude da Paz - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1vWL-04TG8Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-09-13T16:51:22Z"
       }
     }
   ]
