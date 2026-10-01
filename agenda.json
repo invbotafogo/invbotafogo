@@ -1,88 +1,91 @@
 {
-  "rotulo": "Setembro de 2026",
+  "rotulo": "Outubro de 2026",
   "semanas": [
     {
       "rotulo": "Semana 1",
-      "intervalo": "1 a 5 de setembro",
-      "eventos": []
+      "intervalo": "1 a 10 de outubro",
+      "eventos": [
+        {
+          "dia": "SÁB",
+          "data": "03/10",
+          "titulo": "Consagração",
+          "horario": "8h",
+          "nota": "Obreiros / Planejamento Natal"
+        },
+        {
+          "dia": "DOM",
+          "data": "04/10",
+          "titulo": "Culto",
+          "horario": "10h e 19h",
+          "nota": "Ceia do Senhor / Início Ensaio - Natal"
+        }
+      ]
     },
     {
       "rotulo": "Semana 2",
-      "intervalo": "6 a 12 de setembro",
+      "intervalo": "11 a 17 de outubro",
       "eventos": [
         {
           "dia": "DOM",
-          "data": "06/09",
+          "data": "11/10",
           "titulo": "Culto",
           "horario": "10h e 19h",
-          "nota": "Ceia do Senhor"
+          "nota": "Apresentação - Dia das Crianças (Manhã)"
         },
         {
-          "dia": "SÁB",
-          "data": "12/09",
-          "titulo": "Consagração",
-          "horario": "8h",
-          "nota": "Obreiros"
+          "dia": "QUA",
+          "data": "14/10",
+          "titulo": "Culto",
+          "horario": "19h30",
+          "nota": "Noite de Adoração"
         }
       ]
     },
     {
       "rotulo": "Semana 3",
-      "intervalo": "13 a 19 de setembro",
-      "eventos": []
-    },
-    {
-      "rotulo": "Semana 4",
-      "intervalo": "20 a 26 de setembro",
+      "intervalo": "18 a 24 de outubro",
       "eventos": [
         {
           "dia": "DOM",
-          "data": "20/09",
-          "titulo": "Oração pelas Famílias",
-          "horario": "18h",
-          "nota": "Oração"
-        },
-        {
-          "dia": "SÁB",
-          "data": "26/09",
-          "titulo": "Chá das Mulheres",
-          "horario": "17h",
-          "nota": "3° Culto Feminino e Confraternização"
+          "data": "18/10",
+          "titulo": "Almoço",
+          "horario": "12h",
+          "nota": "Almoço com a Família Nova Vida"
         }
       ]
     },
     {
-      "rotulo": "Semana 5",
-      "intervalo": "27 a 30 de setembro",
+      "rotulo": "Semana 4",
+      "intervalo": "25 a 31 de outubro",
       "eventos": [
         {
           "dia": "SEG",
-          "data": "28/09",
+          "data": "26/10",
           "titulo": "Encontro de Amigas",
           "horario": "19h",
           "nota": "Reunião Mensal"
         },
         {
           "dia": "SEG",
-          "data": "28/09",
+          "data": "26/10",
           "titulo": "Encontro de Guerreiros",
           "horario": "19h",
           "nota": "Reunião Mensal"
         },
         {
           "dia": "QUA",
-          "data": "30/09",
+          "data": "28/10",
           "titulo": "Culto",
           "horario": "19h30",
-          "nota": "Noite de Adoração e Clamor"
+          "nota": "Culto de Oração"
         }
       ]
     }
   ],
-  "atualizadoEm": "2026-09-01T11:11:10+00:00",
+  "atualizadoEm": "2026-10-01T12:31:58+00:00",
   "fonte": {
     "planilha": "1_fXS_OxpG3bQk-CO-d8uNVAvblU-KbEsXTaJDH_S8wU",
-    "aba": "Setembro",
+    "aba": "Outubro",
     "coluna": "F"
   }
 }
