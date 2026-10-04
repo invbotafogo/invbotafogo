@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "GSqjqHnZ9C_UoLz3Ea0yTGvTiU8",
+  "etag": "xBhFaxrWDSLE2uZ10k9EL06uYlQ",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 269,
+    "totalResults": 278,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sfSWNuSHbPcTkubpxKl8qp7sAdU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nzQRoMkbXww"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-02T00:02:31Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Oração - Dc. Atayde Fernandes",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-02T00:02:31Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "y75MGFMuwdHb5AsyqJToktJKBOc",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-09-27T20:12:25Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "62QPqGZYCEmnL-cUExx4PbhmmH4",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "UM407wa9C84"
-      },
-      "snippet": {
-        "publishedAt": "2026-09-24T02:22:06Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Ventos Contrários: O Caminho da Tormenta é o Altar do Milagre",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/UM407wa9C84/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/UM407wa9C84/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/UM407wa9C84/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/UM407wa9C84/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/UM407wa9C84/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-09-24T02:22:06Z"
       }
     }
   ]
