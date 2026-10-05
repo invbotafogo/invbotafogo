@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "rQwcDAeastn2xV3q7HFTQlWuzPI",
+  "etag": "AO_JNcG0oP6_aGqaA5BuukSVeuI",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 276,
+    "totalResults": 271,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Y9TN_Vt66mCVumC_VZWW-6zQN2w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KAOK7o5AQTE"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T04:39:28Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T04:39:28Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "ctuyYXPeEECbkDNEQtjEHOPphT4",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-09-28T15:22:30Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "DFisX7xZE8EIQqX-erCs_AH1Qyk",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "X1io9xYy3NE"
-      },
-      "snippet": {
-        "publishedAt": "2026-09-27T20:12:25Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O justo viverá pela fé! - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/X1io9xYy3NE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/X1io9xYy3NE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/X1io9xYy3NE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/X1io9xYy3NE/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/X1io9xYy3NE/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-09-27T20:12:25Z"
       }
     }
   ]
