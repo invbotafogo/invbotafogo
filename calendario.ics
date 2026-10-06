@@ -1,0 +1,176 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Igreja de Nova Vida em Botafogo//Site//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Igreja de Nova Vida em Botafogo
+X-WR-CALDESC:Cultos\, encontros da semana e eventos do mês.
+X-WR-TIMEZONE:America/Sao_Paulo
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:semanal-0-0830@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20260104T083000
+DURATION:PT1H
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Escola Bíblica Dominical
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1000@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20260104T100000
+DURATION:PT2H
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Culto
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1900@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20260104T190000
+DURATION:PT2H
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Culto
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1800@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20260104T180000
+DURATION:PT1H
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Novos Convertidos
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-3-1930@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20260107T193000
+DURATION:PT2H
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Culto
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-4-0715@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20260101T071500
+DURATION:PT1H
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Culto de Oração
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:mensal-20261003T0800-consagracao@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261003T080000
+DURATION:PT1H30M
+SUMMARY:Consagração — Obreiros / Planejamento Natal
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1000@invbotafogo.com.br
+RECURRENCE-ID;TZID=America/Sao_Paulo:20261004T100000
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261004T100000
+DURATION:PT2H
+SUMMARY:Culto — Ceia do Senhor / Início Ensaio - Natal
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1900@invbotafogo.com.br
+RECURRENCE-ID;TZID=America/Sao_Paulo:20261004T190000
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261004T190000
+DURATION:PT2H
+SUMMARY:Culto — Ceia do Senhor / Início Ensaio - Natal
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1000@invbotafogo.com.br
+RECURRENCE-ID;TZID=America/Sao_Paulo:20261011T100000
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261011T100000
+DURATION:PT2H
+SUMMARY:Culto — Apresentação - Dia das Crianças (Manhã)
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-0-1900@invbotafogo.com.br
+RECURRENCE-ID;TZID=America/Sao_Paulo:20261011T190000
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261011T190000
+DURATION:PT2H
+SUMMARY:Culto — Apresentação - Dia das Crianças (Manhã)
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-3-1930@invbotafogo.com.br
+RECURRENCE-ID;TZID=America/Sao_Paulo:20261014T193000
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261014T193000
+DURATION:PT2H
+SUMMARY:Culto — Noite de Adoração
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:mensal-20261018T1200-almoco@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261018T120000
+DURATION:PT1H30M
+SUMMARY:Almoço — Almoço com a Família Nova Vida
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:mensal-20261026T1900-encontro-de-amigas@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261026T190000
+DURATION:PT1H30M
+SUMMARY:Encontro de Amigas — Reunião Mensal
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:mensal-20261026T1900-encontro-de-guerreiros@invbotafogo.com.br
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261026T190000
+DURATION:PT1H30M
+SUMMARY:Encontro de Guerreiros — Reunião Mensal
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+BEGIN:VEVENT
+UID:semanal-3-1930@invbotafogo.com.br
+RECURRENCE-ID;TZID=America/Sao_Paulo:20261028T193000
+DTSTAMP:20261006T050647Z
+DTSTART;TZID=America/Sao_Paulo:20261028T193000
+DURATION:PT2H
+SUMMARY:Culto — Culto de Oração
+LOCATION:Rua da Matriz\, 95 - Botafogo\, Rio de Janeiro - RJ\, 22260-100
+URL:https://invbotafogo.com.br/
+END:VEVENT
+END:VCALENDAR
