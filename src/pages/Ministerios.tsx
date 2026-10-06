@@ -1,5 +1,5 @@
 import { useEffect, useRef, type KeyboardEvent } from 'react';
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { FooterSlot } from '../components/layout/Footer';
 import { MINISTERIOS, NOME_EXPANDIDO, type Ministerio } from '../lib/ministerios';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
