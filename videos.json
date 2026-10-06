@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "AO_JNcG0oP6_aGqaA5BuukSVeuI",
+  "etag": "kwIcpIR8SKXeA4uNYojkCCuB7n0",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 271,
+    "totalResults": 274,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wcKd03rTO8YEMg5kdFfQzVUbjF4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BtVv440Q31E"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-05T19:58:33Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Motivação para o Crescimento (Rm.13:11-14) - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BtVv440Q31E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BtVv440Q31E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BtVv440Q31E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BtVv440Q31E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BtVv440Q31E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-05T19:58:33Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "Y9TN_Vt66mCVumC_VZWW-6zQN2w",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-02T00:02:31Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "y75MGFMuwdHb5AsyqJToktJKBOc",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Kwt1peCQdz8"
-      },
-      "snippet": {
-        "publishedAt": "2026-09-28T15:22:30Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Kwt1peCQdz8/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Kwt1peCQdz8/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Kwt1peCQdz8/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/Kwt1peCQdz8/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/Kwt1peCQdz8/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-09-28T15:22:30Z"
       }
     }
   ]
