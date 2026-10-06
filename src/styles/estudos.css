@@ -360,7 +360,7 @@
         gap: 16px;
     }
 
-    /* Quatro estudos: uma linha no tablet, 2 × 2 no celular (até no de 320px). */
+    /* Tablet: os estudos numa linha só. No celular, 2 × 2 (regra abaixo). */
     .est-indice {
         position: static;
         display: grid;
@@ -382,6 +382,21 @@
 @media (max-width: 640px) {
     .section-estudo .tabs__list {
         width: 100%;
+    }
+
+    /* Sempre duas colunas: com quatro estudos, 2 × 2. Em telas de 420px ou
+       mais, o `auto-fit` de cima cabia três por linha e deixava o quarto
+       sozinho, encostado à esquerda. */
+    .est-indice {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Número ímpar de estudos: o último fica no meio da linha, com a mesma
+       largura dos outros. */
+    .est-item:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 3px);
     }
 
     /* Menos recuo nas laterais do painel: sobra largura para o título da aula
