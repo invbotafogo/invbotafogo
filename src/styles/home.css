@@ -12,7 +12,6 @@
     background-attachment: fixed, fixed;
     min-height: 100vh;
     min-height: 100svh;
-    min-height: 100dvh;
 }
 
 
@@ -25,7 +24,7 @@
     align-items: center;
     gap: 0;               /* respiro entre boas-vindas e versículo */
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100svh; /* ver #root em global.css */
     box-sizing: border-box;
     color: whitesmoke;
     background: rgba(0, 0, 0, 0.5);
