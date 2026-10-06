@@ -1,4 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import { useMobileMenu } from '../../hooks/useMobileMenu';
 import { useScrollProgress } from '../../hooks/useScrollProgress';
@@ -32,10 +33,39 @@ const REDES_GAVETA = [
   { href: REDES.whatsapp, icone: 'fa-brands fa-whatsapp fa-xl', nome: 'WhatsApp' },
 ];
 
+/** Leva ao topo da página, suave — ou na hora, para quem prefere menos movimento. */
+function irAoTopo() {
+  const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: semMovimento ? 'auto' : 'smooth' });
+}
+
 export function Header() {
   const { aberto, alternar, fechar, gavetaRef, gatilhoRef, arrasto, gestos } =
     useMobileMenu();
   const barraProgresso = useScrollProgress<HTMLDivElement>();
+  const { pathname } = useLocation();
+
+  /*
+   * Clique na logo (ou num item do menu) da página em que a pessoa já está:
+   * o React Router não troca de página, então quem leva ao topo é o clique.
+   * Trocando de página, quem sobe é o Layout.
+   *
+   * Com a gaveta aberta o body está travado (useMobileMenu) e, ao fechar, a
+   * rolagem antiga é devolvida — então a subida espera a gaveta fechar.
+   */
+  const topoAoFechar = useRef(false);
+
+  const subirSeForAMesmaPagina = (destino: string) => {
+    if (destino !== pathname) return;
+    if (aberto) topoAoFechar.current = true;
+    else irAoTopo();
+  };
+
+  useEffect(() => {
+    if (aberto || !topoAoFechar.current) return;
+    topoAoFechar.current = false;
+    irAoTopo();
+  }, [aberto]);
 
   return (
     /*
@@ -51,7 +81,15 @@ export function Header() {
         <div ref={barraProgresso} className="navbar__progress" />
 
         <div className="logo navbar__brand">
-          <Link to="/" onClick={fechar}>
+          {/* A logo leva à página inicial; na própria home, volta ao topo. */}
+          <Link
+            to="/"
+            aria-label="Página inicial"
+            onClick={() => {
+              subirSeForAMesmaPagina('/');
+              fechar();
+            }}
+          >
             <img src={logo} alt="INVB Logo" />
           </Link>
         </div>
@@ -60,7 +98,11 @@ export function Header() {
           <ul className="navbar__menu">
             {ITENS.map((item) => (
               <li key={item.para}>
-                <NavLink to={item.para} end={item.para === '/'}>
+                <NavLink
+                  to={item.para}
+                  end={item.para === '/'}
+                  onClick={() => subirSeForAMesmaPagina(item.para)}
+                >
                   {item.rotulo}
                 </NavLink>
               </li>
@@ -72,7 +114,11 @@ export function Header() {
             1024px; no celular ele está no topo da gaveta). O NavLink põe
             `active` quando a pessoa já está na página, e o CSS mostra um anel
             dourado discreto. */}
-        <NavLink to={DESTAQUE.para} className="navbar__cta">
+        <NavLink
+          to={DESTAQUE.para}
+          className="navbar__cta"
+          onClick={() => subirSeForAMesmaPagina(DESTAQUE.para)}
+        >
           {DESTAQUE.curto}
         </NavLink>
 
@@ -137,14 +183,28 @@ export function Header() {
         </div>
 
         {/* Mesmo destaque da barra do desktop, primeiro a entrar na cascata. */}
-        <NavLink to={DESTAQUE.para} className="navbar__drawer-cta" onClick={fechar}>
+        <NavLink
+          to={DESTAQUE.para}
+          className="navbar__drawer-cta"
+          onClick={() => {
+            subirSeForAMesmaPagina(DESTAQUE.para);
+            fechar();
+          }}
+        >
           {DESTAQUE.longo}
         </NavLink>
 
         <ul className="navbar__drawer-list">
           {ITENS.map((item) => (
             <li key={item.para}>
-              <NavLink to={item.para} onClick={fechar} end={item.para === '/'}>
+              <NavLink
+                to={item.para}
+                end={item.para === '/'}
+                onClick={() => {
+                  subirSeForAMesmaPagina(item.para);
+                  fechar();
+                }}
+              >
                 {item.rotulo}
               </NavLink>
             </li>

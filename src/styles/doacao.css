@@ -472,3 +472,34 @@
         transform: none;
     }
 }
+
+/* ---------- CELULAR: CENTRALIZADO ----------
+   No celular os títulos e os destaques ficam centralizados, como na home.
+   Textos longos, listas, cartões e formulários continuam à esquerda: lidos
+   centralizados, cansam. */
+@media (max-width: 640px) {
+    .doe-intro,
+    .doe-versiculo {
+        text-align: center;
+    }
+
+    .doe-intro p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Pix: título, chave, botão e QR Code no meio; o passo a passo continua
+       à esquerda. */
+    .doe-pix-info {
+        text-align: center;
+    }
+
+    .doe-pix-info h2,
+    .doe-pix-acoes {
+        justify-content: center;
+    }
+
+    .doe-pix-qr {
+        justify-self: center;
+    }
+}

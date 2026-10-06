@@ -630,3 +630,43 @@
         transform: none;
     }
 }
+
+/* ---------- CELULAR: CENTRALIZADO ----------
+   No celular os títulos e os destaques ficam centralizados, como na home.
+   Textos longos, listas, cartões e formulários continuam à esquerda: lidos
+   centralizados, cansam. */
+@media (max-width: 560px) {
+    .pv-intro {
+        text-align: center;
+    }
+
+    .pv-lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pv-bloco > .pv-kicker,
+    .pv-bloco > h2 {
+        text-align: center;
+    }
+
+    .pv-chegar > div:first-child {
+        text-align: center;
+    }
+
+    /* O alfinete em cima do endereço: ao lado, ficava solto na ponta. */
+    .pv-endereco {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .pv-historia {
+        text-align: center;
+    }
+
+    .pv-historia-texto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

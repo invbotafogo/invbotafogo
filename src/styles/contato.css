@@ -642,3 +642,41 @@
         transform: none;
     }
 }
+
+/* ---------- CELULAR: CENTRALIZADO ----------
+   No celular os títulos e os destaques ficam centralizados, como na home.
+   Textos longos, listas, cartões e formulários continuam à esquerda: lidos
+   centralizados, cansam. */
+@media (max-width: 560px) {
+    .ct-intro {
+        text-align: center;
+    }
+
+    .ct-intro p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ct-whatsapp {
+        text-align: center;
+    }
+
+    .ct-whatsapp-rotulo,
+    .ct-whatsapp-acoes {
+        justify-content: center;
+    }
+
+    /* E-mail, Instagram e endereço: selo, contato e botão no meio. */
+    .ct-canal {
+        align-items: center;
+        text-align: center;
+    }
+
+    .ct-canal .ct-icone {
+        align-self: center;
+    }
+
+    .ct-canal-texto {
+        align-items: center;
+    }
+}

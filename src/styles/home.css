@@ -1080,3 +1080,25 @@
         max-width: 100%;
     }
 }
+
+/* ---------- CELULAR: CENTRALIZADO ----------
+   Mesma regra das outras páginas: títulos e destaques no meio. A semana, o
+   "Ver outros eventos no mês" e o texto do devocional continuam à esquerda. */
+@media (max-width: 540px) {
+    /* Próximo encontro: hora, dia, encontro e quando, no meio do cartão. */
+    .section-index .encontro-proximo {
+        text-align: center;
+    }
+
+    .section-index .encontro-proximo-corpo,
+    .section-index .encontro-proximo-info {
+        align-items: center;
+    }
+
+    /* Endereço: o alfinete em cima do texto. Ao lado, ficava solto na ponta. */
+    .section-index .ed-loc .addr {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+}

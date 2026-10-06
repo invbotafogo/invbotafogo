@@ -66,6 +66,13 @@ function voltarAoTopo() {
   window.scrollTo({ top: 0, behavior: semMovimento ? 'auto' : 'smooth' });
 }
 
+/* Link para a página em que a pessoa já está: o React Router não troca de
+   página, então o clique leva ao topo. Trocando de página, quem sobe é o
+   Layout. */
+function subirSeForAMesmaPagina(destino: string) {
+  if (window.location.pathname === destino) voltarAoTopo();
+}
+
 /**
  * Rodapé: a marca com as redes, as páginas, os ministérios e "Visite a gente"
  * (endereço, horários dos cultos, telefone e e-mail). Mesma largura do header
@@ -79,7 +86,12 @@ export function Footer() {
       <div className="rod-wrap">
         <div className="rod-grade">
           <div className="rod-marca">
-            <Link to="/" className="rod-logo" aria-label="Página inicial">
+            <Link
+              to="/"
+              className="rod-logo"
+              aria-label="Página inicial"
+              onClick={() => subirSeForAMesmaPagina('/')}
+            >
               <img src={logo} alt="Nova Vida Botafogo" width={170} height={70} />
             </Link>
             <p className="rod-lema">Não apenas uma Igreja, mas uma Família!</p>
@@ -96,13 +108,18 @@ export function Footer() {
 
           <nav className="rod-coluna rod-paginas" aria-labelledby="rod-paginas-titulo">
             <h2 id="rod-paginas-titulo">Páginas</h2>
-            <ul className="rod-lista">
-              {PAGINAS.map((pagina) => (
-                <li key={pagina.para}>
-                  <Link to={pagina.para}>{pagina.rotulo}</Link>
-                </li>
-              ))}
-            </ul>
+            {/* Duas listas: no celular, cada uma é uma fileira centralizada. */}
+            {[PAGINAS.slice(0, 4), PAGINAS.slice(4)].map((fileira) => (
+              <ul className="rod-lista" key={fileira[0].para}>
+                {fileira.map((pagina) => (
+                  <li key={pagina.para}>
+                    <Link to={pagina.para} onClick={() => subirSeForAMesmaPagina(pagina.para)}>
+                      {pagina.rotulo}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ))}
           </nav>
 
           <nav className="rod-coluna rod-ministerios" aria-labelledby="rod-ministerios-titulo">

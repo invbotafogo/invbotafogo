@@ -1,0 +1,181 @@
+/*
+ * "Adicionar à minha agenda" (AssinarAgenda.tsx): o botão em pílula dourada
+ * e, ao tocar, um menu com os apps de calendário. Cores próprias, para o
+ * componente funcionar em qualquer página.
+ */
+
+.ag {
+    --ag-paper: #F6F5F1;
+    --ag-dim: rgba(246, 245, 241, .62);
+    --ag-gold: #E6B23E;
+    --ag-gold-hi: #F6D27A;
+
+    position: relative;
+    display: inline-block;
+    margin-top: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ag-botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid rgba(230, 178, 62, .55);
+    border-radius: 999px;
+    background: none;
+    color: var(--ag-gold-hi);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.ag-botao i {
+    font-size: 16px;
+}
+
+.ag-seta {
+    font-size: 11px !important;
+    transition: transform .2s ease;
+}
+
+.ag-botao[aria-expanded="true"] {
+    background: var(--ag-gold);
+    border-color: var(--ag-gold);
+    color: #0B0B0C;
+}
+
+.ag-botao[aria-expanded="true"] .ag-seta {
+    transform: rotate(180deg);
+}
+
+/* O menu abre embaixo do botão, por cima do que vier depois. */
+.ag-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 30;
+    width: min(310px, calc(100vw - 32px));
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 14px;
+    background: #17140f;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .55);
+    text-align: left;
+}
+
+.ag-menu[hidden] {
+    display: none;
+}
+
+.ag-menu-texto {
+    margin: 0;
+    padding: 8px 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ag-dim);
+}
+
+.ag-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ag-opcao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 9px 10px;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: var(--ag-paper);
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.ag-opcao i {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--ag-gold);
+    font-size: 16px;
+}
+
+.ag-opcao b {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.ag-opcao small {
+    display: block;
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: var(--ag-dim);
+    overflow-wrap: anywhere;
+}
+
+.ag-botao:focus-visible,
+.ag-opcao:focus-visible {
+    outline: 2px solid var(--ag-gold-hi);
+    outline-offset: 2px;
+}
+
+/* Só para leitor de tela: o aviso de "link copiado". */
+.ag-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (hover: hover) {
+    .ag-botao:hover {
+        background: var(--ag-gold);
+        border-color: var(--ag-gold);
+        color: #0B0B0C;
+    }
+
+    .ag-opcao:hover {
+        background: rgba(255, 255, 255, .06);
+    }
+}
+
+/* Onde o botão fica centralizado (celular e tablet), o menu abre centralizado. */
+@media (max-width: 860px) {
+    .ag-menu {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ag-botao,
+    .ag-seta,
+    .ag-opcao {
+        transition: none;
+    }
+}

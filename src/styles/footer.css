@@ -134,6 +134,12 @@
     content: none;
 }
 
+/* As páginas vêm em duas listas (as duas fileiras do celular); no
+   computador elas seguem uma embaixo da outra, como uma lista só. */
+.rod-paginas .rod-lista + .rod-lista {
+    margin-top: 10px;
+}
+
 /* ---------- VISITE A GENTE ---------- */
 /* <address> vem em itálico do navegador. */
 .rod-visite address {
@@ -289,8 +295,9 @@
     }
 }
 
-/* Celular: uma coluna. As páginas em duas colunas curtas; os ministérios
-   saem (a página Ministérios está na lista de páginas). */
+/* Celular: uma coluna, tudo centralizado. As páginas em duas fileiras
+   (duas listas no Footer.tsx); os ministérios saem — a página Ministérios
+   está na lista de páginas. */
 @media (max-width: 640px) {
     .rod-grade {
         grid-template-columns: minmax(0, 1fr);
@@ -305,16 +312,65 @@
         display: none;
     }
 
+    .rod-marca,
+    .rod-coluna h2 {
+        text-align: center;
+    }
+
+    .rod-logo {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .rod-lema {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rod-redes {
+        justify-content: center;
+    }
+
+    .rod-visite address {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rod-mapa {
+        align-self: center;
+    }
+
+    /* "Domingo 10h e 19h": dia e horas lado a lado, no meio. */
+    .rod-horarios {
+        align-self: stretch;
+    }
+
+    .rod-horarios div {
+        justify-content: center;
+    }
+
+    .rod-contato {
+        justify-content: center;
+    }
+
+    /* Cada lista vira uma fileira centralizada. */
     .rod-paginas .rod-lista {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 22px;
+    }
+
+    .rod-paginas .rod-lista + .rod-lista {
+        margin-top: 12px;
     }
 
     .rod-base {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 6px;
+        text-align: center;
     }
 }
 

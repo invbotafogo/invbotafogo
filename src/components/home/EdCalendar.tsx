@@ -9,6 +9,7 @@ import {
   type ProgramacaoMensal,
 } from '../../lib/programacao';
 import { useProgramacaoMensal } from '../../hooks/useProgramacaoMensal';
+import { AssinarAgenda } from './AssinarAgenda';
 
 /* Nada para mostrar: agenda carregando, com erro, ou de outro mês. */
 const SEM_PROGRAMACAO: ProgramacaoMensal = { rotulo: '', semanas: [] };
@@ -167,7 +168,11 @@ export function EdCalendar() {
       <div className="lead-col">
         <p className="kicker">{verMes ? 'Programação mensal' : 'Programação semanal'}</p>
         {!verMes ? (
-          <h3>Nossos encontros</h3>
+          <>
+            <h3>Nossos encontros</h3>
+            {/* Assina o calendário da igreja no app de calendário da pessoa. */}
+            <AssinarAgenda />
+          </>
         ) : (
           <>
             <div className="week-badges">
