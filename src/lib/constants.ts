@@ -2,7 +2,7 @@
 
 export const IGREJA = {
   nome: 'Igreja de Nova Vida em Botafogo',
-  nomeCurto: 'INV Botafogo',
+  nomeCurto: 'INVB',
   enderecoCompleto: 'Rua da Matriz, 95 - Botafogo, Rio de Janeiro - RJ, 22260-100',
   enderecoFooter: 'Rua da Matriz, 95 - Rio de Janeiro/RJ',
   fundacao: '2003',
@@ -18,6 +18,9 @@ export const REDES = {
   instagram: 'https://www.instagram.com/igrejanvb',
   whatsapp: `https://wa.me/5521982982802?text=${encodeURIComponent(
     'Olá! Estou entrando em contato através do site da igreja e gostaria de obter algumas informações.',
+  )}`,
+  whatsappVisita: `https://wa.me/5521982982802?text=${encodeURIComponent(
+    'Olá! Vi o site e quero visitar a igreja pela primeira vez. Pode me ajudar?',
   )}`,
 } as const;
 

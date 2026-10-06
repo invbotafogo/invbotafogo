@@ -1,197 +1,474 @@
-/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+/*
+ * Doe — mesma linguagem de Contato, Ministérios e do "Nossos encontros" da
+ * home: painéis de vidro escuro com cantos de 14px, fio e selo dourados.
+ *
+ * Em cima, a abertura e o versículo; no meio, o Pix em destaque (QR Code,
+ * chave em numerais grandes e o passo a passo); embaixo, os dados da conta
+ * numa grade de 3 × 2. A foto de fundo vem da regra comum de global.css.
+ */
 
+ .section-doe {
+    --ink: #0B0B0C;
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --glass: rgba(20, 20, 22, .55);
+    --fio: rgba(255, 255, 255, .08);
 
-
-
-/* DOE - Estilo atualizado */
-
-.section-ofertas {
-    color: #ffffff;
-    /* margin-top: 25px; */
-    padding: 75px 20px;
-    /* Garante folga sob o header fixo mesmo com safe-area (notch) */
-    padding-top: max(75px, calc(var(--navbar-height) + env(safe-area-inset-top, 0px) + 16px));
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(32px, 6vw, 64px))
+        clamp(16px, 4vw, 28px)
+        clamp(56px, 9vw, 96px);
 }
 
-.ofertas-container {
-    max-width: 900px;
+/* Mesma largura do header: o conteúdo começa na linha da logo e termina na
+   do botão "Primeira vez?". */
+.doe-wrap {
+    max-width: 1160px;
     margin: 0 auto;
-    padding: 10px 40px;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-
-.section-ofertas h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #ffdd57;
-    font-weight: 600;
-}
-
-.versiculo {
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    line-height: 1.6;
-    color: #e6e6e6;
-}
-
-.versiculo span {
-    display: block;
-    margin-top: 12px;
-    font-size: 0.95rem;
-    color: #d0d0d0;
-}
-
-.descricao {
-    margin-bottom: 35px;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #f0f0f0;
-}
-
-/* Container dos blocos de doação */
-.blocos-doacao {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---------- ABERTURA ---------- */
+.doe-topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 28px 64px;
+    align-items: end;
+    margin-bottom: 8px;
+}
+
+.doe-intro h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.doe-intro p {
+    max-width: 540px;
+    margin: 18px 0 0;
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+.doe-versiculo {
+    margin: 0;
+}
+
+.doe-versiculo blockquote {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: clamp(16px, 1.5vw, 19px);
+    line-height: 1.65;
+    color: rgba(246, 245, 241, .86);
+}
+
+.doe-versiculo figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+/* ---------- PIX ---------- */
+/* O cartão de destaque da home (fio e fundo dourados), em três partes:
+   QR Code, chave e passo a passo. */
+.doe-pix {
+    display: grid;
+    /* A chave fica com a maior parte do espaço; o passo a passo, com o resto. */
+    grid-template-columns: auto minmax(0, 1.6fr) minmax(220px, 1fr);
+    grid-template-areas: "qr info passos";
+    gap: 28px 40px;
+    align-items: center;
+    padding: clamp(20px, 3vw, 32px);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(230, 178, 62, .08);
+}
+
+/* O QR Code precisa de fundo branco para o celular ler. */
+.doe-pix-qr {
+    grid-area: qr;
+    padding: 12px;
+    border-radius: 14px;
+    background: #fff;
+    line-height: 0;
+}
+
+.doe-pix-qr img {
+    display: block;
+    width: 176px;
+    height: 176px;
+}
+
+.doe-pix-info {
+    grid-area: info;
+    min-width: 0;
+}
+
+.doe-pix-info h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.doe-pix-info h2 i {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.doe-pix-rotulo {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+/* A peça forte da página: a chave em numerais grandes, como o horário do
+   "Próximo encontro" e o WhatsApp do Contato. */
+.doe-pix-chave {
+    margin: 0;
+    font-size: clamp(26px, 3.3vw, 46px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    color: var(--gold-hi);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.doe-pix-acoes {
+    display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    align-items: center;
+    gap: 10px 16px;
+    margin-top: 22px;
 }
 
-/* Blocos com dados */
-.dados-bancarios,
-.pix-box {
-    flex: 1;
-    width: 400px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 25px 20px;
-    border-radius: 16px;
-    border-left: 5px solid #ffd700;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dados-bancarios:hover,
-.pix-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* Títulos das seções */
-.dados-bancarios h3,
-.pix-box h3 {
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-    color: #ffdd57;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 6px;
-}
-
-.pix-box p,
-.dados-bancarios p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #f5f5f5;
-    line-height: 1.5;
-    word-break: break-word;
-}
-
-/* Botão PIX */
-.botao-pix {
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #ffdd57;
-    color: #333;
+.doe-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--ink);
+    font: inherit;
+    font-size: 15.5px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color .2s ease, transform .15s ease;
 }
 
-.botao-pix:hover {
-    background-color: #e6c200;
-    transform: translateY(-2px);
+.doe-botao.is-copiado {
+    background: var(--gold-hi);
 }
 
-/* Confirmação de cópia */
-.confirmacao {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #9effa8;
+.doe-pix-status {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--dim);
 }
 
-
-.qrcode {
-    width: 200px;
-    height: 200px;
-    margin: 20px auto 0;
-    border-radius: 8px;
-    background-image: url('../assets/images/qrcode_pix.png');
-    /* caminho relativo da imagem */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.doe-pix-status:empty {
+    display: none;
 }
 
-#copiar-btn{
-    font-family: inherit; /* <button> não herda a fonte sozinho */
-    color: black;
-    font-weight: bold;
-    padding: 5px;
-    /* margin-top: 10px; */
-    background-color: #ffcc00;
-    border: none;
-
-    border-radius: 5px;
+.doe-pix-status--erro {
+    color: #fca5a5;
 }
 
-#confirmacao-pix{
-    color: #ffcc00;
-    font-weight: bold;
-    margin-top: 10px;
+/* Passo a passo: é uma sequência, então leva número. */
+.doe-passos {
+    grid-area: passos;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin: 0;
+    padding: 0 0 0 32px;
+    border-left: 1px solid rgba(255, 255, 255, .1);
+    list-style: none;
+    counter-reset: passo;
 }
 
-@media (max-width: 375px) {
+.doe-passos li {
+    counter-increment: passo;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(246, 245, 241, .86);
+}
 
-    .dados-bancarios, .pix-box{
+.doe-passos li::before {
+    content: counter(passo);
+    width: 28px;
+    height: 28px;
+    margin-top: -3px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .18);
+    color: var(--gold-hi);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ---------- TRANSFERÊNCIA OU DEPÓSITO ---------- */
+.doe-banco {
+    padding: clamp(20px, 3vw, 32px);
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
+}
+
+.doe-banco-cabeca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 24px;
+    margin-bottom: 20px;
+}
+
+.doe-banco-cabeca h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.doe-banco-cabeca p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--dim);
+}
+
+/* Grade de 3 × 2, com fio entre as células, como a semana da home. */
+.doe-dados {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+    border: 1px solid var(--fio);
+    border-radius: 12px;
+}
+
+.doe-dado {
+    min-width: 0;
+    padding: 18px 22px;
+}
+
+.doe-dado:nth-child(n + 4) {
+    border-top: 1px solid var(--fio);
+}
+
+.doe-dado:not(:nth-child(3n + 1)) {
+    border-left: 1px solid var(--fio);
+}
+
+.doe-dado dt {
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.doe-dado dd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 6px 0 0;
+}
+
+.doe-dado-valor {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--paper);
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+
+/* Copiar agência, conta e CNPJ: os números que a pessoa digita no app. */
+.doe-copiar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 32px;
+    padding: 0 12px;
+    border: 1px solid rgba(230, 178, 62, .45);
+    border-radius: 999px;
+    background: none;
+    color: var(--gold-hi);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.doe-copiar.is-copiado {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+}
+
+.doe-botao:focus-visible,
+.doe-copiar:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+/* Efeitos de passar o mouse só onde há mouse. */
+@media (hover: hover) {
+    .doe-botao:hover {
+        background: var(--gold-hi);
+        transform: translateY(-2px);
+    }
+
+    .doe-copiar:hover {
+        border-color: var(--gold);
+        background: rgba(230, 178, 62, .12);
+    }
+
+    .doe-copiar.is-copiado:hover {
+        background: var(--gold);
+    }
+}
+
+/* ---------- RESPONSIVO ---------- */
+/* Tablet: versículo embaixo da abertura; no Pix, o passo a passo desce para
+   uma linha própria; os dados ficam em duas colunas. */
+@media (max-width: 980px) {
+    .doe-topo {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .doe-pix {
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-areas:
+            "qr     info"
+            "passos passos";
+    }
+
+    /* Com o passo a passo embaixo, sobra espaço ao lado do QR: a chave cresce. */
+    .doe-pix-chave {
+        font-size: clamp(26px, 4.4vw, 46px);
+    }
+
+    .doe-passos {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px 24px;
+        padding: 24px 0 0;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .doe-dados {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .doe-dado:nth-child(n) {
+        border-top: 0;
+        border-left: 0;
+    }
+
+    .doe-dado:nth-child(n + 3) {
+        border-top: 1px solid var(--fio);
+    }
+
+    .doe-dado:nth-child(2n) {
+        border-left: 1px solid var(--fio);
+    }
+}
+
+/* Celular: tudo numa coluna. A chave e o botão vêm primeiro — é por eles que
+   se paga no próprio celular —, e o QR Code por último, para quem lê de
+   outro aparelho. */
+@media (max-width: 640px) {
+    .doe-pix {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "info"
+            "passos"
+            "qr";
+        gap: 24px;
+    }
+
+    .doe-pix-chave {
+        font-size: clamp(22px, 7.2vw, 40px);
+        letter-spacing: -1px;
+    }
+
+    .doe-botao {
         width: 100%;
-        height: 100%;
-        /* margin: 20px; */
     }
-    .dados-bancarios h3{
-        font-size: 1.1rem;
+
+    .doe-passos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
     }
-    
+
+    .doe-pix-qr {
+        justify-self: start;
+    }
+
+    .doe-pix-qr img {
+        width: 148px;
+        height: 148px;
+    }
+
+    .doe-dados {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .doe-dado:nth-child(n) {
+        border-left: 0;
+        border-top: 0;
+    }
+
+    .doe-dado + .doe-dado {
+        border-top: 1px solid var(--fio);
+    }
+
+    .doe-dado {
+        padding: 16px 18px;
+    }
+
+    .doe-dado-valor {
+        font-size: 17px;
+    }
 }
 
-@media (max-width: 320px){
-    .ofertas-container {
-        
-        backdrop-filter: none;
-
+@media (prefers-reduced-motion: reduce) {
+    .doe-botao,
+    .doe-copiar {
+        transition: none;
     }
 
-    .qrcode {
-        width: 150px;
-        height: 150px;
+    .doe-botao:hover {
+        transform: none;
     }
-    .dados-bancarios p{
-        font-size: 0.9rem;
-    }
-    .pix-box p{
-        font-size: 0.87rem;
-    }
-    
-
-
-
-    
 }

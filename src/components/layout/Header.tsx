@@ -12,7 +12,14 @@ const ITENS = [
   { para: '/ministerios', rotulo: 'Ministérios' },
   { para: '/doacao', rotulo: 'Doe' },
   { para: '/cultos', rotulo: 'Cultos' },
+  
 ];
+
+/* A página de quem vem pela primeira vez não entra no ITENS: ela é o botão
+   de destaque, dourado, na barra (desktop) e no topo da gaveta (mobile). É a
+   porta de entrada de quem chega pelas redes — e um sétimo link apertaria a
+   barra do desktop. */
+const DESTAQUE = { para: '/primeira-vez', curto: 'Primeira vez?', longo: 'Primeira vez aqui?' };
 
 /* As mesmas redes do rodapé do site, na mesma ordem do Footer.tsx e lendo de
    REDES — nenhuma URL duplicada. Os ícones vêm do Font Awesome já carregado no
@@ -60,6 +67,14 @@ export function Header() {
             ))}
           </ul>
         </nav>
+
+        {/* Botão de destaque — só aparece no desktop (o CSS o esconde até
+            1024px; no celular ele está no topo da gaveta). O NavLink põe
+            `active` quando a pessoa já está na página, e o CSS mostra um anel
+            dourado discreto. */}
+        <NavLink to={DESTAQUE.para} className="navbar__cta">
+          {DESTAQUE.curto}
+        </NavLink>
 
         <button
           type="button"
@@ -120,6 +135,11 @@ export function Header() {
             <span />
           </button>
         </div>
+
+        {/* Mesmo destaque da barra do desktop, primeiro a entrar na cascata. */}
+        <NavLink to={DESTAQUE.para} className="navbar__drawer-cta" onClick={fechar}>
+          {DESTAQUE.longo}
+        </NavLink>
 
         <ul className="navbar__drawer-list">
           {ITENS.map((item) => (

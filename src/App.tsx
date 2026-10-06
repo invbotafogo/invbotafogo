@@ -6,6 +6,7 @@ import Doacao from './pages/Doacao';
 import Contato from './pages/Contato';
 import Estudos from './pages/Estudos';
 import Ministerios from './pages/Ministerios';
+import PrimeiraVez from './pages/PrimeiraVez';
 
 /** Preserva a query string ao redirecionar (ex.: ministries.html?ministerio=louvor). */
 function RedirecionaComQuery({ para }: { para: string }) {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/contato" element={<Contato />} />
         <Route path="/estudos" element={<Estudos />} />
         <Route path="/ministerios" element={<Ministerios />} />
+        <Route path="/primeira-vez" element={<PrimeiraVez />} />
 
         {/* URLs antigas (.html) — mantidas para não quebrar links já indexados. */}
         <Route path="/index.html" element={<Navigate to="/" replace />} />

@@ -1,0 +1,632 @@
+/*
+ * Página "Primeira vez aqui?" (/primeira-vez).
+ *
+ * Mesma linguagem visual dos blocos editoriais da home (home.css): rótulo
+ * dourado em caixa alta, cartões de vidro, selo do dia em dourado translúcido
+ * e o mapa escuro. Os tokens são os mesmos de `.section-index`, repetidos aqui
+ * porque lá eles valem só dentro da home.
+ *
+ * O fundo é a mesma foto escurecida a 70% de Cultos, Doe e Estudos, numa
+ * camada fixa própria (logo abaixo). Fica aqui para a página não depender de
+ * mexer no global.css.
+ */
+
+ .section-primeira-vez {
+    --ink: #0B0B0C;
+    --glass: rgba(20, 20, 22, .55);
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .68);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+
+    position: relative;
+    z-index: 0;
+    background-color: var(--brand-dark);
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(36px, 7vw, 76px))
+        clamp(16px, 4vw, 28px)
+        clamp(56px, 9vw, 96px);
+}
+
+/* Foto de fundo numa camada fixa: `background-attachment: fixed` não funciona
+   no celular (ver o comentário no global.css). Mesmos valores de Cultos. */
+.section-primeira-vez::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    background-color: #14110e;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/image.webp');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%, cover;
+}
+
+.pv-wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(56px, 8vw, 88px);
+}
+
+/* Âncoras (#horarios, #como-chegar): o título não pode parar atrás do header fixo. */
+.pv-bloco {
+    scroll-margin-top: calc(var(--navbar-height) + 20px);
+}
+
+.pv-kicker {
+    margin: 0 0 12px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.section-primeira-vez h2 {
+    margin: 0 0 24px;
+    font-size: clamp(1.6rem, 3.6vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+/* ---------- ABERTURA ---------- */
+.pv-intro {
+    max-width: 740px;
+}
+
+.pv-intro h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.pv-lead {
+    margin: 20px 0 0;
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+.pv-proximo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 24px 0 0;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(230, 178, 62, .08);
+    color: var(--gold-hi);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pv-proximo svg {
+    width: 15px;
+    height: 15px;
+    flex: none;
+}
+
+.pv-proximo a {
+    color: var(--gold-hi);
+    font-weight: 600;
+}
+
+/* ---------- BOTÕES E LINKS (mesmo desenho dos botões da home) ---------- */
+.pv-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.pv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .15s, background .2s, color .2s, border-color .2s;
+}
+
+.pv-btn:hover {
+    transform: translateY(-2px);
+}
+
+.pv-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.pv-btn i {
+    font-size: 18px;
+}
+
+.pv-btn-ouro {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.pv-btn-ouro:hover {
+    background: var(--gold-hi);
+}
+
+.pv-btn-vidro {
+    border-color: var(--line);
+    color: var(--paper);
+    background: rgba(11, 11, 12, .4);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.pv-btn-vidro:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(11, 11, 12, .6);
+}
+
+.pv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: gap .2s, color .2s;
+}
+
+.pv-link:hover {
+    color: var(--gold-hi);
+    gap: 11px;
+}
+
+.pv-link svg {
+    width: 15px;
+    height: 15px;
+}
+
+.pv-btn:focus-visible,
+.pv-link:focus-visible,
+.pv-pergunta summary:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+/* ---------- COMO É UM CULTO ---------- */
+.pv-etapas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    counter-reset: etapa;
+}
+
+.pv-etapa {
+    position: relative;
+    padding: 22px 20px 24px;
+    border-radius: 14px;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+/* O número da etapa no canto: deixa claro que é uma sequência. */
+.pv-etapa::before {
+    counter-increment: etapa;
+    content: counter(etapa, decimal-leading-zero);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--dim);
+}
+
+.pv-etapa-icone {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.pv-etapa h3 {
+    margin: 16px 0 8px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.pv-etapa p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--dim);
+}
+
+/* ---------- CRIANÇAS (mesmo cartão do Contato e do "Quem somos") ---------- */
+.pv-criancas {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border-left: 5px solid #ffd700;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, .05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, .6);
+}
+
+.pv-criancas-icone {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 28px;
+}
+
+.section-primeira-vez .pv-criancas h2 {
+    margin-bottom: 12px;
+}
+
+.pv-criancas p {
+    margin: 0 0 18px;
+    max-width: 660px;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+/* ---------- HORÁRIOS ---------- */
+.pv-agenda {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.pv-dia {
+    display: flex;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 12px;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.pv-dia-sigla {
+    flex: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pv-dia ul {
+    flex: 1;
+    min-width: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pv-dia li + li {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.pv-evento {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 12px;
+}
+
+.pv-evento b {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.pv-hora {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--gold-hi);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.pv-hora svg {
+    width: 13px;
+    height: 13px;
+}
+
+.pv-dia li p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--dim);
+}
+
+.pv-nota {
+    margin: 18px 0 0;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.pv-nota a {
+    color: var(--gold);
+}
+
+/* ---------- COMO CHEGAR ---------- */
+.pv-chegar {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 32px;
+    align-items: center;
+}
+
+.pv-endereco {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dim);
+}
+
+.pv-endereco svg {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    margin-top: 2px;
+    color: var(--gold);
+}
+
+.pv-mapa {
+    height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #0b0b0c;
+}
+
+/* Mapa escuro: a mesma inversão controlada do mapa da home. */
+.pv-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    -webkit-filter: invert(.92) hue-rotate(180deg) saturate(.72) brightness(.9);
+    filter: invert(.92) hue-rotate(180deg) saturate(.72) brightness(.9);
+}
+
+/* ---------- QUEM SOMOS (chamada para a "Nossa história" da home) ---------- */
+/* O ano grande repete o bloco "Quem somos" da home: quem clica reconhece o
+   lugar onde chegou. */
+.pv-historia {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(24px, 6vw, 64px);
+    align-items: center;
+}
+
+.pv-historia-ano b {
+    display: block;
+    font-size: clamp(64px, 10vw, 100px);
+    font-weight: 400;
+    line-height: .95;
+    color: var(--gold-hi);
+}
+
+.pv-historia-ano span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dim);
+}
+
+.section-primeira-vez .pv-historia h2 {
+    margin-bottom: 14px;
+}
+
+.pv-historia-texto {
+    margin: 0 0 18px;
+    max-width: 640px;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+/* ---------- PERGUNTAS ---------- */
+.pv-perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pv-pergunta {
+    border-radius: 12px;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, .06);
+    transition: border-color .2s;
+}
+
+.pv-pergunta[open] {
+    border-color: var(--line);
+}
+
+.pv-pergunta summary {
+    position: relative;
+    padding: 18px 52px 18px 20px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+}
+
+.pv-pergunta summary::-webkit-details-marker {
+    display: none;
+}
+
+/* "+" que vira "×" quando a resposta abre. */
+.pv-pergunta summary::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform .2s;
+}
+
+.pv-pergunta[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.pv-pergunta p {
+    margin: 0;
+    padding: 0 20px 16px;
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+.pv-pergunta .pv-link {
+    margin: 0 20px 18px;
+}
+
+/* ---------- CONVITE FINAL ---------- */
+.pv-convite {
+    text-align: center;
+    padding: clamp(28px, 5vw, 44px) clamp(20px, 4vw, 40px);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: rgba(230, 178, 62, .06);
+}
+
+.section-primeira-vez .pv-convite h2 {
+    margin-bottom: 12px;
+}
+
+.pv-convite p {
+    margin: 0 auto;
+    max-width: 560px;
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+.pv-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 960px) {
+    .pv-etapas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pv-agenda {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 860px) {
+    .pv-chegar {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .pv-mapa {
+        height: 240px;
+    }
+}
+
+@media (max-width: 560px) {
+    .pv-etapas {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pv-historia {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .pv-criancas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .pv-criancas-icone {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+    }
+
+    /* No celular os botões ocupam a linha inteira: alvo de toque grande e
+       nenhum texto cortado ("Traçar rota no Google Maps" é comprido). */
+    .pv-acoes .pv-btn,
+    .pv-redes .pv-btn {
+        flex: 1 1 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pv-btn,
+    .pv-link,
+    .pv-pergunta summary::after {
+        transition: none;
+    }
+
+    .pv-btn:hover {
+        transform: none;
+    }
+}

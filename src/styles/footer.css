@@ -1,304 +1,328 @@
-/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+/*
+ * Rodapé (Footer.tsx) — mesma largura e mesma linguagem do header e das
+ * páginas: fundo escuro, fio dourado em cima, títulos das colunas em dourado.
+ *
+ * Quatro colunas no computador (marca e redes, páginas, ministérios e
+ * "Visite a gente"), duas no tablet e uma no celular — onde a lista de
+ * ministérios sai, porque a página Ministérios já está em "Páginas".
+ */
 
+ .rodape {
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --fio: rgba(255, 255, 255, .08);
 
-
-/* Footer não encolhe e fica sempre no final */
-footer {
     flex-shrink: 0;
-}
-
-
-
-
-/* FOOTER */
-footer {
-    background-color: #000;
-    color: #fff;
-    bottom: 0;
-    left: 0;
     width: 100%;
-
-}
-
-footer nav {
-    display: flex;
-    flex-grow: 1;
-    /* Ocupa o espaço restante */
-    gap: 0;
-}
-
-.footer_infos,
-.footer-contact{
-    margin: 0 0 5px 20px;
-    width: auto;
-    margin-right: 10px;
-    text-align: left;
-}
-
-.footer_infos h4{
-    text-align: left;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0;
-}
-
-.footer-logo {
-    max-width: 200px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 5px;
-    list-style: none;
-    padding: 0;
-}
-
-.social-icons li a {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out, transform 0.3s;
-}
-
-.social-icons li a:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;       /* permite quebra de linha */
-    justify-content: space-between; /* espalha os itens igualmente */
-    width: 100%;
-}
-
-
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin: 0 0 5px 20px;
-}
-
-.footer-links ul li a {
+    box-sizing: border-box;
+    padding: 0 clamp(16px, 4vw, 28px);
+    background: black;
+    border-top: 1px solid var(--line);
+    color: var(--paper);
     font-family: 'Montserrat', sans-serif;
-    color: gray;
+}
+
+/* Mesma largura do header: começa na linha da logo e termina na do botão
+   "Primeira vez?". O recuo lateral fica no .rodape, fora dos 1160px. */
+.rod-wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-top: clamp(40px, 6vw, 64px);
+}
+
+.rod-grade {
+    display: grid;
+    grid-template-columns: 1.3fr .8fr 1fr 1.3fr;
+    grid-template-areas: "marca paginas ministerios visite";
+    gap: 40px 48px;
+}
+
+/* ---------- MARCA ---------- */
+.rod-marca {
+    grid-area: marca;
+}
+
+.rod-logo {
+    display: inline-block;
+}
+
+.rod-logo img {
+    display: block;
+    width: 170px;
+    height: auto;
+}
+
+.rod-lema {
+    max-width: 260px;
+    margin: 16px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--dim);
+}
+
+.rod-redes {
+    display: flex;
+    gap: 10px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rod-redes a {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(246, 245, 241, .16);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--paper);
+    font-size: 17px;
     text-decoration: none;
-    font-size: 15px;
-    transition: color 0.5s;
-    font-weight: 400;
-
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
 
-.footer-links ul li a:hover {
-    color: #fff;
+/* ---------- COLUNAS ---------- */
+.rod-paginas {
+    grid-area: paginas;
 }
 
-/* .footer-contact {
-    width: auto;
-    margin-right: 10px;
-    text-align: left;
-} */
-
-.footer-contact h4 {
-    margin-bottom: 5px;
-    font-size: 15px;
-    font-weight: bolder;
-    color: #fff;
+.rod-ministerios {
+    grid-area: ministerios;
 }
 
-.footer-contact p {
-    margin: 5px 0;
+.rod-visite {
+    grid-area: visite;
+}
+
+.rod-coluna h2 {
+    margin: 0 0 16px;
     font-size: 14px;
-}
-
-.footer-contact a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-.footer-contact a:hover {
-    text-decoration: underline;
-}
-
-.footer-copyright {
-    width: 100%;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #ccc;
-    background-color: #111;
-    margin: 0;
-    padding: 8px 0 max(12px, env(safe-area-inset-bottom, 0px));
-}
-
-#esconder{
-    display: none;
-}
-
-@media (max-width: 768px) {
-
-    .footer-contact{
-        display: none;
-    }
-    .footer-links {
-        display: flex;
-        justify-content: center; /* centraliza o bloco de links */
-        flex-wrap: wrap; /* permite quebra de linha */
-        gap: 40px; /* espaço entre os grupos de links, ajuste como quiser */
-    }
-
-    .footer-links ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-        gap: 8px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-    
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--gold);
 }
 
 /*
- * Abaixo de 540px vale tudo o que o bloco de 768px acima já faz (ele também
- * casa aqui). Este bloco fica só com o que É DIFERENTE na tela pequena.
- *
- * As colunas de links continuam TRÊS, de propósito. Havia aqui um
- * `grid-template-columns: 1fr 1fr` que nunca chegou a rodar: este bloco
- * ficava ANTES do de 768px e, como os dois casam numa tela de 400px com a
- * mesma especificidade, o `repeat(3, 1fr)` de lá vencia. Ao pôr os blocos na
- * ordem certa a regra finalmente valeu — e ficou pior: abaixo de 1024px só
- * uma lista aparece no rodapé (as de ministérios ficam ocultas) e ela tem 6
- * itens. Em 3 colunas são 2 linhas cheias; em 2 colunas viram 3 linhas com a
- * metade direita vazia. A regra de duas colunas foi removida.
- *
- * Ao acrescentar um breakpoint novo, mantenha a ordem do maior para o menor.
+ * As listas ficam dentro de <nav>: as regras antigas de `nav ul li a` e
+ * `footer nav ul` do header.css (letra grande em negrito, sublinhado
+ * dourado animado, lista em linha alinhada à direita) são desfeitas aqui.
  */
-@media (max-width: 540px) {
+.rod-lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-    .footer-links ul {
-        text-align: left; /* mantém texto alinhado à esquerda */
+.rod-lista a {
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(246, 245, 241, .74);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.rod-lista a::after {
+    content: none;
+}
+
+/* ---------- VISITE A GENTE ---------- */
+/* <address> vem em itálico do navegador. */
+.rod-visite address {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-style: normal;
+}
+
+.rod-endereco {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(246, 245, 241, .86);
+}
+
+.rod-mapa {
+    align-self: flex-start;
+    margin-top: -6px;
+    font-size: 14px;
+    color: var(--gold-hi);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* Horários dos cultos: dia à esquerda, horas à direita, entre dois fios. */
+.rod-horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    padding: 12px 0;
+    border-top: 1px solid var(--fio);
+    border-bottom: 1px solid var(--fio);
+}
+
+.rod-horarios div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14.5px;
+}
+
+.rod-horarios dt {
+    color: var(--dim);
+}
+
+.rod-horarios dd {
+    margin: 0;
+    font-weight: 600;
+    color: var(--paper);
+    font-variant-numeric: tabular-nums;
+}
+
+.rod-contato {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0;
+    font-size: 14.5px;
+}
+
+.rod-contato i {
+    flex: none;
+    width: 16px;
+    color: var(--gold);
+    text-align: center;
+}
+
+.rod-contato a {
+    min-width: 0;
+    color: rgba(246, 245, 241, .86);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color .2s ease;
+}
+
+/* ---------- BASE ---------- */
+.rod-base {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    margin-top: clamp(36px, 5vw, 56px);
+    padding: 20px 0 max(20px, env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--fio);
+}
+
+.rod-base p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dim);
+}
+
+.rod-topo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border: 0;
+    background: none;
+    color: rgba(246, 245, 241, .74);
+    font: inherit;
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+
+.rod-redes a:focus-visible,
+.rod-lista a:focus-visible,
+.rod-mapa:focus-visible,
+.rod-contato a:focus-visible,
+.rod-topo:focus-visible,
+.rod-logo:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.rod-redes a:focus-visible {
+    border-radius: 50%;
+}
+
+/* Efeitos de passar o mouse só onde há mouse. */
+@media (hover: hover) {
+    .rod-redes a:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #0B0B0C;
     }
 
-    .footer-copyright{
-        font-size: 0.75rem;
-        margin-top: 10px;
+    .rod-lista a:hover,
+    .rod-contato a:hover,
+    .rod-topo:hover {
+        color: var(--gold-hi);
+    }
+
+    .rod-mapa:hover {
+        color: var(--gold);
     }
 }
 
-@media (max-width: 375px) {
-    
-    .footer-copyright{
-        font-size: 0.7rem;
-        margin-top: 10px;
+/* ---------- RESPONSIVO ---------- */
+/* Tablet: duas colunas — marca e "Visite a gente" em cima, as listas embaixo. */
+@media (max-width: 980px) {
+    .rod-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "marca   visite"
+            "paginas ministerios";
     }
-    .social-icons li a {
-        font-size: 17px;
-    }
-    
 }
 
-@media (max-width: 320px){
-    .footer-copyright{
-        font-size: 0.6rem;
-        margin-top: 10px;
+/* Celular: uma coluna. As páginas em duas colunas curtas; os ministérios
+   saem (a página Ministérios está na lista de páginas). */
+@media (max-width: 640px) {
+    .rod-grade {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "marca"
+            "visite"
+            "paginas";
+        gap: 36px;
     }
 
-    .social-icons li a {
-        font-size: 15px;
-    }
-    
-
-
-
-    
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-    #esconder{
-        display: block;
-    }
-
-    /* Menu / hambúrguer: usar @media (max-width: 1024px) abaixo (evita duplicar e cortar o dropdown) */
-
-    footer nav {
-        display: flex;
-        justify-content: flex-end;
-        margin-left: 0;
-    }
-
-    .footer_infos {
+    .rod-ministerios {
         display: none;
     }
 
-    .footer-content {
-        display: flex;
-        justify-content: space-between; /* espalha igualmente */
-        align-items: flex-start; /* alinha pelo topo */
-        flex-wrap: wrap; /* caso a tela fique menor, quebra para linha de baixo */
-        gap: 20px; /* espaçamento entre os blocos */
-        padding: 0 5%;
+    .rod-paginas .rod-lista {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 24px;
     }
 
-
+    .rod-base {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
 }
-@media (max-width: 1024px) {
 
-    #esconder{
-        display: block;
+@media (prefers-reduced-motion: reduce) {
+    .rod-redes a,
+    .rod-lista a,
+    .rod-contato a,
+    .rod-topo {
+        transition: none;
     }
-
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-        padding: 0% 5%;
-    }
-
-    /* footer {
-        padding-bottom: max(20px, env(safe-area-inset-bottom))
-    } */
-
-    footer nav {
-        display: flex;
-        justify-content: flex-end;
-        margin-left: 0;
-    }
-
-    .footer_infos {
-        display: none;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between; /* espalha igualmente */
-        align-items: flex-start; /* alinha pelo topo */
-        flex-wrap: wrap; /* caso a tela fique menor, quebra para linha de baixo */
-        gap: 20px; /* espaçamento entre os blocos */
-        padding: 0 5%;
-    }
-  
-    
-    
-
-
-
-
 }

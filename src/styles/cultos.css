@@ -1,116 +1,629 @@
-/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+/*
+ * Cultos — mesma linguagem de Contato, Ministérios, Doe e do "Nossos
+ * encontros" da home: painéis de vidro escuro com cantos de 14px, fio e selo
+ * dourados.
+ *
+ * Em cima, a abertura e o próximo culto em destaque (o horário em numerais
+ * grandes, como na home); embaixo, as últimas mensagens: a mais recente num
+ * player grande e a lista ao lado. A foto de fundo vem da regra comum de
+ * global.css.
+ */
 
+ .section-cultos {
+    --ink: #0B0B0C;
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --glass: rgba(20, 20, 22, .55);
+    --fio: rgba(255, 255, 255, .08);
 
-
-
-
-
-
-/* Próximo Culto */
-.proximo-culto {
-    background-color: #000;
-    color: #fff;
-    top: 0;
-    margin-top: 140px;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    border-top: 3px solid #ffcc00;
-    border-bottom: 3px solid #ffcc00;
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(32px, 6vw, 64px))
+        clamp(16px, 4vw, 28px)
+        clamp(56px, 9vw, 96px);
 }
 
-.proximo-culto a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* Últimos Cultos (página Cultos): bloco centralizado na área visível */
-.ultimos-cultos {
-    background-color: transparent;
-    color: #fff;
-    padding: clamp(2rem, 5vw, 3.5rem) 20px;
-    text-align: center;
+/* Mesma largura do header: o conteúdo começa na linha da logo e termina na
+   do botão "Primeira vez?". */
+.cul-wrap {
+    max-width: 1160px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    gap: clamp(36px, 5vw, 56px);
 }
 
-.ultimos-cultos h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #ffcc00;
+/* ---------- ABERTURA + PRÓXIMO CULTO ---------- */
+.cul-topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 28px 48px;
+    align-items: end;
 }
 
-.videos-container {
+.cul-intro h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.cul-intro p {
+    max-width: 520px;
+    margin: 18px 0 0;
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+/* O cartão de destaque da home: fio e fundo dourados. */
+.cul-proximo {
+    padding: 22px 28px 26px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(230, 178, 62, .08);
+}
+
+.cul-proximo-rotulo {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1400px;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: var(--dim);
 }
 
-.videos-container iframe {
-    flex: 1 1 0;
+.cul-proximo.is-ao-vivo .cul-proximo-rotulo {
+    color: #fca5a5;
+    font-weight: 600;
+}
+
+/* Bolinha vermelha de "ao vivo", pulsando. */
+.cul-pulso {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ef4444;
+    animation: cul-pulso 1.6s ease-out infinite;
+}
+
+@keyframes cul-pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, .55);
+    }
+
+    70%,
+    100% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+}
+
+.cul-proximo-corpo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* A peça forte da página: o horário em numerais grandes e cheios. */
+.cul-proximo-hora {
+    flex: none;
+    font-size: clamp(56px, 6.2vw, 84px);
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -2px;
+    color: var(--gold-hi);
+    font-variant-numeric: tabular-nums;
+}
+
+.cul-proximo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     min-width: 0;
-    height: 215px;
-    border: none;
+    padding-left: 24px;
+    border-left: 1px solid var(--line);
+}
+
+.cul-proximo-info b {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cul-proximo-info span {
+    font-size: 17px;
+}
+
+.cul-proximo-info small {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--gold);
+}
+
+.cul-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    margin-top: 22px;
+    padding: 0 22px;
+    border: 1px solid rgba(230, 178, 62, .55);
+    border-radius: 999px;
+    color: var(--gold-hi);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.cul-botao i {
+    font-size: 18px;
+}
+
+.cul-botao--cheio {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+}
+
+/* ---------- ÚLTIMAS MENSAGENS ---------- */
+.cul-mensagens-cabeca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 24px;
+    margin-bottom: 18px;
+}
+
+.cul-mensagens-cabeca h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.cul-link,
+.cul-aviso a {
+    color: var(--gold-hi);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.cul-link {
+    font-size: 15px;
+}
+
+/* O player grande à esquerda; a lista, à direita. */
+.cul-grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+    gap: 20px;
+}
+
+.cul-destaque,
+.cul-lista,
+.cul-aviso {
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
+}
+
+.cul-destaque {
+    overflow: hidden;
+    /* Ao escolher um vídeo da lista, o player para abaixo do header fixo. */
+    scroll-margin-top: calc(var(--navbar-height) + 16px);
+}
+
+.cul-player {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.cul-player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Antes do clique, a capa do vídeo com o botão de play. */
+.cul-capa {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cul-capa img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.cul-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 26px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    transform: translate(-50%, -50%);
+    transition: transform .2s ease, background-color .2s ease;
+}
+
+/* O triângulo do play parece deslocado para a esquerda quando centralizado
+   pela caixa: o ajuste é só de olho. */
+.cul-play i {
+    margin-left: 5px;
+}
+
+.cul-capa:focus-visible {
+    outline: 3px solid var(--gold-hi);
+    outline-offset: -3px;
+}
+
+.cul-destaque-texto {
+    padding: 22px 26px 26px;
+}
+
+.cul-destaque-texto h3 {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 30px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+.cul-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    margin: 12px 0 0;
+    font-size: 16px;
+    color: rgba(246, 245, 241, .86);
+}
+
+/* A passagem bíblica, em selo dourado. */
+.cul-ref {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(230, 178, 62, .14);
+    color: var(--gold-hi);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cul-data {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+/* Lista: as três mais recentes, com a do player marcada. Ocupa a altura do
+   player, e o convite para se inscrever fecha o painel lá embaixo. */
+.cul-lista {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 12px 12px;
+}
+
+.cul-inscrever {
+    margin: auto 8px 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--fio);
+}
+
+.cul-inscrever p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: rgba(246, 245, 241, .78);
+}
+
+.cul-inscrever .cul-botao {
+    margin-top: 14px;
+}
+
+.cul-lista-titulo {
+    margin: 0 8px 10px;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.cul-lista ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cul-item {
+    display: grid;
+    grid-template-columns: 136px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: var(--paper);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.cul-item-capa {
+    position: relative;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    background: #000;
 }
 
-@media (max-width: 540px) {
+.cul-item-capa img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .ultimos-cultos {
-        padding: 1.75rem 16px;
-    }
+.cul-item-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
 
-    .ultimos-cultos h2{
-        font-size: 1.5rem;
+/* Título em no máximo duas linhas. */
+.cul-item-texto b {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.cul-item-texto span {
+    font-size: 13.5px;
+    color: rgba(246, 245, 241, .78);
+}
+
+.cul-item-texto small {
+    font-size: 13px;
+    color: var(--dim);
+}
+
+.cul-item.is-ativo {
+    background: rgba(230, 178, 62, .12);
+}
+
+.cul-item.is-ativo b {
+    color: var(--gold-hi);
+}
+
+.cul-item.is-ativo .cul-item-capa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+}
+
+.cul-item:focus-visible,
+.cul-botao:focus-visible,
+.cul-link:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 2px;
+}
+
+/* Carregando: os mesmos blocos, vazios. */
+.cul-esqueleto {
+    animation: cul-carregando 1.4s ease-in-out infinite;
+}
+
+.cul-esqueleto .cul-player {
+    background: rgba(255, 255, 255, .05);
+}
+
+.cul-esqueleto-linha {
+    display: block;
+    width: 70%;
+    height: 20px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, .07);
+}
+
+.cul-esqueleto-linha--curta {
+    width: 40%;
+    margin-top: 12px;
+}
+
+.cul-lista.cul-esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cul-esqueleto-item {
+    display: block;
+    height: 84px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .05);
+}
+
+@keyframes cul-carregando {
+    50% {
+        opacity: .55;
     }
 }
 
-/* Cultos — mobile: Últimos Cultos com iframes um embaixo do outro */
-@media (max-width: 767px) {
-    .ultimos-cultos {
-        min-height: 0;
-        align-items: center;
+.cul-aviso {
+    margin: 0;
+    padding: 22px 26px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(246, 245, 241, .86);
+}
+
+/* Efeitos de passar o mouse só onde há mouse. */
+@media (hover: hover) {
+    .cul-botao:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--ink);
     }
 
-    .videos-container {
+    .cul-botao--cheio:hover {
+        background: var(--gold-hi);
+        border-color: var(--gold-hi);
+    }
+
+    .cul-capa:hover img {
+        transform: scale(1.02);
+    }
+
+    .cul-capa:hover .cul-play {
+        background: var(--gold-hi);
+        transform: translate(-50%, -50%) scale(1.06);
+    }
+
+    .cul-item:hover {
+        background: rgba(255, 255, 255, .05);
+    }
+
+    .cul-item.is-ativo:hover {
+        background: rgba(230, 178, 62, .16);
+    }
+
+    .cul-link:hover,
+    .cul-aviso a:hover {
+        color: var(--gold);
+    }
+}
+
+/* ---------- RESPONSIVO ---------- */
+/* Tablet: o próximo culto embaixo da abertura; a lista embaixo do player,
+   com os três vídeos lado a lado. */
+@media (max-width: 980px) {
+    .cul-topo {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .cul-grade {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cul-inscrever {
+        margin-top: 16px;
+    }
+
+    .cul-lista ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .cul-item {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 10px;
+    }
+}
+
+/* Celular: hora em cima, dia e culto embaixo, como na home; na lista, a capa
+   volta para o lado do título. */
+@media (max-width: 560px) {
+    .cul-proximo {
+        padding: 18px 18px 20px;
+    }
+
+    .cul-proximo-corpo {
         flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 16px;
-        width: 100%;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .videos-container iframe {
-        flex: none;
-        width: min(100%, 560px);
-        max-width: min(100%, 560px);
-        height: auto;
-        aspect-ratio: 16 / 9;
-        min-height: 200px;
+    .cul-proximo-info {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .cul-botao {
+        width: 100%;
+    }
+
+    .cul-play {
+        width: 60px;
+        height: 60px;
+        font-size: 21px;
+    }
+
+    .cul-destaque-texto {
+        padding: 18px 18px 20px;
+    }
+
+    .cul-lista ul {
+        display: flex;
+    }
+
+    .cul-item {
+        grid-template-columns: 120px minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
     }
 }
 
-@media (max-width: 375px) {
-    .proximo-culto {
-        font-size: 17px;
+@media (prefers-reduced-motion: reduce) {
+    .cul-pulso,
+    .cul-esqueleto {
+        animation: none;
     }
 
-    .ultimos-cultos h2{
-        font-size: 1.5rem;
+    .cul-botao,
+    .cul-capa img,
+    .cul-play,
+    .cul-item {
+        transition: none;
     }
-    
+
+    .cul-capa:hover img {
+        transform: none;
+    }
+
+    .cul-capa:hover .cul-play {
+        transform: translate(-50%, -50%);
+    }
 }

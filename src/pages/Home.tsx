@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { HeroHome } from '../components/home/HeroHome';
 import { EdCalendar } from '../components/home/EdCalendar';
 import { EdDevocional } from '../components/home/EdDevocional';
@@ -13,6 +15,21 @@ export default function Home() {
   useDocumentTitle('INVB - Igreja Nova Vida de Botafogo');
   useReveal();
   const rolou = useScrollFade();
+  const { hash } = useLocation();
+
+  /* Links como /#nossa-historia (vindos da página "Primeira vez aqui?"):
+     o React Router troca a rota, mas não rola até a âncora. O
+     requestAnimationFrame deixa a rolagem para depois dos efeitos do
+     Layout, caso algum deles leve a página de volta ao topo. */
+  useEffect(() => {
+    if (!hash) return;
+    const quadro = requestAnimationFrame(() => {
+      document
+        .getElementById(hash.slice(1))
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return () => cancelAnimationFrame(quadro);
+  }, [hash]);
 
   return (
     <div className="section-index">
@@ -29,7 +46,13 @@ export default function Home() {
           <EdLocation />
           {/* Linha fina dourada separando "Localização" de "Nossa história". */}
           <hr className="ed-divider" aria-hidden="true" />
-          <EdHistory />
+          {/* Âncora de /#nossa-historia; a margem compensa o header fixo. */}
+          <div
+            id="nossa-historia"
+            style={{ scrollMarginTop: 'calc(var(--navbar-height) + 24px)' }}
+          >
+            <EdHistory />
+          </div>
         </div>
       </div>
 

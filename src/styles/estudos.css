@@ -5,7 +5,7 @@
    rola na horizontal.
    ============================================================ */
 
-.section-estudo {
+   .section-estudo {
     /*
      * Reserva a altura do header fixo: o título usava `padding-top: 5%`
      * (percentual da largura), que em telas estreitas dava menos de 70px e
@@ -59,15 +59,13 @@
 /* ---------------- índice ---------------- */
 
 /*
- * Mesmo card do painel do estudo ao lado: a mesma transparência dos cards de
- * Contato e Doe (`rgba(0, 0, 0, 0.05)` + blur), borda dourada à esquerda,
- * cantos de 16px e a sombra funda.
+ * Mesmo card do painel do estudo ao lado: fundo quase transparente com blur,
+ * cantos de 16px e a sombra funda. Sem borda dourada na lateral.
  */
 .estudos-indice {
     position: sticky;
     top: calc(var(--navbar-height) + 16px);
     background: rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #ffd700;
     border-radius: 16px;
     padding: 14px;
     backdrop-filter: blur(10px);
@@ -141,10 +139,8 @@
 /* ---------------- painel do estudo ---------------- */
 
 /*
- * Mesmo tratamento dos cards de Contato (`.contato-glass-card`) e Doe
- * (`.ofertas-container`): fundo quase transparente com blur, cantos de 16px e
- * a sombra funda — sem a borda dourada lateral. A foto de fundo do site
- * aparece por trás, como nos outros cards.
+ * Mesmo tratamento do índice ao lado: fundo quase transparente com blur,
+ * cantos de 16px e a sombra funda. A foto de fundo do site aparece por trás.
  */
 .estudo-painel {
     background: rgba(0, 0, 0, 0.05);
@@ -210,11 +206,10 @@
 
 /* ---------------- card de aula ---------------- */
 
-/* Mesmo tratamento dos cards de "Nossa história" (`.ed-hist` em home.css) e da
-   página de Contato (`.contato-glass-card` em contato.css): fundo levemente
-   escurecido, cantos de 16px e a mesma sombra funda — sem borda lateral, que
-   fica só no painel que envolve a grade. O padding é um degrau menor porque
-   aqui o card é um bloco da grade de aulas, não uma seção inteira da página. */
+/* Mesmo tratamento dos cards de "Nossa história" (`.ed-hist` em home.css):
+   fundo levemente escurecido, cantos de 16px e a mesma sombra funda, sem
+   borda lateral. O padding é um degrau menor porque aqui o card é um bloco
+   da grade de aulas, não uma seção inteira da página. */
 .aula-card {
     display: flex;
     flex-direction: column;

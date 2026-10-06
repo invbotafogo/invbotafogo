@@ -1,9 +1,51 @@
-/* Migrado de src/css/styles.css — regras preservadas na ordem original. */
+/*
+ * Contato — mesma linguagem do "Nossos encontros" da home e de Ministérios:
+ * foto de fundo escurecida, painéis de vidro escuro com cantos de 14px, fio e
+ * selo dourados.
+ *
+ * Em cima, a abertura e o WhatsApp em destaque (o número em numerais grandes,
+ * como o horário do "Próximo encontro"); no meio, e-mail, Instagram e
+ * endereço num painel de três colunas; embaixo, o formulário, que também
+ * recebe pedido de oração (ContactForm.tsx).
+ */
 
+ .section-contato {
+    --ink: #0B0B0C;
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --glass: rgba(20, 20, 22, .55);
+    --fio: rgba(255, 255, 255, .08);
+    --campo: rgba(246, 245, 241, .06);
+    --campo-borda: rgba(246, 245, 241, .2);
 
+    position: relative;
+    z-index: 0;
+    background-color: var(--brand-dark);
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(32px, 6vw, 64px))
+        clamp(16px, 4vw, 28px)
+        clamp(56px, 9vw, 96px);
+}
 
-
-.section-contato {
+/* A mesma foto escurecida a 70% das outras páginas, numa camada fixa
+   própria — `background-attachment: fixed` não funciona no celular. */
+.section-contato::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     background-color: #14110e;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -11,171 +53,592 @@
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: 100% 100%, cover;
-    background-attachment: fixed, fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    min-height: 75vh;
-    padding-top: max(clamp(5.5rem, 14vw, 6.5rem), calc(70px + env(safe-area-inset-top, 0px) + 12px));
-    padding-right: clamp(16px, 4vw, 28px);
-    padding-bottom: clamp(2rem, 6vw, 3rem);
-    padding-left: clamp(16px, 4vw, 28px);
-    transition: opacity 1s ease-out;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
 }
 
-/* Card alinhado aos blocos cultos / eventos / calendário (vidro + borda dourada) */
-.section-contato .contato-glass-card {
-    width: 100%;
-    max-width: min(560px, 100%);
+/* Mesma largura do header: o conteúdo começa na linha da logo e termina na
+   do botão "Primeira vez?". */
+.ct-wrap {
+    max-width: 1160px;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.05);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-left: 5px solid #ffd700;
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-    padding: clamp(1.25rem, 4vw, 2rem);
-    box-sizing: border-box;
-}
-.section-contato .contato-glass-card .text {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    box-shadow: none;
-}
-
-.section-contato h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: 10px;
-    color: #c9a84c;
-    font-weight: 700;
-}
-
-.section-contato p {
-    margin-bottom: 10px;
-    font-size: clamp(0.95rem, 2.8vw, 1rem);
-    color: #f0f0f0;
-    line-height: 1.5;
-}
-
-.section-contato .contato-glass-card p i {
-    color: #c9a84c;
-    margin-right: 0.35rem;
-}
-
-.section-contato a {
-    color: #ffd700;
-    text-decoration: none;
-}
-
-.section-contato a:hover {
-    text-decoration: underline;
-}
-
-/* Formulário de Contato */
-.contact-form {
-    margin-top: 25px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
+    gap: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    /* Controles de formulário não herdam fonte: o navegador aplica a sua
-       própria e ela vence a herança. Sem esta linha, os campos ficam numa
-       fonte diferente do texto logo acima. Só a família — o tamanho continua
-       sendo o `font-size` abaixo. */
-    font-family: inherit;
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.06);
-    color: #eee;
-    transition: all 0.3s ease;
-    box-shadow: none;
+/* ---------- ABERTURA + WHATSAPP ---------- */
+.ct-topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+    gap: 28px 48px;
+    align-items: end;
+    margin-bottom: 8px;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #777;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    background-color: rgba(240, 192, 64, 0.05);
-    box-shadow: 0 0 0 2px rgba(240, 192, 64, 0.3);
-    border-color: #f0c040;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.contact-form button {
-    font-family: inherit; /* idem: <button> não herda a fonte sozinho */
-    background-color: #ffd700;
-    color: #333;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form button:hover {
-    background-color: #e6c200;
-    transform: translateY(-2px);
-}
-
-.contact-form button:disabled {
-    cursor: progress;
-    opacity: 0.7;
-    transform: none;
-}
-
-/* Retorno do envio (apenas sucesso/erro — o estado "Enviando…" fica no botão) */
-.contact-form p.contact-form__status {
+.ct-intro h1 {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.ct-intro p {
+    max-width: 520px;
+    margin: 18px 0 0;
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+.ct-intro a {
+    color: var(--gold-hi);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+/* O cartão de destaque da home: fio e fundo dourados. */
+.ct-whatsapp {
+    padding: 22px 28px 26px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(230, 178, 62, .08);
+}
+
+.ct-whatsapp-rotulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.ct-whatsapp-rotulo i {
+    color: var(--gold);
+    font-size: 17px;
+}
+
+/* A peça forte da página: o número em numerais grandes e cheios. */
+.ct-whatsapp-numero {
+    margin: 0;
+    font-size: clamp(38px, 4.2vw, 56px);
     font-weight: 600;
-    line-height: 1.4;
+    line-height: .95;
+    letter-spacing: -2px;
+    color: var(--gold-hi);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
-.contact-form p.contact-form__status--ok {
-    color: #4ade80;
+.ct-whatsapp-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
 }
 
-.contact-form p.contact-form__status--erro {
-    color: #f87171;
+/* Botões em pílula: contorno dourado; o principal, cheio. */
+.ct-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid rgba(230, 178, 62, .55);
+    border-radius: 999px;
+    color: var(--gold-hi);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
 
-@media (max-width: 320px){
-    #email{
-        
-        font-size: 0.8rem;
-        text-align: center;
-        margin: 2%;
-       
+.ct-botao--cheio {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+}
+
+.ct-botao:focus-visible,
+.ct-intro a:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+/* ---------- E-MAIL, INSTAGRAM E ENDEREÇO ---------- */
+/* Um painel só, em três colunas separadas por fio, como a semana da home.
+   A do e-mail é mais larga: o endereço é comprido. */
+.ct-canais {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
+}
+
+.ct-canal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 26px 28px 28px;
+}
+
+.ct-canal + .ct-canal {
+    border-left: 1px solid var(--fio);
+}
+
+.ct-icone {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 17px;
+}
+
+/* O texto cresce e empurra o botão para o pé da coluna: os três botões
+   ficam na mesma altura. */
+.ct-canal-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.ct-rotulo {
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.ct-valor {
+    font-size: clamp(18px, 1.55vw, 21px);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--paper);
+    overflow-wrap: anywhere;
+}
+
+.ct-detalhe {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--dim);
+}
+
+.ct-canal .ct-botao {
+    margin-top: 20px;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+/* Título, texto e versículo à esquerda; o formulário à direita. */
+.ct-escreva {
+    display: grid;
+    grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
+    gap: 32px 64px;
+    padding: clamp(24px, 4vw, 44px);
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
+    /* O "pedir oração" do topo desce até aqui sem parar atrás do header fixo. */
+    scroll-margin-top: calc(var(--navbar-height) + 16px);
+}
+
+.ct-escreva-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-escreva-intro h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.ct-escreva-intro p {
+    margin: 12px 0 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--dim);
+}
+
+/* O versículo desce até o pé da coluna e fecha o painel junto com o botão. */
+.ct-versiculo {
+    margin: auto 0 0;
+    padding-top: 32px;
+}
+
+.ct-versiculo blockquote {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(246, 245, 241, .78);
+}
+
+.ct-versiculo figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.ct-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+/* Mensagem ou pedido de oração, em pílulas. O rádio fica invisível, mas
+   continua no lugar: é ele que recebe o foco do teclado e que o leitor de
+   tela anuncia. */
+.ct-assunto {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.ct-assunto legend {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.ct-assunto-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ct-assunto-opcao {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid var(--campo-borda);
+    border-radius: 999px;
+    color: var(--paper);
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.ct-assunto-opcao.is-ativo {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.ct-assunto-opcao:has(input:focus-visible) {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+.ct-assunto-opcao input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.ct-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.ct-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.ct-campo--inteiro {
+    grid-column: 1 / -1;
+}
+
+.ct-campo label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(246, 245, 241, .86);
+}
+
+.ct-campo-dica {
+    font-weight: 400;
+    color: var(--dim);
+}
+
+/* Campos não herdam a fonte sozinhos: sem o `font: inherit`, o navegador
+   usa a dele. 16px também evita o zoom automático do iPhone ao tocar. */
+.ct-campo input,
+.ct-campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 16px;
+    color: var(--paper);
+    padding: 13px 15px;
+    border: 1px solid var(--campo-borda);
+    border-radius: 10px;
+    background: var(--campo);
+    transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.ct-campo textarea {
+    min-height: 150px;
+    line-height: 1.55;
+    resize: vertical;
+}
+
+.ct-campo textarea::placeholder {
+    color: rgba(246, 245, 241, .4);
+}
+
+.ct-campo input:focus,
+.ct-campo textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(246, 245, 241, .08);
+    box-shadow: 0 0 0 3px rgba(230, 178, 62, .25);
+}
+
+/* Preenchimento automático do navegador: sem isto o campo fica claro, com
+   texto escuro, no meio da página escura. */
+.ct-campo input:-webkit-autofill {
+    -webkit-text-fill-color: var(--paper);
+    -webkit-box-shadow: 0 0 0 1000px #221d17 inset;
+    caret-color: var(--paper);
+    transition: background-color 9999s ease-out 0s;
+}
+
+.ct-enviar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 20px;
+}
+
+.ct-enviar button {
+    font: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 50px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color .2s ease, transform .15s ease;
+}
+
+.ct-enviar button:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+.ct-enviar button:disabled {
+    cursor: progress;
+    opacity: .7;
+}
+
+/* Retorno do envio. Vazio enquanto nada foi enviado. */
+.ct-status {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.ct-status:empty {
+    display: none;
+}
+
+.ct-status--ok {
+    color: #86efac;
+}
+
+.ct-status--erro {
+    color: #fca5a5;
+}
+
+/* Efeitos de passar o mouse só onde há mouse: no celular o toque deixava o
+   botão "aceso" depois de enviar. */
+@media (hover: hover) {
+    .ct-intro a:hover {
+        color: var(--gold);
     }
-    
 
+    .ct-botao:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--ink);
+    }
 
+    .ct-botao--cheio:hover {
+        background: var(--gold-hi);
+        border-color: var(--gold-hi);
+    }
 
-    
+    .ct-assunto-opcao:hover {
+        border-color: var(--gold);
+    }
+
+    .ct-enviar button:hover {
+        background: var(--gold-hi);
+        transform: translateY(-2px);
+    }
+
+    .ct-enviar button:disabled:hover {
+        background: var(--gold);
+        transform: none;
+    }
+}
+
+/* ---------- RESPONSIVO ---------- */
+/* Tablet: abertura em cima do WhatsApp; os três canais viram linhas, com o
+   botão na ponta; o formulário passa para baixo do título. */
+@media (max-width: 980px) {
+    .ct-topo {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+    }
+
+    /* O cartão do WhatsApp passa a ter a largura toda: o número cresce junto. */
+    .ct-whatsapp-numero {
+        font-size: clamp(34px, 7vw, 56px);
+    }
+
+    .ct-canais {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ct-canal {
+        display: grid;
+        grid-template-columns: 40px minmax(0, 1fr) auto;
+        grid-template-areas: "icone texto botao";
+        column-gap: 18px;
+        align-items: center;
+        padding: 20px 24px;
+    }
+
+    .ct-canal + .ct-canal {
+        border-left: 0;
+        border-top: 1px solid var(--fio);
+    }
+
+    .ct-icone {
+        grid-area: icone;
+        align-self: start;
+        margin: 0;
+    }
+
+    .ct-canal-texto {
+        grid-area: texto;
+    }
+
+    .ct-canal .ct-botao {
+        grid-area: botao;
+        margin: 0;
+    }
+
+    .ct-escreva {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ct-versiculo {
+        margin: 0;
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .ct-whatsapp {
+        padding: 18px 18px 20px;
+    }
+
+    .ct-whatsapp-numero {
+        font-size: clamp(28px, 9vw, 40px);
+        letter-spacing: -1px;
+    }
+
+    .ct-whatsapp-acoes .ct-botao {
+        flex: 1 1 auto;
+    }
+
+    /* No celular cada canal volta a ser uma coluna, como no computador: o
+       selo em cima e o texto com a largura toda — assim o e-mail cabe numa
+       linha só. */
+    .ct-canal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .ct-icone {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .ct-valor {
+        font-size: clamp(16px, 4.6vw, 19px);
+    }
+
+    .ct-canal .ct-botao {
+        margin-top: 14px;
+        min-height: 40px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .ct-campos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ct-assunto-opcao {
+        flex: 1 1 0;
+        padding: 0 12px;
+    }
+
+    .ct-enviar button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ct-botao,
+    .ct-assunto-opcao,
+    .ct-campo input,
+    .ct-campo textarea,
+    .ct-enviar button {
+        transition: none;
+    }
+
+    .ct-enviar button:hover {
+        transform: none;
+    }
 }

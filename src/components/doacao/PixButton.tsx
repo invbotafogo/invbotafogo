@@ -1,42 +1,67 @@
-import { useEffect, useState } from 'react';
+import qrcodePix from '../../assets/images/qrcode_pix.png';
 import { PIX } from '../../lib/constants';
+import { useCopiar } from '../../hooks/useCopiar';
 
+/* É uma sequência de verdade — por isso os números. */
+const PASSOS = [
+  'Abra o app do seu banco e escolha Pix.',
+  'Escaneie o QR Code ou cole a chave.',
+  `Confira o favorecido, ${PIX.favorecido}, e confirme.`,
+];
+
+/**
+ * O Pix, em destaque: o QR Code, a chave em numerais grandes com o botão de
+ * copiar e, ao lado, o passo a passo.
+ */
 export function PixButton() {
-  const [confirmacao, setConfirmacao] = useState('');
-
-  useEffect(() => {
-    if (!confirmacao) return;
-    const id = setTimeout(() => setConfirmacao(''), 3000);
-    return () => clearTimeout(id);
-  }, [confirmacao]);
-
-  const copiar = async () => {
-    try {
-      await navigator.clipboard.writeText(PIX.chave);
-      setConfirmacao('Chave PIX copiada!');
-    } catch {
-      setConfirmacao('Não foi possível copiar. Copie manualmente.');
-    }
-  };
+  const { estado, copiar } = useCopiar();
 
   return (
-    <div className="pix-box">
-      <br />
-      <h3>Chave PIX</h3>
+    <section className="doe-pix" aria-labelledby="doe-pix-titulo">
+      <div className="doe-pix-qr">
+        <img src={qrcodePix} alt="QR Code do Pix da igreja" width={176} height={176} />
+      </div>
 
-      {/* QR Code vem como background-image no CSS, igual ao site antigo. */}
-      <div className="qrcode" />
+      <div className="doe-pix-info">
+        <h2 id="doe-pix-titulo">
+          <i className="fa-brands fa-pix" aria-hidden="true" /> Doe pelo Pix
+        </h2>
+        <p className="doe-pix-rotulo">Chave Pix (CNPJ)</p>
+        <p className="doe-pix-chave">{PIX.chave}</p>
 
-      <p>
-        <i className="fa-solid fa-qrcode" /> <strong id="chave-pix">{PIX.chave}</strong>
-      </p>
+        <div className="doe-pix-acoes">
+          <button
+            type="button"
+            className={`doe-botao${estado === 'ok' ? ' is-copiado' : ''}`}
+            onClick={() => copiar(PIX.chave)}
+          >
+            <i
+              className={estado === 'ok' ? 'fa-solid fa-check' : 'fa-regular fa-copy'}
+              aria-hidden="true"
+            />
+            {estado === 'ok' ? 'Chave copiada' : 'Copiar chave Pix'}
+          </button>
 
-      <button type="button" id="copiar-btn" onClick={copiar}>
-        Copiar chave PIX
-      </button>
-      <p id="confirmacao-pix" className="confirmacao" role="status" aria-live="polite">
-        {confirmacao}
-      </p>
-    </div>
+          <p
+            className={`doe-pix-status${estado === 'erro' ? ' doe-pix-status--erro' : ''}`}
+            role="status"
+            aria-live="polite"
+          >
+            {estado === 'ok'
+              ? 'Agora é só colar no app do banco.'
+              : estado === 'erro'
+                ? 'Não foi possível copiar. Selecione a chave e copie.'
+                : ''}
+          </p>
+        </div>
+      </div>
+
+      {/* role="list": com list-style none, o Safari deixa de anunciar como lista. */}
+      <ol className="doe-passos" role="list">
+        {PASSOS.map((passo) => (
+          <li key={passo}>{passo}</li>
+        ))}
+      </ol>
+    </section>
   );
 }

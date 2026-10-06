@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { ArrowRight, ArrowLeft, Clock } from './icons';
 import {
   PROGRAMACAO_SEMANAL,
   ehDoMesCorrente,
   mesDoRotulo,
+  type DiaSemanal,
   type ProgramacaoMensal,
 } from '../../lib/programacao';
 import { useProgramacaoMensal } from '../../hooks/useProgramacaoMensal';
@@ -15,28 +17,76 @@ const SEM_PROGRAMACAO: ProgramacaoMensal = { rotulo: '', semanas: [] };
 const agoraSP = () =>
   new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
 
-/* Próximo culto semanal (dia + evento), a partir de agora (Brasília) */
-function proximoSlot() {
+/* "08:30" → "8h30"; "10:00" → "10h" — o mesmo jeito de escrever do resto do site. */
+function horaAmigavel(hhmm: string): string {
+  const [hora, minutos] = hhmm.split(':').map(Number);
+  return minutos ? `${hora}h${String(minutos).padStart(2, '0')}` : `${hora}h`;
+}
+
+interface Linha {
+  hora: string;
+  titulo: string;
+}
+
+/*
+ * Um horário por linha, em ordem. O "Culto" de domingo tem dois horários e vira
+ * duas linhas (10h e 19h): escrito como "10h - 19h" ele se lia como um culto
+ * só, das 10h às 19h.
+ */
+function linhasDoDia(dia: DiaSemanal): Linha[] {
+  return dia.eventos
+    .flatMap((evento) => evento.horarios.map((hora) => ({ hora, titulo: evento.titulo })))
+    .sort((a, b) => a.hora.localeCompare(b.hora));
+}
+
+/* Dia da semana por extenso, no padrão Date.getDay() — o `w` da programação. */
+const NOME_DO_DIA = [
+  'Domingo',
+  'Segunda-feira',
+  'Terça-feira',
+  'Quarta-feira',
+  'Quinta-feira',
+  'Sexta-feira',
+  'Sábado',
+];
+
+interface Proximo {
+  /** Índice do dia em PROGRAMACAO_SEMANAL. */
+  d: number;
+  hora: string;
+  titulo: string;
+  /** "Hoje", "Amanhã" ou "Daqui a 3 dias". */
+  quando: string;
+}
+
+/* Próximo encontro da semana, a partir de agora (Brasília) */
+function proximoEncontro(): Proximo {
   const n = agoraSP();
   const agoraMin = n.getDay() * 1440 + n.getHours() * 60 + n.getMinutes();
   let melhor = Infinity;
-  let res = { d: 0, e: 0 };
+  let res = { d: 0, w: 0, hora: '', titulo: '' };
 
   PROGRAMACAO_SEMANAL.forEach((dia, d) => {
-    dia.eventos.forEach((ev, e) => {
+    dia.eventos.forEach((ev) => {
       ev.horarios.forEach((t) => {
         const [hh, mm] = t.split(':').map(Number);
         const occ = dia.w * 1440 + hh * 60 + mm;
         const delta = (occ - agoraMin + 10080) % 10080;
         if (delta < melhor) {
           melhor = delta;
-          res = { d, e };
+          res = { d, w: dia.w, hora: t, titulo: ev.titulo };
         }
       });
     });
   });
 
-  return res;
+  /* Dias de calendário até lá. Um encontro de hoje que já passou só volta na
+     semana que vem: são 7 dias, não "hoje". */
+  let dias = (res.w - n.getDay() + 7) % 7;
+  if (dias === 0 && melhor >= 1440) dias = 7;
+  const quando = dias === 0 ? 'Hoje' : dias === 1 ? 'Amanhã' : `Daqui a ${dias} dias`;
+
+  return { d: res.d, hora: res.hora, titulo: res.titulo, quando };
 }
 
 /* Índice da semana vigente dentro da programação mensal (Brasília).
@@ -62,9 +112,12 @@ function semanaAtual(programacao: ProgramacaoMensal): number {
  * Google Calendar.
  */
 export function EdCalendar() {
-  const [verMes, setVerMes] = useState(false);
+  /* /?agenda=mes#programacao (o link de "Primeira vez aqui?") já abre na
+     programação do mês. */
+  const [parametros] = useSearchParams();
+  const [verMes, setVerMes] = useState(() => parametros.get('agenda') === 'mes');
   const [semanaSelecionada, setSemanaSelecionada] = useState<number | null>(null);
-  const proximo = useMemo(() => proximoSlot(), []);
+  const proximo = useMemo(() => proximoEncontro(), []);
 
   /* Eventos extras do mês: vêm da planilha. A programação semanal acima é fixa. */
   const {
@@ -105,7 +158,12 @@ export function EdCalendar() {
   };
 
   return (
-    <section className="ed reveal ed-top ed-cal">
+    /* Âncora de /#programacao; a margem compensa o header fixo. */
+    <section
+      id="programacao"
+      className="ed reveal ed-top ed-cal"
+      style={{ scrollMarginTop: 'calc(var(--navbar-height) + 24px)' }}
+    >
       <div className="lead-col">
         <p className="kicker">{verMes ? 'Programação mensal' : 'Programação semanal'}</p>
         {!verMes ? (
@@ -134,39 +192,44 @@ export function EdCalendar() {
       <div className="prog-col">
         {!verMes ? (
           <>
-            <div className="agenda agenda-week">
-              {PROGRAMACAO_SEMANAL.map((dia, d) => (
-                /*
-                 * `slot-timeline` liga o fio vertical do CSS, e só faz sentido
-                 * quando o dia tem mais de um evento para ligar: em QUA e QUI,
-                 * com um culto só, a linha não conectaria nada e ainda sugeriria
-                 * que os cartões são uma sequência contínua.
-                 */
-                <div
-                  key={dia.dia}
-                  className={`slot ${d === proximo.d ? 'next' : ''} ${
-                    dia.eventos.length > 1 ? 'slot-timeline' : ''
-                  }`}
-                >
-                  <div className="day">{dia.dia}</div>
-                  <div className="info">
-                    {dia.eventos.map((ev, e) => {
-                      const ehProximo = d === proximo.d && e === proximo.e;
-                      return (
-                        <div className={`ev ${ehProximo ? 'is-next' : ''}`} key={ev.titulo}>
-                          <div className="ev-main">
-                            <b>{ev.titulo}</b>
-                            <p>
-                              <Clock /> {ev.horario}
-                            </p>
-                          </div>
-                          {ehProximo && <span className="tag">PRÓXIMO</span>}
-                        </div>
-                      );
-                    })}
+            {/* O próximo encontro em destaque — a hora grande é o que a pessoa
+                procura — e, embaixo, a semana inteira: uma coluna por dia de
+                encontro, um horário por linha. */}
+            <div className="encontros">
+              <div className="encontro-proximo">
+                <p className="encontro-proximo-rotulo">Próximo encontro</p>
+                <div className="encontro-proximo-corpo">
+                  <time className="encontro-proximo-hora" dateTime={proximo.hora}>
+                    {horaAmigavel(proximo.hora)}
+                  </time>
+                  <div className="encontro-proximo-info">
+                    <b>{NOME_DO_DIA[PROGRAMACAO_SEMANAL[proximo.d].w]}</b>
+                    <span>{proximo.titulo}</span>
+                    <small>{proximo.quando}</small>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="semana-grade">
+                {PROGRAMACAO_SEMANAL.map((dia, d) => (
+                  <div className="semana-coluna" key={dia.dia}>
+                    <h4>{NOME_DO_DIA[dia.w]}</h4>
+                    <ul>
+                      {linhasDoDia(dia).map((linha) => (
+                        <li
+                          key={`${linha.hora}-${linha.titulo}`}
+                          className={
+                            d === proximo.d && linha.hora === proximo.hora ? 'is-next' : undefined
+                          }
+                        >
+                          <time dateTime={linha.hora}>{horaAmigavel(linha.hora)}</time>
+                          <span>{linha.titulo}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
             <button type="button" className="month-link" onClick={abrirMes}>
               Ver outros eventos no mês <ArrowRight />

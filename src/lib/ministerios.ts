@@ -13,8 +13,18 @@ export interface Ministerio {
   /** Primeira linha do título: "Ministério de", "Grupo de"... */
   label: string;
   nome: string;
-  /** Classe do ícone Font Awesome usada no card. */
+  /**
+   * Uma frase sobre o que o ministério faz: aparece em /ministerios, embaixo
+   * do nome, no painel. Resume os parágrafos abaixo — mudou lá, confira aqui.
+   */
+  resumo: string;
+  /** Classe do ícone Font Awesome usada no índice de /ministerios. */
   icone: string;
+  /**
+   * Ilustração do ministério, no topo do painel em /ministerios. Quando
+   * chegarem as fotos do ensaio institucional, é só trocar o arquivo
+   * importado no começo deste arquivo.
+   */
   imagem: string;
   imagemAlt: string;
   paragrafos: string[];
@@ -24,9 +34,9 @@ export interface Ministerio {
 /**
  * A ORDEM DESTE ARRAY É A ORDEM DA TELA.
  *
- * É ela que define a sequência dos cards em /ministerios e a lista do rodapé
+ * É ela que define a sequência do índice em /ministerios e a do rodapé
  * (Footer.tsx fatia este mesmo array em duas colunas). Não há nenhuma
- * ordenação em tempo de execução: para mover um card, mova o bloco aqui.
+ * ordenação em tempo de execução: para mover um ministério, mova o bloco aqui.
  *
  * Regra em vigor:
  *   1. os "Ministério de/da" vêm primeiro, em ordem alfabética pelo `nome`;
@@ -40,6 +50,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'comunicacoes',
     label: 'Ministério de',
     nome: 'Comunicações',
+    resumo: 'Leva a Palavra e as ações da igreja para as redes, em fotos e vídeos, e cuida do site.',
     icone: 'fa-solid fa-tower-broadcast',
     imagem: comunicacoes,
     imagemAlt: 'Ministério de Comunicações',
@@ -57,6 +68,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'evangelismo',
     label: 'Ministério de',
     nome: 'Evangelismo',
+    resumo: 'Anuncia o Evangelho nas ruas, hospitais, presídios e lares, e acolhe quem acabou de chegar à fé.',
     icone: 'fa-solid fa-book-bible',
     imagem: evangelismo,
     imagemAlt: 'Ministério de Evangelismo',
@@ -75,6 +87,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'infantil',
     label: 'Ministério',
     nome: 'Infantil',
+    resumo: 'Ensina a Palavra às crianças de um jeito criativo e cuida delas durante os cultos.',
     icone: 'fa-solid fa-child',
     imagem: infantil,
     imagemAlt: 'Ministério Infantil',
@@ -93,6 +106,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'intercessao',
     label: 'Ministério de',
     nome: 'Intercessão',
+    resumo: 'Ora pela igreja, pelos líderes e por causas específicas, em cultos e campanhas de oração.',
     icone: 'fa-solid fa-hands-praying',
     imagem: intercessao,
     imagemAlt: 'Ministério de Intercessão',
@@ -110,6 +124,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'introducao',
     label: 'Ministério de',
     nome: 'Introdução',
+    resumo: 'Recebe quem chega à igreja e ajuda no bom andamento dos cultos e eventos.',
     icone: 'fa-solid fa-handshake',
     imagem: intro,
     imagemAlt: 'Ministério de Introdução e recepção',
@@ -126,6 +141,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'juventude',
     label: 'Ministério da',
     nome: 'Juventude',
+    resumo: 'Encontros semanais de estudo da Bíblia, oração e comunhão para os jovens.',
     icone: 'fa-solid fa-fire',
     imagem: juventude,
     imagemAlt: 'Ministério da Juventude',
@@ -143,6 +159,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'louvor',
     label: 'Ministério de',
     nome: 'Louvor',
+    resumo: 'Conduz a igreja na adoração a Deus por meio da música.',
     icone: 'fa-solid fa-music',
     imagem: louvor,
     imagemAlt: 'Ministério de Louvor',
@@ -160,6 +177,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'mulheres',
     label: 'Ministério de',
     nome: 'Mulheres',
+    resumo: 'Um espaço de comunhão, apoio e crescimento espiritual para as mulheres da igreja.',
     icone: 'fa-solid fa-heart',
     imagem: mulheres,
     imagemAlt: 'Ministério de Mulheres',
@@ -178,6 +196,7 @@ export const MINISTERIOS: Ministerio[] = [
     id: 'guerreiros',
     label: 'Grupo de',
     nome: 'Guerreiros',
+    resumo: 'Encontro dos homens para oração, estudo da Palavra e apoio entre irmãos.',
     icone: 'fa-solid fa-shield',
     imagem: guerreiros,
     imagemAlt: 'Grupo de Guerreiros',
@@ -193,27 +212,9 @@ export const MINISTERIOS: Ministerio[] = [
 ];
 
 /**
- * O card usa "INTRODUÇÃO" e o painel expandido usa "Introdução & Recepção".
- * Mantido como no site antigo.
+ * Nome por extenso quando ele não cabe no campo `nome`: em /ministerios
+ * aparece "Introdução & Recepção".
  */
 export const NOME_EXPANDIDO: Record<string, string> = {
   introducao: 'Introdução & Recepção',
 };
-
-/**
- * Ministérios cujo card ampliado já usa o layout novo — card de vidro em
- * coluna única, no padrão das seções Contato e "Nossa história"
- * (ver components/ministerios/MinistryDetailSolo.tsx e
- * styles/ministerios-solo.css).
- *
- * Hoje vale para todos. Para devolver um ministério ao painel antigo, troque
- * pela lista explícita dos ids que devem usar o layout novo — por exemplo
- * `new Set(['louvor'])` — sem mexer em nenhum outro arquivo.
- */
-export const MINISTERIOS_LAYOUT_SOLO: ReadonlySet<string> = new Set(
-  MINISTERIOS.map((ministerio) => ministerio.id),
-);
-
-export function usaLayoutSolo(id?: string | null): boolean {
-  return !!id && MINISTERIOS_LAYOUT_SOLO.has(id);
-}

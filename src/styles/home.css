@@ -344,145 +344,201 @@
     flex: none;
 }
 
-/* ---------- LINHA DO TEMPO DO DIA (programação semanal) ---------- */
-/* Um fio vertical atravessa o cartão do dia e transforma o selo no marcador
-   central dele; cada evento ganha um pontinho na mesma prumada. Assim os
-   horários deixam de ser uma lista solta e passam a ser lidos como a sequência
-   do dia.
-
-   Só entra em cartões com mais de um evento (`.slot-timeline`, ligado no
-   EdCalendar): num dia de culto único o fio não ligaria nada e, cruzando a
-   borda dos cartões, faria DOM, QUA e QUI parecerem uma sequência contínua —
-   quando são dias distintos.
-
-   O fio é desenhado em dois trechos — acima e abaixo do selo — porque o fundo
-   do selo é translúcido: uma linha contínua apareceria por dentro dele em vez
-   de passar por trás. */
-/* Medidas do bloco do evento, fixadas para o alinhamento do selo (mais abaixo)
-   ser aritmética e não medida de fonte. Os valores são os que já se calculavam
-   sozinhos, então na tela nada se move — a diferença é que agora são nossos.
-   Valem para os três cartões da semana: entrelinha diferente entre o domingo e
-   os outros dias apareceria. */
-.section-index .agenda-week .slot {
-    /* Linha do título (os 22px de `.slot .info b`). */
-    --tl-titulo-lh: 27px;
-    /* Espelha o margin-top de `.slot .info p`. */
-    --tl-hora-mt: 6px;
-    /* Era a margem inferior padrão que o navegador dá a todo <p>. */
-    --tl-hora-mb: 14px;
+/* ---------- NOSSOS ENCONTROS (programação semanal) ---------- */
+/* Duas camadas. Em cima, o próximo encontro em destaque: a hora grande é o que
+   a pessoa veio procurar. Embaixo, a semana inteira num painel só, uma coluna
+   por dia de encontro e um horário por linha — o "Culto" de domingo, com dois
+   horários, aparece duas vezes (10h e 19h), em vez de "10h - 19h", que se lia
+   como um culto das 10h às 19h. */
+.section-index .encontros {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-/* `block` para a linha do título medir exatamente `--tl-titulo-lh`: como
-   inline, ela ainda dependia do "strut" do bloco em volta, que usa outro
-   tamanho de fonte e esticava a linha em uns 3px. */
-.section-index .agenda-week .slot .ev-main b {
-    display: block;
-    line-height: var(--tl-titulo-lh);
+/* Mesmo tratamento que o cartão do dia seguinte já tinha: fio e fundo dourados. */
+.section-index .encontro-proximo {
+    padding: 20px 26px 24px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(230, 178, 62, .08);
 }
 
-.section-index .agenda-week .slot .ev-main p {
-    margin-top: var(--tl-hora-mt);
-    margin-bottom: var(--tl-hora-mb);
+.section-index .encontro-proximo-rotulo {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: var(--dim);
 }
 
-.section-index .agenda-week .slot-timeline {
-    /* Espelham o padding do cartão, a largura do selo e o gap entre eles: é
-       daqui que sai a prumada da linha. Mudou lá em cima? Mude aqui também. */
-    --tl-pad: 18px;
-    --tl-day: 46px;
-    --tl-gap: 16px;
-    /* Centro horizontal do selo, medido da borda esquerda do cartão. */
-    --tl-x: calc(var(--tl-pad) + var(--tl-day) / 2);
-    /* Meia altura do selo + um respiro, para o fio morrer antes de tocá-lo. */
-    --tl-cut: calc(var(--tl-day) / 2 + 6px);
-    /* Folga nas pontas: o fio não encosta na borda de cima nem na de baixo. */
-    --tl-inset: 12px;
-    /*
-     * Quanto o selo desce para pousar na linha do horário.
-     *
-     * O selo é centralizado no cartão, e o cartão é simétrico: o centro dele
-     * cai no centro do bloco do evento do meio. Dentro desse bloco o horário
-     * não fica no centro — acima dele há a linha do título e a margem que os
-     * separa; abaixo, a margem que sobra no pé. O selo desce metade dessa
-     * diferença e pousa exatamente no centro do parágrafo da hora.
-     *
-     * As três medidas são fixadas logo abaixo justamente para esta conta
-     * existir: com `line-height: normal` e a margem padrão do <p>, quem as
-     * decide é a métrica da fonte e o navegador.
-     */
-    --tl-selo-desce: calc((var(--tl-titulo-lh) + var(--tl-hora-mt) - var(--tl-hora-mb)) / 2);
-    position: relative;
+.section-index .encontro-proximo-corpo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
-/* `relative` de propósito: o selo se desloca sem tirar nada do lugar, então a
-   altura do cartão e a posição dos eventos continuam as mesmas. */
-.section-index .agenda-week .slot-timeline .day {
-    position: relative;
-    top: var(--tl-selo-desce);
+/* A peça memorável da seção: o horário em numerais grandes e cheios. */
+.section-index .encontro-proximo-hora {
+    flex: none;
+    font-size: clamp(56px, 6.2vw, 84px);
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -2px;
+    color: var(--gold-hi);
+    font-variant-numeric: tabular-nums;
 }
 
-.section-index .agenda-week .slot-timeline::before,
-.section-index .agenda-week .slot-timeline::after {
-    content: '';
-    position: absolute;
-    left: var(--tl-x);
-    width: 1px;
-    background: var(--line);
-    pointer-events: none;
+.section-index .encontro-proximo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding-left: 24px;
+    border-left: 1px solid var(--line);
 }
 
-/* O selo desceu, então os dois trechos acompanham: sem isto a folga de cima
-   cresceria e a de baixo entraria por dentro do selo. */
-.section-index .agenda-week .slot-timeline::before {
-    top: var(--tl-inset);
-    height: calc(50% - var(--tl-cut) - var(--tl-inset) + var(--tl-selo-desce));
+.section-index .encontro-proximo-info b {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--paper);
 }
 
-.section-index .agenda-week .slot-timeline::after {
-    bottom: var(--tl-inset);
-    height: calc(50% - var(--tl-cut) - var(--tl-inset) - var(--tl-selo-desce));
+.section-index .encontro-proximo-info span {
+    font-size: 17px;
+    color: var(--paper);
 }
 
-/* O pontinho de cada evento, alinhado à prumada da linha. Ele mora no
-   parágrafo do horário, não no bloco do evento inteiro: é o horário que marca
-   o ponto na linha do tempo, então é com ele que a bolinha se alinha — no
-   centro do bloco ela caía entre o título e a hora, sem apontar para nada.
-   O deslocamento é negativo porque o texto começa depois do selo e do gap. */
-.section-index .agenda-week .slot-timeline .ev-main p {
-    position: relative;
+.section-index .encontro-proximo-info small {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--gold);
 }
 
-.section-index .agenda-week .slot-timeline .ev-main p::before {
-    content: '';
-    position: absolute;
-    left: calc(-1 * (var(--tl-day) / 2 + var(--tl-gap)));
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 7px;
-    height: 7px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 1px solid var(--gold);
-    background: var(--ink);
+/* A semana: quantas colunas houver dias na programação. */
+.section-index .semana-grade {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    background: var(--glass);
 }
 
-/*
- * O evento do meio de três cai exatamente na altura do selo: a prumada da
- * linha passa pelo centro do selo, e o centro vertical do bloco de eventos
- * coincide com ele. O ponto ficava desenhado por cima da letra do meio de
- * "DOM" — daí o O sair estranho. Aqui o selo é o marcador dessa linha (é o que
- * a referência mostra: ponto, selo, ponto), então o ponto sai de cena.
- *
- * `:nth-child(2):nth-last-child(2)` = o segundo de exatamente três.
- */
-.section-index .agenda-week .slot-timeline .ev:nth-child(2):nth-last-child(2) .ev-main p::before {
-    display: none;
+.section-index .semana-coluna {
+    padding: 18px 20px 22px;
 }
 
-/* O próximo evento é o único ponto preenchido — mesma lógica do selo PRÓXIMO. */
-.section-index .agenda-week .slot-timeline .ev.is-next .ev-main p::before {
-    background: var(--gold);
-    box-shadow: 0 0 0 3px rgba(230, 178, 62, .16);
+.section-index .semana-coluna + .semana-coluna {
+    border-left: 1px solid rgba(255, 255, 255, .08);
+}
+
+.section-index .semana-coluna h4 {
+    margin: 0 0 14px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--paper);
+}
+
+.section-index .semana-coluna ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section-index .semana-coluna li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.section-index .semana-coluna time {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
+}
+
+.section-index .semana-coluna li span {
+    font-size: 16px;
+    line-height: 1.35;
+    color: var(--dim);
+}
+
+/* O mesmo encontro do destaque, achado também na semana. */
+.section-index .semana-coluna li.is-next time {
+    color: var(--gold-hi);
+}
+
+.section-index .semana-coluna li.is-next span {
+    color: var(--paper);
+}
+
+/* Celular: o destaque fica mais compacto e a semana vira lista — um dia
+   embaixo do outro, com hora e nome na mesma linha. */
+@media (max-width: 540px) {
+    .section-index .encontro-proximo {
+        padding: 16px 18px 18px;
+    }
+
+    /* Hora em cima, dia e encontro embaixo: lado a lado, "Quarta-feira"
+       quebrava no meio. */
+    .section-index .encontro-proximo-corpo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .section-index .encontro-proximo-hora {
+        letter-spacing: -1px;
+    }
+
+    .section-index .encontro-proximo-info {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .section-index .encontro-proximo-info b {
+        font-size: 19px;
+    }
+
+    .section-index .encontro-proximo-info span {
+        font-size: 16px;
+    }
+
+    .section-index .semana-grade {
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+    }
+
+    .section-index .semana-coluna {
+        padding: 16px 18px;
+    }
+
+    .section-index .semana-coluna + .semana-coluna {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .section-index .semana-coluna h4 {
+        margin-bottom: 10px;
+    }
+
+    .section-index .semana-coluna ul {
+        gap: 8px;
+    }
+
+    .section-index .semana-coluna li {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 12px;
+    }
+
+    .section-index .semana-coluna time {
+        flex: none;
+        min-width: 3.4em;
+    }
 }
 
 .section-index .month-link {

@@ -1,21 +1,29 @@
-import type { Video } from '../../lib/youtube';
+import { formatarPublicacao, type Video } from '../../lib/youtube';
 
 interface VideoCardProps {
   video: Video;
-  indice: number;
+  /** É o vídeo que está no player grande. */
+  ativo: boolean;
+  onEscolher: () => void;
 }
 
-export function VideoCard({ video, indice }: VideoCardProps) {
+/** Uma linha da lista ao lado do player: capa, título, pregador e data. */
+export function VideoCard({ video, ativo, onEscolher }: VideoCardProps) {
   return (
-    <iframe
-      title={`Último culto ${indice + 1}`}
-      src={video.embedUrl}
-      width="360"
-      height="215"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      style={{ margin: '10px' }}
-    />
+    <button
+      type="button"
+      className={`cul-item${ativo ? ' is-ativo' : ''}`}
+      onClick={onEscolher}
+      aria-current={ativo ? 'true' : undefined}
+    >
+      <span className="cul-item-capa">
+        <img src={video.capaPequena} alt="" loading="lazy" width={320} height={180} />
+      </span>
+      <span className="cul-item-texto">
+        <b>{video.titulo}</b>
+        {video.pregador && <span>{video.pregador}</span>}
+        {video.publicadoEm && <small>{formatarPublicacao(video.publicadoEm)}</small>}
+      </span>
+    </button>
   );
 }

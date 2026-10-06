@@ -1,81 +1,208 @@
-import { useEffect, useRef } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { MinistryCard } from '../components/ministerios/MinistryCard';
-import { MinistryDetail } from '../components/ministerios/MinistryDetail';
+import { useEffect, useRef, type KeyboardEvent } from 'react';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { FooterSlot } from '../components/layout/Footer';
-import { MINISTERIOS, usaLayoutSolo } from '../lib/ministerios';
+import { MINISTERIOS, NOME_EXPANDIDO, type Ministerio } from '../lib/ministerios';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import '../styles/ministerios.css';
-/* Layout novo do card ampliado (padrão Contato / "Nossa história").
-   Precisa vir depois de ministerios.css para vencer as regras do painel antigo. */
-import '../styles/ministerios-solo.css';
 
+/** "Louvor", "Guerreiros", "Introdução & Recepção". */
+function nomeDe(ministerio: Ministerio): string {
+  return NOME_EXPANDIDO[ministerio.id] ?? ministerio.nome;
+}
+
+/** Leva o painel para a tela quando o topo dele está escondido ou abaixo da metade da tela. */
+function rolarAteOPainel() {
+  const painel = document.getElementById('min-painel');
+  if (!painel) return;
+  const topo = painel.getBoundingClientRect().top;
+  const alturaDoHeader = 70; /* --navbar-height */
+  if (topo < alturaDoHeader || topo > window.innerHeight * 0.5) {
+    painel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/**
+ * Ministérios: o índice com os nove à esquerda (no celular, uma grade em cima)
+ * e, ao lado, o painel do ministério escolhido, com a ilustração, o texto e o
+ * que a equipe faz.
+ *
+ * O ministério aberto fica na URL (?ministerio=louvor), e é assim que os links
+ * do rodapé abrem direto no ministério certo. Sem nada na URL, abre o primeiro.
+ */
 export default function Ministerios() {
   useDocumentTitle('INVB - Ministérios');
 
-  /** O ministério aberto fica na URL — mantém os deep links ?ministerio=louvor do rodapé. */
-  const [searchParams, setSearchParams] = useSearchParams();
-  const selecionadoId = searchParams.get('ministerio');
-  const selecionado = MINISTERIOS.find((m) => m.id === selecionadoId) ?? null;
+  const [parametros, setParametros] = useSearchParams();
+  const { key: chaveDaNavegacao } = useLocation();
 
-  /** Só com o layout novo aberto a seção volta a rolar como uma página normal. */
-  const layoutSolo = usaLayoutSolo(selecionado?.id);
+  const indice = Math.max(
+    0,
+    MINISTERIOS.findIndex((m) => m.id === parametros.get('ministerio')),
+  );
+  const ministerio = MINISTERIOS[indice];
+  const anterior = MINISTERIOS[indice - 1];
+  const proximo = MINISTERIOS[indice + 1];
 
-  const painelRef = useRef<HTMLDivElement>(null);
+  const abas = useRef<(HTMLButtonElement | null)[]>([]);
 
-  /**
-   * Os cards da grade não usam a foto — só o painel expandido. Sem preload,
-   * o browser só pede o arquivo no clique e a imagem aparece 1–2s depois.
+  /* De onde veio a última troca: clique (índice ou anterior/próximo),
+     teclado (setas no índice) ou de fora (link do rodapé, chegada na página). */
+  const origem = useRef<'clique' | 'teclado' | null>(null);
+
+  const escolher = (i: number, como: 'clique' | 'teclado') => {
+    origem.current = como;
+    setParametros({ ministerio: MINISTERIOS[i].id }, { replace: true });
+    if (como === 'teclado') abas.current[i]?.focus();
+  };
+
+  /* Setas, Home e End andam pelo índice, como em qualquer lista de abas. */
+  const aoTeclar = (evento: KeyboardEvent<HTMLDivElement>) => {
+    const total = MINISTERIOS.length;
+    const destino: Record<string, number> = {
+      ArrowDown: (indice + 1) % total,
+      ArrowRight: (indice + 1) % total,
+      ArrowUp: (indice - 1 + total) % total,
+      ArrowLeft: (indice - 1 + total) % total,
+      Home: 0,
+      End: total - 1,
+    };
+    if (!(evento.key in destino)) return;
+    evento.preventDefault();
+    escolher(destino[evento.key], 'teclado');
+  };
+
+  /*
+   * Depois de cada troca, o painel vem para a tela se tiver ficado fora de
+   * vista: no celular ele fica embaixo da grade; no computador, o "Próximo"
+   * fica no fim do painel. Quem anda pelo teclado não é rolado — a aba focada
+   * sairia da tela. Chegando sem ministério na URL, a página fica no topo.
    */
   useEffect(() => {
-    for (const ministerio of MINISTERIOS) {
-      const img = new Image();
-      img.src = ministerio.imagem;
-    }
-  }, []);
+    const como = origem.current;
+    origem.current = null;
+    if (como === 'teclado') return;
+    if (como === null && !parametros.has('ministerio')) return;
 
-  /**
-   * No layout novo o card ampliado É a página: ele já nasce logo abaixo do
-   * header. `scrollIntoView({ block: 'start' })` encostava o topo do painel
-   * na borda da viewport e, como o header é fixo, o card acabava por baixo
-   * dele — o "salto" para cima. Aqui basta voltar ao topo do documento; quem
-   * centra o card verticalmente é o CSS (margens automáticas do painel).
-   *
-   * O painel antigo segue com scrollIntoView, agora com o scroll-margin-top
-   * que compensa o header.
-   */
-  useEffect(() => {
-    if (!selecionado) return;
-
-    if (layoutSolo) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-
-    painelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, [selecionado, layoutSolo]);
-
-  const abrir = (id: string) => setSearchParams({ ministerio: id });
-  const fechar = () => setSearchParams({}, { replace: true });
+    let cancelado = false;
+    /* Espera a Montserrat: com a fonte de reserva a página tem outra altura. */
+    document.fonts.ready.then(() => {
+      if (!cancelado) rolarAteOPainel();
+    });
+    return () => {
+      cancelado = true;
+    };
+    /* Roda a cada navegação — inclusive um clique no rodapé no ministério que
+       já está aberto, que não muda o `indice`. */
+  }, [chaveDaNavegacao]);
 
   return (
-    <div
-      className={`section-ministerios${layoutSolo ? ' section-ministerios--solo' : ''}`}
-      id="main"
-    >
-      <MinistryDetail ministerio={selecionado} aoFechar={fechar} painelRef={painelRef} />
+    <>
+      <div className="section-ministerios" id="main">
+        <div className="min-wrap">
+          <div className="min-intro">
+            <h1>Ministérios</h1>
+            
+          </div>
 
-      <div className="cards-container">
-        {MINISTERIOS.map((ministerio) => (
-          <MinistryCard
-            key={ministerio.id}
-            ministerio={ministerio}
-            aoSelecionar={() => abrir(ministerio.id)}
-          />
-        ))}
+          <div className="min-corpo">
+            <div className="min-indice" role="tablist" aria-label="Ministérios" onKeyDown={aoTeclar}>
+              {MINISTERIOS.map((m, i) => {
+                const ativa = i === indice;
+                return (
+                  <button
+                    key={m.id}
+                    ref={(botao) => {
+                      abas.current[i] = botao;
+                    }}
+                    type="button"
+                    role="tab"
+                    id={`min-aba-${m.id}`}
+                    aria-selected={ativa}
+                    aria-controls="min-painel"
+                    tabIndex={ativa ? 0 : -1}
+                    className={`min-aba${ativa ? ' is-ativa' : ''}`}
+                    onClick={() => escolher(i, 'clique')}
+                  >
+                    <span className="min-aba-icone" aria-hidden="true">
+                      <i className={m.icone} />
+                    </span>
+                    <span className="min-aba-nome">{nomeDe(m)}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div
+              className="min-painel"
+              id="min-painel"
+              role="tabpanel"
+              aria-labelledby={`min-aba-${ministerio.id}`}
+            >
+              {/* A key troca o conteúdo inteiro, e a animação de entrada roda de novo. */}
+              <div className="min-painel-conteudo" key={ministerio.id}>
+                <div className="min-topo">
+                  <div className="min-emblema">
+                    <img src={ministerio.imagem} alt="" />
+                  </div>
+
+                  <div className="min-titulo">
+                    <p className="min-rotulo">{ministerio.label}</p>
+                    <h2>{nomeDe(ministerio)}</h2>
+                    <p className="min-resumo">{ministerio.resumo}</p>
+                  </div>
+                </div>
+
+                <div className="min-texto">
+                  {ministerio.paragrafos.map((texto) => (
+                    <p key={texto.slice(0, 40)}>{texto}</p>
+                  ))}
+                </div>
+
+                <h3 className="min-atividades-titulo">O que fazem</h3>
+                <ul className="min-atividades">
+                  {ministerio.atividades.map((atividade) => (
+                    <li key={atividade}>
+                      <i className="fa-solid fa-check" aria-hidden="true" />
+                      <span>{atividade}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="min-navegacao">
+                  {anterior && (
+                    <button
+                      type="button"
+                      className="min-nav min-nav--anterior"
+                      onClick={() => escolher(indice - 1, 'clique')}
+                    >
+                      <i className="fa-solid fa-chevron-left" aria-hidden="true" />
+                      <span>
+                        <small>Anterior</small>
+                        <b>{nomeDe(anterior)}</b>
+                      </span>
+                    </button>
+                  )}
+                  {proximo && (
+                    <button
+                      type="button"
+                      className="min-nav min-nav--proximo"
+                      onClick={() => escolher(indice + 1, 'clique')}
+                    >
+                      <span>
+                        <small>Próximo</small>
+                        <b>{nomeDe(proximo)}</b>
+                      </span>
+                      <i className="fa-solid fa-chevron-right" aria-hidden="true" />
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <FooterSlot />
-    </div>
+    </>
   );
 }
