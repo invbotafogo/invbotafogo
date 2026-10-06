@@ -42,11 +42,15 @@ export default function Estudos() {
   return (
     <>
       <div className="section-estudo">
-        <section id="estudos-biblicos" className="estudos-biblicos">
-          <h2>{secao.titulo}</h2>
-          <p className="estudos-intro">
-          Escolha um tema para acessar as aulas e PDFs correspondentes.
-          </p>
+        <section id="estudos-biblicos" className="est-wrap">
+          {/* Título à esquerda e o texto à direita, como em Ministérios. */}
+          <div className="est-intro">
+            <h1>Estudos</h1>
+            <p>
+              As aulas da Escola Bíblica Dominical e das capacitações da igreja. Escolha um estudo
+              para ver as aulas e baixar os PDFs.
+            </p>
+          </div>
 
           <Tabs abas={ABAS} ativa={abaAtiva} aoTrocar={trocarAba} rotuloLista="Estudos">
             <div className="biblioteca">
@@ -58,9 +62,9 @@ export default function Estudos() {
               />
 
               {tema ? (
-                <StudyPanel tema={tema} />
+                <StudyPanel tema={tema} rotulo={secao.titulo} />
               ) : (
-                <p className="estudo-vazio">Estudos em breve.</p>
+                <p className="est-vazio">Estudos em breve.</p>
               )}
             </div>
           </Tabs>

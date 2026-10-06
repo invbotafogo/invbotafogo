@@ -11,7 +11,10 @@ export interface Aula {
   /** Vídeo do YouTube. Tem prioridade sobre `imagem` na renderização. */
   videoId?: string;
   imagem?: string;
-  /** Classe do <img>: o card de apostila da Capacitação usa uma classe diferente. */
+  /**
+   * Sem efeito hoje: o card novo põe toda imagem no mesmo quadro 16:9. Ficou
+   * para não ter de mexer nas aulas já cadastradas; aulas novas não precisam.
+   */
   imagemClasse?: 'video-thumb' | 'aula-imagem';
   pdf?: string;
 }

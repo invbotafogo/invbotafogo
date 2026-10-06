@@ -2,54 +2,50 @@ import type { Tema } from '../../lib/estudos';
 
 interface StudyIndexProps {
   temas: Tema[];
-  /** Rótulo da aba aberta — vira o título do índice. */
+  /** Rótulo da aba aberta, para o leitor de tela. */
   rotuloAba: string;
   temaAtivo: string;
   aoSelecionar: (id: string) => void;
 }
 
 /**
- * Índice dos estudos da categoria aberta.
- * Lista apenas os nomes dos estudos — sem miniaturas/capas, para manter a
- * escolha simples e limpa. A capa e o resumo do estudo continuam no painel
- * ao lado (StudyPanel).
- * Em telas largas é uma coluna fixa ao lado do painel; abaixo de 900px o CSS
- * transforma a mesma lista numa grade de botões.
+ * Índice dos estudos da aba aberta, no mesmo painel de vidro do índice de
+ * Ministérios, só com os nomes. No computador fica à esquerda do painel; abaixo
+ * de 980px vira uma grade em cima dele.
  */
 export function StudyIndex({ temas, rotuloAba, temaAtivo, aoSelecionar }: StudyIndexProps) {
   return (
-    <nav className="estudos-indice" aria-label={`Estudos de ${rotuloAba}`}>
-      <p className="estudos-indice__titulo">Estudos · {rotuloAba}</p>
+    <nav className="est-indice" aria-label={`Estudos de ${rotuloAba}`}>
+      {temas.map((tema) => {
+        const ativo = tema.id === temaAtivo;
 
-      <div className="estudos-indice__lista">
-        {temas.map((tema) => {
-          const ativo = tema.id === temaAtivo;
-
-          return (
-            <button
-              key={tema.id}
-              type="button"
-              className="estudo-item"
-              aria-current={ativo}
-              onClick={() => aoSelecionar(tema.id)}
-            >
-              <span className="estudo-item__nome">{tema.titulo}</span>
-            </button>
-          );
-        })}
-      </div>
+        return (
+          <button
+            key={tema.id}
+            type="button"
+            className={`est-item${ativo ? ' is-ativo' : ''}`}
+            aria-current={ativo}
+            onClick={() => aoSelecionar(tema.id)}
+          >
+            {tema.titulo}
+          </button>
+        );
+      })}
     </nav>
   );
 }
 
-/** "17 aulas · PDF" — o que a pessoa precisa saber antes de abrir. */
+/** "8 aulas, com vídeo e PDF": o que a pessoa encontra antes de abrir. */
 export function resumo(tema: Tema): string {
   const total = tema.aulas.length;
   if (total === 0) return 'Aulas em breve';
 
-  const partes = [total === 1 ? '1 aula' : `${total} aulas`];
-  if (tema.aulas.some((a) => a.videoId)) partes.push('vídeo');
-  if (tema.aulas.some((a) => a.pdf)) partes.push('PDF');
+  const aulas = total === 1 ? '1 aula' : `${total} aulas`;
+  const video = tema.aulas.some((a) => a.videoId);
+  const pdf = tema.aulas.some((a) => a.pdf);
 
-  return partes.join(' · ');
+  if (video && pdf) return `${aulas}, com vídeo e PDF`;
+  if (video) return `${aulas}, com vídeo`;
+  if (pdf) return `${aulas}, com PDF`;
+  return aulas;
 }

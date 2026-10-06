@@ -1,70 +1,76 @@
-/* Componente novo da migração: abas internas de /estudos.
-   Segue a linguagem visual existente (dourado #ffcc00 + vidro escuro). */
+/*
+ * Abas (Tabs.tsx) — hoje só em /estudos: EBD | Capacitação.
+ *
+ * Um controle em pílula no vidro escuro do site, com a aba aberta cheia de
+ * dourado, como o botão principal de Cultos. As cores repetem as de
+ * Ministérios e Cultos (--gold, --ink…), com o valor ao lado para o caso de a
+ * página não definir as variáveis.
+ */
 
 .tabs {
     width: 100%;
 }
 
 /*
- * Grade de colunas iguais em vez de flex: com `1fr` num container de largura
- * `fit-content`, todas as abas ficam do tamanho da mais larga — "EBD" e
- * "Capacitação" saem idênticas em vez de cada uma medir o próprio texto.
+ * Grade de colunas iguais em vez de flex: com `1fr`, todas as abas ficam do
+ * tamanho da mais larga — "EBD" e "Capacitação" saem idênticas em vez de cada
+ * uma medir o próprio texto.
  */
 .tabs__list {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-    justify-content: center;
-    gap: 10px;
+    gap: 4px;
     width: fit-content;
     max-width: 100%;
-    margin: 0 auto 30px auto;
-    padding: 0 16px;
-    list-style: none;
+    margin: 0 0 16px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 999px;
+    background: var(--glass, rgba(20, 20, 22, .55));
 }
 
 .tabs__tab {
     min-width: 0;
-    padding: 12px 28px;
-    font-size: 18px;
+    min-height: 42px;
+    padding: 0 22px;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    color: rgba(246, 245, 241, .74);
+    font: inherit;
+    font-size: 15px;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 8px;
+    white-space: nowrap;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    min-height: 48px;
-}
-
-.tabs__tab:hover {
-    background-color: #333;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color .2s ease, color .2s ease;
 }
 
 .tabs__tab[aria-selected="true"] {
-    color: #ffcc00;
-    border-color: #c9a84c;
-    background: rgba(201, 168, 76, 0.18);
+    background: var(--gold, #E6B23E);
+    color: var(--ink, #0B0B0C);
 }
 
 .tabs__tab:focus-visible {
-    outline: none;
-    border-color: #ffcc00;
-    box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.35);
+    outline: 2px solid var(--gold-hi, #F6D27A);
+    outline-offset: 2px;
 }
 
-@media (max-width: 540px) {
-    /* No celular as duas ocupam a linha inteira, ainda com a mesma largura. */
-    .tabs__list {
-        gap: 8px;
-        width: 100%;
+@media (hover: hover) {
+    .tabs__tab:hover {
+        background: rgba(255, 255, 255, .05);
+        color: var(--paper, #F6F5F1);
     }
 
+    .tabs__tab[aria-selected="true"]:hover {
+        background: var(--gold-hi, #F6D27A);
+        color: var(--ink, #0B0B0C);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
     .tabs__tab {
-        padding: 12px 16px;
-        font-size: 16px;
+        transition: none;
     }
 }

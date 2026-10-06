@@ -1,375 +1,495 @@
-/* ============================================================
-   ESTUDOS — biblioteca (índice + painel)
-   Em telas largas o índice é uma coluna fixa ao lado do painel;
-   abaixo de 900px a mesma lista vira uma faixa de botões que
-   rola na horizontal.
-   ============================================================ */
+/*
+ * Estudos — abas, índice e painel (Estudos.tsx).
+ *
+ * Mesma linguagem de Ministérios e Cultos: painéis de vidro escuro com cantos
+ * de 14px e fio dourado. No computador, o índice dos estudos fica à
+ * esquerda e o painel do estudo escolhido ocupa o resto da largura, com as
+ * aulas em grade. No celular, o índice vira uma grade em cima do painel e as
+ * aulas viram uma lista.
+ *
+ * Sem ícones decorativos: o único desenho da página é o play dos vídeos.
+ * A foto de fundo vem da regra comum de global.css.
+ */
 
-   .section-estudo {
-    /*
-     * Reserva a altura do header fixo: o título usava `padding-top: 5%`
-     * (percentual da largura), que em telas estreitas dava menos de 70px e
-     * deixava o "Estudos Bíblicos" atrás da barra fixa.
-     */
-    padding-top: calc(var(--navbar-height) + env(safe-area-inset-top, 0px));
+.section-estudo {
+    --ink: #0B0B0C;
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --glass: rgba(20, 20, 22, .55);
+    --fio: rgba(255, 255, 255, .08);
+
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(32px, 6vw, 64px))
+        clamp(16px, 4vw, 28px)
+        clamp(56px, 9vw, 96px);
 }
 
-.estudos-biblicos h2 {
-    /*
-     * Tamanho fluido: em 36px fixo, "Escola Bíblica Dominical" em Montserrat
-     * passava da largura do celular e era cortado nas duas pontas.
-     */
-    padding: 24px 16px 0;
-    font-size: clamp(26px, 6.4vw, 36px);
+/* Mesma largura do header: o conteúdo começa na linha da logo e termina na
+   do botão "Primeira vez?". */
+.est-wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+/* ---------- ABERTURA ---------- */
+/* Título à esquerda e o texto à direita, na mesma linha, como em Ministérios. */
+.est-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px 48px;
+    margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.est-intro h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffcc00;
-    text-align: center;
-    text-wrap: balance;
-    overflow-wrap: break-word;
-    margin-bottom: 15px;
+    line-height: 1;
+    white-space: nowrap;
 }
 
-.estudos-intro {
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    text-align: center;
-    max-width: 700px;
-    padding: 0 16px;
-    margin: 0 auto 30px auto;
-    line-height: 1.6;
+.est-intro p {
+    max-width: 600px;
+    margin: 0;
+    font-size: clamp(1rem, 2.4vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--dim);
 }
 
+/* As abas EBD | Capacitação (tabs.css) na largura do índice, logo acima dele. */
+.section-estudo .tabs__list {
+    width: 290px;
+}
 
-/* ---------------- estrutura ---------------- */
-
+/* ---------- ÍNDICE + PAINEL ---------- */
 .biblioteca {
-    width: 95%;
-    max-width: 1320px;
-    margin: 0 auto 40px auto;
     display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
-    gap: 26px;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 24px;
     align-items: start;
 }
 
-
-/* ---------------- índice ---------------- */
-
-/*
- * Mesmo card do painel do estudo ao lado: fundo quase transparente com blur,
- * cantos de 16px e a sombra funda. Sem borda dourada na lateral.
- */
-.estudos-indice {
+.est-indice {
     position: sticky;
-    top: calc(var(--navbar-height) + 16px);
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-    padding: 14px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-}
-
-.estudos-indice__titulo {
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #a79c8a;
-    padding: 4px 8px 12px;
-    margin: 0;
-}
-
-.estudos-indice__lista {
+    top: calc(var(--navbar-height) + 20px);
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 2px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
 }
 
-.estudo-item {
+.est-item {
     display: flex;
     align-items: center;
+    gap: 10px;
     width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: rgba(246, 245, 241, .74);
+    font: inherit;
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.3;
     text-align: left;
     cursor: pointer;
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 9px 10px;
-    font: inherit;
-    color: inherit;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color .2s ease, color .2s ease;
 }
 
-.estudo-item:hover {
-    background: rgba(255, 255, 255, 0.06);
-}
-
-.estudo-item:focus-visible {
-    outline: 2px solid #ffcc00;
-    outline-offset: 1px;
-}
-
-.estudo-item[aria-current="true"] {
-    background: rgba(201, 168, 76, 0.16);
-    border-color: rgba(201, 168, 76, 0.5);
-}
-
-.estudo-item__nome {
-    font-family: 'Montserrat', sans-serif;
+.est-item.is-ativo {
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold-hi);
     font-weight: 600;
-    font-size: 14.5px;
-    color: #eee6d7;
+}
+
+/* ---------- PAINEL ---------- */
+.est-painel {
     min-width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: clamp(22px, 4vw, 44px);
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
 }
 
-.estudo-item[aria-current="true"] .estudo-item__nome {
-    color: #ffcc00;
+.est-painel-conteudo {
+    animation: est-entra .3s ease;
 }
 
+@keyframes est-entra {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
 
-/* ---------------- painel do estudo ---------------- */
-
-/*
- * Mesmo tratamento do índice ao lado: fundo quase transparente com blur,
- * cantos de 16px e a sombra funda. A foto de fundo do site aparece por trás.
- */
-.estudo-painel {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
-/*
- * O topo é 14px — o mesmo padding do card do índice ao lado —, para que o
- * título do estudo e o rótulo "Estudos · EBD" comecem na mesma altura. Os dois
- * cards abrem no mesmo ponto da grade; sem isso, o cabeçalho daqui descia e o
- * card da direita parecia começar mais embaixo.
- */
-.estudo-painel__cab {
-    position: relative;
-    z-index: 1;
-    padding: 14px clamp(16px, 2.5vw, 28px) 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 6px 16px;
+/* Rótulo, nome grande e o resumo; embaixo, o fio dourado. */
+.est-topo {
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--line);
 }
 
-.estudo-painel__cab h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(22px, 3.4vw, 30px);
-    /* Entrelinha curta: o espaço extra que o navegador põe acima da letra
-       empurrava o título para baixo do rótulo do índice ao lado. */
-    line-height: 1.15;
-    color: #ffcc00;
+.est-rotulo {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--dim);
+}
+
+.est-topo h2 {
     margin: 0;
+    font-size: clamp(30px, 3.7vw, 50px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--paper);
     text-wrap: balance;
 }
 
-.estudo-painel__meta {
-    font-size: 13.5px;
-    color: #cfc6b6;
+.est-resumo {
+    margin: 10px 0 0;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--gold-hi);
 }
 
-.estudo-painel__corpo {
-    padding: 18px clamp(16px, 2.5vw, 28px) 26px;
-}
-
-.estudo-aulas {
+/* ---------- AULAS ---------- */
+.est-aulas {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+    padding-top: 28px;
 }
 
-.estudo-vazio {
-    margin: 0;
-    padding: 24px 0;
-    text-align: center;
-    font-size: 15px;
-    color: #9a9a9a;
-    font-style: italic;
-}
-
-
-/* ---------------- card de aula ---------------- */
-
-/* Mesmo tratamento dos cards de "Nossa história" (`.ed-hist` em home.css):
-   fundo levemente escurecido, cantos de 16px e a mesma sombra funda, sem
-   borda lateral. O padding é um degrau menor porque aqui o card é um bloco
-   da grade de aulas, não uma seção inteira da página. */
-.aula-card {
+.est-aula {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-    padding: clamp(0.9rem, 2.5vw, 1.25rem);
-    width: 100%;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .03);
+    overflow: hidden;
 }
 
-.aula-card img.video-thumb,
-.aula-card img.aula-imagem,
-.aula-card iframe,
-.aula-card .sem-video {
-    width: 100%;
-    height: auto;
-    border: none;
-    box-sizing: border-box;
+/* Capa, vídeo ou imagem da aula, sempre no quadro 16:9. */
+.est-aula-midia {
+    position: relative;
     aspect-ratio: 16 / 9;
-    border-radius: 8px;
+    background: rgba(0, 0, 0, .4);
+    overflow: hidden;
+}
+
+.est-aula-midia > img,
+.est-aula-midia > iframe,
+.est-aula-capa,
+.est-sem-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.est-aula-midia > img {
     object-fit: cover;
 }
 
-.aula-card .sem-video {
-    background: #0a0a0a;
-    border: 1px solid #262626;
-    color: #7d7568;
-    font: 600 0.95rem/1.2 'Montserrat', system-ui, sans-serif;
+/* Antes do clique, a capa do vídeo com o play dourado (o mesmo de Cultos). */
+.est-aula-capa {
+    display: block;
+    padding: 0;
+    background: #000;
+    cursor: pointer;
+}
+
+/* A capa do YouTube vem em 4:3 com faixas pretas; o `cover` no 16:9 corta
+   exatamente as faixas. */
+.est-aula-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.est-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     display: grid;
     place-items: center;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+    transform: translate(-50%, -50%);
+    transition: transform .2s ease, background-color .2s ease;
 }
 
-.aula-card h4 {
-    /* Sem font-family: herda a base do site. Aqui pedia 'Poppins', que nunca
-       foi carregada — o título da aula ficava numa fonte diferente do botão
-       "Baixar PDF" logo abaixo, dentro do mesmo card. */
-    font-weight: 500;
-    font-size: 15px;
-    text-align: center;
-    margin: 12px 0;
-    color: #f0ece4;
+/* O triângulo do play parece deslocado para a esquerda quando centralizado
+   pela caixa: o ajuste é só de olho. */
+.est-play i {
+    margin-left: 3px;
 }
 
-.aula-card .btn {
-    font-family: 'Montserrat', sans-serif;
+.est-sem-video {
+    display: grid;
+    place-items: center;
+    color: var(--dim);
+    font-size: 14px;
+}
+
+.est-aula-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px 16px;
+}
+
+.est-aula-texto h3 {
+    margin: 0;
+    font-size: 15.5px;
     font-weight: 600;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #ffcc00;
-    text-decoration: none;
-    border-radius: 6px;
+    line-height: 1.35;
+    color: var(--paper);
+    /* Sem palavra sozinha na última linha ("… - Parte" / "I"). */
+    text-wrap: pretty;
+}
+
+/* O botão de contorno dourado de Cultos, um degrau menor. `margin-top: auto`
+   alinha os botões da mesma linha mesmo com títulos de alturas diferentes. */
+.est-botao {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
     margin-top: auto;
+    padding: 0 18px;
+    border: 1px solid rgba(230, 178, 62, .55);
+    border-radius: 999px;
+    color: var(--gold-hi);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
 
-.aula-card .btn:hover {
-    background-color: #222;
+.est-vazio {
+    margin: 0;
+    padding-top: 28px;
+    font-size: 16px;
+    color: var(--dim);
 }
 
+/* Aba sem nenhum estudo: o aviso ocupa o lugar do painel. */
+.biblioteca > .est-vazio {
+    grid-column: 1 / -1;
+    padding: 22px 26px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
+}
 
-/* ---------------- mobile: índice vira faixa ---------------- */
+.est-item:focus-visible,
+.est-botao:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 2px;
+}
 
-@media (max-width: 900px) {
+.est-aula-capa:focus-visible {
+    outline: 3px solid var(--gold-hi);
+    outline-offset: -3px;
+}
+
+/* Efeitos de passar o mouse só onde há mouse. */
+@media (hover: hover) {
+    .est-item:hover {
+        background: rgba(255, 255, 255, .05);
+        color: var(--paper);
+    }
+
+    .est-item.is-ativo:hover {
+        background: rgba(230, 178, 62, .16);
+        color: var(--gold-hi);
+    }
+
+    .est-aula-capa:hover img {
+        transform: scale(1.03);
+    }
+
+    .est-aula-capa:hover .est-play {
+        background: var(--gold-hi);
+        transform: translate(-50%, -50%) scale(1.06);
+    }
+
+    .est-botao:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--ink);
+    }
+}
+
+/* ---------- RESPONSIVO ---------- */
+/* Tablet e celular: o índice vira uma grade em cima do painel. */
+@media (max-width: 980px) {
+    .est-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
     .biblioteca {
         grid-template-columns: minmax(0, 1fr);
         gap: 16px;
     }
 
-    /* O card continua — só perde a fixação lateral e fica mais compacto. */
-    .estudos-indice {
+    /* Quatro estudos: uma linha no tablet, 2 × 2 no celular (até no de 320px). */
+    .est-indice {
         position: static;
-        padding: 14px 12px;
-    }
-
-    .estudos-indice__titulo {
-        text-align: center;
-        padding: 0 0 10px;
-    }
-
-    /*
-     * Grade de duas colunas iguais em vez de rolagem lateral: os botões
-     * ficam alinhados entre si e todos do mesmo tamanho. Largura
-     * `fit-content` mantém o bloco mais estreito que as abas de cima.
-     */
-    .estudos-indice__lista {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        /* Se um nome longo quebrar em duas linhas numa tela estreita, todas
-           as linhas acompanham — os botões nunca ficam de alturas diferentes. */
-        grid-auto-rows: 1fr;
-        gap: 8px;
-        width: fit-content;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 0 4px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 6px;
     }
 
-    .estudo-item {
-        display: flex;
-        align-items: center;
+    /* Nome no meio do botão. */
+    .est-item {
         justify-content: center;
-        width: auto;
-        min-width: 0;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        /* Mesmo canto das abas EBD/Capacitação (tabs.css). */
-        border-radius: 8px;
-        /*
-         * Um degrau abaixo das abas EBD/Capacitação (48px / 16px): o estudo
-         * é escolha secundária, a categoria é a principal. Ainda acima do
-         * alvo de toque mínimo de 40px.
-         */
-        padding: 9px 16px;
-        min-height: 40px;
-    }
-
-    .estudo-item[aria-current="true"] {
-        background: rgba(201, 168, 76, 0.2);
-        border-color: #c9a84c;
-    }
-
-    .estudo-item__nome {
+        padding: 10px 8px;
         font-size: 14px;
-        white-space: normal;
-        color: #e6ded0;
+        line-height: 1.25;
+        text-align: center;
     }
-
 }
 
-@media (max-width: 540px) {
-    .estudos-biblicos h2 {
-        padding-top: 16px;
+/* Celular: as aulas viram uma lista, com a capa pequena à esquerda. */
+@media (max-width: 640px) {
+    .section-estudo .tabs__list {
+        width: 100%;
     }
 
-    .estudos-intro {
+    /* Menos recuo nas laterais do painel: sobra largura para o título da aula
+       ao lado da capa. */
+    .est-painel {
+        padding: 24px 14px 14px;
+    }
+
+    .est-topo {
+        padding-bottom: 22px;
+    }
+
+    .est-resumo {
+        font-size: 17px;
+    }
+
+    .est-aulas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        padding-top: 22px;
+    }
+
+    .est-aula {
+        display: grid;
+        grid-template-columns: clamp(96px, 30vw, 132px) minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        padding: 8px;
+    }
+
+    .est-aula-midia {
+        border-radius: 8px;
+    }
+
+    /* Na capa pequena, o play de 52px tampava quase tudo. */
+    .est-play {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .est-play i {
+        margin-left: 2px;
+    }
+
+    .est-sem-video {
+        font-size: 13px;
+    }
+
+    .est-aula-texto {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .est-aula-texto h3 {
         font-size: 15px;
-        font-weight: 400;
     }
 
-    .biblioteca {
-        width: 90%;
+    .est-botao {
+        min-height: 34px;
+        padding: 0 16px;
+        font-size: 13.5px;
     }
 
-    .estudo-aulas {
-        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-        gap: 14px;
+    /* Tocando: o vídeo ocupa a largura toda do cartão, e o texto desce. */
+    .est-aula.is-tocando {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .est-aula.is-tocando .est-aula-texto {
+        padding: 0 6px 6px;
+    }
+
+    .est-item {
+        font-size: 13.5px;
     }
 }
 
 @media (max-width: 360px) {
-    .estudo-item {
-        padding: 9px 12px;
+    .est-aula-texto h3 {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .est-painel-conteudo {
+        animation: none;
     }
 
-    .estudo-item__nome {
-        font-size: 13px;
+    .est-item,
+    .est-aula-capa img,
+    .est-play,
+    .est-botao {
+        transition: none;
+    }
+}
+
+/* ---------- CELULAR: CENTRALIZADO ----------
+   No celular os títulos e os destaques ficam centralizados, como na home e em
+   Ministérios. A lista de aulas continua à esquerda: lida centralizada, cansa. */
+@media (max-width: 640px) {
+    .est-intro {
+        align-items: center;
+        text-align: center;
+    }
+
+    .est-topo {
+        text-align: center;
     }
 }
