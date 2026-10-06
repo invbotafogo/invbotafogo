@@ -3,10 +3,19 @@ on:
   push:
     branches:
       - main
+  # Quando a agenda do mês é atualizada (dia 1, ou à mão), o site é publicado
+  # de novo: é o que leva os eventos novos para o calendario.ics que as
+  # pessoas assinam.
+  workflow_run:
+    workflows: ['Atualizar agenda do mês']
+    types: [completed]
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
   deploy:
+    # Depois da agenda, só publica se ela tiver rodado sem erro.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,12 +25,21 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
+      # A agenda do mês mora na branch `data`. Lida pelo git — e não pelo
+      # raw.githubusercontent.com, que guarda cópia por alguns minutos — para o
+      # calendário sair com a versão que acabou de ser publicada.
+      - name: Buscar a agenda do mês
+        run: |
+          if git fetch --depth=1 origin data; then
+            git show FETCH_HEAD:agenda.json > "$RUNNER_TEMP/agenda.json" || echo "Sem agenda.json na branch data."
+          fi
       - name: Build
         run: npm run build
         env:
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+          AGENDA_JSON_LOCAL: ${{ runner.temp }}/agenda.json
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:

@@ -28,7 +28,7 @@ export const PROGRAMACAO_SEMANAL: DiaSemanal[] = [
     w: 0,
     eventos: [
       { titulo: 'Escola Bíblica Dominical', horario: '8h30', horarios: ['08:30'] },
-      { titulo: 'Culto', horario: '10h - 19h', horarios: ['10:00', '19:00'] },
+      { titulo: 'Culto', horario: '10h / 19h', horarios: ['10:00', '19:00'] },
       { titulo: 'Novos Convertidos', horario: '18h', horarios: ['18:00'] },
     ],
   },

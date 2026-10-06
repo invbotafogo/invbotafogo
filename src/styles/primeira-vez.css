@@ -352,12 +352,14 @@
     border-top: 1px solid rgba(255, 255, 255, .06);
 }
 
+/* Nome à esquerda e hora sempre no canto direito, na altura da primeira
+   linha. Um nome comprido ("Escola Bíblica Dominical") quebra dentro da
+   própria coluna, em vez de empurrar a hora para baixo. */
 .pv-evento {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 4px 12px;
+    column-gap: 12px;
 }
 
 .pv-evento b {
