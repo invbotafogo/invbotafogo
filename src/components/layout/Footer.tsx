@@ -5,6 +5,7 @@ import { IGREJA, REDES } from '../../lib/constants';
 import { CULTOS } from '../../lib/cultos';
 import { MINISTERIOS, NOME_EXPANDIDO } from '../../lib/ministerios';
 import { useRodapeAVista } from '../../hooks/useRodapeAVista';
+import { AcessoCentral } from './AcessoCentral';
 import '../../styles/footer.css';
 
 const PAGINAS = [
@@ -172,9 +173,10 @@ export function Footer() {
         </div>
 
         <div className="rod-base">
-          <p>
+          {/* Na página inicial, 5 toques aqui abrem o código da Central INVB. */}
+          <AcessoCentral>
             © {ano} {IGREJA.nome}
-          </p>
+          </AcessoCentral>
           <button type="button" className="rod-topo" onClick={voltarAoTopo}>
             Voltar ao topo <i className="fa-solid fa-arrow-up" aria-hidden="true" />
           </button>

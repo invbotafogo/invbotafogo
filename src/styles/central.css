@@ -1,0 +1,391 @@
+/*
+ * Central INVB (Central.tsx) — mesma linguagem do resto do site: foto de
+ * fundo escurecida, painéis de vidro escuro com cantos de 14px, fio e selo
+ * dourados. Em cima, a abertura e o quadro "Sites no ar"; embaixo, um site
+ * por linha.
+ */
+
+.section-central {
+    --ink: #0B0B0C;
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --glass: rgba(20, 20, 22, .55);
+    --fio: rgba(255, 255, 255, .08);
+
+    position: relative;
+    z-index: 0;
+    flex: 1 0 auto;
+    background-color: var(--brand-dark);
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(32px, 6vw, 64px))
+        clamp(16px, 4vw, 28px)
+        clamp(56px, 9vw, 96px);
+}
+
+/* A mesma foto escurecida a 70% das outras páginas, numa camada fixa
+   própria — `background-attachment: fixed` não funciona no celular. */
+.section-central::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    z-index: -1;
+    pointer-events: none;
+    transform: translateZ(0);
+    background-color: #14110e;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/image.webp');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%, cover;
+}
+
+.cen-wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---------- ABERTURA + RESUMO ---------- */
+.cen-topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+    gap: 28px 48px;
+    align-items: end;
+    margin-bottom: 8px;
+}
+
+.cen-intro h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.cen-intro p {
+    margin: 18px 0 0;
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    line-height: 1.7;
+    color: var(--dim);
+}
+
+/* O cartão de destaque do site: fio e fundo dourados. */
+.cen-resumo {
+    padding: 22px 26px 24px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(230, 178, 62, .08);
+}
+
+.cen-resumo-rotulo {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+.cen-resumo-numero {
+    margin: 0;
+    font-size: clamp(48px, 5.4vw, 72px);
+    font-weight: 600;
+    line-height: .95;
+    letter-spacing: -2px;
+    color: var(--gold-hi);
+    font-variant-numeric: tabular-nums;
+}
+
+.cen-resumo-numero span {
+    font-size: .42em;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--paper);
+}
+
+.cen-resumo-hora {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--gold);
+}
+
+.cen-resumo .cen-botao {
+    margin-top: 18px;
+}
+
+/* ---------- LISTA ---------- */
+.cen-lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: var(--glass);
+}
+
+/* Ícone, nome e endereço, situação e os botões. */
+.cen-linha {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 132px auto;
+    grid-template-areas: "icone texto situacao acoes";
+    align-items: center;
+    column-gap: 22px;
+    padding: 20px 24px;
+}
+
+.cen-linha + .cen-linha {
+    border-top: 1px solid var(--fio);
+}
+
+.cen-icone {
+    grid-area: icone;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.cen-texto {
+    grid-area: texto;
+    min-width: 0;
+}
+
+.cen-nome {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cen-aviso {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 0 9px;
+    border: 1px solid rgba(246, 245, 241, .2);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dim);
+}
+
+.cen-host {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 14.5px;
+    color: var(--gold-hi);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.cen-descricao {
+    margin: 6px 0 0;
+    max-width: 62ch;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--dim);
+}
+
+/* No ar / Sem resposta / Verificando. */
+.cen-situacao {
+    grid-area: situacao;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cen-ponto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.cen-situacao--no-ar {
+    color: #86efac;
+}
+
+.cen-situacao--sem-resposta {
+    color: #fca5a5;
+}
+
+.cen-situacao--verificando {
+    color: var(--dim);
+}
+
+.cen-situacao--verificando .cen-ponto {
+    animation: cen-piscar 1.1s ease-in-out infinite;
+}
+
+@keyframes cen-piscar {
+    50% {
+        opacity: .25;
+    }
+}
+
+.cen-acoes {
+    grid-area: acoes;
+    display: flex;
+    gap: 8px;
+}
+
+/* Botões em pílula: contorno dourado; o principal, cheio. */
+.cen-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid rgba(230, 178, 62, .55);
+    border-radius: 999px;
+    background: none;
+    color: var(--gold-hi);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.cen-botao i {
+    font-size: 13px;
+}
+
+.cen-botao--cheio {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+}
+
+.cen-botao--icone {
+    width: 44px;
+    padding: 0;
+}
+
+.cen-botao--icone i {
+    font-size: 16px;
+}
+
+.cen-botao:disabled {
+    cursor: progress;
+    opacity: .6;
+}
+
+.cen-botao:focus-visible,
+.cen-host:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .cen-botao:not(:disabled):hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--ink);
+    }
+
+    .cen-botao--cheio:hover {
+        background: var(--gold-hi);
+        border-color: var(--gold-hi);
+    }
+
+    .cen-host:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+/* ---------- RESPONSIVO ---------- */
+/* Tablet: resumo embaixo da abertura; situação e botões descem para baixo do texto. */
+@media (max-width: 860px) {
+    .cen-topo {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .cen-linha {
+        grid-template-columns: 44px minmax(0, 1fr) auto;
+        grid-template-areas:
+            "icone texto texto"
+            "icone situacao acoes";
+        row-gap: 14px;
+        align-items: start;
+    }
+
+    .cen-situacao {
+        align-self: center;
+    }
+}
+
+/* Celular: centralizado, como as outras páginas; cada site vira um bloco. */
+@media (max-width: 560px) {
+    .cen-intro,
+    .cen-resumo {
+        text-align: center;
+    }
+
+    .cen-resumo {
+        padding: 18px;
+    }
+
+    .cen-linha {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "icone"
+            "texto"
+            "situacao"
+            "acoes";
+        justify-items: center;
+        row-gap: 10px;
+        padding: 20px 18px;
+        text-align: center;
+    }
+
+    .cen-nome {
+        justify-content: center;
+    }
+
+    .cen-descricao {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cen-acoes {
+        width: 100%;
+    }
+
+    .cen-acoes .cen-botao--cheio {
+        flex: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cen-situacao--verificando .cen-ponto {
+        animation: none;
+    }
+
+    .cen-botao {
+        transition: none;
+    }
+}

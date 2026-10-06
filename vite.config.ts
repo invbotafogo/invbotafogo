@@ -1,5 +1,6 @@
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { createHash } from 'node:crypto';
 import { copyFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { IGREJA } from './src/lib/constants.ts';
@@ -81,9 +82,32 @@ function calendarioIcs(): Plugin {
   };
 }
 
-export default defineConfig({
+/**
+ * Código de acesso da Central INVB (ver src/lib/acessoCentral.ts). Não fica no
+ * repositório: no deploy vem do secret CODIGO_CENTRAL do GitHub (deploy.yml);
+ * para testar no computador, pode ir no .env. O site leva só o hash SHA-256
+ * dele. Sem o código, o build sai normal — só a Central não abre.
+ */
+function hashDoCodigoDaCentral(mode: string, avisar: boolean): string {
+  const codigo = (loadEnv(mode, import.meta.dirname, '').CODIGO_CENTRAL ?? '').trim();
+  if (!codigo) {
+    if (avisar) {
+      console.warn(
+        '\nAviso: CODIGO_CENTRAL não definido — neste build a Central INVB não abre com código nenhum.' +
+          '\nNo deploy ele vem do secret do GitHub; aqui, é normal.\n',
+      );
+    }
+    return '';
+  }
+  return createHash('sha256').update(codigo).digest('hex');
+}
+
+export default defineConfig(({ mode, isPreview }) => ({
   base: '/',
   plugins: [react(), spaFallback(), calendarioIcs()],
+  define: {
+    __CODIGO_CENTRAL_SHA256__: JSON.stringify(hashDoCodigoDaCentral(mode, !isPreview)),
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -95,4 +119,4 @@ export default defineConfig({
     /* Túnel do ngrok para testar o site no celular. */
     allowedHosts: ['onboard-ferris-spectator.ngrok-free.dev'],
   },
-});
+}));

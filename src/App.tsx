@@ -7,6 +7,7 @@ import Contato from './pages/Contato';
 import Estudos from './pages/Estudos';
 import Ministerios from './pages/Ministerios';
 import PrimeiraVez from './pages/PrimeiraVez';
+import Central from './pages/Central';
 
 /** Preserva a query string ao redirecionar (ex.: ministries.html?ministerio=louvor). */
 function RedirecionaComQuery({ para }: { para: string }) {
@@ -25,6 +26,8 @@ export default function App() {
         <Route path="/estudos" element={<Estudos />} />
         <Route path="/ministerios" element={<Ministerios />} />
         <Route path="/primeira-vez" element={<PrimeiraVez />} />
+        {/* Sem link no site: abre pelo código, na página inicial (AcessoCentral.tsx). */}
+        <Route path="/central" element={<Central />} />
 
         {/* URLs antigas (.html) — mantidas para não quebrar links já indexados. */}
         <Route path="/index.html" element={<Navigate to="/" replace />} />

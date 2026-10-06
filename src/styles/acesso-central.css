@@ -1,0 +1,103 @@
+/*
+ * Acesso à Central INVB (AcessoCentral.tsx): o texto do rodapé que recebe os
+ * toques e a janelinha do código.
+ */
+
+/* Toques rápidos não podem selecionar o texto nem piscar o fundo. */
+.acc-gatilho {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* A janela fica dentro do rodapé: o text-align centralizado do rodapé no
+   celular e as regras de `.rod-base p` não podem passar para cá. */
+.acc-dialogo {
+    width: min(360px, calc(100vw - 32px));
+    text-align: left;
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 14px;
+    background: #17140f;
+    color: #F6F5F1;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .6);
+}
+
+.acc-dialogo::backdrop {
+    background: rgba(0, 0, 0, .7);
+}
+
+.acc-dialogo form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.acc-dialogo label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 16px evita o zoom automático do iPhone ao tocar no campo. */
+.acc-dialogo input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgba(246, 245, 241, .2);
+    border-radius: 10px;
+    background: rgba(246, 245, 241, .06);
+    color: #F6F5F1;
+    font: inherit;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.acc-dialogo input:focus {
+    outline: none;
+    border-color: #E6B23E;
+    box-shadow: 0 0 0 3px rgba(230, 178, 62, .25);
+}
+
+.acc-dialogo input[aria-invalid="true"] {
+    border-color: #fca5a5;
+}
+
+.acc-dialogo .acc-erro {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fca5a5;
+}
+
+.acc-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.acc-botao {
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid rgba(230, 178, 62, .55);
+    border-radius: 999px;
+    background: none;
+    color: #F6D27A;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.acc-botao--cheio {
+    background: #E6B23E;
+    border-color: #E6B23E;
+    color: #0B0B0C;
+}
+
+.acc-botao:focus-visible {
+    outline: 2px solid #F6D27A;
+    outline-offset: 3px;
+}
