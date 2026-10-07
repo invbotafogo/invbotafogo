@@ -16,6 +16,9 @@ import { CALENDARIO_ICS, gerarCalendarioIcs } from './src/lib/calendarioIcs.ts';
  * GitHub Pages não faz rewrite de rotas: uma URL como /estudos devolveria 404.
  * Copiar o index.html para 404.html faz o Pages servir o app em qualquer rota.
  * Na Vercel quem cuida disso é o rewrite do vercel.json — manter os dois é inofensivo.
+ *
+ * O /links (o link da bio do Instagram) ganha também um links.html: o Pages
+ * serve /links por ele e responde 200, e não o 404 do fallback.
  */
 function spaFallback() {
   return {
@@ -23,6 +26,7 @@ function spaFallback() {
     closeBundle() {
       const out = resolve(import.meta.dirname, 'dist');
       copyFileSync(resolve(out, 'index.html'), resolve(out, '404.html'));
+      copyFileSync(resolve(out, 'index.html'), resolve(out, 'links.html'));
     },
   };
 }

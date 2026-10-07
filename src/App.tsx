@@ -8,6 +8,7 @@ import Estudos from './pages/Estudos';
 import Ministerios from './pages/Ministerios';
 import PrimeiraVez from './pages/PrimeiraVez';
 import Central from './pages/Central';
+import Links from './pages/Links';
 
 /** Preserva a query string ao redirecionar (ex.: ministries.html?ministerio=louvor). */
 function RedirecionaComQuery({ para }: { para: string }) {
@@ -28,6 +29,8 @@ export default function App() {
         <Route path="/primeira-vez" element={<PrimeiraVez />} />
         {/* Sem link no site: abre pelo código, na página inicial (AcessoCentral.tsx). */}
         <Route path="/central" element={<Central />} />
+        {/* Sem link no menu: é o link da bio do Instagram (lib/links.ts). */}
+        <Route path="/links" element={<Links />} />
 
         {/* URLs antigas (.html) — mantidas para não quebrar links já indexados. */}
         <Route path="/index.html" element={<Navigate to="/" replace />} />

@@ -5,6 +5,7 @@ import { centralLiberada } from '../lib/acessoCentral';
 import { SUBDOMINIOS, type Subdominio } from '../lib/subdominios';
 import { useCopiar } from '../hooks/useCopiar';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import { useForaDosBuscadores } from '../hooks/useForaDosBuscadores';
 import '../styles/central.css';
 
 type Situacao = 'verificando' | 'no-ar' | 'sem-resposta';
@@ -32,17 +33,6 @@ async function verificar(host: string): Promise<Situacao> {
   } catch {
     return 'sem-resposta';
   }
-}
-
-/** Esta página não aparece no Google, mesmo que alguém publique o endereço. */
-function useForaDosBuscadores() {
-  useEffect(() => {
-    const meta = document.createElement('meta');
-    meta.name = 'robots';
-    meta.content = 'noindex, nofollow';
-    document.head.appendChild(meta);
-    return () => meta.remove();
-  }, []);
 }
 
 function Linha({ site, situacao }: { site: Subdominio; situacao: Situacao }) {

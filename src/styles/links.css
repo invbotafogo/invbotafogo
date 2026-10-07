@@ -1,0 +1,293 @@
+/*
+ * /links (Links.tsx) — o link da bio do Instagram.
+ *
+ * Uma coluna estreita no meio da tela, feita para o celular: o nome da
+ * igreja, o próximo culto e os botões, um embaixo do outro. Mesma linguagem
+ * do resto do site: foto de fundo escurecida, vidro escuro, cantos de 14px e
+ * os ícones no selo dourado de Contato. O primeiro botão vem cheio de
+ * dourado; os outros ficam dourados ao passar o mouse.
+ */
+
+.section-links {
+    --ink: #0B0B0C;
+    --paper: #F6F5F1;
+    --dim: rgba(246, 245, 241, .62);
+    --gold: #E6B23E;
+    --gold-hi: #F6D27A;
+    --line: rgba(230, 178, 62, .26);
+    --glass: rgba(20, 20, 22, .55);
+    --fio: rgba(255, 255, 255, .08);
+
+    position: relative;
+    z-index: 0;
+    flex: 1 0 auto;
+    background-color: var(--brand-dark);
+    color: var(--paper);
+    padding:
+        calc(var(--navbar-height) + clamp(28px, 6vw, 56px))
+        16px
+        clamp(40px, 8vw, 72px);
+}
+
+/* A mesma foto escurecida a 70% das outras páginas, numa camada fixa
+   própria — `background-attachment: fixed` não funciona no celular. */
+.section-links::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Altura fixa: ver global.css (o "engasgo" no iPhone). */
+    height: 100vh;
+    height: 100lvh;
+    z-index: -1;
+    pointer-events: none;
+    transform: translateZ(0);
+    background-color: #14110e;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/image.webp');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: 100% 100%, cover;
+}
+
+/*
+ * iPhone: no iOS 26, todo `position: fixed` pula uns pixels quando a barra
+ * do Safari aparece ou some (WebKit bug 297779). Quase todo mundo chega aqui
+ * pelo Instagram no celular, então a foto rola junto com a página no iPhone
+ * e termina num degradê para a cor de fundo.
+ */
+@supports (-webkit-touch-callout: none) {
+    @media (hover: none) {
+        .section-links::before {
+            position: absolute;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 55%, #14110e 100%),
+                url('../assets/images/image.webp');
+        }
+    }
+}
+
+/* O botão flutuante do WhatsApp sai daqui: a lista já tem o WhatsApp, e o
+   botão cobria o fim dela no celular. */
+.section-links ~ .wa-fab {
+    display: none;
+}
+
+.lk-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ---------- ABERTURA ---------- */
+.lk-intro {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.lk-intro h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 6.2vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.lk-intro p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dim);
+}
+
+/* Próximo culto: a pílula dourada de "Primeira vez aqui?". */
+.lk-intro .lk-proximo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 15px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(230, 178, 62, .08);
+    color: var(--gold-hi);
+    font-size: 14px;
+}
+
+/* ---------- BOTÕES ---------- */
+.lk-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lk-botao {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 68px;
+    padding: 13px 16px 13px 14px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    background: var(--glass);
+    color: var(--paper);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.lk-icone {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(230, 178, 62, .12);
+    color: var(--gold);
+    font-size: 17px;
+}
+
+.lk-texto {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lk-titulo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    font-size: 16.5px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.lk-detalhe {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--dim);
+}
+
+.lk-seta {
+    flex: none;
+    font-size: 13px;
+    color: rgba(246, 245, 241, .4);
+}
+
+/* "Primeira vez? Comece aqui": o principal, cheio de dourado. */
+.lk-botao--destaque {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.lk-botao--destaque .lk-icone {
+    background: rgba(11, 11, 12, .12);
+    color: var(--ink);
+}
+
+.lk-botao--destaque .lk-detalhe {
+    color: rgba(11, 11, 12, .72);
+}
+
+.lk-botao--destaque .lk-seta {
+    color: rgba(11, 11, 12, .55);
+}
+
+/* Selo vermelho de "ao vivo", pulsando, como em Cultos. */
+.lk-ao-vivo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 22px;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: rgba(239, 68, 68, .15);
+    color: #fca5a5;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.lk-pulso {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ef4444;
+    animation: lk-pulso 1.6s ease-out infinite;
+}
+
+@keyframes lk-pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, .55);
+    }
+
+    70%,
+    100% {
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+    }
+}
+
+/* ---------- REDES ---------- */
+.lk-redes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.lk-redes a {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(246, 245, 241, .2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--paper);
+    font-size: 17px;
+    text-decoration: none;
+    transition: border-color .2s ease, color .2s ease;
+}
+
+.lk-botao:focus-visible,
+.lk-redes a:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+}
+
+/* Passar o mouse: só onde há mouse. */
+@media (hover: hover) {
+    .lk-botao:hover {
+        border-color: rgba(230, 178, 62, .55);
+        background: rgba(230, 178, 62, .08);
+    }
+
+    .lk-botao--destaque:hover {
+        border-color: var(--gold-hi);
+        background: var(--gold-hi);
+    }
+
+    .lk-redes a:hover {
+        border-color: var(--gold);
+        color: var(--gold-hi);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lk-pulso {
+        animation: none;
+    }
+
+    .lk-botao,
+    .lk-redes a {
+        transition: none;
+    }
+}
