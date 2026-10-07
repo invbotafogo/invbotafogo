@@ -66,7 +66,7 @@ export const LINKS_DA_BIO: LinkDaBio[] = [
     destino: '/doacao',
   },
   {
-    titulo: 'Falar no WhatsApp',
+    titulo: 'Fale conosco',
     detalhe: IGREJA.telefone,
     icone: 'fa-brands fa-whatsapp',
     destino: REDES.whatsapp,
