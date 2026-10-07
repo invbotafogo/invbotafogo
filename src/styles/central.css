@@ -248,7 +248,9 @@
     gap: 8px;
 }
 
-/* Botões em pílula: contorno dourado; o principal, cheio. */
+/* Botões em pílula com contorno dourado, como os de Contato: ficam cheios
+   de dourado ao passar o mouse. Nenhum vem cheio — com dez linhas, dez
+   botões "Abrir" dourados deixavam a página amarela demais. */
 .cen-botao {
     display: inline-flex;
     align-items: center;
@@ -271,12 +273,6 @@
 
 .cen-botao i {
     font-size: 13px;
-}
-
-.cen-botao--cheio {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: var(--ink);
 }
 
 .cen-botao--icone {
@@ -304,11 +300,6 @@
         background: var(--gold);
         border-color: var(--gold);
         color: var(--ink);
-    }
-
-    .cen-botao--cheio:hover {
-        background: var(--gold-hi);
-        border-color: var(--gold-hi);
     }
 
     .cen-host:hover {
@@ -376,7 +367,7 @@
         width: 100%;
     }
 
-    .cen-acoes .cen-botao--cheio {
+    .cen-acoes .cen-botao--abrir {
         flex: 1;
     }
 }

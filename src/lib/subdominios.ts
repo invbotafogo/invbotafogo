@@ -9,6 +9,8 @@
 export interface Subdominio {
   /** Endereço sem https:// — é o que aparece na tela. */
   host: string;
+  /** Caminho depois do endereço, quando o link não é a página inicial ('/admin'). */
+  caminho?: string;
   nome: string;
   descricao: string;
   /** Classe do ícone Font Awesome. */
@@ -62,6 +64,15 @@ export const SUBDOMINIOS: Subdominio[] = [
     descricao: 'O que a equipe de louvor vai cantar nos próximos cultos, com os tons.',
     icone: 'fa-solid fa-music',
     aviso: 'Login para editar',
+  },
+  {
+    host: 'lyra-music-database.vercel.app',
+    caminho: '/admin',
+    nome: 'Banco de Músicas do Lyra',
+    descricao:
+      'Letras e cifras em todos os tons, com link direto para cada tom. Este link abre a área de administração.',
+    icone: 'fa-solid fa-guitar',
+    aviso: 'Admin',
   },
   {
     host: 'www.invbotafogo.com.br',

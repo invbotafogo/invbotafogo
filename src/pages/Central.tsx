@@ -47,7 +47,7 @@ function useForaDosBuscadores() {
 
 function Linha({ site, situacao }: { site: Subdominio; situacao: Situacao }) {
   const { estado, copiar } = useCopiar();
-  const url = `https://${site.host}`;
+  const url = `https://${site.host}${site.caminho ?? ''}`;
 
   return (
     <li className="cen-linha">
@@ -62,6 +62,7 @@ function Linha({ site, situacao }: { site: Subdominio; situacao: Situacao }) {
         </p>
         <a className="cen-host" href={url} target="_blank" rel="noopener noreferrer">
           {site.host}
+          {site.caminho}
         </a>
         <p className="cen-descricao">{site.descricao}</p>
       </div>
@@ -72,7 +73,7 @@ function Linha({ site, situacao }: { site: Subdominio; situacao: Situacao }) {
       </span>
 
       <div className="cen-acoes">
-        <a className="cen-botao cen-botao--cheio" href={url} target="_blank" rel="noopener noreferrer">
+        <a className="cen-botao cen-botao--abrir" href={url} target="_blank" rel="noopener noreferrer">
           Abrir <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
         </a>
         <button
