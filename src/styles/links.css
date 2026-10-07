@@ -101,18 +101,15 @@
     color: var(--dim);
 }
 
-/* Próximo culto: a pílula dourada de "Primeira vez aqui?". */
+/* Próximo culto: só texto, sem contorno — contorno, nesta página, é de
+   botão (as redes, logo abaixo). */
 .lk-intro .lk-proximo {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-top: 16px;
-    padding: 8px 15px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: rgba(230, 178, 62, .08);
+    margin-top: 12px;
     color: var(--gold-hi);
-    font-size: 14px;
+    font-size: 14.5px;
 }
 
 /* ---------- BOTÕES ---------- */
@@ -236,29 +233,54 @@
     }
 }
 
-/* ---------- REDES ---------- */
+/* ---------- REDES ----------
+   No alto, logo depois da abertura: pílulas discretas, com o ícone e o nome,
+   para não disputar com o botão dourado de "Primeira vez?". Ficam douradas
+   ao passar o mouse. */
 .lk-redes {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 28px;
+    margin: 0 0 24px;
+    text-align: center;
 }
 
-.lk-redes a {
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(246, 245, 241, .2);
-    border-radius: 50%;
+.lk-redes-titulo {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--dim);
+}
+
+/* Três colunas iguais: as três redes sempre na mesma linha, do mesmo tamanho. */
+.lk-redes-botoes {
     display: grid;
-    place-items: center;
-    color: var(--paper);
-    font-size: 17px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.lk-redes-botoes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+    min-height: 38px;
+    padding: 0 8px;
+    border: 1px solid rgba(246, 245, 241, .14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .03);
+    color: rgba(246, 245, 241, .78);
+    font-size: 13.5px;
+    font-weight: 500;
     text-decoration: none;
-    transition: border-color .2s ease, color .2s ease;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.lk-redes-botoes i {
+    font-size: 14px;
 }
 
 .lk-botao:focus-visible,
-.lk-redes a:focus-visible {
+.lk-redes-botoes a:focus-visible {
     outline: 2px solid var(--gold-hi);
     outline-offset: 3px;
 }
@@ -275,9 +297,10 @@
         background: var(--gold-hi);
     }
 
-    .lk-redes a:hover {
+    .lk-redes-botoes a:hover {
         border-color: var(--gold);
-        color: var(--gold-hi);
+        background: var(--gold);
+        color: var(--ink);
     }
 }
 
@@ -287,7 +310,23 @@
     }
 
     .lk-botao,
-    .lk-redes a {
+    .lk-redes-botoes a {
         transition: none;
+    }
+}
+
+/* Celular estreito (até 360px): o nome cabe, o ícone sai. */
+@media (max-width: 360px) {
+    .lk-redes-botoes {
+        gap: 6px;
+    }
+
+    .lk-redes-botoes a {
+        padding: 0 6px;
+        font-size: 13px;
+    }
+
+    .lk-redes-botoes i {
+        display: none;
     }
 }

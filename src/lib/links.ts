@@ -22,6 +22,13 @@ export interface LinkDaBio {
   mostraAoVivo?: boolean;
 }
 
+/** As redes, no alto da página, com o nome de cada uma. */
+export const REDES_DA_BIO = [
+  { nome: 'YouTube', icone: 'fa-brands fa-youtube', url: REDES.youtube },
+  { nome: 'Instagram', icone: 'fa-brands fa-instagram', url: REDES.instagram },
+  { nome: 'Facebook', icone: 'fa-brands fa-facebook-f', url: REDES.facebook },
+];
+
 const ROTA_NO_MAPA = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
   IGREJA.enderecoCompleto,
 )}`;

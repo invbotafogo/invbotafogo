@@ -6,7 +6,8 @@ import '../../styles/acesso-central.css';
 /*
  * Acesso à Central INVB (/central), que não tem link no site. Só funciona na
  * página inicial. Abre uma janelinha para digitar o código de acesso:
- *   - pelo link direto invbotafogo.com.br/#central;
+ *   - pelo link direto invbotafogo.com.br/#central, ou abrindo
+ *     invbotafogo.com.br/central sem o código (a Central manda para cá);
  *   - no computador, apertando Shift 3 vezes seguidas;
  *   - no celular, com 5 toques rápidos no "© Igreja..." do rodapé.
  * O código não está no repositório: vem de um secret do GitHub no build (ver

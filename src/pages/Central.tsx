@@ -82,13 +82,13 @@ function Linha({ site, situacao }: { site: Subdominio; situacao: Situacao }) {
 
 /**
  * Central INVB: os sites da igreja num lugar só, com a situação de cada um.
- * Não tem link em lugar nenhum do site — chega-se aqui pelo código de acesso,
- * na página inicial (ver AcessoCentral.tsx). Quem abre /central direto, sem
- * ter digitado o código nesta aba, volta para a página inicial, como em
- * qualquer endereço que não existe.
+ * Não tem link em lugar nenhum do site — chega-se aqui pelo código de acesso
+ * (ver AcessoCentral.tsx). Quem abre /central direto, sem ter digitado o
+ * código nesta aba, cai na página inicial com a caixa do código aberta (o
+ * mesmo do link /#central); com o código certo, volta para cá.
  */
 export default function Central() {
-  if (!centralLiberada()) return <Navigate to="/" replace />;
+  if (!centralLiberada()) return <Navigate to="/#central" replace />;
   return <PaginaCentral />;
 }
 

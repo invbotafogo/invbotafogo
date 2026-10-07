@@ -1,7 +1,7 @@
 /** Dados fixos da igreja, centralizados para não repetir string solta pelos componentes. */
 
 export const IGREJA = {
-  nome: 'Igreja de Nova Vida em Botafogo',
+  nome: 'Igreja Nova Vida de Botafogo',
   nomeCurto: 'INVB',
   enderecoCompleto: 'Rua da Matriz, 95 - Botafogo, Rio de Janeiro - RJ, 22260-100',
   enderecoFooter: 'Rua da Matriz, 95 - Rio de Janeiro/RJ',

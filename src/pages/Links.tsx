@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { IGREJA, REDES } from '../lib/constants';
-import { LINKS_DA_BIO, type LinkDaBio } from '../lib/links';
+import { IGREJA } from '../lib/constants';
+import { LINKS_DA_BIO, REDES_DA_BIO, type LinkDaBio } from '../lib/links';
 import { useNextService } from '../hooks/useNextService';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { useForaDosBuscadores } from '../hooks/useForaDosBuscadores';
@@ -42,9 +42,10 @@ function Botao({ link, aoVivo }: { link: LinkDaBio; aoVivo: boolean }) {
 
 /**
  * /links: o link da bio do Instagram. Não está no menu do site. Uma tela só,
- * com o que as pessoas procuram ao chegar pelo Instagram: o primeiro botão,
- * em dourado, leva para "Primeira vez aqui?"; os outros, para o resto do
- * site. Os botões moram em src/lib/links.ts.
+ * com o que as pessoas procuram ao chegar pelo Instagram: no alto, as redes;
+ * embaixo, os botões — o primeiro, em dourado, leva para "Primeira vez
+ * aqui?"; os outros, para o resto do site. Redes e botões moram em
+ * src/lib/links.ts.
  *
  * Nada de <header>, <nav> ou <footer> aqui dentro: o CSS do site estiliza
  * essas tags pelo nome (header.css fixa todo <header> no topo da tela).
@@ -70,6 +71,21 @@ export default function Links() {
           )}
         </div>
 
+        {/* As redes no alto, com o nome de cada uma: botões que se vê que são botões. */}
+        <div className="lk-redes" role="group" aria-labelledby="lk-redes-titulo">
+          <p id="lk-redes-titulo" className="lk-redes-titulo">
+            Siga a gente nas redes
+          </p>
+          <div className="lk-redes-botoes">
+            {REDES_DA_BIO.map((rede) => (
+              <a key={rede.nome} href={rede.url} target="_blank" rel="noopener noreferrer">
+                <i className={rede.icone} aria-hidden="true" />
+                {rede.nome}
+              </a>
+            ))}
+          </div>
+        </div>
+
         <ul className="lk-lista">
           {LINKS_DA_BIO.map((link) => (
             <li key={link.titulo}>
@@ -77,18 +93,6 @@ export default function Links() {
             </li>
           ))}
         </ul>
-
-        <div className="lk-redes">
-          <a href={REDES.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <i className="fa-brands fa-youtube" aria-hidden="true" />
-          </a>
-          <a href={REDES.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i className="fa-brands fa-instagram" aria-hidden="true" />
-          </a>
-          <a href={REDES.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i className="fa-brands fa-facebook-f" aria-hidden="true" />
-          </a>
-        </div>
       </div>
     </div>
   );
