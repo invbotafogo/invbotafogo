@@ -66,7 +66,7 @@ export const SUBDOMINIOS: Subdominio[] = [
     aviso: 'Login para editar',
   },
   {
-    host: 'lyra-music-database.vercel.app',
+    host: 'database.invbotafogo.com.br',
     caminho: '/admin',
     nome: 'Banco de Músicas do Lyra',
     descricao:
