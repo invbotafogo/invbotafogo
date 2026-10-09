@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "02QWcWF6LnwD9qVkza5asnxPNZw",
+  "etag": "FqllC0GKlq9zn5wsP8VvJnFoFZ0",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -10,7 +10,7 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "txR_Cf78FNskrXOCFjrXo-bS-RA",
+      "etag": "JLO4BfstEyaA1-8MMIPG6bmityw",
       "id": {
         "kind": "youtube#video",
         "videoId": "pR59GRol-58"
@@ -18,7 +18,7 @@
       "snippet": {
         "publishedAt": "2026-10-08T19:01:54Z",
         "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Quarta - Pra. Daniela Neves",
+        "title": "Não Seja Traído pelo Seu Coração - Pra. Daniela Neves",
         "description": "",
         "thumbnails": {
           "default": {
