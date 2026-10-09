@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Ofv6Bf2RbnGSt-w6WeMPy_sfycs",
+  "etag": "7sGlSFeIGh6H_vEYIrOc3pwHuhQ",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 364,
+    "totalResults": 365,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "txR_Cf78FNskrXOCFjrXo-bS-RA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pR59GRol-58"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-08T19:01:54Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Quarta - Pra. Daniela Neves",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pR59GRol-58/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pR59GRol-58/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pR59GRol-58/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pR59GRol-58/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pR59GRol-58/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-08T19:01:54Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "wcKd03rTO8YEMg5kdFfQzVUbjF4",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-05T04:39:28Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "ctuyYXPeEECbkDNEQtjEHOPphT4",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "nzQRoMkbXww"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-02T00:02:31Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Oração - Dc. Atayde Fernandes",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/nzQRoMkbXww/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-02T00:02:31Z"
       }
     }
   ]
