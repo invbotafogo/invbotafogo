@@ -1,14 +1,14 @@
 /*
- * Cabeçalho — barra fixa no topo, no padrão editorial da Home:
- * vidro escuro, fio dourado, links em caixa alta e um botão de destaque
- * ("Primeira vez?"). A mecânica da gaveta mobile é a mesma de antes.
+ * CabeÃ§alho â€” barra fixa no topo, no padrÃ£o editorial da Home:
+ * vidro escuro, fio dourado, links em caixa alta e um botÃ£o de destaque
+ * ("Primeira vez?"). A mecÃ¢nica da gaveta mobile Ã© a mesma de antes.
  */
 
 /* ============================================================
    PALETA
    ------------------------------------------------------------
-   As mesmas variáveis que o home.css declara em `.section-index`. O header
-   fica fora dela, então declara as suas no wrapper — overlay e gaveta também
+   As mesmas variÃ¡veis que o home.css declara em `.section-index`. O header
+   fica fora dela, entÃ£o declara as suas no wrapper â€” overlay e gaveta tambÃ©m
    moram dentro de #header e herdam daqui.
    ============================================================ */
    #header {
@@ -19,7 +19,7 @@
     --dim: rgba(246, 245, 241, .62);
     --line: rgba(230, 178, 62, .26);
 
-    /* Wrapper do header: empilha acima do conteúdo (evita cards por cima da logo/menu) */
+    /* Wrapper do header: empilha acima do conteÃºdo (evita cards por cima da logo/menu) */
     position: relative;
     z-index: 6000;
     overflow: visible;
@@ -45,8 +45,8 @@ header {
     gap: 32px;
     overflow: visible;
     color: var(--paper);
-    /* Quase opaco: legível sobre o que passar por baixo (mapa claro, foto
-       escura) mesmo onde não existe backdrop-filter. */
+    /* Quase opaco: legÃ­vel sobre o que passar por baixo (mapa claro, foto
+       escura) mesmo onde nÃ£o existe backdrop-filter. */
     background-color: rgba(11, 11, 12, .95);
     border-bottom: 1px solid var(--line);
     box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
@@ -55,12 +55,12 @@ header {
      * "Rastros" nas letras do menu ao rolar
      * -------------------------------------
      * `translateZ(0)` + `backface-visibility: hidden` prendem o header numa
-     * camada própria: ele passa a ser recomposto, não repintado, durante o
-     * scroll — sem resíduo do quadro anterior por cima do texto.
+     * camada prÃ³pria: ele passa a ser recomposto, nÃ£o repintado, durante o
+     * scroll â€” sem resÃ­duo do quadro anterior por cima do texto.
      *
-     * Efeito colateral: o transform faz do header o bloco contêiner de
+     * Efeito colateral: o transform faz do header o bloco contÃªiner de
      * qualquer descendente `position: fixed`. Por isso a gaveta e o overlay
-     * são irmãos do <header>, não filhos (ver Header.tsx).
+     * sÃ£o irmÃ£os do <header>, nÃ£o filhos (ver Header.tsx).
      */
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -68,9 +68,9 @@ header {
 }
 
 /*
- * Vidro só no desktop: no celular o desfoque custa caro no scroll (mesma
- * decisão do global.css para o card da história no iPhone). Se os "rastros"
- * voltarem em algum navegador, basta apagar este bloco: o fundo de cima já é
+ * Vidro sÃ³ no desktop: no celular o desfoque custa caro no scroll (mesma
+ * decisÃ£o do global.css para o card da histÃ³ria no iPhone). Se os "rastros"
+ * voltarem em algum navegador, basta apagar este bloco: o fundo de cima jÃ¡ Ã©
  * quase opaco.
  */
 @media (min-width: 1025px) {
@@ -99,7 +99,7 @@ header {
     width: auto;
     height: 65px;
     margin: 0;
-    filter: brightness(0) invert(1);
+    /* Sem filtro de cor: a logo jÃ¡ vem branca com o V dourado. */
     transition: opacity .2s ease;
 }
 
@@ -131,7 +131,7 @@ header {
     position: relative;
 }
 
-/* Mesma linguagem do `.kicker` da Home: caixa alta pequena e espaçada. */
+/* Mesma linguagem do `.kicker` da Home: caixa alta pequena e espaÃ§ada. */
 .navbar__menu a {
     position: relative;
     display: inline-block;
@@ -173,12 +173,12 @@ header {
     transform: scaleX(1);
 }
 
-/* `.active` é a classe que o NavLink do react-router põe na rota atual. */
+/* `.active` Ã© a classe que o NavLink do react-router pÃµe na rota atual. */
 .navbar__menu a.active {
     color: var(--gold);
 }
 
-/* ---------- BOTÃO DE DESTAQUE (desktop) ---------- */
+/* ---------- BOTÃƒO DE DESTAQUE (desktop) ---------- */
 /* O mesmo `btn-gold` da Home, em tamanho de barra. */
 
 .navbar__cta {
@@ -235,7 +235,7 @@ header {
     /*
      * Largura cheia + `scaleX` no lugar de animar `width`: o navegador resolve
      * no compositor, sem recalcular layout a cada quadro. Sem `transition`
-     * nenhuma — qualquer transição aqui faz a barra correr atrás do scroll.
+     * nenhuma â€” qualquer transiÃ§Ã£o aqui faz a barra correr atrÃ¡s do scroll.
      */
     width: 100%;
     height: 2px;
@@ -247,7 +247,7 @@ header {
     pointer-events: none;
 }
 
-/* ---------- HAMBÚRGUER (desktop escondido) ---------- */
+/* ---------- HAMBÃšRGUER (desktop escondido) ---------- */
 
 .navbar__toggle {
     display: none;
@@ -260,7 +260,7 @@ header {
 }
 
 /* ============================================================
-   MOBILE / TABLET (até 1024px)
+   MOBILE / TABLET (atÃ© 1024px)
    ============================================================ */
 @media (max-width: 1024px) {
     header {
@@ -269,8 +269,8 @@ header {
         background-color: rgba(11, 11, 12, .97);
     }
 
-    /* O menu horizontal e o botão de destaque são só do desktop. No mobile,
-       quem mostra os dois é a gaveta (`.navbar__drawer`). */
+    /* O menu horizontal e o botÃ£o de destaque sÃ£o sÃ³ do desktop. No mobile,
+       quem mostra os dois Ã© a gaveta (`.navbar__drawer`). */
     .navbar__nav,
     .navbar__cta {
         display: none;
@@ -281,7 +281,7 @@ header {
     }
 
     /*
-     * Hambúrguer → X: deslocamento = altura da barra + gap até o centro da
+     * HambÃºrguer â†’ X: deslocamento = altura da barra + gap atÃ© o centro da
      * barra do meio. Barras finas (2px), no lugar das de 5px.
      */
     .navbar__toggle {
@@ -296,7 +296,7 @@ header {
         width: 48px;
         height: 48px;
         padding: 0;
-        /* Alinha as barras com a borda do conteúdo; a área de toque continua de 48px. */
+        /* Alinha as barras com a borda do conteÃºdo; a Ã¡rea de toque continua de 48px. */
         margin: 0 -12px 0 0;
         border-radius: 12px;
         outline: none;
@@ -336,13 +336,13 @@ header {
 /* ============================================================
    GAVETA DO MENU MOBILE
    ------------------------------------------------------------
-   Overlay e gaveta são irmãos do <header>, não filhos (o transform do header
-   os prenderia à barra de 70px — ver Header.tsx). Empilhamento dentro de
+   Overlay e gaveta sÃ£o irmÃ£os do <header>, nÃ£o filhos (o transform do header
+   os prenderia Ã  barra de 70px â€” ver Header.tsx). Empilhamento dentro de
    #header: overlay 4990 < header 5000 < gaveta 5010.
 
-   A gaveta nunca sai do DOM: aberta e fechada são a mesma caixa em posições
-   diferentes, o que permite animar a saída. `visibility` troca com atraso
-   igual ao da transição — e, fechada, é ela que tira a gaveta do tab e do
+   A gaveta nunca sai do DOM: aberta e fechada sÃ£o a mesma caixa em posiÃ§Ãµes
+   diferentes, o que permite animar a saÃ­da. `visibility` troca com atraso
+   igual ao da transiÃ§Ã£o â€” e, fechada, Ã© ela que tira a gaveta do tab e do
    leitor de tela.
    ============================================================ */
 
@@ -351,7 +351,7 @@ header {
     inset: 0;
     z-index: 4990;
     background: rgba(0, 0, 0, .62);
-    /* Sem isto, arrastar sobre o overlay rola a página por trás no iOS. */
+    /* Sem isto, arrastar sobre o overlay rola a pÃ¡gina por trÃ¡s no iOS. */
     touch-action: none;
     overscroll-behavior: contain;
     opacity: 0;
@@ -367,7 +367,7 @@ header {
     transition: opacity .3s ease, visibility 0s linear 0s;
 }
 
-/* Onde o filtro existe, o véu clareia (62% → 42%) para o desfoque aparecer. */
+/* Onde o filtro existe, o vÃ©u clareia (62% â†’ 42%) para o desfoque aparecer. */
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
     .navbar__overlay {
         background: rgba(0, 0, 0, .42);
@@ -408,13 +408,13 @@ header {
     transition: transform .32s cubic-bezier(.4, 0, .2, 1), visibility 0s linear 0s;
 }
 
-/* Enquanto o dedo arrasta, a posição vem do style inline e a transição sai
+/* Enquanto o dedo arrasta, a posiÃ§Ã£o vem do style inline e a transiÃ§Ã£o sai
    de cena. Precisa das duas classes e de vir depois de `.is-open`. */
 .navbar__drawer.is-open.is-arrastando {
     transition: none;
 }
 
-/* Topo da gaveta: rótulo dourado + X, na mesma altura da barra do header. */
+/* Topo da gaveta: rÃ³tulo dourado + X, na mesma altura da barra do header. */
 .navbar__drawer-top {
     display: flex;
     align-items: center;
@@ -435,8 +435,8 @@ header {
     color: var(--gold);
 }
 
-/* O X é o próprio hambúrguer fechado: mesmas barras (24x2), mesma área de
-   toque. Os números vêm do `.navbar__toggle` — mudou um, mude o outro. */
+/* O X Ã© o prÃ³prio hambÃºrguer fechado: mesmas barras (24x2), mesma Ã¡rea de
+   toque. Os nÃºmeros vÃªm do `.navbar__toggle` â€” mudou um, mude o outro. */
 .navbar__drawer-close {
     position: relative;
     display: grid;
@@ -476,7 +476,7 @@ header {
     color: var(--gold);
 }
 
-/* ---------- BOTÃO DE DESTAQUE (gaveta) ---------- */
+/* ---------- BOTÃƒO DE DESTAQUE (gaveta) ---------- */
 /* Primeiro a entrar na cascata, antes dos links. */
 
 .navbar__drawer-cta {
@@ -523,8 +523,8 @@ header {
     display: flex;
     align-items: stretch;
     min-height: 52px;
-    /* Entrada escalonada: o atraso vive só na regra `.is-open`, então na
-       saída todos somem juntos. */
+    /* Entrada escalonada: o atraso vive sÃ³ na regra `.is-open`, entÃ£o na
+       saÃ­da todos somem juntos. */
     opacity: 0;
     transform: translateX(16px);
     transition: opacity .25s ease, transform .25s ease;
@@ -564,7 +564,7 @@ header {
     transition: color .2s ease, background .2s ease;
 }
 
-/* Marcador dourado à esquerda — o eco vertical do fio do menu do desktop. */
+/* Marcador dourado Ã  esquerda â€” o eco vertical do fio do menu do desktop. */
 .navbar__drawer-list a::before {
     content: '';
     position: absolute;
@@ -579,8 +579,8 @@ header {
     transition: transform .25s ease;
 }
 
-/* O `nav ul li a::after` do fim do arquivo (rodapé) também alcança a gaveta;
-   aqui o marcador é a barra lateral do ::before. */
+/* O `nav ul li a::after` do fim do arquivo (rodapÃ©) tambÃ©m alcanÃ§a a gaveta;
+   aqui o marcador Ã© a barra lateral do ::before. */
 .navbar__drawer-list a::after {
     content: none;
 }
@@ -597,7 +597,7 @@ header {
     transform: scaleY(1);
 }
 
-/* ---------- RODAPÉ DA GAVETA: versículo + redes ---------- */
+/* ---------- RODAPÃ‰ DA GAVETA: versÃ­culo + redes ---------- */
 
 .navbar__drawer-foot {
     margin-top: auto;
@@ -617,7 +617,7 @@ header {
 
 .navbar__drawer-verso {
     margin: 0 0 20px;
-    /* Aspas curvas pelo CSS: a constante guarda só o versículo. */
+    /* Aspas curvas pelo CSS: a constante guarda sÃ³ o versÃ­culo. */
     quotes: '\201C' '\201D';
 }
 
@@ -646,13 +646,13 @@ header {
     font-style: normal;
     font-weight: 600;
     letter-spacing: 2px;
-    /* Compensa o letter-spacing depois da última letra no texto centralizado. */
+    /* Compensa o letter-spacing depois da Ãºltima letra no texto centralizado. */
     text-indent: 2px;
     text-transform: uppercase;
     color: var(--gold);
 }
 
-/* Ícones e espaçamento iguais aos do `.social-icons` (footer.css). */
+/* Ãcones e espaÃ§amento iguais aos do `.social-icons` (footer.css). */
 .navbar__drawer-redes {
     list-style: none;
     display: flex;
@@ -685,7 +685,7 @@ header {
     transform: scale(1.1);
 }
 
-/* A gaveta só existe no mobile — acima disso o menu horizontal volta. */
+/* A gaveta sÃ³ existe no mobile â€” acima disso o menu horizontal volta. */
 @media (max-width: 1024px) {
     .navbar__drawer {
         display: flex;
@@ -706,11 +706,11 @@ header {
 }
 
 /* ============================================================
-   LEGADO — RODAPÉ
+   LEGADO â€” RODAPÃ‰
    ------------------------------------------------------------
-   Estas regras vieram do styles.css antigo e alcançam qualquer <nav> do
-   site, inclusive o do rodapé. O menu do header não depende mais delas
-   (usa `.navbar__menu`); ficam aqui para o rodapé não mudar. O sublinhado
+   Estas regras vieram do styles.css antigo e alcanÃ§am qualquer <nav> do
+   site, inclusive o do rodapÃ©. O menu do header nÃ£o depende mais delas
+   (usa `.navbar__menu`); ficam aqui para o rodapÃ© nÃ£o mudar. O sublinhado
    passou do #ffcc00 para o dourado da marca.
    ============================================================ */
 
