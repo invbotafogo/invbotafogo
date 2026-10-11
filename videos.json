@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "NpDIKA0foJLJFWLGnH97TF8bCn8",
+  "etag": "Ebe84JOGLocxuQMNl6_rGITrhyk",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 366,
+    "totalResults": 368,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KbZbTkz_ZFq_gX9qj2gTnl-M_SI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "dpRkFYEnNfo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-11T18:38:07Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Grão de Mostarda: O Poder da Fé Viva - Pr. Marcio Soares",
+        "description": "Neste culto da manhã, dia 11/10, contamos com a participação especial das nossas crianças! A pequena Ir. Laís abriu o culto, e, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-11T18:38:07Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "JLO4BfstEyaA1-8MMIPG6bmityw",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-05T19:58:33Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "leyTbNbLieLPvglzoyzSY8syklA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "KAOK7o5AQTE"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-05T04:39:28Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/KAOK7o5AQTE/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-05T04:39:28Z"
       }
     }
   ]
