@@ -1,10 +1,10 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "3ywM0_OeWCA9YH6iR5I0nRtyX4A",
+  "etag": "ytqFxLX7h02r-K6KmV8yJ9ISKns",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 369,
+    "totalResults": 368,
     "resultsPerPage": 50
   },
   "items": [
