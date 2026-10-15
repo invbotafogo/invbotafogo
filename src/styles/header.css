@@ -247,6 +247,21 @@ header {
     pointer-events: none;
 }
 
+/* Onde o navegador sabe prender uma animação à rolagem (Safari 26, Chrome
+   115+), a barra anda no compositor, sem JavaScript. O hook só liga a
+   classe quando há suporte; nos outros o JS continua como antes. */
+@supports (animation-timeline: scroll()) {
+    .navbar__progress--css {
+        animation: navbar-progresso linear both;
+        animation-timeline: scroll(root);
+    }
+}
+
+@keyframes navbar-progresso {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
 /*
  * Onde o navegador sabe prender uma animação à rolagem (Safari 26, Chrome
  * 115+), a barra anda no compositor, sem JavaScript: `scroll(root)` é a

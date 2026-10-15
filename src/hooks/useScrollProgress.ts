@@ -21,10 +21,26 @@ export function suportaTimelineDeRolagem(): boolean {
   return typeof CSS !== 'undefined' && CSS.supports('animation-timeline: scroll()');
 }
 
+/**
+ * Navegadores novos (Safari 26, Chrome 115+) sabem prender uma animação à
+ * rolagem direto no compositor: `animation-timeline: scroll()`. Aí a barra
+ * anda no mesmo thread que desenha a rolagem, sem passar pelo JavaScript.
+ */
+export function suportaTimelineDeRolagem(): boolean {
+  return typeof CSS !== 'undefined' && CSS.supports('animation-timeline: scroll()');
+}
+
 export function useScrollProgress<T extends HTMLElement>() {
   const ref = useRef<T>(null);
 
   useEffect(() => {
+    /* Com a timeline de rolagem o CSS cuida de tudo (ver header.css); o
+       JavaScript só serve de reserva para navegadores antigos. */
+    if (suportaTimelineDeRolagem()) {
+      ref.current?.classList.add('navbar__progress--css');
+      return;
+    }
+
     /* Com a timeline de rolagem o CSS cuida de tudo (ver header.css); o
        JavaScript só serve de reserva para navegadores antigos. No iPhone o
        caminho por JS engasgava: o Safari entrega os eventos de scroll em
