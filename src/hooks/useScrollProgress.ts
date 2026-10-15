@@ -1,27 +1,6 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * Prende a barra de progresso ao movimento da página.
- *
- * Devolve uma ref para o elemento da barra: o valor é escrito direto no DOM,
- * dentro de um requestAnimationFrame, em vez de virar estado do React. Estado
- * fazia o header inteiro re-renderizar a cada evento de scroll, e era isso que
- * dava a sensação de avanço aos saltos.
- *
- * O preenchimento usa `scaleX`, que o navegador resolve no compositor, sem
- * recalcular layout a cada quadro como acontecia animando `width`.
- */
-/**
- * Navegadores novos (Safari 26, Chrome 115+) sabem prender uma animação à
- * rolagem direto no compositor: `animation-timeline: scroll()`. Aí a barra
- * anda no mesmo thread que desenha a rolagem, sem passar pelo JavaScript —
- * nenhum evento, nenhum quadro perdido. Esta função diz se o navegador sabe.
- */
-export function suportaTimelineDeRolagem(): boolean {
-  return typeof CSS !== 'undefined' && CSS.supports('animation-timeline: scroll()');
-}
-
-/**
  * Navegadores novos (Safari 26, Chrome 115+) sabem prender uma animação à
  * rolagem direto no compositor: `animation-timeline: scroll()`. Aí a barra
  * anda no mesmo thread que desenha a rolagem, sem passar pelo JavaScript.
@@ -30,21 +9,18 @@ export function suportaTimelineDeRolagem(): boolean {
   return typeof CSS !== 'undefined' && CSS.supports('animation-timeline: scroll()');
 }
 
+/**
+ * Prende a barra de progresso ao movimento da página.
+ *
+ * Devolve uma ref para o elemento da barra. Onde o navegador suporta a
+ * timeline de rolagem, o CSS (header.css) cuida de tudo e este hook só liga
+ * a classe. Nos outros, o valor é escrito direto no DOM, dentro de um
+ * requestAnimationFrame, usando `scaleX` (resolvido no compositor).
+ */
 export function useScrollProgress<T extends HTMLElement>() {
   const ref = useRef<T>(null);
 
   useEffect(() => {
-    /* Com a timeline de rolagem o CSS cuida de tudo (ver header.css); o
-       JavaScript só serve de reserva para navegadores antigos. */
-    if (suportaTimelineDeRolagem()) {
-      ref.current?.classList.add('navbar__progress--css');
-      return;
-    }
-
-    /* Com a timeline de rolagem o CSS cuida de tudo (ver header.css); o
-       JavaScript só serve de reserva para navegadores antigos. No iPhone o
-       caminho por JS engasgava: o Safari entrega os eventos de scroll em
-       outro ritmo do desenho, e a barra andava aos saltos. */
     if (suportaTimelineDeRolagem()) {
       ref.current?.classList.add('navbar__progress--css');
       return;
@@ -69,7 +45,7 @@ export function useScrollProgress<T extends HTMLElement>() {
     }
 
     /* Eventos de scroll chegam mais rápido do que a tela desenha: um quadro
-       por vez basta, e mantém a barra sempre no mesmo instante da rolagem. */
+       por vez basta. */
     function agendar() {
       if (!quadro) quadro = requestAnimationFrame(aplicar);
     }
@@ -78,8 +54,7 @@ export function useScrollProgress<T extends HTMLElement>() {
     window.addEventListener('scroll', agendar, { passive: true });
     window.addEventListener('resize', agendar);
 
-    /* Páginas que crescem depois de carregar (vídeos, imagens, aulas abrindo)
-       mudam o total rolável — sem isso a barra passaria a mentir o percentual. */
+    /* Páginas que crescem depois de carregar mudam o total rolável. */
     const observador = new ResizeObserver(agendar);
     observador.observe(document.body);
 
