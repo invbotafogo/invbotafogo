@@ -1,13 +1,101 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "ogobfmy9mKf0J7lOPBVMyi6Vu7o",
+  "etag": "4YL7Ce_l9twriXxrO1kCYtfRNVo",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 371,
+    "totalResults": 373,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "55WkSGYYCmEJ3iTBJsVQGmWvWFw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mRdJBiPiIQ8"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T19:28:28Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo (Noite) - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T19:28:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1FWQgP_uLLEgc304Kk3iA_i6xMg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HTzG_UUdDHo"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-19T19:04:31Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Altar Não Tolera Meios-Termos (II Cr.33:9-13) - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-19T19:04:31Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "e2Cs0o5ro5nMkAaeYgHCNMkz8qI",
@@ -50,94 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-12T01:26:06Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "N2nBxI69h7M6Cp4HGy5YYTAdDA0",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "dpRkFYEnNfo"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-11T18:38:07Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Grão de Mostarda: O Poder da Fé Viva - Pr. Marcio Soares",
-        "description": "Neste culto da manhã, dia 11/10, contamos com a participação especial das nossas crianças! A pequena Ir. Laís abriu o culto, e, ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/dpRkFYEnNfo/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-11T18:38:07Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "P_ea6A2bJ4Y1EwZCHwqpgjBEp88",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "pR59GRol-58"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-08T19:01:54Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Não Seja Traído pelo Seu Coração - Pra. Daniela Neves",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/pR59GRol-58/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/pR59GRol-58/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/pR59GRol-58/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/pR59GRol-58/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/pR59GRol-58/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-08T19:01:54Z"
       }
     }
   ]
