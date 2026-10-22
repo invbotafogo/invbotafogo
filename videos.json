@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "oqdslfYE8WuiWgjs-h7G7KLsHWQ",
+  "etag": "sjQ1TlhOIj2JpcT03Y8NlHslnPA",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 376,
+    "totalResults": 375,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5Zrx4bgX_p4NJO2Mipjk2vsFltk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sbdex9oihNI"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-22T02:01:04Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Cativeiro de Papel: O Confronto da Verdade contra o Medo Hereditário - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sbdex9oihNI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sbdex9oihNI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sbdex9oihNI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sbdex9oihNI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sbdex9oihNI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-22T02:01:04Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "55WkSGYYCmEJ3iTBJsVQGmWvWFw",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-19T19:04:31Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "e2Cs0o5ro5nMkAaeYgHCNMkz8qI",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ZH96wNMN_5w"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-12T01:26:06Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ZH96wNMN_5w/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ZH96wNMN_5w/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ZH96wNMN_5w/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/ZH96wNMN_5w/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/ZH96wNMN_5w/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-12T01:26:06Z"
       }
     }
   ]
