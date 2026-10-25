@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "NMC5Hs3tDBSYvgeo3KW3KgjcOhg",
+  "etag": "HrqhGP3nt0WjGfbt0hZ_75vWIrQ",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 376,
+    "totalResults": 377,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "b6uwmHNCNlHDHyYRM8p3PcJ4S2Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PpNQDgA0K3I"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-25T17:39:44Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Proibido Retroceder - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-25T17:39:44Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "hyQWoQEPfNTOVST7UTJskr-OfhU",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-19T19:28:28Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "akofcU3qvh1S52g3k05jaIIItxQ",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "HTzG_UUdDHo"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-19T19:04:31Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Altar Não Tolera Meios-Termos (II Cr.33:9-13) - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/HTzG_UUdDHo/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-19T19:04:31Z"
       }
     }
   ]
