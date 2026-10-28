@@ -1,16 +1,60 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "Ra5OUSKobIiFj-Gp2T-2pVmpEMU",
+  "etag": "bS0JA0GHV5Dz0LTx5MIBt6KsTwU",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 378,
+    "totalResults": 380,
     "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "b6uwmHNCNlHDHyYRM8p3PcJ4S2Q",
+      "etag": "E4S-_SMm3HIZaoowQyZrrnhSGQQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GScPxEoty10"
+      },
+      "snippet": {
+        "publishedAt": "2026-10-28T18:36:43Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GScPxEoty10/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GScPxEoty10/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GScPxEoty10/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GScPxEoty10/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GScPxEoty10/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-10-28T18:36:43Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kprNbdR8-t08WtihTCmW0oNV5GE",
       "id": {
         "kind": "youtube#video",
         "videoId": "PpNQDgA0K3I"
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-10-22T02:01:04Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "hHqBdiy1f1jbusKbpSWLSocaSIU",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "mRdJBiPiIQ8"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-19T19:28:28Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo (Noite) - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/mRdJBiPiIQ8/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-19T19:28:28Z"
       }
     }
   ]
