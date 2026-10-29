@@ -127,7 +127,7 @@ export const TEMAS_EBD: Tema[] = [
       { titulo: 'Aula 8', imagem: `${IMG_OR}/8.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula8.pdf` },
       { titulo: 'Aula 9', imagem: `${IMG_OR}/9.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula9.pdf` },
       { titulo: 'Aula 10', imagem: `${IMG_OR}/10.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula10.pdf` },
-      // { titulo: 'Aula 11', imagem: `${IMG_OR}/11.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula11.pdf` },
+      { titulo: 'Aula 11', imagem: `${IMG_OR}/11.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula11.pdf` },
       // { titulo: 'Aula 12', imagem: `${IMG_OR}/12.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula12.pdf` },
       // { titulo: 'Aula 13', imagem: `${IMG_OR}/13.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula13.pdf` },
       // { titulo: 'Aula 14', imagem: `${IMG_OR}/14.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula14.pdf` },
