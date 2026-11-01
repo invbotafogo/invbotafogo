@@ -1,40 +1,33 @@
 {
-  "rotulo": "Outubro de 2026",
+  "rotulo": "Novembro de 2026",
   "semanas": [
     {
       "rotulo": "Semana 1",
-      "intervalo": "1 a 10 de outubro",
+      "intervalo": "1 a 7 de novembro",
       "eventos": [
         {
-          "dia": "SÁB",
-          "data": "03/10",
-          "titulo": "Consagração",
-          "horario": "8h",
-          "nota": "Obreiros / Planejamento Natal"
-        },
-        {
           "dia": "DOM",
-          "data": "04/10",
+          "data": "01/11",
           "titulo": "Culto",
           "horario": "10h e 19h",
-          "nota": "Ceia do Senhor / Início Ensaio - Natal"
+          "nota": "Ceia do Senhor"
+        },
+        {
+          "dia": "SÁB",
+          "data": "07/11",
+          "titulo": "Consagração",
+          "horario": "8h",
+          "nota": "Obreiros"
         }
       ]
     },
     {
       "rotulo": "Semana 2",
-      "intervalo": "11 a 17 de outubro",
+      "intervalo": "8 a 14 de novembro",
       "eventos": [
         {
-          "dia": "DOM",
-          "data": "11/10",
-          "titulo": "Culto",
-          "horario": "10h e 19h",
-          "nota": "Apresentação - Dia das Crianças (Manhã)"
-        },
-        {
           "dia": "QUA",
-          "data": "14/10",
+          "data": "11/11",
           "titulo": "Culto",
           "horario": "19h30",
           "nota": "Noite de Adoração"
@@ -43,49 +36,61 @@
     },
     {
       "rotulo": "Semana 3",
-      "intervalo": "18 a 24 de outubro",
+      "intervalo": "15 a 21 de novembro",
+      "eventos": []
+    },
+    {
+      "rotulo": "Semana 4",
+      "intervalo": "22 a 28 de novembro",
       "eventos": [
         {
-          "dia": "DOM",
-          "data": "18/10",
-          "titulo": "Almoço",
+          "dia": "QUA",
+          "data": "25/11",
+          "titulo": "Culto",
+          "horario": "19h30",
+          "nota": "Culto de Oração"
+        },
+        {
+          "dia": "SEX",
+          "data": "27/11",
+          "titulo": "Encontro de Casados",
+          "horario": "19h45",
+          "nota": "Último Encontro de Casados do Ano"
+        },
+        {
+          "dia": "SÁB",
+          "data": "28/11",
+          "titulo": "Confraternização",
           "horario": "12h",
-          "nota": "Almoço com a Família Nova Vida"
+          "nota": "Churrasco da Família Nova Vida"
         }
       ]
     },
     {
-      "rotulo": "Semana 4",
-      "intervalo": "25 a 31 de outubro",
+      "rotulo": "Semana 5",
+      "intervalo": "29 a 30 de novembro",
       "eventos": [
         {
           "dia": "SEG",
-          "data": "26/10",
-          "titulo": "Encontro de Amigas",
+          "data": "30/11",
+          "titulo": "Encontro de Mulheres Restauradas",
           "horario": "19h",
-          "nota": "Reunião Mensal"
+          "nota": "Última Reunião do Ano"
         },
         {
           "dia": "SEG",
-          "data": "26/10",
+          "data": "30/11",
           "titulo": "Encontro de Guerreiros",
           "horario": "19h",
-          "nota": "Reunião Mensal"
-        },
-        {
-          "dia": "QUA",
-          "data": "28/10",
-          "titulo": "Culto",
-          "horario": "19h30",
-          "nota": "Culto de Oração"
+          "nota": "Última Reunião do Ano"
         }
       ]
     }
   ],
-  "atualizadoEm": "2026-10-01T12:31:58+00:00",
+  "atualizadoEm": "2026-11-01T12:44:26+00:00",
   "fonte": {
     "planilha": "1_fXS_OxpG3bQk-CO-d8uNVAvblU-KbEsXTaJDH_S8wU",
-    "aba": "Outubro",
+    "aba": "Novembro",
     "coluna": "F"
   }
 }
