@@ -5,6 +5,7 @@ const IMG_ES = `${ASSETS_RAW_BASE}/imagesES`;
 const IMG_CR = `${ASSETS_RAW_BASE}/imagesCR`;
 const IMG_CC = `${ASSETS_RAW_BASE}/imagesCC`;
 const IMG_OR = `${ASSETS_RAW_BASE}/imagesOR`;
+const IMG_RP = `${ASSETS_RAW_BASE}/imagesRP`;
 
 export interface Aula {
   titulo: string;
@@ -133,6 +134,15 @@ export const TEMAS_EBD: Tema[] = [
       // { titulo: 'Aula 14', imagem: `${IMG_OR}/14.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula14.pdf` },
       // { titulo: 'Aula 15', imagem: `${IMG_OR}/15.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula15.pdf` },
       // { titulo: 'Aula 16', imagem: `${IMG_OR}/16.webp`, imagemClasse: 'video-thumb', pdf: `${PDF}/ORACAO_Aula16.pdf` },
+    ],
+  },
+  {
+    id: 'reforma_protestante',
+    titulo: 'Reforma Protestante',
+    capa: `${IMG_RP}/1.webp`,
+    // Aula avulsa de 31/10/2026 (Dia da Reforma).
+    aulas: [
+      { titulo: 'Reforma Protestante', imagem: `${IMG_RP}/1.webp`, pdf: `${PDF}/REFORMA_Aula1.pdf` },
     ],
   },
 ];
