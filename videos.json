@@ -1,13 +1,101 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "WWzBaGHiRYQ5jBEiztDDcNcb-8g",
+  "etag": "ZnkKAld-NmMzvltS4Dg28Rp2S4A",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 385,
+    "totalResults": 387,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aJtUxusILn4gITe2zY4DzyvuPvM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "w3sBYDVsk-c"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T15:25:46Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Jó Que Ninguém Conhecia - Pra. Daniela Neves",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T15:25:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NusnP9XfKP75Cu4PTGyC1UpxiiA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Un2IsnrZm8k"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-06T15:12:40Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Culto de Domingo - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-06T15:12:40Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "Sybv8IhAiCzZVNZpfdp7fIssSaw",
@@ -50,94 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-11-01T18:33:54Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "6Q00sBXRitZ0zZ1lDcjfzKlxeAU",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "GScPxEoty10"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-28T18:36:43Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/GScPxEoty10/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/GScPxEoty10/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/GScPxEoty10/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/GScPxEoty10/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/GScPxEoty10/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-28T18:36:43Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "kprNbdR8-t08WtihTCmW0oNV5GE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "PpNQDgA0K3I"
-      },
-      "snippet": {
-        "publishedAt": "2026-10-25T17:39:44Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Proibido Retroceder - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/PpNQDgA0K3I/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-10-25T17:39:44Z"
       }
     }
   ]
