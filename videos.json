@@ -1,16 +1,104 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "_KhPA7bF-yfqzDTERKPUhrvDSAE",
+  "etag": "j4eHJJ679YPiREbLvo7SOOBUqDs",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 389,
+    "totalResults": 391,
     "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "aJtUxusILn4gITe2zY4DzyvuPvM",
+      "etag": "l710pgSkpB5VeRyLg1UkF8nwhJw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_Zmmdnz9Zo4"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T16:39:00Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Fogo Que Ninguém Pôde Apagar (1Sm 22) - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T16:39:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CFxL1utAlFydXIHrwSxT0XPpZFE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qFAYKvSh82E"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-09T16:15:40Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "A Ilusão dos Altares Humanos e a Plenitude da Alegria em Deus - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-09T16:15:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "N6icQnjnKbDUAsCaiW3T4LVrkq0",
       "id": {
         "kind": "youtube#video",
         "videoId": "w3sBYDVsk-c"
@@ -50,94 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-11-06T15:25:46Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "NusnP9XfKP75Cu4PTGyC1UpxiiA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Un2IsnrZm8k"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-06T15:12:40Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Culto de Domingo - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/Un2IsnrZm8k/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-06T15:12:40Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Sybv8IhAiCzZVNZpfdp7fIssSaw",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "2PBWuSihxhk"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-01T18:33:54Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Santidade Além do Domingo: O Testemunho que Deus Exige no Privado (Mq.6:8)",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/2PBWuSihxhk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/2PBWuSihxhk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/2PBWuSihxhk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/2PBWuSihxhk/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/2PBWuSihxhk/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-01T18:33:54Z"
       }
     }
   ]
