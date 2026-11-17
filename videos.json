@@ -1,13 +1,101 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "VuaENIWaKXqVBI1jXN72hX3tDsE",
+  "etag": "I4G_pTAmBsQfV__mFpjbmvc6cOA",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 395,
+    "totalResults": 397,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_UGt5Z65PUm_nsVM_4fJ0-bjiro",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GEdn-nFN-cw"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T13:59:58Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Não Basta Ouvir a Palavra: É Preciso Comê-la | Lucas 5 | Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T13:59:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AeJOjloFexV7jQyz9muttKmz9tU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-ToKmfd2vZk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-17T13:31:21Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "As Três Garantias do Cristão - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-17T13:31:21Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "5ZfOvcjtdpwrxoJxh6S8cqdca3Y",
@@ -50,94 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-11-09T16:39:00Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "LFRyEtLTGgxv5ZPY44f3MBmOkhk",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "qFAYKvSh82E"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-09T16:15:40Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "A Ilusão dos Altares Humanos e a Plenitude da Alegria em Deus - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/qFAYKvSh82E/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-09T16:15:40Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "N6icQnjnKbDUAsCaiW3T4LVrkq0",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "w3sBYDVsk-c"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-06T15:25:46Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Jó Que Ninguém Conhecia - Pra. Daniela Neves",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/w3sBYDVsk-c/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-06T15:25:46Z"
       }
     }
   ]
