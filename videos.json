@@ -1,13 +1,57 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "-1zI1e-1PbuX8Bl8ZiokCHpVxVQ",
+  "etag": "9PAaNKx_lASkAgUckSGGzYkMGN8",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 398,
+    "totalResults": 399,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ez3xSXxT8JgO6EbsCaHH6nG0pbE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PFyDkicLdgk"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-19T12:51:06Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Na Oficina do Oleiro: Do Quebrantamento à Restauração - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PFyDkicLdgk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PFyDkicLdgk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PFyDkicLdgk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PFyDkicLdgk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PFyDkicLdgk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-19T12:51:06Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "_UGt5Z65PUm_nsVM_4fJ0-bjiro",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-11-17T13:31:21Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "5ZfOvcjtdpwrxoJxh6S8cqdca3Y",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "_Zmmdnz9Zo4"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-09T16:39:00Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "O Fogo Que Ninguém Pôde Apagar (1Sm 22) - Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/_Zmmdnz9Zo4/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-09T16:39:00Z"
       }
     }
   ]
