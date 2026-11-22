@@ -1,16 +1,60 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "OE7yDhttynsqEngmjZb9LhX0C3o",
+  "etag": "aTu_4WcE0gjw5m5JvzHA_9urlDk",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 392,
+    "totalResults": 401,
     "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "Ez3xSXxT8JgO6EbsCaHH6nG0pbE",
+      "etag": "oCmnz7L4fZPEvHWXECEqZkQDHy0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4meOTZFAX6c"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-22T20:28:26Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "O Preço da Unidade: Confrontando a Imaturidade na Casa De Deus - Pr. Marcio Soares",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4meOTZFAX6c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4meOTZFAX6c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4meOTZFAX6c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4meOTZFAX6c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4meOTZFAX6c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-22T20:28:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tc5sxqkDI7DEwgwK9BuVobrklSc",
       "id": {
         "kind": "youtube#video",
         "videoId": "PFyDkicLdgk"
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-11-17T13:59:58Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "aqF9TVJW3eeihIBdjYlvMUGxDh0",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "-ToKmfd2vZk"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-17T13:31:21Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "As Três Garantias do Cristão - Pr. Marcio Soares",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/-ToKmfd2vZk/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-17T13:31:21Z"
       }
     }
   ]
