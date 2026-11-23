@@ -1,6 +1,6 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "oxLyiuA0nI77q48pAS_4g87bTUA",
+  "etag": "b4ky3ehQfUuu1tww-20eCM2IOXo",
   "nextPageToken": "CDIQAA",
   "regionCode": "US",
   "pageInfo": {
@@ -8,6 +8,50 @@
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7U-PL-jNUQoBXxhwtcloM7cmqXs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "w1bpmttIWqM"
+      },
+      "snippet": {
+        "publishedAt": "2026-11-23T10:06:41Z",
+        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
+        "title": "Uma Vida Sem Reservas: O Segredo para Viver as Promessas de Deus! - Pr. Luiz Carlos",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/w1bpmttIWqM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/w1bpmttIWqM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/w1bpmttIWqM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/w1bpmttIWqM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/w1bpmttIWqM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-11-23T10:06:41Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "oCmnz7L4fZPEvHWXECEqZkQDHy0",
@@ -94,50 +138,6 @@
         "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
         "liveBroadcastContent": "none",
         "publishTime": "2026-11-19T12:51:06Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "UAzDHRV9Z1evn7biVb5vXAirzAI",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "GEdn-nFN-cw"
-      },
-      "snippet": {
-        "publishedAt": "2026-11-17T13:59:58Z",
-        "channelId": "UCLuWhw8fYakYDzM9SlNXVKg",
-        "title": "Não Basta Ouvir a Palavra: É Preciso Comê-la | Lucas 5 | Pr. Luiz Carlos",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/GEdn-nFN-cw/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "IGREJA NOVA VIDA DE BOTAFOGO",
-        "liveBroadcastContent": "none",
-        "publishTime": "2026-11-17T13:59:58Z"
       }
     }
   ]
